@@ -50,20 +50,22 @@ function NavBar() {
           </div>
         ) : (
           <ul className={styles.NavList}>
-            <a href="#home"><li>Home</li></a>
-            <a href="#about"><li>About</li></a>
-            <a href="#services"><li>Services</li></a>
-            <a href="#contact"><li>Contact</li></a>
+            <a href="#tour"><li>Tour</li></a>
+            <a href="#newmusic"><li>New Music</li></a>
+            <a href="#store"><li>Store</li></a>
+            <a href="#videos"><li>Videos</li></a>
+            <a href="#ourmission"><li>Our Mission</li></a>
           </ul>
         )}
       </div>
       {isMobile && isMenuOpen && (
         <div className={styles.MobileMenu}>
           <ul className={styles.MobileNavList}>
-            <a href="#home" onClick={toggleMenu}><li>Home</li></a>
-            <a href="#about" onClick={toggleMenu}><li>About</li></a>
-            <a href="#services" onClick={toggleMenu}><li>Services</li></a>
-            <a href="#contact" onClick={toggleMenu}><li>Contact</li></a>
+            <a href="#tour" onClick={toggleMenu}><li>Tour</li></a>
+            <a href="#newmusic" onClick={toggleMenu}><li>New Music</li></a>
+            <a href="#store" onClick={toggleMenu}><li>Store</li></a>
+            <a href="#videos" onClick={toggleMenu}><li>Videos</li></a>
+            <a href="#ourmission" onClick={toggleMenu}><li>Our Mission</li></a>
           </ul>
         </div>
       )}
