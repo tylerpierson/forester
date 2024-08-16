@@ -1,0 +1,115 @@
+.NavBar {
+    width: 100vw;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #1c1c1c, #333);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    &.hidden {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+
+    .NavBarContainer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .NavList {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s ease, background-color 0.3s ease;
+
+            &:hover {
+                color: #f1c40f;
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 5px;
+            }
+
+            li {
+                margin-left: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .Hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        span {
+            background: #fff;
+            height: 3px;
+            width: 25px;
+            margin: 2px 0;
+            transition: background 0.3s ease;
+        }
+        &:hover span {
+            background: #f1c40f;
+        }
+    }
+
+    .MobileMenu {
+        background: #333;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .MobileNavList {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s ease, background-color 0.3s ease;
+
+            &:hover {
+                color: #f1c40f;
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            li {
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .NavList {
+            display: none;
+        }
+        .Hamburger {
+            margin-right: 3%;
+            display: flex;
+        }
+    }
+}
