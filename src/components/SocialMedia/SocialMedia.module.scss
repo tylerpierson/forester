@@ -1,0 +1,16 @@
+.socialMedia {
+    margin-top: 2rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    a {
+        color: #000;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #f1c40f;
+        }
+    }
+}
