@@ -1,9 +1,7 @@
 .NavBar {
     width: 100vw;
     padding: 1rem 2rem;
-    background: linear-gradient(90deg, #003300, #014501, #155215);
     color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -40,7 +38,7 @@
             transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 
             &:hover {
-                color: #6a716b;
+                color: #8f9690;
                 border-radius: 5px;
                 transform: scale(1.1);
             }

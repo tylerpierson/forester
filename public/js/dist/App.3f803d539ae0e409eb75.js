@@ -26,7 +26,7 @@ function App() {
     className: _App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].App
   }, /*#__PURE__*/React.createElement("img", {
     className: _App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logo,
-    src: "/img/forester-logo-noname.png",
+    src: "https://images.squarespace-cdn.com/content/v1/5c708346d74562229cb7c872/1555020988289-4094VIM7BKQ2AWU6QOBG/Forester+logo2.png?format=1500w",
     alt: "Forester Logo"
   }), /*#__PURE__*/React.createElement(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/React.createElement(_components_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 }
@@ -224,17 +224,17 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IMqMrT2eGOGeFiLbCAGg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: beige;
+  background: linear-gradient(90deg, #003300, #014501, #155215);
   position: relative;
 }
 .IMqMrT2eGOGeFiLbCAGg .vhoE8x9DmiQww7vrQ5mS {
-  width: 40rem;
+  width: 20rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.4;
-}`, "",{"version":3,"sources":["webpack://./src/App.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,kBAAA;AACJ;AAAI;EACI,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;AAER","sourcesContent":[".App {\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background-color: beige;\n    position: relative;\n    .logo {\n        width: 40rem;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        opacity: 0.4;\n    }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,6DAAA;EACA,kBAAA;AACJ;AAAI;EACI,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;AAER","sourcesContent":[".App {\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background: linear-gradient(90deg, #003300, #014501, #155215);\n    position: relative;\n    .logo {\n        width: 20rem;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        opacity: 0.4;\n    }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"App": `IMqMrT2eGOGeFiLbCAGg`,
@@ -266,9 +266,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   width: 100vw;
   padding: 1rem 2rem;
-  background: linear-gradient(90deg, #003300, #014501, #155215);
   color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -303,7 +301,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a:hover {
-  color: #6a716b;
+  color: #8f9690;
   border-radius: 5px;
   transform: scale(1.1);
 }
@@ -364,7 +362,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
     margin-right: 3%;
     display: flex;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,YAAA;EACA,kBAAA;EACA,6DAAA;EACA,WAAA;EACA,wCAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,kDAAA;AACJ;AACI;EACI,UAAA;EACA,2BAAA;AACR;AAEI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AAAR;AAGI;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;AADR;AAGQ;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,qBAAA;EACA,sBAAA;EACA,gBAAA;EACA,iBAAA;EACA,4EAAA;AADZ;AAGY;EACI,cAAA;EACA,kBAAA;EACA,qBAAA;AADhB;AAIY;EACI,mBAAA;EACA,eAAA;AAFhB;AAOI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;AALR;AAOQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,gCAAA;AALZ;AAQQ;EACI,mBAAA;AANZ;AAUI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AARR;AAWI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AATR;AAWQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AATZ;AAWY;EACI,cAAA;EACA,0CAAA;AAThB;AAYY;EACI,eAAA;AAVhB;AAeI;EACI;IACI,aAAA;EAbV;EAgBM;IACI,gBAAA;IACA,aAAA;EAdV;AACF","sourcesContent":[".NavBar {\n    width: 100vw;\n    padding: 1rem 2rem;\n    background: linear-gradient(90deg, #003300, #014501, #155215);\n    color: #fff;\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    position: sticky;\n    top: 0;\n    z-index: 1000;\n    transition: opacity 0.5s ease, transform 0.5s ease;\n\n    &.hidden {\n        opacity: 0;\n        transform: translateY(-20%);\n    }\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: #fff;\n            text-decoration: none;\n            padding: 0.5rem 0.8rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;\n\n            &:hover {\n                color: #6a716b;\n                border-radius: 5px;\n                transform: scale(1.1);\n            }\n\n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }\n    }\n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: background 0.3s ease;\n        }\n\n        &:hover span {\n            background: #f1c40f;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        right: 0;\n        width: 100%;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #f1c40f;\n                background-color: rgba(255, 255, 255, 0.1);\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n        .NavList {\n            display: none;\n        }\n\n        .Hamburger {\n            margin-right: 3%;\n            display: flex;\n        }\n    }\n}\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,YAAA;EACA,kBAAA;EACA,WAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,kDAAA;AACJ;AACI;EACI,UAAA;EACA,2BAAA;AACR;AAEI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AAAR;AAGI;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;AADR;AAGQ;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,qBAAA;EACA,sBAAA;EACA,gBAAA;EACA,iBAAA;EACA,4EAAA;AADZ;AAGY;EACI,cAAA;EACA,kBAAA;EACA,qBAAA;AADhB;AAIY;EACI,mBAAA;EACA,eAAA;AAFhB;AAOI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;AALR;AAOQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,gCAAA;AALZ;AAQQ;EACI,mBAAA;AANZ;AAUI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AARR;AAWI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AATR;AAWQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AATZ;AAWY;EACI,cAAA;EACA,0CAAA;AAThB;AAYY;EACI,eAAA;AAVhB;AAeI;EACI;IACI,aAAA;EAbV;EAgBM;IACI,gBAAA;IACA,aAAA;EAdV;AACF","sourcesContent":[".NavBar {\n    width: 100vw;\n    padding: 1rem 2rem;\n    color: #fff;\n    position: sticky;\n    top: 0;\n    z-index: 1000;\n    transition: opacity 0.5s ease, transform 0.5s ease;\n\n    &.hidden {\n        opacity: 0;\n        transform: translateY(-20%);\n    }\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: #fff;\n            text-decoration: none;\n            padding: 0.5rem 0.8rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;\n\n            &:hover {\n                color: #8f9690;\n                border-radius: 5px;\n                transform: scale(1.1);\n            }\n\n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }\n    }\n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: background 0.3s ease;\n        }\n\n        &:hover span {\n            background: #f1c40f;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        right: 0;\n        width: 100%;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #f1c40f;\n                background-color: rgba(255, 255, 255, 0.1);\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n        .NavList {\n            display: none;\n        }\n\n        .Hamburger {\n            margin-right: 3%;\n            display: flex;\n        }\n    }\n}\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
@@ -419,11 +417,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Xl3D2phY1Xn9py_bYJEw {
   border-radius: 10%;
 }
 .Xl3D2phY1Xn9py_bYJEw a:hover {
-  color: #333;
+  color: #1a5b28;
   background-color: #fff;
-  border-radius: 50%;
+  border-radius: 10%;
   transform: scale(1.1);
-}`, "",{"version":3,"sources":["webpack://./src/components/SocialMedia/SocialMedia.module.scss"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,UAAA;EACA,aAAA;EACA,uBAAA;AACJ;AAAI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;EACA,iBAAA;EACA,2BAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,UAAA;EACA,yBAAA;EACA,kBAAA;AAER;AAAQ;EACI,WAAA;EACA,sBAAA;EACA,kBAAA;EACA,qBAAA;AAEZ","sourcesContent":[".socialMedia {\n    margin-top: 2rem;\n    width: 70%;\n    display: flex;\n    justify-content: center;\n    a {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        color: white;\n        font-size: 1.5rem;\n        transition: color 0.3s ease;\n        width: 3rem;\n        height: 3rem;\n        margin: 0 0.5rem;\n        padding: 0;\n        background-color: #1a5b28;\n        border-radius: 10%;\n\n        &:hover {\n            color: #333;\n            background-color: #fff;\n            border-radius: 50%;\n            transform: scale(1.1);\n        }\n    }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/SocialMedia/SocialMedia.module.scss"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,UAAA;EACA,aAAA;EACA,uBAAA;AACJ;AAAI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;EACA,iBAAA;EACA,2BAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,UAAA;EACA,yBAAA;EACA,kBAAA;AAER;AAAQ;EACI,cAAA;EACA,sBAAA;EACA,kBAAA;EACA,qBAAA;AAEZ","sourcesContent":[".socialMedia {\n    margin-top: 2rem;\n    width: 70%;\n    display: flex;\n    justify-content: center;\n    a {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        color: white;\n        font-size: 1.5rem;\n        transition: color 0.3s ease;\n        width: 3rem;\n        height: 3rem;\n        margin: 0 0.5rem;\n        padding: 0;\n        background-color: #1a5b28;\n        border-radius: 10%;\n\n        &:hover {\n            color: #1a5b28;\n            background-color: #fff;\n            border-radius: 10%;\n            transform: scale(1.1);\n        }\n    }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"socialMedia": `Xl3D2phY1Xn9py_bYJEw`
@@ -847,4 +845,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.ec0fab17b09f3a2930df1bde1443ace3.js.map
+//# sourceMappingURL=App.d863f9ff4a960bf711f68b3bfdcf8641.js.map
