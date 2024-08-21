@@ -50,22 +50,22 @@ function NavBar() {
           </div>
         ) : (
           <ul className={styles.NavList}>
-            <a href="#tour"><li>Tour</li></a>
-            <a href="#newmusic"><li>New Music</li></a>
-            <a href="#store"><li>Store</li></a>
-            <a href="#videos"><li>Videos</li></a>
-            <a href="#ourmission"><li>Our Mission</li></a>
+            <a href="#tour"><li>TOUR</li></a>
+            <a href="#newmusic"><li>NEW MUSIC</li></a>
+            <a href="#store"><li>STORE</li></a>
+            <a href="#videos"><li>VIDEOS</li></a>
+            <a href="#ourmission"><li>OUR MISSION</li></a>
           </ul>
         )}
       </div>
       {isMobile && isMenuOpen && (
         <div className={styles.MobileMenu}>
           <ul className={styles.MobileNavList}>
-            <a href="#tour" onClick={toggleMenu}><li>Tour</li></a>
-            <a href="#newmusic" onClick={toggleMenu}><li>New Music</li></a>
-            <a href="#store" onClick={toggleMenu}><li>Store</li></a>
-            <a href="#videos" onClick={toggleMenu}><li>Videos</li></a>
-            <a href="#ourmission" onClick={toggleMenu}><li>Our Mission</li></a>
+            <a href="#tour" onClick={toggleMenu}><li>TOUR</li></a>
+            <a href="#newmusic" onClick={toggleMenu}><li>NEW MUSIC</li></a>
+            <a href="#store" onClick={toggleMenu}><li>STORE</li></a>
+            <a href="#videos" onClick={toggleMenu}><li>VIDEOS</li></a>
+            <a href="#ourmission" onClick={toggleMenu}><li>OUR MISSION</li></a>
           </ul>
         </div>
       )}
