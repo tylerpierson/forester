@@ -8,25 +8,6 @@ everything under the hood and no opinionated set up
 
 I will base all my tutorials on this Starter Kit.
 
-# Who Am I?
-
-![bigpoppacode.io](https://i.imgur.com/PjuyuzK.jpeg)
-
-I am Arthur Bernier Jr. I work as freelance fullstack web developer and attraction marketing consultant specializing in supporting e-commerce brands,
-subscription box sites, social activists, religious/non-profit leaders and creative entrepreneurs(i.e. barbers, artists, musicians, stylists, models and photographers).
-I have a passion for helping entrepreneurs reach their perfect audience and helping you communicate to that audience in a way that makes them know, like and trust you. I also am a Part-Time Instructor at General Assembly, a Senior Director at a National Non-Profit, a Multi Time Start-Up Founder who has raised 7 figures in VC, Creator and Maintainer of MambaScript, and Multi Time Tech Lead at startups from Seed Stage to Billion Dollar Valuation.
-
-
-# My Favorite Online Instructors
-
-[__Colt Steele__](https://www.youtube.com/channel/UCrqAGUPPMOdo0jfQ6grikZw)
-
-[__Brad Traversy__](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA)
-
-[__Jose Santos Garcia__](https://www.youtube.com/channel/UC46wWUso9H5KPQcoL9iE3Ug)
-
-[__Stephen Grider__](https://www.youtube.com/channel/UCQCaS3atWyNHEy5PkDXdpNg/)
-
 ## Steps
 
 
