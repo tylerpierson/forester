@@ -4,10 +4,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: beige;
+    background: linear-gradient(45deg, #002f00, #004a00, #014701);
     position: relative;
+    font-family: "Mitr", sans-serif;
+
     .logo {
-        width: 40rem;
+        width: 20rem;
         position: absolute;
         top: 50%;
         left: 50%;

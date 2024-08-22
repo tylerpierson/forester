@@ -26,7 +26,7 @@ function App() {
     className: _App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].App
   }, /*#__PURE__*/React.createElement("img", {
     className: _App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logo,
-    src: "/img/forester-logo-noname.png",
+    src: "https://images.squarespace-cdn.com/content/v1/5c708346d74562229cb7c872/1555020988289-4094VIM7BKQ2AWU6QOBG/Forester+logo2.png?format=1500w",
     alt: "Forester Logo"
   }), /*#__PURE__*/React.createElement(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/React.createElement(_components_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 }
@@ -89,34 +89,34 @@ function NavBar() {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].NavList
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#tour"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Tour")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "TOUR")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#newmusic"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "New Music")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "NEW MUSIC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#store"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Store")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "STORE")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#videos"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Videos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "VIDEOS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#ourmission"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Our Mission")))), isMobile && isMenuOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "OUR MISSION")))), isMobile && isMenuOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MobileMenu
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MobileNavList
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#tour",
     onClick: toggleMenu
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Tour")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "TOUR")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#newmusic",
     onClick: toggleMenu
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "New Music")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "NEW MUSIC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#store",
     onClick: toggleMenu
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Store")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "STORE")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#videos",
     onClick: toggleMenu
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Videos")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "VIDEOS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#ourmission",
     onClick: toggleMenu
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Our Mission")))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "OUR MISSION")))));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
 
@@ -146,26 +146,34 @@ function SocialMedia() {
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaFacebookF, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://twitter.com",
-    target: "_blank",
-    rel: "noopener noreferrer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaTwitter, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "https://instagram.com",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaInstagram, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://linkedin.com",
+    href: "https://tiktok.com",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaLinkedinIn, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaTiktok, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "https://twitter.com",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaTwitter, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "https://spotify.com",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaSpotify, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "https://applemusic.com",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaApple, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "https://youtube.com",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaYoutube, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://github.com",
+    href: "https://soundcloud.com",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaGithub, null)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaSoundcloud, null)));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SocialMedia);
 
@@ -216,17 +224,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IMqMrT2eGOGeFiLbCAGg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: beige;
+  background: linear-gradient(45deg, #002f00, #004a00, #014701);
   position: relative;
+  font-family: "Mitr", sans-serif;
 }
 .IMqMrT2eGOGeFiLbCAGg .vhoE8x9DmiQww7vrQ5mS {
-  width: 40rem;
+  width: 20rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.4;
-}`, "",{"version":3,"sources":["webpack://./src/App.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,kBAAA;AACJ;AAAI;EACI,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;AAER","sourcesContent":[".App {\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background-color: beige;\n    position: relative;\n    .logo {\n        width: 40rem;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        opacity: 0.4;\n    }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,6DAAA;EACA,kBAAA;EACA,+BAAA;AACJ;AACI;EACI,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;AACR","sourcesContent":[".App {\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background: linear-gradient(45deg, #002f00, #004a00, #014701);\n    position: relative;\n    font-family: \"Mitr\", sans-serif;\n\n    .logo {\n        width: 20rem;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        opacity: 0.4;\n    }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"App": `IMqMrT2eGOGeFiLbCAGg`,
@@ -258,9 +267,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   width: 100vw;
   padding: 1rem 2rem;
-  background: linear-gradient(90deg, #1c1c1c, #333);
   color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -272,13 +279,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
 }
 .QpVD3qAS0nYBtoQqAYoe .IN1dAZkGN8YgIc1_f2FV {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: center;
+  width: auto;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -289,18 +296,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   align-items: center;
   color: #fff;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 0.5rem 0.8rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a:hover {
-  color: #f1c40f;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #8f9690;
   border-radius: 5px;
+  transform: scale(1.1);
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a li {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   cursor: pointer;
 }
 .QpVD3qAS0nYBtoQqAYoe .ZcrcTrKhDDmmbAOeAxJJ {
@@ -356,7 +363,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
     margin-right: 3%;
     display: flex;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,YAAA;EACA,kBAAA;EACA,iDAAA;EACA,WAAA;EACA,wCAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,kDAAA;AACJ;AACI;EACI,UAAA;EACA,2BAAA;AACR;AAEI;EACI,aAAA;EACA,yBAAA;EACA,mBAAA;AAAR;AAGI;EACI,aAAA;EACA,6BAAA;EACA,WAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;AADR;AAGQ;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AADZ;AAGY;EACI,cAAA;EACA,0CAAA;EACA,kBAAA;AADhB;AAIY;EACI,iBAAA;EACA,eAAA;AAFhB;AAOI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;AALR;AAMQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,gCAAA;AAJZ;AAMQ;EACI,mBAAA;AAJZ;AAQI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AANR;AASI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AAPR;AASQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AAPZ;AASY;EACI,cAAA;EACA,0CAAA;AAPhB;AAUY;EACI,eAAA;AARhB;AAaI;EACI;IACI,aAAA;EAXV;EAaM;IACI,gBAAA;IACA,aAAA;EAXV;AACF","sourcesContent":[".NavBar {\n    width: 100vw;\n    padding: 1rem 2rem;\n    background: linear-gradient(90deg, #1c1c1c, #333);\n    color: #fff;\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    position: sticky;\n    top: 0;\n    z-index: 1000;\n    transition: opacity 0.5s ease, transform 0.5s ease;\n\n    &.hidden {\n        opacity: 0;\n        transform: translateY(-20%);\n    }\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: flex-end;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: space-around;\n        width: 100%;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: #fff;\n            text-decoration: none;\n            padding: 0.5rem 1rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #f1c40f;\n                background-color: rgba(255, 255, 255, 0.1);\n                border-radius: 5px;\n            }\n\n            li {\n                margin-left: 1rem;\n                cursor: pointer;\n            }\n        }\n    }\n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: background 0.3s ease;\n        }\n        &:hover span {\n            background: #f1c40f;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        right: 0;\n        width: 100%;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #f1c40f;\n                background-color: rgba(255, 255, 255, 0.1);\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n        .NavList {\n            display: none;\n        }\n        .Hamburger {\n            margin-right: 3%;\n            display: flex;\n        }\n    }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,YAAA;EACA,kBAAA;EACA,WAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,kDAAA;AACJ;AACI;EACI,UAAA;EACA,2BAAA;AACR;AAEI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AAAR;AAGI;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;AADR;AAGQ;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,qBAAA;EACA,sBAAA;EACA,gBAAA;EACA,iBAAA;EACA,4EAAA;AADZ;AAGY;EACI,cAAA;EACA,kBAAA;EACA,qBAAA;AADhB;AAIY;EACI,mBAAA;EACA,eAAA;AAFhB;AAOI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;AALR;AAOQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,gCAAA;AALZ;AAQQ;EACI,mBAAA;AANZ;AAUI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AARR;AAWI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AATR;AAWQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AATZ;AAWY;EACI,cAAA;EACA,0CAAA;AAThB;AAYY;EACI,eAAA;AAVhB;AAeI;EACI;IACI,aAAA;EAbV;EAgBM;IACI,gBAAA;IACA,aAAA;EAdV;AACF","sourcesContent":[".NavBar {\n    width: 100vw;\n    padding: 1rem 2rem;\n    color: #fff;\n    position: sticky;\n    top: 0;\n    z-index: 1000;\n    transition: opacity 0.5s ease, transform 0.5s ease;\n\n    &.hidden {\n        opacity: 0;\n        transform: translateY(-20%);\n    }\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: #fff;\n            text-decoration: none;\n            padding: 0.5rem 0.8rem;\n            font-weight: 400;\n            font-size: 1.5rem;\n            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;\n\n            &:hover {\n                color: #8f9690;\n                border-radius: 5px;\n                transform: scale(1.1);\n            }\n\n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }\n    }\n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: background 0.3s ease;\n        }\n\n        &:hover span {\n            background: #f1c40f;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        right: 0;\n        width: 100%;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #f1c40f;\n                background-color: rgba(255, 255, 255, 0.1);\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n        .NavList {\n            display: none;\n        }\n\n        .Hamburger {\n            margin-right: 3%;\n            display: flex;\n        }\n    }\n}\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
@@ -394,17 +401,28 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Xl3D2phY1Xn9py_bYJEw {
   margin-top: 2rem;
   width: 70%;
   display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
+  justify-content: center;
 }
 .Xl3D2phY1Xn9py_bYJEw a {
-  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
   font-size: 1.5rem;
   transition: color 0.3s ease;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0.5rem;
+  padding: 0;
+  background-color: #1a5b28;
+  border-radius: 10%;
 }
 .Xl3D2phY1Xn9py_bYJEw a:hover {
-  color: #f1c40f;
-}`, "",{"version":3,"sources":["webpack://./src/components/SocialMedia/SocialMedia.module.scss"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,UAAA;EACA,aAAA;EACA,6BAAA;EACA,SAAA;AACJ;AAAI;EACI,WAAA;EACA,iBAAA;EACA,2BAAA;AAER;AAAQ;EACI,cAAA;AAEZ","sourcesContent":[".socialMedia {\n    margin-top: 2rem;\n    width: 70%;\n    display: flex;\n    justify-content: space-evenly;\n    gap: 1rem;\n    a {\n        color: #333;\n        font-size: 1.5rem;\n        transition: color 0.3s ease;\n\n        &:hover {\n            color: #f1c40f;\n        }\n    }\n}\n"],"sourceRoot":""}]);
+  color: #1a5b28;
+  background-color: #fff;
+  border-radius: 10%;
+  transform: scale(1.1);
+}`, "",{"version":3,"sources":["webpack://./src/components/SocialMedia/SocialMedia.module.scss"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,UAAA;EACA,aAAA;EACA,uBAAA;AACJ;AAAI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;EACA,iBAAA;EACA,2BAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,UAAA;EACA,yBAAA;EACA,kBAAA;AAER;AAAQ;EACI,cAAA;EACA,sBAAA;EACA,kBAAA;EACA,qBAAA;AAEZ","sourcesContent":[".socialMedia {\n    margin-top: 2rem;\n    width: 70%;\n    display: flex;\n    justify-content: center;\n    a {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        color: white;\n        font-size: 1.5rem;\n        transition: color 0.3s ease;\n        width: 3rem;\n        height: 3rem;\n        margin: 0 0.5rem;\n        padding: 0;\n        background-color: #1a5b28;\n        border-radius: 10%;\n\n        &:hover {\n            color: #1a5b28;\n            background-color: #fff;\n            border-radius: 10%;\n            transform: scale(1.1);\n        }\n    }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"socialMedia": `Xl3D2phY1Xn9py_bYJEw`
@@ -828,4 +846,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.d3b23ec1f355188b95aecdf7ec5659c8.js.map
+//# sourceMappingURL=App.fd93bf5af38d7e64a425d88a1ade6800.js.map

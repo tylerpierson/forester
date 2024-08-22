@@ -1,9 +1,7 @@
 .NavBar {
     width: 100vw;
     padding: 1rem 2rem;
-    background: linear-gradient(90deg, #1c1c1c, #333);
     color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -16,14 +14,14 @@
 
     .NavBarContainer {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
     }
 
     .NavList {
         display: flex;
-        justify-content: space-around;
-        width: 100%;
+        justify-content: center;
+        width: auto;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -34,19 +32,19 @@
             align-items: center;
             color: #fff;
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: color 0.3s ease, background-color 0.3s ease;
+            padding: 0.5rem 0.8rem;
+            font-weight: 400;
+            font-size: 1.5rem;
+            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 
             &:hover {
-                color: #f1c40f;
-                background-color: rgba(255, 255, 255, 0.1);
+                color: #8f9690;
                 border-radius: 5px;
+                transform: scale(1.1);
             }
 
             li {
-                margin-left: 1rem;
+                margin-left: 0.5rem;
                 cursor: pointer;
             }
         }
@@ -56,6 +54,7 @@
         display: none;
         flex-direction: column;
         cursor: pointer;
+
         span {
             background: #fff;
             height: 3px;
@@ -63,6 +62,7 @@
             margin: 2px 0;
             transition: background 0.3s ease;
         }
+
         &:hover span {
             background: #f1c40f;
         }
@@ -107,9 +107,11 @@
         .NavList {
             display: none;
         }
+
         .Hamburger {
             margin-right: 3%;
             display: flex;
         }
     }
 }
+
