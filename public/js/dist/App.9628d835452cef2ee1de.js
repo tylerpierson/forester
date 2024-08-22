@@ -53,42 +53,30 @@ function App() {
 
 const ImageCarousel = () => {
   const images = [{
-    src: '/img/album1.png',
+    src: '/img/moonlight.jpg',
     alt: 'Image 1',
-    link: 'http://lnk.to/xgrow'
+    link: 'https://lnk.to/xmoonlight'
   }, {
-    src: '/img/album2.png',
+    src: '/img/watercolor.jpg',
     alt: 'Image 2',
-    link: 'http://lnk.to/xpieces'
+    link: 'https://lnk.to/watercolor'
   }, {
-    src: '/img/album3.png',
+    src: '/img/AROL.jpg',
     alt: 'Image 3',
-    link: 'https://lnk.to/whenifallasleep'
+    link: 'https://lnk.to/ARoL'
   }, {
-    src: '/img/album4.png',
+    src: '/img/kerosene.jpg',
     alt: 'Image 4',
-    link: 'http://lnk.to/xholdingback'
-  }, {
-    src: '/img/album5.jpeg',
-    alt: 'Image 5',
-    link: 'https://lnk.to/xsitw'
-  }, {
-    src: '/img/album6.png',
-    alt: 'Image 6',
-    link: 'http://lnk.to/xchemicals'
-  }, {
-    src: '/img/album7.png',
-    alt: 'Image 7',
-    link: 'https://lnk.to/xthinkingaboutyou'
-  }, {
-    src: '/img/album8.jpg',
-    alt: 'Image 8',
-    link: 'https://lnk.to/xSayNoMore'
+    link: 'https://lowly.ffm.to/forester-kerosene'
   }];
+  const extendedImages = [...images, ...images, ...images];
   const [currentIndex, setCurrentIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
-  const goToSlide = index => {
-    setCurrentIndex(index);
-  };
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prevIndex => (prevIndex + 1) % (images.length * 3));
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [images.length]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _ImageCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -96,23 +84,29 @@ const ImageCarousel = () => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _ImageCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselInner,
     style: {
-      transform: "translateX(-".concat(currentIndex * 100, "%)")
+      transform: "translateX(-".concat(currentIndex % images.length * (100 / 3), "%)")
     }
-  }, images.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, extendedImages.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _ImageCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselItem,
-    key: index
+    key: index,
+    style: {
+      flex: '0 0 33.33%'
+    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     target: "_blank",
-    href: image.link
+    href: image.link,
+    rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: image.src,
     alt: image.alt
   })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _ImageCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dotsContainer
-  }, images.map((_, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, Array.from({
+    length: Math.ceil(images.length / 3)
+  }).map((_, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: index,
-    className: "".concat(_ImageCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dot, " ").concat(currentIndex === index ? _ImageCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].active : ''),
-    onClick: () => goToSlide(index)
+    className: "".concat(_ImageCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dot, " ").concat(currentIndex % images.length === index * 3 ? _ImageCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].active : ''),
+    onClick: () => setCurrentIndex(index * 3)
   }))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ImageCarousel);
@@ -344,9 +338,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IMqMrT2eGOGeFiLbCAGg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(45deg, #002f00, #004a00, #014701);
+  background: linear-gradient(45deg, #1b1c1b, #363e36, #232723);
   position: relative;
-  font-family: "Mitr", sans-serif;
+  font-family: "Roboto Mono", monospace;
 }
 .IMqMrT2eGOGeFiLbCAGg .vhoE8x9DmiQww7vrQ5mS {
   width: 20rem;
@@ -355,7 +349,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IMqMrT2eGOGeFiLbCAGg {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.4;
-}`, "",{"version":3,"sources":["webpack://./src/App.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,6DAAA;EACA,kBAAA;EACA,+BAAA;AACJ;AACI;EACI,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;AACR","sourcesContent":[".App {\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background: linear-gradient(45deg, #002f00, #004a00, #014701);\n    position: relative;\n    font-family: \"Mitr\", sans-serif;\n\n    .logo {\n        width: 20rem;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        opacity: 0.4;\n    }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,6DAAA;EACA,kBAAA;EACA,qCAAA;AACJ;AACI;EACI,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;AACR","sourcesContent":[".App {\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background: linear-gradient(45deg, #1b1c1b, #363e36, #232723);\n    position: relative;\n    font-family: \"Roboto Mono\", monospace;\n\n    .logo {\n        width: 20rem;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        opacity: 0.4;\n    }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"App": `IMqMrT2eGOGeFiLbCAGg`,
@@ -387,51 +381,62 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, `.zno7C5Vtpr1rk2Z2dJ6O {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 1560px;
   margin: auto;
   overflow: hidden;
-  text-align: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
 
 .P2TKSHYMiUVR4GoQ5sw9 {
   display: flex;
-  transition: transform 0.5s ease-in-out;
 }
 
 .g3PXTRa9pAMQpzBbGmDp {
   display: flex;
+  width: 300%;
   transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .EeKhh5r4VraWSOzFyRWu {
-  min-width: 100%;
-  transition: opacity 0.5s ease-in-out;
+  flex: 0 0 33.33%;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 .EeKhh5r4VraWSOzFyRWu img {
-  width: 70%;
-  border-radius: 10px;
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+.EeKhh5r4VraWSOzFyRWu img:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 .khu3MTLV3xPVW200TQw_ {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .ODjsskWujBY6FGmw25jV {
-  height: 10px;
-  width: 10px;
-  margin: 0 5px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
   display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .ODjsskWujBY6FGmw25jV.LBrM6TSGBKSYePlewCrQ {
-  background-color: rgba(0, 0, 0, 0.9);
-}`, "",{"version":3,"sources":["webpack://./src/components/ImageCarousel/ImageCarousel.module.scss"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,WAAA;EACA,gBAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;AACJ;;AAGC;EACG,aAAA;EACA,sCAAA;AAAJ;;AAIC;EACG,aAAA;EACA,sCAAA;AADJ;;AAKC;EACG,eAAA;EACA,oCAAA;AAFJ;;AAMC;EACG,UAAA;EACA,mBAAA;AAHJ;;AAOC;EACG,aAAA;EACA,uBAAA;EACA,gBAAA;AAJJ;;AAQC;EACG,YAAA;EACA,WAAA;EACA,aAAA;EACA,oCAAA;EACA,kBAAA;EACA,qBAAA;EACA,eAAA;AALJ;;AASC;EACG,oCAAA;AANJ","sourcesContent":[".carouselContainer {\n    position: relative;\n    width: 100%;\n    max-width: 600px;\n    margin: auto;\n    overflow: hidden;\n    text-align: center;\n }\n \n \n .carousel {\n    display: flex;\n    transition: transform 0.5s ease-in-out;\n }\n \n \n .carouselInner {\n    display: flex;\n    transition: transform 0.5s ease-in-out;\n }\n \n \n .carouselItem {\n    min-width: 100%;\n    transition: opacity 0.5s ease-in-out;\n }\n \n \n .carouselItem img {\n    width: 70%;\n    border-radius: 10px;\n }\n \n \n .dotsContainer {\n    display: flex;\n    justify-content: center;\n    margin-top: 15px;\n }\n \n \n .dot {\n    height: 10px;\n    width: 10px;\n    margin: 0 5px;\n    background-color: rgba(0, 0, 0, 0.5);\n    border-radius: 50%;\n    display: inline-block;\n    cursor: pointer;\n }\n \n \n .dot.active {\n    background-color: rgba(0, 0, 0, 0.9);\n }\n "],"sourceRoot":""}]);
+  background-color: #333;
+}
+
+.ODjsskWujBY6FGmw25jV:hover {
+  background-color: #666;
+}`, "",{"version":3,"sources":["webpack://./src/components/ImageCarousel/ImageCarousel.module.scss"],"names":[],"mappings":"AAAA;EACG,kBAAA;EACA,WAAA;EACA,iBAAA;EACA,YAAA;EACA,gBAAA;EACA,gBAAA;EACA,iBAAA;AACH;;AAEC;EACE,aAAA;AACH;;AAEC;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACH;;AAEC;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACH;;AAEC;EACE,WAAA;EACA,kBAAA;EACA,+BAAA,EAAA,8BAAA;AACH;AACG;EACE,sBAAA,EAAA,+BAAA;AACL;;AAGC;EACE,kBAAA;EACA,gBAAA;AAAH;;AAGC;EACE,qBAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAH;;AAGC;EACE,sBAAA;AAAH;;AAGC;EACE,sBAAA;AAAH","sourcesContent":[".carouselContainer {\n   position: relative;\n   width: 100%;\n   max-width: 1560px;\n   margin: auto;\n   overflow: hidden;\n   margin-top: 1rem;\n   padding-top: 1rem;\n }\n \n .carousel {\n   display: flex;\n }\n \n .carouselInner {\n   display: flex;\n   width: calc(100% * 3);\n   transition: transform 0.5s ease-in-out;\n   will-change: transform;\n }\n \n .carouselItem {\n   flex: 0 0 33.33%; \n   box-sizing: border-box;\n   padding: 0 20px;\n }\n \n .carouselItem img {\n   width: 100%;\n   border-radius: 8px;\n   transition: transform 0.3s ease; /* Smooth scaling transition */\n \n   &:hover {\n     transform: scale(1.05); /* Slightly scale up on hover */\n   }\n }\n \n .dotsContainer {\n   text-align: center;\n   margin-top: 10px;\n }\n \n .dot {\n   display: inline-block;\n   width: 10px;\n   height: 10px;\n   margin: 0 5px;\n   background-color: #ccc;\n   border-radius: 50%;\n   cursor: pointer;\n   transition: background-color 0.3s ease;\n }\n \n .dot.active {\n   background-color: #333;\n }\n \n .dot:hover {\n   background-color: #666;\n }\n "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `zno7C5Vtpr1rk2Z2dJ6O`,
@@ -468,15 +473,11 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   width: 100vw;
   padding: 1rem 2rem;
-  color: #fff;
+  color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
   transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.QpVD3qAS0nYBtoQqAYoe.pGuXSjiAF9ReSU4SwCSk {
-  opacity: 0;
-  transform: translateY(-20%);
 }
 .QpVD3qAS0nYBtoQqAYoe .IN1dAZkGN8YgIc1_f2FV {
   display: flex;
@@ -495,11 +496,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: white;
   text-decoration: none;
   padding: 0.5rem 0.8rem;
-  font-weight: 400;
-  font-size: 2rem;
+  font-weight: 500;
+  font-size: 1.4rem;
   transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a:hover {
@@ -564,11 +565,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
     margin-right: 3%;
     display: flex;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,YAAA;EACA,kBAAA;EACA,WAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,kDAAA;AACJ;AACI;EACI,UAAA;EACA,2BAAA;AACR;AAEI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AAAR;AAGI;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;AADR;AAGQ;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,qBAAA;EACA,sBAAA;EACA,gBAAA;EACA,eAAA;EACA,4EAAA;AADZ;AAGY;EACI,cAAA;EACA,kBAAA;EACA,qBAAA;AADhB;AAIY;EACI,mBAAA;EACA,eAAA;AAFhB;AAOI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;AALR;AAOQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,gCAAA;AALZ;AAQQ;EACI,mBAAA;AANZ;AAUI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AARR;AAWI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AATR;AAWQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AATZ;AAWY;EACI,cAAA;EACA,0CAAA;AAThB;AAYY;EACI,eAAA;AAVhB;AAeI;EACI;IACI,aAAA;EAbV;EAgBM;IACI,gBAAA;IACA,aAAA;EAdV;AACF","sourcesContent":[".NavBar {\n    width: 100vw;\n    padding: 1rem 2rem;\n    color: #fff;\n    position: sticky;\n    top: 0;\n    z-index: 1000;\n    transition: opacity 0.5s ease, transform 0.5s ease;\n\n    &.hidden {\n        opacity: 0;\n        transform: translateY(-20%);\n    }\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: #fff;\n            text-decoration: none;\n            padding: 0.5rem 0.8rem;\n            font-weight: 400;\n            font-size: 2rem;\n            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;\n\n            &:hover {\n                color: #8f9690;\n                border-radius: 5px;\n                transform: scale(1.1);\n            }\n\n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }\n    }\n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: background 0.3s ease;\n        }\n\n        &:hover span {\n            background: #f1c40f;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        right: 0;\n        width: 100%;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #f1c40f;\n                background-color: rgba(255, 255, 255, 0.1);\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n        .NavList {\n            display: none;\n        }\n\n        .Hamburger {\n            margin-right: 3%;\n            display: flex;\n        }\n    }\n}\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,YAAA;EACA,kBAAA;EACA,YAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,kDAAA;AACJ;AACI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AACR;AAEI;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;AAAR;AAEQ;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;EACA,qBAAA;EACA,sBAAA;EACA,gBAAA;EACA,iBAAA;EACA,4EAAA;AAAZ;AAEY;EACI,cAAA;EACA,kBAAA;EACA,qBAAA;AAAhB;AAGY;EACI,mBAAA;EACA,eAAA;AADhB;AAMI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;AAJR;AAMQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,gCAAA;AAJZ;AAOQ;EACI,mBAAA;AALZ;AASI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AAPR;AAUI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AARR;AAUQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AARZ;AAUY;EACI,cAAA;EACA,0CAAA;AARhB;AAWY;EACI,eAAA;AAThB;AAcI;EACI;IACI,aAAA;EAZV;EAeM;IACI,gBAAA;IACA,aAAA;EAbV;AACF","sourcesContent":[".NavBar {\n    width: 100vw;\n    padding: 1rem 2rem;\n    color: white;\n    position: sticky;\n    top: 0;\n    z-index: 1000;\n    transition: opacity 0.5s ease, transform 0.5s ease;\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: white;\n            text-decoration: none;\n            padding: 0.5rem 0.8rem;\n            font-weight: 500;\n            font-size: 1.4rem;\n            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;\n\n            &:hover {\n                color: #8f9690;\n                border-radius: 5px;\n                transform: scale(1.1);\n            }\n\n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }\n    }\n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: background 0.3s ease;\n        }\n\n        &:hover span {\n            background: #f1c40f;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        right: 0;\n        width: 100%;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #f1c40f;\n                background-color: rgba(255, 255, 255, 0.1);\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n        .NavList {\n            display: none;\n        }\n\n        .Hamburger {\n            margin-right: 3%;\n            display: flex;\n        }\n    }\n}\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
-	"hidden": `pGuXSjiAF9ReSU4SwCSk`,
 	"NavBarContainer": `IN1dAZkGN8YgIc1_f2FV`,
 	"NavList": `o5xAJUHc5NRtb6zPAGtC`,
 	"Hamburger": `ZcrcTrKhDDmmbAOeAxJJ`,
@@ -651,43 +651,34 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.hkTH5c4T24dA_wFjm2O4 {
+___CSS_LOADER_EXPORT___.push([module.id, `.DyskzzB41LkALTA2XioJ {
   position: relative;
-  width: 100%;
+  width: 85%;
   height: 100vh;
   overflow: hidden;
+  border-radius: 1%;
 }
 
-.YGgZ10UzGYB2YZRwNiJ5 {
+.WBUPoLGLPVO0zY9pbBUT {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
-.RMfzKF88S47ayRHh68OO {
+.QNBspwgb7ectoaEi8BUm {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-}
-
-.RMfzKF88S47ayRHh68OO h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.RMfzKF88S47ayRHh68OO p {
-  font-size: 1.5rem;
-  margin: 0;
-}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,WAAA;EACA,aAAA;EACA,gBAAA;AACJ;;AAEE;EACE,WAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;AACP;;AAEE;EACE,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;EACA,kBAAA;AACJ;;AAEE;EACE,eAAA;EACA,SAAA;AACJ;;AAEE;EACE,iBAAA;EACA,SAAA;AACJ","sourcesContent":[".video-banner {\n    position: relative;\n    width: 100%;\n    height: 100vh;\n    overflow: hidden;\n  }\n  \n  .video-banner__video {\n    width: 100%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n  }\n  \n  .video-banner__content {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: white;\n    text-align: center;\n  }\n  \n  .video-banner__content h1 {\n    font-size: 3rem;\n    margin: 0;\n  }\n  \n  .video-banner__content p {\n    font-size: 1.5rem;\n    margin: 0;\n  }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,UAAA;EACA,aAAA;EACA,gBAAA;EACA,iBAAA;AACJ;;AAEE;EACE,WAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;AACP;;AAEE;EACE,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;EACA,kBAAA;AACJ","sourcesContent":[".videoBanner {\n    position: relative;\n    width: 85%;\n    height: 100vh;\n    overflow: hidden;\n    border-radius: 1%;\n  }\n  \n  .videoBannerVideo {\n    width: 100%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n  }\n  \n  .videoBannerContent {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: white;\n    text-align: center;\n  }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"video-banner": `hkTH5c4T24dA_wFjm2O4`,
-	"video-banner__video": `YGgZ10UzGYB2YZRwNiJ5`,
-	"video-banner__content": `RMfzKF88S47ayRHh68OO`
+	"videoBanner": `DyskzzB41LkALTA2XioJ`,
+	"videoBannerVideo": `WBUPoLGLPVO0zY9pbBUT`,
+	"videoBannerContent": `QNBspwgb7ectoaEi8BUm`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1214,4 +1205,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.57fa39c2cc5a5b1cae0ea52eb9fd1401.js.map
+//# sourceMappingURL=App.50dbf77ef2625e6965c5b398e5b40118.js.map
