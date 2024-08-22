@@ -6,7 +6,7 @@
     align-items: center;
     background: linear-gradient(45deg, #1b1c1b, #363e36, #232723);
     position: relative;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Poppins", sans-serif;
 
     .logo {
         width: 20rem;
@@ -17,6 +17,6 @@
         opacity: 0.6;
         z-index: 1000;
         pointer-events: none; 
-        margin-top: -10rem;
+        margin-top: -35rem;
     }
 }
