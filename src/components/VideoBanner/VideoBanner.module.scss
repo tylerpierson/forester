@@ -1,0 +1,31 @@
+.video-banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .video-banner__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .video-banner__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+  }
+  
+  .video-banner__content h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .video-banner__content p {
+    font-size: 1.5rem;
+    margin: 0;
+  }
