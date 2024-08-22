@@ -1,16 +1,11 @@
 .NavBar {
     width: 100vw;
     padding: 1rem 2rem;
-    color: #fff;
+    color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
     transition: opacity 0.5s ease, transform 0.5s ease;
-
-    &.hidden {
-        opacity: 0;
-        transform: translateY(-20%);
-    }
 
     .NavBarContainer {
         display: flex;
@@ -30,11 +25,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #fff;
+            color: white;
             text-decoration: none;
             padding: 0.5rem 0.8rem;
-            font-weight: 400;
-            font-size: 2rem;
+            font-weight: 500;
+            font-size: 1.4rem;
             transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 
             &:hover {

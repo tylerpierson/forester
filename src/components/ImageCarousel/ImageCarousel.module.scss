@@ -1,56 +1,61 @@
 .carouselContainer {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    overflow: hidden;
-    text-align: center;
+   position: relative;
+   width: 100%;
+   max-width: 1560px;
+   margin: auto;
+   overflow: hidden;
+   margin-top: 1rem;
+   padding-top: 1rem;
  }
- 
  
  .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+   display: flex;
  }
- 
  
  .carouselInner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+   display: flex;
+   width: calc(100% * 3);
+   transition: transform 0.5s ease-in-out;
+   will-change: transform;
  }
- 
  
  .carouselItem {
-    min-width: 100%;
-    transition: opacity 0.5s ease-in-out;
+   flex: 0 0 33.33%; 
+   box-sizing: border-box;
+   padding: 0 20px;
  }
- 
  
  .carouselItem img {
-    width: 70%;
-    border-radius: 10px;
- }
+   width: 100%;
+   border-radius: 8px;
+   transition: transform 0.3s ease; /* Smooth scaling transition */
  
+   &:hover {
+     transform: scale(1.05); /* Slightly scale up on hover */
+   }
+ }
  
  .dotsContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
+   text-align: center;
+   margin-top: 10px;
  }
- 
  
  .dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   margin: 0 5px;
+   background-color: #ccc;
+   border-radius: 50%;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
  }
  
- 
  .dot.active {
-    background-color: rgba(0, 0, 0, 0.9);
+   background-color: #333;
+ }
+ 
+ .dot:hover {
+   background-color: #666;
  }
  
