@@ -1,0 +1,27 @@
+.tourSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  
+    #seated-55fdf2c0 {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      iframe {
+        border: none;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+      }
+    }
+  }
+  

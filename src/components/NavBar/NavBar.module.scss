@@ -17,9 +17,18 @@
         display: flex;
         justify-content: center;
         width: auto;
+        height: 3.5rem;
         list-style: none;
         padding: 0;
         margin: 0;
+        background-color: #1e254a;
+        border-radius: 0.75rem;
+
+        &:hover {
+            color: #1a5b28;
+            background-color: #fff;
+            border-radius: 0.75rem;
+        }
 
         a {
             display: flex;
@@ -27,15 +36,13 @@
             align-items: center;
             color: white;
             text-decoration: none;
-            padding: 0.5rem 0.8rem;
+            padding: 0.5rem 1rem;
             font-weight: 500;
             font-size: 1.4rem;
             transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-
+            
             &:hover {
-                color: #8f9690;
-                border-radius: 5px;
-                transform: scale(1.1);
+                color: #1a5b28;
             }
 
             li {
