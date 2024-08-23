@@ -14,6 +14,7 @@ export default function App() {
             <SocialMedia />
             <TourSection />
             <ImageCarousel />
+            <SocialMedia />
         </div>
     );
 }

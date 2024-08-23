@@ -30,7 +30,7 @@
 function App() {
   return /*#__PURE__*/React.createElement("div", {
     className: _App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].App
-  }, /*#__PURE__*/React.createElement(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/React.createElement(_components_VideoBanner_VideoBanner__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/React.createElement(_components_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/React.createElement(_components_TourSection_TourSection__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/React.createElement(_components_ImageCarousel_ImageCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+  }, /*#__PURE__*/React.createElement(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/React.createElement(_components_VideoBanner_VideoBanner__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/React.createElement(_components_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/React.createElement(_components_TourSection_TourSection__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/React.createElement(_components_ImageCarousel_ImageCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/React.createElement(_components_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 }
 
 /***/ }),
@@ -379,6 +379,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IMqMrT2eGOGeFiLbCAGg {
   background: linear-gradient(45deg, #1b1c1b, #363e36, #232723);
   position: relative;
   font-family: "Roboto Mono", monospace;
+  padding-bottom: 5rem;
 }
 .IMqMrT2eGOGeFiLbCAGg .vhoE8x9DmiQww7vrQ5mS {
   width: 20rem;
@@ -390,7 +391,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IMqMrT2eGOGeFiLbCAGg {
   z-index: 1000;
   pointer-events: none;
   margin-top: -10rem;
-}`, "",{"version":3,"sources":["webpack://./src/App.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,6DAAA;EACA,kBAAA;EACA,qCAAA;AACJ;AACI;EACI,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;EACA,aAAA;EACA,oBAAA;EACA,kBAAA;AACR","sourcesContent":[".App {\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background: linear-gradient(45deg, #1b1c1b, #363e36, #232723);\n    position: relative;\n    font-family: \"Roboto Mono\", monospace;\n\n    .logo {\n        width: 20rem;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        opacity: 0.6;\n        z-index: 1000;\n        pointer-events: none; \n        margin-top: -10rem;\n    }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,6DAAA;EACA,kBAAA;EACA,qCAAA;EACA,oBAAA;AACJ;AACI;EACI,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;EACA,aAAA;EACA,oBAAA;EACA,kBAAA;AACR","sourcesContent":[".App {\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background: linear-gradient(45deg, #1b1c1b, #363e36, #232723);\n    position: relative;\n    font-family: \"Roboto Mono\", monospace;\n    padding-bottom: 5rem;\n\n    .logo {\n        width: 20rem;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        opacity: 0.6;\n        z-index: 1000;\n        pointer-events: none; \n        margin-top: -10rem;\n    }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"App": `IMqMrT2eGOGeFiLbCAGg`,
@@ -426,6 +427,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.zno7C5Vtpr1rk2Z2dJ6O {
   margin: auto;
   overflow: hidden;
   margin-top: 6rem;
+  margin-bottom: 10rem;
   padding-top: 1rem;
 }
 
@@ -477,7 +479,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.zno7C5Vtpr1rk2Z2dJ6O {
 
 .ODjsskWujBY6FGmw25jV:hover {
   background-color: #666;
-}`, "",{"version":3,"sources":["webpack://./src/components/ImageCarousel/ImageCarousel.module.scss"],"names":[],"mappings":"AAAA;EACG,kBAAA;EACA,WAAA;EACA,iBAAA;EACA,YAAA;EACA,gBAAA;EACA,gBAAA;EACA,iBAAA;AACH;;AAEC;EACE,aAAA;AACH;;AAEC;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACH;;AAEC;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACH;;AAEC;EACE,WAAA;EACA,kBAAA;EACA,+BAAA,EAAA,8BAAA;AACH;AACG;EACE,sBAAA,EAAA,+BAAA;AACL;;AAGC;EACE,kBAAA;EACA,gBAAA;AAAH;;AAGC;EACE,qBAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAH;;AAGC;EACE,sBAAA;AAAH;;AAGC;EACE,sBAAA;AAAH","sourcesContent":[".carouselContainer {\n   position: relative;\n   width: 100%;\n   max-width: 1560px;\n   margin: auto;\n   overflow: hidden;\n   margin-top: 6rem;\n   padding-top: 1rem;\n }\n \n .carousel {\n   display: flex;\n }\n \n .carouselInner {\n   display: flex;\n   width: calc(100% * 3);\n   transition: transform 0.5s ease-in-out;\n   will-change: transform;\n }\n \n .carouselItem {\n   flex: 0 0 33.33%; \n   box-sizing: border-box;\n   padding: 0 20px;\n }\n \n .carouselItem img {\n   width: 100%;\n   border-radius: 8px;\n   transition: transform 0.3s ease; /* Smooth scaling transition */\n \n   &:hover {\n     transform: scale(1.05); /* Slightly scale up on hover */\n   }\n }\n \n .dotsContainer {\n   text-align: center;\n   margin-top: 10px;\n }\n \n .dot {\n   display: inline-block;\n   width: 10px;\n   height: 10px;\n   margin: 0 5px;\n   background-color: #ccc;\n   border-radius: 50%;\n   cursor: pointer;\n   transition: background-color 0.3s ease;\n }\n \n .dot.active {\n   background-color: #333;\n }\n \n .dot:hover {\n   background-color: #666;\n }\n "],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/ImageCarousel/ImageCarousel.module.scss"],"names":[],"mappings":"AAAA;EACG,kBAAA;EACA,WAAA;EACA,iBAAA;EACA,YAAA;EACA,gBAAA;EACA,gBAAA;EACA,oBAAA;EACA,iBAAA;AACH;;AAEC;EACE,aAAA;AACH;;AAEC;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACH;;AAEC;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACH;;AAEC;EACE,WAAA;EACA,kBAAA;EACA,+BAAA,EAAA,8BAAA;AACH;AACG;EACE,sBAAA,EAAA,+BAAA;AACL;;AAGC;EACE,kBAAA;EACA,gBAAA;AAAH;;AAGC;EACE,qBAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAH;;AAGC;EACE,sBAAA;AAAH;;AAGC;EACE,sBAAA;AAAH","sourcesContent":[".carouselContainer {\n   position: relative;\n   width: 100%;\n   max-width: 1560px;\n   margin: auto;\n   overflow: hidden;\n   margin-top: 6rem;\n   margin-bottom: 10rem;\n   padding-top: 1rem;\n }\n \n .carousel {\n   display: flex;\n }\n \n .carouselInner {\n   display: flex;\n   width: calc(100% * 3);\n   transition: transform 0.5s ease-in-out;\n   will-change: transform;\n }\n \n .carouselItem {\n   flex: 0 0 33.33%; \n   box-sizing: border-box;\n   padding: 0 20px;\n }\n \n .carouselItem img {\n   width: 100%;\n   border-radius: 8px;\n   transition: transform 0.3s ease; /* Smooth scaling transition */\n \n   &:hover {\n     transform: scale(1.05); /* Slightly scale up on hover */\n   }\n }\n \n .dotsContainer {\n   text-align: center;\n   margin-top: 10px;\n }\n \n .dot {\n   display: inline-block;\n   width: 10px;\n   height: 10px;\n   margin: 0 5px;\n   background-color: #ccc;\n   border-radius: 50%;\n   cursor: pointer;\n   transition: background-color 0.3s ease;\n }\n \n .dot.active {\n   background-color: #333;\n }\n \n .dot:hover {\n   background-color: #666;\n }\n "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `zno7C5Vtpr1rk2Z2dJ6O`,
@@ -1348,4 +1350,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.a8b46406930d6be4ff9d0ed872a6b7bd.js.map
+//# sourceMappingURL=App.59ef1d9959401a5d331bec273639aeb7.js.map
