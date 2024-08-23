@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './App.module.scss';
 import NavBar from './components/NavBar/NavBar';
 import SocialMedia from './components/SocialMedia/SocialMedia';
-import ImageCarousel from './components/ImageCarousel/ImageCarousel';
+import AlbumCarousel from './components/AlbumCarousel/AlbumCarousel';
 import VideoBanner from './components/VideoBanner/VideoBanner';
 import TourSection from './components/TourSection/TourSection';
 
@@ -12,8 +12,8 @@ export default function App() {
             <NavBar />
             <VideoBanner />
             <SocialMedia />
-            <TourSection />
-            <ImageCarousel />
+            <TourSection id="tour" />
+            <AlbumCarousel />
             <SocialMedia />
         </div>
     );

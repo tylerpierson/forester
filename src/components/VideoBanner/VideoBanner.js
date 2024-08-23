@@ -3,7 +3,7 @@ import styles from './VideoBanner.module.scss';
 
 const VideoBanner = () => {
   return (
-    <div className={styles.videoBanner}>
+    <div id="videos" className={styles.videoBanner}>
       <img className={styles.logo} src="/img/logo_placehold.png" alt="Forester Logo" />
       <video autoPlay loop muted playsInline className={styles.videoBannerVideo}>
         <source src="/video/website.MOV" type="video/mp4" />
