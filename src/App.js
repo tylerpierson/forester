@@ -5,6 +5,7 @@ import SocialMedia from './components/SocialMedia/SocialMedia';
 import AlbumCarousel from './components/AlbumCarousel/AlbumCarousel';
 import VideoBanner from './components/VideoBanner/VideoBanner';
 import TourSection from './components/TourSection/TourSection';
+import BackToTop from './components/BackToTop/BackToTop';
 
 export default function App() {
     return (
@@ -15,6 +16,7 @@ export default function App() {
             <TourSection id="tour" />
             <AlbumCarousel />
             <SocialMedia />
+            <BackToTop />
         </div>
     );
 }
