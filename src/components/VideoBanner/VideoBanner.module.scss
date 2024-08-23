@@ -4,6 +4,15 @@
     height: 85vh;
     overflow: hidden;
     border-radius: 1%;
+    .logo {
+      width: 40rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.5;
+      z-index: 1000;
+    }
   }
   
   .videoBannerVideo {

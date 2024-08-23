@@ -9,7 +9,6 @@ import TourSection from './components/TourSection/TourSection';
 export default function App() {
     return (
         <div className={styles.App}>
-            <img className={styles.logo} src="/img/logo_placehold.png" alt="Forester Logo" />
             <NavBar />
             <VideoBanner />
             <SocialMedia />

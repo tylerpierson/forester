@@ -30,11 +30,7 @@
 function App() {
   return /*#__PURE__*/React.createElement("div", {
     className: _App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].App
-  }, /*#__PURE__*/React.createElement("img", {
-    className: _App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logo,
-    src: "/img/logo_placehold.png",
-    alt: "Forester Logo"
-  }), /*#__PURE__*/React.createElement(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/React.createElement(_components_VideoBanner_VideoBanner__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/React.createElement(_components_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/React.createElement(_components_TourSection_TourSection__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/React.createElement(_components_ImageCarousel_ImageCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+  }, /*#__PURE__*/React.createElement(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/React.createElement(_components_VideoBanner_VideoBanner__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/React.createElement(_components_SocialMedia_SocialMedia__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/React.createElement(_components_TourSection_TourSection__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/React.createElement(_components_ImageCarousel_ImageCarousel__WEBPACK_IMPORTED_MODULE_4__["default"], null));
 }
 
 /***/ }),
@@ -314,7 +310,11 @@ const TourSection = () => {
 const VideoBanner = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("video", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    className: _VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logo,
+    src: "/img/logo_placehold.png",
+    alt: "Forester Logo"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("video", {
     autoPlay: true,
     loop: true,
     muted: true,
@@ -700,35 +700,13 @@ ___CSS_LOADER_EXPORT___.locals = {
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.HvgboFHhvHeMxm43zFZ6 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  /* Specificity for embedded content */
-}
-.HvgboFHhvHeMxm43zFZ6 #oERHQqE4KJMruSHIEe5f {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Ensure iframe styles are correctly applied */
-}
-.HvgboFHhvHeMxm43zFZ6 #oERHQqE4KJMruSHIEe5f iframe {
-  border: none;
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
-}`, "",{"version":3,"sources":["webpack://./src/components/TourSection/TourSection.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,UAAA;EACA,SAAA;EACA,YAAA;EACA,aAAA;EACA,kBAAA;EACA,gBAAA;EAEA,qCAAA;AAAJ;AACI;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EAEA,+CAAA;AAAN;AACM;EACE,YAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;AACR","sourcesContent":[".tourSection {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 0;\n    margin: 0;\n    width: 100vw;\n    height: 100vh;\n    position: relative;\n    overflow: hidden;\n  \n    /* Specificity for embedded content */\n    #seated-55fdf2c0 {\n      width: 100%;\n      height: 100%;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n  \n      /* Ensure iframe styles are correctly applied */\n      iframe {\n        border: none;\n        width: 100%;\n        height: 100%;\n        border-radius: 0;\n      }\n    }\n  }\n  "],"sourceRoot":""}]);
+  padding: 10rem 10rem 5rem 10rem;
+  width: 90%;
+  color: whitesmoke;
+}`, "",{"version":3,"sources":["webpack://./src/components/TourSection/TourSection.module.scss"],"names":[],"mappings":"AAAA;EACE,+BAAA;EACA,UAAA;EACA,iBAAA;AACF","sourcesContent":[".tourSection {\n  padding: 10rem 10rem 5rem 10rem;\n  width: 90%;\n  color: whitesmoke;\n}\n  "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"tourSection": `HvgboFHhvHeMxm43zFZ6`,
-	"seated-55fdf2c0": `oERHQqE4KJMruSHIEe5f`
+	"tourSection": `HvgboFHhvHeMxm43zFZ6`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -760,6 +738,15 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.DyskzzB41LkALTA2XioJ {
   overflow: hidden;
   border-radius: 1%;
 }
+.DyskzzB41LkALTA2XioJ .gnSjDnSvFnetzzLkRRgd {
+  width: 40rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  z-index: 1000;
+}
 
 .WBUPoLGLPVO0zY9pbBUT {
   width: 100%;
@@ -775,10 +762,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.DyskzzB41LkALTA2XioJ {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,UAAA;EACA,YAAA;EACA,gBAAA;EACA,iBAAA;AACJ;;AAEE;EACE,WAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;AACP;;AAEE;EACE,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;EACA,kBAAA;AACJ","sourcesContent":[".videoBanner {\n    position: relative;\n    width: 85%;\n    height: 85vh;\n    overflow: hidden;\n    border-radius: 1%;\n  }\n  \n  .videoBannerVideo {\n    width: 100%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n  }\n  \n  .videoBannerContent {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: white;\n    text-align: center;\n  }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,UAAA;EACA,YAAA;EACA,gBAAA;EACA,iBAAA;AACJ;AAAI;EACE,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;EACA,aAAA;AAEN;;AAEE;EACE,WAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;AACP;;AAEE;EACE,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;EACA,kBAAA;AACJ","sourcesContent":[".videoBanner {\n    position: relative;\n    width: 85%;\n    height: 85vh;\n    overflow: hidden;\n    border-radius: 1%;\n    .logo {\n      width: 40rem;\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      opacity: 0.5;\n      z-index: 1000;\n    }\n  }\n  \n  .videoBannerVideo {\n    width: 100%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n  }\n  \n  .videoBannerContent {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: white;\n    text-align: center;\n  }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"videoBanner": `DyskzzB41LkALTA2XioJ`,
+	"logo": `gnSjDnSvFnetzzLkRRgd`,
 	"videoBannerVideo": `WBUPoLGLPVO0zY9pbBUT`,
 	"videoBannerContent": `QNBspwgb7ectoaEi8BUm`
 };
@@ -1360,4 +1348,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.2e8a25f0f6195fde250214ef88e29e7e.js.map
+//# sourceMappingURL=App.a8b46406930d6be4ff9d0ed872a6b7bd.js.map
