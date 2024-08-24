@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './VideoBanner.module.scss';
+import SocialMediaTop from '../SocialMedia/SocialMediaTop';
 
 const VideoBanner = () => {
   return (
@@ -10,6 +11,7 @@ const VideoBanner = () => {
         Your browser does not support the video tag.
       </video>
       <div className={styles.videoBannerContent}>
+        <SocialMediaTop />
       </div>
     </div>
   );

@@ -1,31 +1,31 @@
 .videoBanner {
-    position: relative;
-    width: 85%;
-    height: 85vh;
-    overflow: hidden;
-    border-radius: 1%;
-    .logo {
-      width: 40rem;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0.5;
-      z-index: 1000;
-    }
-  }
-  
-  .videoBannerVideo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .videoBannerContent {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  overflow: hidden;
+  text-align: center;
+
+  .logo {
+    width: 40rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0.5;
+    z-index: 1000;
+  }
+
+  .videoBannerVideo {
+    width: 85%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1%;
+  }
+
+  .videoBannerContent {
+    bottom: 20px;
     color: white;
     text-align: center;
+    z-index: 1000;
   }
+}
