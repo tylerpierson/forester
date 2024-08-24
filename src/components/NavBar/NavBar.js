@@ -51,10 +51,10 @@ function NavBar() {
         ) : (
           <ul className={styles.NavList}>
             <a href="#tour"><li>TOUR</li></a>
-            <a href="#newmusic"><li>NEW MUSIC</li></a>
+            <a href="#newmusic"><li>MUSIC</li></a>
             <a href="#store"><li>STORE</li></a>
             <a href="#videos"><li>VIDEOS</li></a>
-            <a href="#ourmission"><li>OUR MISSION</li></a>
+            <a href="#ourmission"><li>MISSION</li></a>
           </ul>
         )}
       </div>

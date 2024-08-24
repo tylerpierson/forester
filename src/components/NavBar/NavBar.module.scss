@@ -1,7 +1,7 @@
 .NavBar {
     width: 100vw;
     padding: 1rem 2rem;
-    color: white;
+    color: whitesmoke;
     position: sticky;
     top: 0;
     z-index: 2000;
@@ -21,12 +21,12 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        background-color: #1e254a;
+        background-color: #16101d;
         border-radius: 0.75rem;
 
         &:hover {
             color: #1e254a;
-            background-color: #fff;
+            background-color: whitesmoke;
             border-radius: 0.75rem;
         }
 
@@ -34,7 +34,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
+            color: whitesmoke;
             text-decoration: none;
             padding: 0.5rem 1rem;
             font-weight: 500;
