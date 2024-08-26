@@ -5,6 +5,7 @@ import SocialMedia from './components/SocialMedia/SocialMedia';
 import ImageCarousel from './components/ImageCarousel/ImageCarousel';
 import VideoBanner from './components/VideoBanner/VideoBanner';
 import TourSection from './components/TourSection/TourSection';
+import MerchCarousel from './components/MerchCarousel/MerchCarousel';
 
 export default function App() {
     return (
@@ -14,6 +15,7 @@ export default function App() {
             <SocialMedia />
             <TourSection />
             <ImageCarousel />
+            <MerchCarousel />
             <SocialMedia />
         </div>
     );
