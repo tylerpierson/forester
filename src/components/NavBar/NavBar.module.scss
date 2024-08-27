@@ -1,10 +1,18 @@
 .NavBar {
     width: 90%;
+    border-radius: 30px;
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 2000;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+    &.hidden {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
 
     .NavBarContainer {
         display: flex;
@@ -37,10 +45,10 @@
             font-weight: 500;
             font-size: 1.7rem;
             transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-            
+
             &:hover {
                 color: #1e254a;
-                text-shadow: none;
+                text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;
             }
 
             li {
@@ -54,17 +62,20 @@
         display: none;
         flex-direction: column;
         cursor: pointer;
+        transition: .3s ease;
 
         span {
             background: #fff;
             height: 3px;
             width: 25px;
             margin: 2px 0;
-            transition: background 0.3s ease;
+            transition: 0.3s ease;
         }
 
         &:hover span {
             background: #1e254a;
+            border: .5px solid ghostwhite;
+            transition: .3s ease;
         }
     }
 
@@ -95,6 +106,7 @@
             &:hover {
                 color: #1e254a;
                 background-color: rgba(255, 255, 255, 0.1);
+                text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;
             }
 
             li {
@@ -114,4 +126,3 @@
         }
     }
 }
-

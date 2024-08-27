@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from './NavBar.module.scss';
 
-function NavBar({ isFaded, setIsFaded }) {
+function NavBar() {
   const [isVisible, setIsVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
 
   useEffect(() => {
     let lastScrollTop = 0;
@@ -13,10 +12,9 @@ function NavBar({ isFaded, setIsFaded }) {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
-        setIsVisible(false);
-        setIsFaded(false); // Remove fading effect on scroll
+        setIsVisible(false); // Fade out when scrolling down
       } else {
-        setIsVisible(true);
+        setIsVisible(true); // Fade in when scrolling up
       }
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     };
@@ -50,8 +48,6 @@ function NavBar({ isFaded, setIsFaded }) {
       top: offsetPosition,
       behavior: 'smooth'
     });
-
-    setIsFaded(true); // Trigger fade effect
 
     if (isMobile) {
       setIsMenuOpen(false);

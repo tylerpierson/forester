@@ -330,11 +330,7 @@ function MissionStatement() {
 /* harmony import */ var _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar.module.scss */ "./src/components/NavBar/NavBar.module.scss");
 
 
-function NavBar(_ref) {
-  let {
-    isFaded,
-    setIsFaded
-  } = _ref;
+function NavBar() {
   const [isVisible, setIsVisible] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
   const [isMobile, setIsMobile] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [isMenuOpen, setIsMenuOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
@@ -343,10 +339,9 @@ function NavBar(_ref) {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
-        setIsVisible(false);
-        setIsFaded(false); // Remove fading effect on scroll
+        setIsVisible(false); // Fade out when scrolling down
       } else {
-        setIsVisible(true);
+        setIsVisible(true); // Fade in when scrolling up
       }
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     };
@@ -374,8 +369,6 @@ function NavBar(_ref) {
       top: offsetPosition,
       behavior: 'smooth'
     });
-    setIsFaded(true); // Trigger fade effect
-
     if (isMobile) {
       setIsMenuOpen(false);
     }
@@ -1032,15 +1025,53 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.fdvC6wJWb7N6Pdr98BXA {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.3);
 }
+
 .oWon0UkDx0_lYPNnYvv2 .ersCi17hvo_AFFOoJKx7 {
-  color: #1e254a;
+  color: rgba(179, 217, 91, 0.873);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
+
 .oWon0UkDx0_lYPNnYvv2 .ersCi17hvo_AFFOoJKx7:hover {
   color: #fff;
-}`, "",{"version":3,"sources":["webpack://./src/components/MissionStatement/MissionStatement.module.scss"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,2EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,oBAAA;EACA,gBAAA;AACJ;;AAEA;EACI,2EAAA;EACA,iBAAA;EACA,mBAAA;EACA,iBAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EACA,UAAA;EACA,oCAAA;AACJ;AAAI;EACI,cAAA;EACA,qBAAA;EACA,gBAAA;EACA,2BAAA;AAER;AADQ;EACI,WAAA;AAGZ","sourcesContent":[".MissionStatement {\n    position: relative;\n    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n    background-image: url('/public/img/forester-film-edits-35.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    margin-bottom: 10rem;\n    overflow: hidden;\n}\n\n.MissionStatementPara {\n    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n    font-size: 1.2rem;\n    line-height: 1.6rem;\n    color: ghostwhite;\n    position: relative;\n    margin: 5rem;\n    padding: 10rem 2rem;\n    z-index: 2;\n    background-color: rgba(0, 0, 0, 0.3);\n    .link {\n        color: #1e254a;\n        text-decoration: none;\n        font-weight: 500;\n        transition: color 0.3s ease;\n        &:hover {\n            color: #fff;\n        }\n    }\n}\n"],"sourceRoot":""}]);
+}
+
+/* Adjust clip-path for smaller screens */
+@media (max-width: 1200px) {
+  .fdvC6wJWb7N6Pdr98BXA,
+  .oWon0UkDx0_lYPNnYvv2 {
+    clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);
+  }
+}
+@media (max-width: 992px) {
+  .fdvC6wJWb7N6Pdr98BXA,
+  .oWon0UkDx0_lYPNnYvv2 {
+    clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);
+  }
+}
+@media (max-width: 768px) {
+  .fdvC6wJWb7N6Pdr98BXA,
+  .oWon0UkDx0_lYPNnYvv2 {
+    clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);
+  }
+}
+@media (max-width: 576px) {
+  .fdvC6wJWb7N6Pdr98BXA {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .fdvC6wJWb7N6Pdr98BXA,
+  .oWon0UkDx0_lYPNnYvv2 {
+    clip-path: none;
+    height: 40rem;
+    overflow-y: scroll;
+  }
+  .oWon0UkDx0_lYPNnYvv2 {
+    padding: 2rem 5rem;
+    margin: 0;
+  }
+}`, "",{"version":3,"sources":["webpack://./src/components/MissionStatement/MissionStatement.module.scss"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,2EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,oBAAA;EACA,gBAAA;AACJ;;AAEA;EACI,2EAAA;EACA,iBAAA;EACA,mBAAA;EACA,iBAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EACA,UAAA;EACA,oCAAA;AACJ;;AAEA;EACI,gCAAA;EACA,qBAAA;EACA,gBAAA;EACA,2BAAA;AACJ;;AAEA;EACI,WAAA;AACJ;;AAEA,yCAAA;AACA;EACI;;IAEI,4EAAA;EACN;AACF;AAEA;EACI;;IAEI,4EAAA;EAAN;AACF;AAGA;EACI;;IAEI,4EAAA;EADN;AACF;AAIA;EACI;IACI,iBAAA;IACA,oBAAA;EAFN;EAKE;;IAEI,eAAA;IACA,aAAA;IACA,kBAAA;EAHN;EAME;IACI,kBAAA;IACA,SAAA;EAJN;AACF","sourcesContent":[".MissionStatement {\n    position: relative;\n    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n    background-image: url('/public/img/forester-film-edits-35.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    margin-bottom: 10rem;\n    overflow: hidden;\n}\n\n.MissionStatementPara {\n    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n    font-size: 1.2rem;\n    line-height: 1.6rem;\n    color: ghostwhite;\n    position: relative;\n    margin: 5rem;\n    padding: 10rem 2rem;\n    z-index: 2;\n    background-color: rgba(0, 0, 0, 0.3);\n}\n\n.MissionStatementPara .link {\n    color: rgba(179, 217, 91, 0.873);\n    text-decoration: none;\n    font-weight: 500;\n    transition: color 0.3s ease;\n}\n\n.MissionStatementPara .link:hover {\n    color: #fff;\n}\n\n/* Adjust clip-path for smaller screens */\n@media (max-width: 1200px) {\n    .MissionStatement,\n    .MissionStatementPara {\n        clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);\n    }\n}\n\n@media (max-width: 992px) {\n    .MissionStatement,\n    .MissionStatementPara {\n        clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);\n    }\n}\n\n@media (max-width: 768px) {\n    .MissionStatement,\n    .MissionStatementPara {\n        clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);\n    }\n}\n\n@media (max-width: 576px) {\n    .MissionStatement{\n        padding-top: 5rem;\n        padding-bottom: 5rem;\n    }\n    \n    .MissionStatement,\n    .MissionStatementPara {\n        clip-path: none;\n        height: 40rem;\n        overflow-y: scroll;\n    }\n\n    .MissionStatementPara {\n        padding: 2rem 5rem;\n        margin: 0;\n    }\n}\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"MissionStatement": `fdvC6wJWb7N6Pdr98BXA`,
@@ -1072,11 +1103,18 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   width: 90%;
+  border-radius: 30px;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 2000;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.QpVD3qAS0nYBtoQqAYoe.pGuXSjiAF9ReSU4SwCSk {
+  opacity: 0;
+  transform: translateY(-100%);
 }
 .QpVD3qAS0nYBtoQqAYoe .IN1dAZkGN8YgIc1_f2FV {
   display: flex;
@@ -1110,7 +1148,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a:hover {
   color: #1e254a;
-  text-shadow: none;
+  text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a li {
   margin-left: 0.5rem;
@@ -1120,16 +1158,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 .QpVD3qAS0nYBtoQqAYoe .ZcrcTrKhDDmmbAOeAxJJ span {
   background: #fff;
   height: 3px;
   width: 25px;
   margin: 2px 0;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 .QpVD3qAS0nYBtoQqAYoe .ZcrcTrKhDDmmbAOeAxJJ:hover span {
   background: #1e254a;
+  border: 0.5px solid ghostwhite;
+  transition: 0.3s ease;
 }
 .QpVD3qAS0nYBtoQqAYoe .EHyE2pRSdW8SxXlsnalc {
   background: #333;
@@ -1157,6 +1198,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
 .QpVD3qAS0nYBtoQqAYoe .B0N_SpgrkQDn_a8SbL4n a:hover {
   color: #1e254a;
   background-color: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;
 }
 .QpVD3qAS0nYBtoQqAYoe .B0N_SpgrkQDn_a8SbL4n a li {
   cursor: pointer;
@@ -1169,10 +1211,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
     margin-right: 3%;
     display: flex;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;EACA,kBAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,kDAAA;AACJ;AACI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AACR;AAEI;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,cAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;AAAR;AAEQ;EACI,iBAAA;EACA,sBAAA;AAAZ;AAGQ;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,4EAAA;AADZ;AAGY;EACI,cAAA;EACA,iBAAA;AADhB;AAIY;EACI,mBAAA;EACA,eAAA;AAFhB;AAOI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;AALR;AAOQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,gCAAA;AALZ;AAQQ;EACI,mBAAA;AANZ;AAUI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AARR;AAWI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AATR;AAWQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AATZ;AAWY;EACI,cAAA;EACA,0CAAA;AAThB;AAYY;EACI,eAAA;AAVhB;AAeI;EACI;IACI,aAAA;EAbV;EAgBM;IACI,gBAAA;IACA,aAAA;EAdV;AACF","sourcesContent":[".NavBar {\n    width: 90%;\n    padding: 1rem 2rem;\n    position: sticky;\n    top: 0;\n    z-index: 2000;\n    transition: opacity 0.5s ease, transform 0.5s ease;\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        height: 3.5rem;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n        border-radius: 0.75rem;\n\n        &:hover {\n            color: whitesmoke;\n            border-radius: 0.75rem;\n        }\n\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: whitesmoke;\n            text-decoration: none;\n            padding: 0.5rem 1rem;\n            font-weight: 500;\n            font-size: 1.7rem;\n            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;\n            \n            &:hover {\n                color: #1e254a;\n                text-shadow: none;\n            }\n\n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }\n    }\n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: background 0.3s ease;\n        }\n\n        &:hover span {\n            background: #1e254a;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        right: 0;\n        width: 100%;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #1e254a;\n                background-color: rgba(255, 255, 255, 0.1);\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n        .NavList {\n            display: none;\n        }\n\n        .Hamburger {\n            margin-right: 3%;\n            display: flex;\n        }\n    }\n}\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;EACA,mBAAA;EACA,kBAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,oCAAA;EACA,UAAA;EACA,gEAAA;AACJ;AACI;EACI,UAAA;EACA,4BAAA;AACR;AAEI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AAAR;AAGI;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,cAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;AADR;AAGQ;EACI,iBAAA;EACA,sBAAA;AADZ;AAIQ;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,4EAAA;AAFZ;AAIY;EACI,cAAA;EACA,uEAAA;AAFhB;AAKY;EACI,mBAAA;EACA,eAAA;AAHhB;AAQI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;AANR;AAQQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,qBAAA;AANZ;AASQ;EACI,mBAAA;EACA,8BAAA;EACA,qBAAA;AAPZ;AAWI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AATR;AAYI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AAVR;AAYQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AAVZ;AAYY;EACI,cAAA;EACA,0CAAA;EACA,uEAAA;AAVhB;AAaY;EACI,eAAA;AAXhB;AAgBI;EACI;IACI,aAAA;EAdV;EAiBM;IACI,gBAAA;IACA,aAAA;EAfV;AACF","sourcesContent":[".NavBar {\n    width: 90%;\n    border-radius: 30px;\n    padding: 1rem 2rem;\n    position: sticky;\n    top: 0;\n    z-index: 2000;\n    background-color: rgba(0, 0, 0, 0.5);\n    opacity: 1;\n    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;\n\n    &.hidden {\n        opacity: 0;\n        transform: translateY(-100%);\n    }\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        height: 3.5rem;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n        border-radius: 0.75rem;\n\n        &:hover {\n            color: whitesmoke;\n            border-radius: 0.75rem;\n        }\n\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: whitesmoke;\n            text-decoration: none;\n            padding: 0.5rem 1rem;\n            font-weight: 500;\n            font-size: 1.7rem;\n            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;\n\n            &:hover {\n                color: #1e254a;\n                text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;\n            }\n\n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }\n    }\n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n        transition: .3s ease;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: 0.3s ease;\n        }\n\n        &:hover span {\n            background: #1e254a;\n            border: .5px solid ghostwhite;\n            transition: .3s ease;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        right: 0;\n        width: 100%;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #1e254a;\n                background-color: rgba(255, 255, 255, 0.1);\n                text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n        .NavList {\n            display: none;\n        }\n\n        .Hamburger {\n            margin-right: 3%;\n            display: flex;\n        }\n    }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
+	"hidden": `pGuXSjiAF9ReSU4SwCSk`,
 	"NavBarContainer": `IN1dAZkGN8YgIc1_f2FV`,
 	"NavList": `o5xAJUHc5NRtb6zPAGtC`,
 	"Hamburger": `ZcrcTrKhDDmmbAOeAxJJ`,
@@ -2302,4 +2345,4 @@ module.exports = __webpack_require__.p + "f1786f4de4d641b84864.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.38ab8cadef34cf3e289c93c36bbbb4d8.js.map
+//# sourceMappingURL=App.fee842127e5739804a6a56096b06d125.js.map
