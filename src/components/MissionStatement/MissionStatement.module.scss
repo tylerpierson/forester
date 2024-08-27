@@ -1,4 +1,5 @@
 .MissionStatement {
+    position: relative;
     clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);
     background-image: url('/public/img/forester-film-edits-35.jpg');
     background-attachment: fixed;
@@ -9,8 +10,17 @@
     align-items: center;
     width: 100%;
     margin-bottom: 10rem;
-    .MissionStatementPara {
-        padding: 5rem 5rem;
-        line-height: 1.4rem;
-    }
+    overflow: hidden;
+}
+
+.MissionStatementPara {
+    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: ghostwhite;
+    position: relative;
+    margin: 5rem;
+    padding: 8rem 2rem 6rem;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
 }
