@@ -9,6 +9,7 @@ import TourSection from './components/TourSection/TourSection';
 import MerchCarousel from './components/MerchCarousel/MerchCarousel';
 import BackToTop from './components/BackToTop/BackToTop';
 import MissionStatement from './components/MissionStatement/MissionStatement';
+import Footer from './components/Footer/Footer';
 
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
             <MerchCarousel isFaded={isFaded}/>
             <MissionStatement />
             <SocialMediaBottom isFaded={isFaded}/>
+            <Footer />
             <BackToTop />
         </div>
     );

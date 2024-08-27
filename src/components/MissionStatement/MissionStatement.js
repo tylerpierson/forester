@@ -52,7 +52,10 @@ Ten years later, the vision for Forester has expanded well beyond ragers. A pill
 “The Forester project is ultimately a conservation project,” Carlson says. “We want to spread the word that our planet is both beautiful and irreplaceable.”
 <br/>
 <br/>
-The trick is that through the depth and power of their music, they’re able to express this message without having to say anything at all.</p>
+The trick is that through the depth and power of their music, they’re able to express this message without having to say anything at all.
+<br/>
+<br/>
+Learn more about the <a className={styles.link} href='https://forester.raisely.com/' target='_blank'>Forester Project</a> here.</p>
     </div>
   )
 }

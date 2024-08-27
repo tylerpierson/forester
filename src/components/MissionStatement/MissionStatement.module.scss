@@ -20,7 +20,16 @@
     color: ghostwhite;
     position: relative;
     margin: 5rem;
-    padding: 8rem 2rem 6rem;
+    padding: 10rem 2rem;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.3);
+    .link {
+        color: #1e254a;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        &:hover {
+            color: #fff;
+        }
+    }
 }

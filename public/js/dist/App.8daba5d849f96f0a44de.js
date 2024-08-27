@@ -23,7 +23,9 @@
 /* harmony import */ var _components_MerchCarousel_MerchCarousel__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/MerchCarousel/MerchCarousel */ "./src/components/MerchCarousel/MerchCarousel.js");
 /* harmony import */ var _components_BackToTop_BackToTop__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/BackToTop/BackToTop */ "./src/components/BackToTop/BackToTop.js");
 /* harmony import */ var _components_MissionStatement_MissionStatement__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/MissionStatement/MissionStatement */ "./src/components/MissionStatement/MissionStatement.js");
+/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/Footer/Footer */ "./src/components/Footer/Footer.js");
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
 
 
 
@@ -52,7 +54,7 @@ function App() {
     isFaded: isFaded
   }), /*#__PURE__*/React.createElement(_components_MissionStatement_MissionStatement__WEBPACK_IMPORTED_MODULE_10__["default"], null), /*#__PURE__*/React.createElement(_components_SocialMedia_SocialMediaBottom__WEBPACK_IMPORTED_MODULE_4__["default"], {
     isFaded: isFaded
-  }), /*#__PURE__*/React.createElement(_components_BackToTop_BackToTop__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+  }), /*#__PURE__*/React.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], null), /*#__PURE__*/React.createElement(_components_BackToTop_BackToTop__WEBPACK_IMPORTED_MODULE_9__["default"], null));
 }
 
 /***/ }),
@@ -185,6 +187,29 @@ function BackToTop() {
 
 /***/ }),
 
+/***/ "./src/components/Footer/Footer.js":
+/*!*****************************************!*\
+  !*** ./src/components/Footer/Footer.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.module.scss */ "./src/components/Footer/Footer.module.scss");
+
+
+function Footer() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Footer
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA92024 Forester. Site by BT Web Dev"));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
+
+/***/ }),
+
 /***/ "./src/components/MerchCarousel/MerchCarousel.js":
 /*!*******************************************************!*\
   !*** ./src/components/MerchCarousel/MerchCarousel.js ***!
@@ -281,7 +306,11 @@ function MissionStatement() {
     className: _MissionStatement_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MissionStatement
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: _MissionStatement_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MissionStatementPara
-  }, "The systems of nature are at once deeply complex and gracefully simple. Given that Forester\u2019s music functions similarly, it makes sense that they named themselves after the woods.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "The Los Angeles-based indie electronic duo, David Parris and Xander Carlson, make lush soundscapes both inspired by and evocative of views from a mountain, deep pink sunsets, wind through the trees and the stars on a clear night. The nourishing effect these things have on a human soul? That\u2019s how they want their music to make you feel. The cool thing is that it does.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CThere\u2019s a section along the trail from Yosemite to Mount Whitney called Forester Pass,\u201D Carlson says. \u201CHiking it was one of the most impactful experiences of my life. The freedom I felt up there, we're trying to put that energy in the music.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Based in Los Angeles, the longtime friends launched the Forester project in 2019, working nine-to-five gigs and making music together at night. They experienced immediate success with their debut single \u201CSpark\u201D \u2013 a deep exhale of a track that was picked up by YouTube tastemaker Trap Nation, signed to its label Lowly Palace and has since collected more than 5.7 million streams on Spotify. True to its name, the song was an auspicious beginning that caught the ear of an A&R at Kygo\u2019s Palm Tree Records, where Forester signed in 2020.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "This was all of course happening in the dark heart of the pandemic, a moment that offered Parris and Carlson, both then recent college grads, time to just make music. They got in the car and drove north to Carlson\u2019s family cabin in Mammoth Lakes, California, on the eastern slope of the vast Sierra Nevada mountain range.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CNobody was around, stores were closed,\u201D Carlson recalls. \u201CWe spent months there creating music. It was a prolific time for us.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Here, at 8,000 feet, the guys further developed the Forester sound, which falls into a dreamy, achingly emotional and thoroughly sophisticated, middle ground between the indie folk of Bon Iver \u2013 a hero to both Parris and Carlson \u2013 and melody-focused electronic giants like Avicii. The music made in the mountains became their 2020 sophomore LP, A Range Of Light. The album\u2019s theme is healing through nature \u2013 a phenomenon they experienced while making it, with time off spent swimming, hiking, off-roading in the back country and taking in the night sky.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CI had been chronically sick for a while and was finally figuring out why,\u201D recalls Carlson, \u201Cand that trip to Mammoth was the turning point for me in terms of healing.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CIt was a weird time getting out of college and experiencing the isolation of the pandemic. You feel the weight of the world,\u201D says Parris.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CWith the music we were making in Mammoth,\u201D adds Carlson, \u201Cwe were trying to encapsulate the beautiful moments, so people can consume them wherever they are and hopefully have a moment of escape too.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "The Forester catalog now encompasses three albums: A Range Of Light, 2019\u2019s Kerosene and 2022\u2019s Watercolor. Together, these LPs have collected an incredible 72.7 million global streams, in addition to a growing fanbase made up of both longstanding dance fans and scene newcomers.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CThey're coming to our shows for an emotional release,\u201D says Carlson.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Forester has been meeting these fans out on the road, playing their first live show in June of 2021 at Colorado\u2019s epic Red Rocks Amphitheatre when they opened for Kygo. The Norwegian powerhouse also invited them to open for him at his massive summer 2022 stadium shows in Oslo and Mexico City, gigs that put the duo in front of tens of thousands of fans. Outsidelands 2022 in San Francisco found Forester not only doing their hypnotic live set \u2013 for which Carlson sings and plays synths while Parris handles guitar -- but playing a DJ gig later that night.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "In fact they started playing out together more than a decade ago, becoming the resident DJs for school dances, birthday parties and other teenage festivities on the westside of L.A. during their high school years. They threw their own warehouse parties that, as Parris recalls \u201Cwere definitely illegal.\u201D The afterparty for their prom drew 1,000 kids in formalwear to a remote spot in L.A.\u2019s Topanga Canyon and ended with the arrival of the LAPD. \u201CIt was incredible while it lasted, though,\u201D says Carlson.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Ten years later, the vision for Forester has expanded well beyond ragers. A pillar of the project is the preservation of the nature that\u2019s inspired them, with the guys donating a portion of the revenue from their first album to The Nature Conservancy, who used it to plant roughly 1,000 trees. Their ultimate goal is for their streaming to be at net zero carbon emissions.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CThe Forester project is ultimately a conservation project,\u201D Carlson says. \u201CWe want to spread the word that our planet is both beautiful and irreplaceable.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "The trick is that through the depth and power of their music, they\u2019re able to express this message without having to say anything at all."));
+  }, "The systems of nature are at once deeply complex and gracefully simple. Given that Forester\u2019s music functions similarly, it makes sense that they named themselves after the woods.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "The Los Angeles-based indie electronic duo, David Parris and Xander Carlson, make lush soundscapes both inspired by and evocative of views from a mountain, deep pink sunsets, wind through the trees and the stars on a clear night. The nourishing effect these things have on a human soul? That\u2019s how they want their music to make you feel. The cool thing is that it does.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CThere\u2019s a section along the trail from Yosemite to Mount Whitney called Forester Pass,\u201D Carlson says. \u201CHiking it was one of the most impactful experiences of my life. The freedom I felt up there, we're trying to put that energy in the music.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Based in Los Angeles, the longtime friends launched the Forester project in 2019, working nine-to-five gigs and making music together at night. They experienced immediate success with their debut single \u201CSpark\u201D \u2013 a deep exhale of a track that was picked up by YouTube tastemaker Trap Nation, signed to its label Lowly Palace and has since collected more than 5.7 million streams on Spotify. True to its name, the song was an auspicious beginning that caught the ear of an A&R at Kygo\u2019s Palm Tree Records, where Forester signed in 2020.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "This was all of course happening in the dark heart of the pandemic, a moment that offered Parris and Carlson, both then recent college grads, time to just make music. They got in the car and drove north to Carlson\u2019s family cabin in Mammoth Lakes, California, on the eastern slope of the vast Sierra Nevada mountain range.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CNobody was around, stores were closed,\u201D Carlson recalls. \u201CWe spent months there creating music. It was a prolific time for us.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Here, at 8,000 feet, the guys further developed the Forester sound, which falls into a dreamy, achingly emotional and thoroughly sophisticated, middle ground between the indie folk of Bon Iver \u2013 a hero to both Parris and Carlson \u2013 and melody-focused electronic giants like Avicii. The music made in the mountains became their 2020 sophomore LP, A Range Of Light. The album\u2019s theme is healing through nature \u2013 a phenomenon they experienced while making it, with time off spent swimming, hiking, off-roading in the back country and taking in the night sky.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CI had been chronically sick for a while and was finally figuring out why,\u201D recalls Carlson, \u201Cand that trip to Mammoth was the turning point for me in terms of healing.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CIt was a weird time getting out of college and experiencing the isolation of the pandemic. You feel the weight of the world,\u201D says Parris.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CWith the music we were making in Mammoth,\u201D adds Carlson, \u201Cwe were trying to encapsulate the beautiful moments, so people can consume them wherever they are and hopefully have a moment of escape too.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "The Forester catalog now encompasses three albums: A Range Of Light, 2019\u2019s Kerosene and 2022\u2019s Watercolor. Together, these LPs have collected an incredible 72.7 million global streams, in addition to a growing fanbase made up of both longstanding dance fans and scene newcomers.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CThey're coming to our shows for an emotional release,\u201D says Carlson.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Forester has been meeting these fans out on the road, playing their first live show in June of 2021 at Colorado\u2019s epic Red Rocks Amphitheatre when they opened for Kygo. The Norwegian powerhouse also invited them to open for him at his massive summer 2022 stadium shows in Oslo and Mexico City, gigs that put the duo in front of tens of thousands of fans. Outsidelands 2022 in San Francisco found Forester not only doing their hypnotic live set \u2013 for which Carlson sings and plays synths while Parris handles guitar -- but playing a DJ gig later that night.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "In fact they started playing out together more than a decade ago, becoming the resident DJs for school dances, birthday parties and other teenage festivities on the westside of L.A. during their high school years. They threw their own warehouse parties that, as Parris recalls \u201Cwere definitely illegal.\u201D The afterparty for their prom drew 1,000 kids in formalwear to a remote spot in L.A.\u2019s Topanga Canyon and ended with the arrival of the LAPD. \u201CIt was incredible while it lasted, though,\u201D says Carlson.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Ten years later, the vision for Forester has expanded well beyond ragers. A pillar of the project is the preservation of the nature that\u2019s inspired them, with the guys donating a portion of the revenue from their first album to The Nature Conservancy, who used it to plant roughly 1,000 trees. Their ultimate goal is for their streaming to be at net zero carbon emissions.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CThe Forester project is ultimately a conservation project,\u201D Carlson says. \u201CWe want to spread the word that our planet is both beautiful and irreplaceable.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "The trick is that through the depth and power of their music, they\u2019re able to express this message without having to say anything at all.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Learn more about the ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    className: _MissionStatement_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].link,
+    href: "https://forester.raisely.com/",
+    target: "_blank"
+  }, "Forester Project"), " here."));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MissionStatement);
 
@@ -646,7 +675,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IMqMrT2eGOGeFiLbCAGg {
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   font-family: "Poppins", sans-serif;
 }
 .IMqMrT2eGOGeFiLbCAGg .vhoE8x9DmiQww7vrQ5mS {
@@ -659,7 +688,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IMqMrT2eGOGeFiLbCAGg {
   z-index: 1000;
   pointer-events: none;
   margin-top: -35rem;
-}`, "",{"version":3,"sources":["webpack://./src/App.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,kCAAA;AACJ;AACI;EACI,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;EACA,aAAA;EACA,oBAAA;EACA,kBAAA;AACR","sourcesContent":[".App {\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    position: relative;\n    padding-bottom: 5rem;\n    font-family: \"Poppins\", sans-serif;\n\n    .logo {\n        width: 20rem;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        opacity: 0.6;\n        z-index: 1000;\n        pointer-events: none; \n        margin-top: -35rem;\n    }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,kCAAA;AACJ;AACI;EACI,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;EACA,aAAA;EACA,oBAAA;EACA,kBAAA;AACR","sourcesContent":[".App {\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    position: relative;\n    padding-bottom: 2rem;\n    font-family: \"Poppins\", sans-serif;\n\n    .logo {\n        width: 20rem;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        opacity: 0.6;\n        z-index: 1000;\n        pointer-events: none; \n        margin-top: -35rem;\n    }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"App": `IMqMrT2eGOGeFiLbCAGg`,
@@ -826,6 +855,41 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Footer/Footer.module.scss":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Footer/Footer.module.scss ***!
+  \*****************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.p0lSI9uAa0TZuoF1iKdK {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 14px;
+  color: ghostwhite;
+}`, "",{"version":3,"sources":["webpack://./src/components/Footer/Footer.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,eAAA;EACA,iBAAA;AACJ","sourcesContent":[".Footer {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 100px;\n    font-size: 14px;\n    color: ghostwhite;\n}"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"Footer": `p0lSI9uAa0TZuoF1iKdK`
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/MerchCarousel/MerchCarousel.module.scss":
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/MerchCarousel/MerchCarousel.module.scss ***!
@@ -964,14 +1028,24 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.fdvC6wJWb7N6Pdr98BXA {
   color: ghostwhite;
   position: relative;
   margin: 5rem;
-  padding: 8rem 2rem 6rem;
+  padding: 10rem 2rem;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.3);
-}`, "",{"version":3,"sources":["webpack://./src/components/MissionStatement/MissionStatement.module.scss"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,2EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,oBAAA;EACA,gBAAA;AACJ;;AAEA;EACI,2EAAA;EACA,iBAAA;EACA,mBAAA;EACA,iBAAA;EACA,kBAAA;EACA,YAAA;EACA,uBAAA;EACA,UAAA;EACA,oCAAA;AACJ","sourcesContent":[".MissionStatement {\n    position: relative;\n    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n    background-image: url('/public/img/forester-film-edits-35.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    margin-bottom: 10rem;\n    overflow: hidden;\n}\n\n.MissionStatementPara {\n    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n    font-size: 1.2rem;\n    line-height: 1.6rem;\n    color: ghostwhite;\n    position: relative;\n    margin: 5rem;\n    padding: 8rem 2rem 6rem;\n    z-index: 2;\n    background-color: rgba(0, 0, 0, 0.3);\n}\n"],"sourceRoot":""}]);
+}
+.oWon0UkDx0_lYPNnYvv2 .ersCi17hvo_AFFOoJKx7 {
+  color: #1e254a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.oWon0UkDx0_lYPNnYvv2 .ersCi17hvo_AFFOoJKx7:hover {
+  color: #fff;
+}`, "",{"version":3,"sources":["webpack://./src/components/MissionStatement/MissionStatement.module.scss"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,2EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,oBAAA;EACA,gBAAA;AACJ;;AAEA;EACI,2EAAA;EACA,iBAAA;EACA,mBAAA;EACA,iBAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EACA,UAAA;EACA,oCAAA;AACJ;AAAI;EACI,cAAA;EACA,qBAAA;EACA,gBAAA;EACA,2BAAA;AAER;AADQ;EACI,WAAA;AAGZ","sourcesContent":[".MissionStatement {\n    position: relative;\n    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n    background-image: url('/public/img/forester-film-edits-35.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    margin-bottom: 10rem;\n    overflow: hidden;\n}\n\n.MissionStatementPara {\n    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n    font-size: 1.2rem;\n    line-height: 1.6rem;\n    color: ghostwhite;\n    position: relative;\n    margin: 5rem;\n    padding: 10rem 2rem;\n    z-index: 2;\n    background-color: rgba(0, 0, 0, 0.3);\n    .link {\n        color: #1e254a;\n        text-decoration: none;\n        font-weight: 500;\n        transition: color 0.3s ease;\n        &:hover {\n            color: #fff;\n        }\n    }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"MissionStatement": `fdvC6wJWb7N6Pdr98BXA`,
-	"MissionStatementPara": `oWon0UkDx0_lYPNnYvv2`
+	"MissionStatementPara": `oWon0UkDx0_lYPNnYvv2`,
+	"link": `ersCi17hvo_AFFOoJKx7`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1524,6 +1598,59 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_BackToTop_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_BackToTop_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_BackToTop_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./src/components/Footer/Footer.module.scss":
+/*!**************************************************!*\
+  !*** ./src/components/Footer/Footer.module.scss ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/sass-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js!./Footer.module.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Footer/Footer.module.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -2175,4 +2302,4 @@ module.exports = __webpack_require__.p + "f1786f4de4d641b84864.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.455a5e5038e6f43806ac103de36d7aa9.js.map
+//# sourceMappingURL=App.df285ede7d074490630295f86067fda6.js.map
