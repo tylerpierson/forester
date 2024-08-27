@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube, FaGithub, FaTiktok, FaSpotify, FaApple, FaSoundcloud } from 'react-icons/fa';
-import styles from './SocialMedia.module.scss';
+import styles from './SocialMediaTop.module.scss';
 
-function SocialMedia() {
+function SocialMediaTop() {
   return (
     <div className={styles.socialMedia}>
       <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
@@ -33,4 +33,4 @@ function SocialMedia() {
   );
 }
 
-export default SocialMedia;
+export default SocialMediaTop;

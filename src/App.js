@@ -1,22 +1,25 @@
 import { useState, useEffect } from 'react';
 import styles from './App.module.scss';
 import NavBar from './components/NavBar/NavBar';
-import SocialMedia from './components/SocialMedia/SocialMedia';
-import ImageCarousel from './components/ImageCarousel/ImageCarousel';
+import SocialMediaTop from './components/SocialMedia/SocialMediaTop';
+import SocialMediaBottom from './components/SocialMedia/SocialMediaBottom';
+import AlbumCarousel from './components/AlbumCarousel/AlbumCarousel';
 import VideoBanner from './components/VideoBanner/VideoBanner';
 import TourSection from './components/TourSection/TourSection';
 import MerchCarousel from './components/MerchCarousel/MerchCarousel';
+import BackToTop from './components/BackToTop/BackToTop';
+
 
 export default function App() {
     return (
         <div className={styles.App}>
             <NavBar />
             <VideoBanner />
-            <SocialMedia />
             <TourSection />
-            <ImageCarousel />
+            <AlbumCarousel />
             <MerchCarousel />
-            <SocialMedia />
+            <SocialMediaBottom />
+            <BackToTop />
         </div>
     );
 }

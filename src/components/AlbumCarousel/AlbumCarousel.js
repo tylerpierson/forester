@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styles from './ImageCarousel.module.scss';
+import styles from './AlbumCarousel.module.scss';
 
-const ImageCarousel = () => {
+const AlbumCarousel = () => {
   const images = [
     { src: '/img/moonlight.jpg', alt: 'Image 1', link: 'https://lnk.to/xmoonlight' },
     { src: '/img/watercolor.jpg', alt: 'Image 2', link: 'https://lnk.to/watercolor' },
@@ -22,7 +22,7 @@ const ImageCarousel = () => {
   }, [images.length]);
 
   return (
-    <div className={styles.carouselContainer}>
+    <div id="newmusic" className={styles.carouselContainer}>
       <div className={styles.carousel}>
         <div
           className={styles.carouselInner}
@@ -50,4 +50,4 @@ const ImageCarousel = () => {
   );
 };
 
-export default ImageCarousel;
+export default AlbumCarousel;

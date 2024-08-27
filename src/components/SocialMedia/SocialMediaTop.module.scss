@@ -1,0 +1,28 @@
+.socialMedia {
+    margin-top: -5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+        width: 3rem;
+        height: 3rem;
+        margin: 0 0.5rem;
+        padding: 0;
+        background-color: #1e254a;
+        border-radius: 10%;
+        z-index: 1000;
+
+        &:hover {
+            color: #1e254a;
+            background-color: #fff;
+            border-radius: 10%;
+            transform: scale(1.1);
+        }
+    }
+}

@@ -21,7 +21,7 @@ const MerchCarousel = () => {
   }, [images.length]);
 
   return (
-    <div className={styles.carouselContainer}>
+    <div id="store" className={styles.carouselContainer}>
       <div className={styles.carousel}>
         <div
           className={styles.carouselInner}
