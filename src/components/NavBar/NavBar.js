@@ -76,7 +76,7 @@ function NavBar({ isFaded, setIsFaded }) {
             <a href="#newmusic" onClick={(e) => handleNavigationClick(e, '#newmusic')}><li>MUSIC</li></a>
             <a href="#store" onClick={(e) => handleNavigationClick(e, '#store')}><li>STORE</li></a>
             <a href="#videos" onClick={(e) => handleNavigationClick(e, '#videos')}><li>VIDEOS</li></a>
-            <a href="#ourmission" onClick={(e) => handleNavigationClick(e, '#ourmission')}><li>MISSION</li></a>
+            <a href="#mission" onClick={(e) => handleNavigationClick(e, '#mission')}><li>MISSION</li></a>
           </ul>
         )}
       </div>
@@ -87,7 +87,7 @@ function NavBar({ isFaded, setIsFaded }) {
             <a href="#newmusic" onClick={(e) => handleNavigationClick(e, '#newmusic')}><li>NEW MUSIC</li></a>
             <a href="#store" onClick={(e) => handleNavigationClick(e, '#store')}><li>STORE</li></a>
             <a href="#videos" onClick={(e) => handleNavigationClick(e, '#videos')}><li>VIDEOS</li></a>
-            <a href="#ourmission" onClick={(e) => handleNavigationClick(e, '#ourmission')}><li>OUR MISSION</li></a>
+            <a href="#mission" onClick={(e) => handleNavigationClick(e, '#mission')}><li>OUR MISSION</li></a>
           </ul>
         </div>
       )}

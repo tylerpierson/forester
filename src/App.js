@@ -8,6 +8,7 @@ import VideoBanner from './components/VideoBanner/VideoBanner';
 import TourSection from './components/TourSection/TourSection';
 import MerchCarousel from './components/MerchCarousel/MerchCarousel';
 import BackToTop from './components/BackToTop/BackToTop';
+import MissionStatement from './components/MissionStatement/MissionStatement';
 
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
             <TourSection isFaded={isFaded}/>
             <AlbumCarousel isFaded={isFaded}/>
             <MerchCarousel isFaded={isFaded}/>
+            <MissionStatement />
             <SocialMediaBottom isFaded={isFaded}/>
             <BackToTop />
         </div>

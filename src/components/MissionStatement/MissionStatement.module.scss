@@ -1,0 +1,16 @@
+.MissionStatement {
+    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);
+    background-image: url('/public/img/green-bg.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10rem;
+    .MissionStatementPara {
+        padding: 5rem 5rem;
+        line-height: 1.4rem;
+    }
+}

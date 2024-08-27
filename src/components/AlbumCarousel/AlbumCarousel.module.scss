@@ -1,15 +1,25 @@
 .carouselContainer {
-   position: relative;
-   width: 90%;
-   max-width: 1560px;
-   margin: auto;
-   overflow: hidden;
-   margin-top: 6rem;
-   margin-bottom: 10rem;
-   padding-top: 1rem;
- }
+  position: relative;
+  width: 100%;
+  height: 40rem;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  padding-top: 1rem;
+  clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);
+  background-image: url('/public/img/simple-bg.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
  
  .carousel {
+  max-width: 1560px;
+
    display: flex;
  }
  
