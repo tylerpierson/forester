@@ -1,16 +1,11 @@
 .NavBar {
     width: 100vw;
     padding: 1rem 2rem;
-    color: #fff;
+    color: whitesmoke;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 2000;
     transition: opacity 0.5s ease, transform 0.5s ease;
-
-    &.hidden {
-        opacity: 0;
-        transform: translateY(-20%);
-    }
 
     .NavBarContainer {
         display: flex;
@@ -22,25 +17,31 @@
         display: flex;
         justify-content: center;
         width: auto;
+        height: 3.5rem;
         list-style: none;
         padding: 0;
         margin: 0;
+        border-radius: 0.75rem;
+
+        &:hover {
+            color: whitesmoke;
+            border-radius: 0.75rem;
+        }
 
         a {
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #fff;
+            color: whitesmoke;
             text-decoration: none;
-            padding: 0.5rem 0.8rem;
-            font-weight: 400;
-            font-size: 2rem;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            font-size: 1.7rem;
             transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-
+            
             &:hover {
-                color: #8f9690;
-                border-radius: 5px;
-                transform: scale(1.1);
+                color: #1e254a;
+                text-shadow: none;
             }
 
             li {
@@ -64,7 +65,7 @@
         }
 
         &:hover span {
-            background: #f1c40f;
+            background: #1e254a;
         }
     }
 
@@ -93,7 +94,7 @@
             transition: color 0.3s ease, background-color 0.3s ease;
 
             &:hover {
-                color: #f1c40f;
+                color: #1e254a;
                 background-color: rgba(255, 255, 255, 0.1);
             }
 

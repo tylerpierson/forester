@@ -1,31 +1,31 @@
-.video-banner {
+.videoBanner {
     position: relative;
-    width: 100%;
-    height: 100vh;
+    width: 85%;
+    height: 85vh;
     overflow: hidden;
+    border-radius: 1%;
+    .logo {
+      width: 40rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.5;
+      z-index: 1000;
+    }
   }
   
-  .video-banner__video {
+  .videoBannerVideo {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  .video-banner__content {
+  .videoBannerContent {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: whitesmoke;
     text-align: center;
-  }
-  
-  .video-banner__content h1 {
-    font-size: 3rem;
-    margin: 0;
-  }
-  
-  .video-banner__content p {
-    font-size: 1.5rem;
-    margin: 0;
   }
