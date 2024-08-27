@@ -11,14 +11,16 @@ import BackToTop from './components/BackToTop/BackToTop';
 
 
 export default function App() {
+    const [isFaded, setIsFaded] = useState(false);
+
     return (
         <div className={styles.App}>
-            <NavBar />
-            <VideoBanner />
-            <TourSection />
-            <AlbumCarousel />
-            <MerchCarousel />
-            <SocialMediaBottom />
+            <NavBar isFaded={isFaded} setIsFaded={setIsFaded} />
+            <VideoBanner isFaded={isFaded}/>
+            <TourSection isFaded={isFaded}/>
+            <AlbumCarousel isFaded={isFaded}/>
+            <MerchCarousel isFaded={isFaded}/>
+            <SocialMediaBottom isFaded={isFaded}/>
             <BackToTop />
         </div>
     );

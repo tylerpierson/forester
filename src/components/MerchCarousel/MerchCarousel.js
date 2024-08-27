@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './MerchCarousel.module.scss';
 
-const MerchCarousel = () => {
+const MerchCarousel = ({ isFaded }) => {
   const images = [
     { src: '/img/hat1.png', alt: 'Image 1', link: 'https://lnk.to/xmoonlight' },
     { src: '/img/hat2.png', alt: 'Image 2', link: 'https://lnk.to/watercolor' },
@@ -21,7 +21,7 @@ const MerchCarousel = () => {
   }, [images.length]);
 
   return (
-    <div id="store" className={styles.carouselContainer}>
+    <div id="store" className={isFaded ? `${styles.faded} ${styles.carouselContainer}` : `${styles.carouselContainer}`}>
       <div className={styles.carousel}>
         <div
           className={styles.carouselInner}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './AlbumCarousel.module.scss';
 
-const AlbumCarousel = () => {
+const AlbumCarousel = ({ isFaded }) => {
   const images = [
     { src: '/img/moonlight.jpg', alt: 'Image 1', link: 'https://lnk.to/xmoonlight' },
     { src: '/img/watercolor.jpg', alt: 'Image 2', link: 'https://lnk.to/watercolor' },
@@ -22,7 +22,7 @@ const AlbumCarousel = () => {
   }, [images.length]);
 
   return (
-    <div id="newmusic" className={styles.carouselContainer}>
+    <div id="newmusic" className={isFaded ? `${styles.faded} ${styles.carouselContainer}` : `${styles.carouselContainer}`}>
       <div className={styles.carousel}>
         <div
           className={styles.carouselInner}

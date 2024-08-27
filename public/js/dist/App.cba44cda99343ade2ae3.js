@@ -34,9 +34,23 @@
 
 
 function App() {
+  const [isFaded, setIsFaded] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   return /*#__PURE__*/React.createElement("div", {
     className: _App_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].App
-  }, /*#__PURE__*/React.createElement(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/React.createElement(_components_VideoBanner_VideoBanner__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/React.createElement(_components_TourSection_TourSection__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/React.createElement(_components_AlbumCarousel_AlbumCarousel__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/React.createElement(_components_MerchCarousel_MerchCarousel__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/React.createElement(_components_SocialMedia_SocialMediaBottom__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/React.createElement(_components_BackToTop_BackToTop__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+  }, /*#__PURE__*/React.createElement(_components_NavBar_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    isFaded: isFaded,
+    setIsFaded: setIsFaded
+  }), /*#__PURE__*/React.createElement(_components_VideoBanner_VideoBanner__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    isFaded: isFaded
+  }), /*#__PURE__*/React.createElement(_components_TourSection_TourSection__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    isFaded: isFaded
+  }), /*#__PURE__*/React.createElement(_components_AlbumCarousel_AlbumCarousel__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    isFaded: isFaded
+  }), /*#__PURE__*/React.createElement(_components_MerchCarousel_MerchCarousel__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    isFaded: isFaded
+  }), /*#__PURE__*/React.createElement(_components_SocialMedia_SocialMediaBottom__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    isFaded: isFaded
+  }), /*#__PURE__*/React.createElement(_components_BackToTop_BackToTop__WEBPACK_IMPORTED_MODULE_9__["default"], null));
 }
 
 /***/ }),
@@ -55,7 +69,10 @@ function App() {
 /* harmony import */ var _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AlbumCarousel.module.scss */ "./src/components/AlbumCarousel/AlbumCarousel.module.scss");
 
 
-const AlbumCarousel = () => {
+const AlbumCarousel = _ref => {
+  let {
+    isFaded
+  } = _ref;
   const images = [{
     src: '/img/moonlight.jpg',
     alt: 'Image 1',
@@ -83,7 +100,7 @@ const AlbumCarousel = () => {
   }, [images.length]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "newmusic",
-    className: _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer
+    className: isFaded ? "".concat(_AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer) : "".concat(_AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carousel
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -180,7 +197,10 @@ function BackToTop() {
 /* harmony import */ var _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MerchCarousel.module.scss */ "./src/components/MerchCarousel/MerchCarousel.module.scss");
 
 
-const MerchCarousel = () => {
+const MerchCarousel = _ref => {
+  let {
+    isFaded
+  } = _ref;
   const images = [{
     src: '/img/hat1.png',
     alt: 'Image 1',
@@ -204,7 +224,7 @@ const MerchCarousel = () => {
   }, [images.length]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "store",
-    className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer
+    className: isFaded ? "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer) : "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carousel
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -253,7 +273,11 @@ const MerchCarousel = () => {
 /* harmony import */ var _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar.module.scss */ "./src/components/NavBar/NavBar.module.scss");
 
 
-function NavBar() {
+function NavBar(_ref) {
+  let {
+    isFaded,
+    setIsFaded
+  } = _ref;
   const [isVisible, setIsVisible] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
   const [isMobile, setIsMobile] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [isMenuOpen, setIsMenuOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
@@ -263,6 +287,7 @@ function NavBar() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
         setIsVisible(false);
+        setIsFaded(false); // Remove fading effect on scroll
       } else {
         setIsVisible(true);
       }
@@ -284,6 +309,23 @@ function NavBar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const handleNavigationClick = (event, targetId) => {
+    event.preventDefault();
+    const targetElement = document.querySelector(targetId);
+    const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - window.innerHeight / 3;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+    setIsFaded(true); // Trigger fade effect
+
+    if (isMobile) {
+      setIsMenuOpen(false);
+    }
+
+    // Add 'focused' class to the clicked section
+    targetElement.classList.add(_NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].focused);
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "".concat(_NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].NavBar, " ").concat(!isVisible ? _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].hidden : '')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -294,34 +336,39 @@ function NavBar() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].NavList
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "#tour"
+    href: "#tour",
+    onClick: e => handleNavigationClick(e, '#tour')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "TOUR")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "#newmusic"
+    href: "#newmusic",
+    onClick: e => handleNavigationClick(e, '#newmusic')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "MUSIC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "#store"
+    href: "#store",
+    onClick: e => handleNavigationClick(e, '#store')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "STORE")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "#videos"
+    href: "#videos",
+    onClick: e => handleNavigationClick(e, '#videos')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "VIDEOS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "#ourmission"
+    href: "#ourmission",
+    onClick: e => handleNavigationClick(e, '#ourmission')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "MISSION")))), isMobile && isMenuOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MobileMenu
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MobileNavList
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#tour",
-    onClick: toggleMenu
+    onClick: e => handleNavigationClick(e, '#tour')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "TOUR")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#newmusic",
-    onClick: toggleMenu
+    onClick: e => handleNavigationClick(e, '#newmusic')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "NEW MUSIC")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#store",
-    onClick: toggleMenu
+    onClick: e => handleNavigationClick(e, '#store')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "STORE")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#videos",
-    onClick: toggleMenu
+    onClick: e => handleNavigationClick(e, '#videos')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "VIDEOS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#ourmission",
-    onClick: toggleMenu
+    onClick: e => handleNavigationClick(e, '#ourmission')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "OUR MISSION")))));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
@@ -456,7 +503,10 @@ function SocialMediaTop() {
 /* harmony import */ var _TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TourSection.module.scss */ "./src/components/TourSection/TourSection.module.scss");
 
 
-const TourSection = () => {
+const TourSection = _ref => {
+  let {
+    isFaded
+  } = _ref;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     const script = document.createElement('script');
     script.src = "https://widget.seated.com/app.js";
@@ -468,7 +518,7 @@ const TourSection = () => {
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "tour",
-    className: _TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].tourSection
+    className: isFaded ? "".concat(_TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].tourSection) : "".concat(_TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].tourSection)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "seated-55fdf2c0",
     className: _TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].seatedEmbed,
@@ -496,10 +546,13 @@ const TourSection = () => {
 
 
 
-const VideoBanner = () => {
+const VideoBanner = _ref => {
+  let {
+    isFaded
+  } = _ref;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "videos",
-    className: _VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner
+    className: isFaded ? "".concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner) : "".concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: _VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logo,
     src: "/img/logo_placehold.png",
@@ -1191,9 +1244,29 @@ body {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(45deg, #2a002a, #0a000a, #150015);
-}`, "",{"version":3,"sources":["webpack://./src/index.module.scss"],"names":[],"mappings":"AAAA;EACI,uBAAA;AACJ;;AAEA;EACI,SAAA;EACA,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,6DAAA;AACJ","sourcesContent":["html {\n    scroll-behavior: smooth;\n}  \n\nbody {\n    margin: 0;\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background: linear-gradient(45deg, #2a002a, #0a000a, #150015);\n}\n"],"sourceRoot":""}]);
+}
+
+.cxIb1ujYdxM2Ce2XmPtQ {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.enoNXke24DaIlWDBLQpJ {
+  background-color: red;
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+}
+
+.dFRZUFVaT06AZ_YT9yPM {
+  opacity: 1 !important;
+  pointer-events: all;
+}`, "",{"version":3,"sources":["webpack://./src/index.module.scss"],"names":[],"mappings":"AAAA;EACI,uBAAA;AACJ;;AAEA;EACI,SAAA;EACA,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,6DAAA;AACJ;;AAGA;EACI,UAAA;EACA,oBAAA;AAAJ;;AAGE;EACE,qBAAA;EACA,YAAA;EACA,6BAAA;AAAJ;;AAGE;EACE,qBAAA;EACA,mBAAA;AAAJ","sourcesContent":["html {\n    scroll-behavior: smooth;\n}  \n\nbody {\n    margin: 0;\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    background: linear-gradient(45deg, #2a002a, #0a000a, #150015);\n}\n\n\n.hidden {\n    opacity: 0;\n    pointer-events: none;\n  }\n  \n  .faded {\n    background-color: red;\n    opacity: 0.3;\n    transition: opacity 0.5s ease;\n  }\n  \n  .focused {\n    opacity: 1 !important;\n    pointer-events: all;\n  }\n  "],"sourceRoot":""}]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {};
+___CSS_LOADER_EXPORT___.locals = {
+	"hidden": `cxIb1ujYdxM2Ce2XmPtQ`,
+	"faded": `enoNXke24DaIlWDBLQpJ`,
+	"focused": `dFRZUFVaT06AZ_YT9yPM`
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
@@ -1897,4 +1970,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.0c3eaeb7e940d7f1b4867973b324fd97.js.map
+//# sourceMappingURL=App.c31ce860c20135c1d8e0519d8fa81795.js.map

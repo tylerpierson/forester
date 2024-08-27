@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styles from './NavBar.module.scss';
 
-function NavBar() {
+function NavBar({ isFaded, setIsFaded }) {
   const [isVisible, setIsVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
 
   useEffect(() => {
     let lastScrollTop = 0;
@@ -13,6 +14,7 @@ function NavBar() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
         setIsVisible(false);
+        setIsFaded(false); // Remove fading effect on scroll
       } else {
         setIsVisible(true);
       }
@@ -39,6 +41,26 @@ function NavBar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleNavigationClick = (event, targetId) => {
+    event.preventDefault();
+    const targetElement = document.querySelector(targetId);
+    const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - (window.innerHeight / 3);
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+
+    setIsFaded(true); // Trigger fade effect
+
+    if (isMobile) {
+      setIsMenuOpen(false);
+    }
+
+    // Add 'focused' class to the clicked section
+    targetElement.classList.add(styles.focused);
+  };
+
   return (
     <div className={`${styles.NavBar} ${!isVisible ? styles.hidden : ''}`}>
       <div className={styles.NavBarContainer}>
@@ -50,22 +72,22 @@ function NavBar() {
           </div>
         ) : (
           <ul className={styles.NavList}>
-            <a href="#tour"><li>TOUR</li></a>
-            <a href="#newmusic"><li>MUSIC</li></a>
-            <a href="#store"><li>STORE</li></a>
-            <a href="#videos"><li>VIDEOS</li></a>
-            <a href="#ourmission"><li>MISSION</li></a>
+            <a href="#tour" onClick={(e) => handleNavigationClick(e, '#tour')}><li>TOUR</li></a>
+            <a href="#newmusic" onClick={(e) => handleNavigationClick(e, '#newmusic')}><li>MUSIC</li></a>
+            <a href="#store" onClick={(e) => handleNavigationClick(e, '#store')}><li>STORE</li></a>
+            <a href="#videos" onClick={(e) => handleNavigationClick(e, '#videos')}><li>VIDEOS</li></a>
+            <a href="#ourmission" onClick={(e) => handleNavigationClick(e, '#ourmission')}><li>MISSION</li></a>
           </ul>
         )}
       </div>
       {isMobile && isMenuOpen && (
         <div className={styles.MobileMenu}>
           <ul className={styles.MobileNavList}>
-            <a href="#tour" onClick={toggleMenu}><li>TOUR</li></a>
-            <a href="#newmusic" onClick={toggleMenu}><li>NEW MUSIC</li></a>
-            <a href="#store" onClick={toggleMenu}><li>STORE</li></a>
-            <a href="#videos" onClick={toggleMenu}><li>VIDEOS</li></a>
-            <a href="#ourmission" onClick={toggleMenu}><li>OUR MISSION</li></a>
+            <a href="#tour" onClick={(e) => handleNavigationClick(e, '#tour')}><li>TOUR</li></a>
+            <a href="#newmusic" onClick={(e) => handleNavigationClick(e, '#newmusic')}><li>NEW MUSIC</li></a>
+            <a href="#store" onClick={(e) => handleNavigationClick(e, '#store')}><li>STORE</li></a>
+            <a href="#videos" onClick={(e) => handleNavigationClick(e, '#videos')}><li>VIDEOS</li></a>
+            <a href="#ourmission" onClick={(e) => handleNavigationClick(e, '#ourmission')}><li>OUR MISSION</li></a>
           </ul>
         </div>
       )}

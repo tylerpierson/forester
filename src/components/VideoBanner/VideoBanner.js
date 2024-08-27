@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './VideoBanner.module.scss';
 import SocialMediaTop from '../SocialMedia/SocialMediaTop';
 
-const VideoBanner = () => {
+const VideoBanner = ({ isFaded }) => {
   return (
-    <div id="videos" className={styles.videoBanner}>
+    <div id="videos" className={isFaded ? `${styles.faded} ${styles.videoBanner}` : `${styles.videoBanner}`}>
       <img className={styles.logo} src="/img/logo_placehold.png" alt="Forester Logo" />
       <video autoPlay loop muted playsInline className={styles.videoBannerVideo}>
         <source src="/video/moonlight_test.mp4" type="video/mp4" />
