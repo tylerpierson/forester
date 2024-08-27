@@ -10,6 +10,7 @@ import MerchCarousel from './components/MerchCarousel/MerchCarousel';
 import BackToTop from './components/BackToTop/BackToTop';
 import MissionStatement from './components/MissionStatement/MissionStatement';
 import Footer from './components/Footer/Footer';
+import Subscribe from './components/Subscribe/Subscribe';
 
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
             <AlbumCarousel isFaded={isFaded}/>
             <MerchCarousel isFaded={isFaded}/>
             <MissionStatement />
+            <Subscribe />
             <SocialMediaBottom isFaded={isFaded}/>
             <Footer />
             <BackToTop />
