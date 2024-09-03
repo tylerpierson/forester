@@ -23,7 +23,11 @@
 /* harmony import */ var _components_MerchCarousel_MerchCarousel__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/MerchCarousel/MerchCarousel */ "./src/components/MerchCarousel/MerchCarousel.js");
 /* harmony import */ var _components_BackToTop_BackToTop__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/BackToTop/BackToTop */ "./src/components/BackToTop/BackToTop.js");
 /* harmony import */ var _components_MissionStatement_MissionStatement__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/MissionStatement/MissionStatement */ "./src/components/MissionStatement/MissionStatement.js");
+/* harmony import */ var _components_Footer_Footer__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/Footer/Footer */ "./src/components/Footer/Footer.js");
+/* harmony import */ var _components_Subscribe_Subscribe__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/Subscribe/Subscribe */ "./src/components/Subscribe/Subscribe.js");
 /* provided dependency */ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
 
 
 
@@ -50,9 +54,9 @@ function App() {
     isFaded: isFaded
   }), /*#__PURE__*/React.createElement(_components_MerchCarousel_MerchCarousel__WEBPACK_IMPORTED_MODULE_8__["default"], {
     isFaded: isFaded
-  }), /*#__PURE__*/React.createElement(_components_MissionStatement_MissionStatement__WEBPACK_IMPORTED_MODULE_10__["default"], null), /*#__PURE__*/React.createElement(_components_SocialMedia_SocialMediaBottom__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), /*#__PURE__*/React.createElement(_components_MissionStatement_MissionStatement__WEBPACK_IMPORTED_MODULE_10__["default"], null), /*#__PURE__*/React.createElement(_components_Subscribe_Subscribe__WEBPACK_IMPORTED_MODULE_12__["default"], null), /*#__PURE__*/React.createElement(_components_SocialMedia_SocialMediaBottom__WEBPACK_IMPORTED_MODULE_4__["default"], {
     isFaded: isFaded
-  }), /*#__PURE__*/React.createElement(_components_BackToTop_BackToTop__WEBPACK_IMPORTED_MODULE_9__["default"], null));
+  }), /*#__PURE__*/React.createElement(_components_Footer_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], null), /*#__PURE__*/React.createElement(_components_BackToTop_BackToTop__WEBPACK_IMPORTED_MODULE_9__["default"], null));
 }
 
 /***/ }),
@@ -185,6 +189,29 @@ function BackToTop() {
 
 /***/ }),
 
+/***/ "./src/components/Footer/Footer.js":
+/*!*****************************************!*\
+  !*** ./src/components/Footer/Footer.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.module.scss */ "./src/components/Footer/Footer.module.scss");
+
+
+function Footer() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Footer
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA92024 Forester. Site by BT Web Dev"));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
+
+/***/ }),
+
 /***/ "./src/components/MerchCarousel/MerchCarousel.js":
 /*!*******************************************************!*\
   !*** ./src/components/MerchCarousel/MerchCarousel.js ***!
@@ -281,7 +308,11 @@ function MissionStatement() {
     className: _MissionStatement_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MissionStatement
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: _MissionStatement_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MissionStatementPara
-  }, "The systems of nature are at once deeply complex and gracefully simple. Given that Forester\u2019s music functions similarly, it makes sense that they named themselves after the woods. The Los Angeles-based indie electronic duo, David Parris and Xander Carlson, make lush soundscapes both inspired by and evocative of views from a mountain, deep pink sunsets, wind through the trees and the stars on a clear night. The nourishing effect these things have on a human soul? That\u2019s how they want their music to make you feel. The cool thing is that it does. \u201CThere\u2019s a section along the trail from Yosemite to Mount Whitney called Forester Pass,\u201D Carlson says. \u201CHiking it was one of the most impactful experiences of my life. The freedom I felt up there, we're trying to put that energy in the music.\u201D Based in Los Angeles, the longtime friends launched the Forester project in 2019, working nine-to-five gigs and making music together at night. They experienced immediate success with their debut single \u201CSpark\u201D \u2013 a deep exhale of a track that was picked up by YouTube tastemaker Trap Nation, signed to its label Lowly Palace and has since collected more than 5.7 million streams on Spotify. True to its name, the song was an auspicious beginning that caught the ear of an A&R at Kygo\u2019s Palm Tree Records, where Forester signed in 2020. This was all of course happening in the dark heart of the pandemic, a moment that offered Parris and Carlson, both then recent college grads, time to just make music. They got in the car and drove north to Carlson\u2019s family cabin in Mammoth Lakes, California, on the eastern slope of the vast Sierra Nevada mountain range. \u201CNobody was around, stores were closed,\u201D Carlson recalls. \u201CWe spent months there creating music. It was a prolific time for us.\u201D Here, at 8,000 feet, the guys further developed the Forester sound, which falls into a dreamy, achingly emotional and thoroughly sophisticated, middle ground between the indie folk of Bon Iver \u2013 a hero to both Parris and Carlson \u2013 and melody-focused electronic giants like Avicii. The music made in the mountains became their 2020 sophomore LP, A Range Of Light. The album\u2019s theme is healing through nature \u2013 a phenomenon they experienced while making it, with time off spent swimming, hiking, off-roading in the back country and taking in the night sky. \u201CI had been chronically sick for a while and was finally figuring out why,\u201D recalls Carlson, \u201Cand that trip to Mammoth was the turning point for me in terms of healing.\u201D \u201CIt was a weird time getting out of college and experiencing the isolation of the pandemic. You feel the weight of the world,\u201D says Parris. \u201CWith the music we were making in Mammoth,\u201D adds Carlson, \u201Cwe were trying to encapsulate the beautiful moments, so people can consume them wherever they are and hopefully have a moment of escape too.\u201D The Forester catalog now encompasses three albums: A Range Of Light, 2019\u2019s Kerosene and 2022\u2019s Watercolor. Together, these LPs have collected an incredible 72.7 million global streams, in addition to a growing fanbase made up of both longstanding dance fans and scene newcomers. \u201CThey're coming to our shows for an emotional release,\u201D says Carlson. Forester has been meeting these fans out on the road, playing their first live show in June of 2021 at Colorado\u2019s epic Red Rocks Amphitheatre when they opened for Kygo. The Norwegian powerhouse also invited them to open for him at his massive summer 2022 stadium shows in Oslo and Mexico City, gigs that put the duo in front of tens of thousands of fans. Outsidelands 2022 in San Francisco found Forester not only doing their hypnotic live set \u2013 for which Carlson sings and plays synths while Parris handles guitar -- but playing a DJ gig later that night. In fact they started playing out together more than a decade ago, becoming the resident DJs for school dances, birthday parties and other teenage festivities on the westside of L.A. during their high school years. They threw their own warehouse parties that, as Parris recalls \u201Cwere definitely illegal.\u201D The afterparty for their prom drew 1,000 kids in formalwear to a remote spot in L.A.\u2019s Topanga Canyon and ended with the arrival of the LAPD. \u201CIt was incredible while it lasted, though,\u201D says Carlson. Ten years later, the vision for Forester has expanded well beyond ragers. A pillar of the project is the preservation of the nature that\u2019s inspired them, with the guys donating a portion of the revenue from their first album to The Nature Conservancy, who used it to plant roughly 1,000 trees. Their ultimate goal is for their streaming to be at net zero carbon emissions. \u201CThe Forester project is ultimately a conservation project,\u201D Carlson says. \u201CWe want to spread the word that our planet is both beautiful and irreplaceable.\u201D The trick is that through the depth and power of their music, they\u2019re able to express this message without having to say anything at all."));
+  }, "The systems of nature are at once deeply complex and gracefully simple. Given that Forester\u2019s music functions similarly, it makes sense that they named themselves after the woods.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "The Los Angeles-based indie electronic duo, David Parris and Xander Carlson, make lush soundscapes both inspired by and evocative of views from a mountain, deep pink sunsets, wind through the trees and the stars on a clear night. The nourishing effect these things have on a human soul? That\u2019s how they want their music to make you feel. The cool thing is that it does.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CThere\u2019s a section along the trail from Yosemite to Mount Whitney called Forester Pass,\u201D Carlson says. \u201CHiking it was one of the most impactful experiences of my life. The freedom I felt up there, we're trying to put that energy in the music.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Based in Los Angeles, the longtime friends launched the Forester project in 2019, working nine-to-five gigs and making music together at night. They experienced immediate success with their debut single \u201CSpark\u201D \u2013 a deep exhale of a track that was picked up by YouTube tastemaker Trap Nation, signed to its label Lowly Palace and has since collected more than 5.7 million streams on Spotify. True to its name, the song was an auspicious beginning that caught the ear of an A&R at Kygo\u2019s Palm Tree Records, where Forester signed in 2020.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "This was all of course happening in the dark heart of the pandemic, a moment that offered Parris and Carlson, both then recent college grads, time to just make music. They got in the car and drove north to Carlson\u2019s family cabin in Mammoth Lakes, California, on the eastern slope of the vast Sierra Nevada mountain range.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CNobody was around, stores were closed,\u201D Carlson recalls. \u201CWe spent months there creating music. It was a prolific time for us.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Here, at 8,000 feet, the guys further developed the Forester sound, which falls into a dreamy, achingly emotional and thoroughly sophisticated, middle ground between the indie folk of Bon Iver \u2013 a hero to both Parris and Carlson \u2013 and melody-focused electronic giants like Avicii. The music made in the mountains became their 2020 sophomore LP, A Range Of Light. The album\u2019s theme is healing through nature \u2013 a phenomenon they experienced while making it, with time off spent swimming, hiking, off-roading in the back country and taking in the night sky.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CI had been chronically sick for a while and was finally figuring out why,\u201D recalls Carlson, \u201Cand that trip to Mammoth was the turning point for me in terms of healing.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CIt was a weird time getting out of college and experiencing the isolation of the pandemic. You feel the weight of the world,\u201D says Parris.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CWith the music we were making in Mammoth,\u201D adds Carlson, \u201Cwe were trying to encapsulate the beautiful moments, so people can consume them wherever they are and hopefully have a moment of escape too.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "The Forester catalog now encompasses three albums: A Range Of Light, 2019\u2019s Kerosene and 2022\u2019s Watercolor. Together, these LPs have collected an incredible 72.7 million global streams, in addition to a growing fanbase made up of both longstanding dance fans and scene newcomers.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CThey're coming to our shows for an emotional release,\u201D says Carlson.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Forester has been meeting these fans out on the road, playing their first live show in June of 2021 at Colorado\u2019s epic Red Rocks Amphitheatre when they opened for Kygo. The Norwegian powerhouse also invited them to open for him at his massive summer 2022 stadium shows in Oslo and Mexico City, gigs that put the duo in front of tens of thousands of fans. Outsidelands 2022 in San Francisco found Forester not only doing their hypnotic live set \u2013 for which Carlson sings and plays synths while Parris handles guitar -- but playing a DJ gig later that night.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "In fact they started playing out together more than a decade ago, becoming the resident DJs for school dances, birthday parties and other teenage festivities on the westside of L.A. during their high school years. They threw their own warehouse parties that, as Parris recalls \u201Cwere definitely illegal.\u201D The afterparty for their prom drew 1,000 kids in formalwear to a remote spot in L.A.\u2019s Topanga Canyon and ended with the arrival of the LAPD. \u201CIt was incredible while it lasted, though,\u201D says Carlson.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Ten years later, the vision for Forester has expanded well beyond ragers. A pillar of the project is the preservation of the nature that\u2019s inspired them, with the guys donating a portion of the revenue from their first album to The Nature Conservancy, who used it to plant roughly 1,000 trees. Their ultimate goal is for their streaming to be at net zero carbon emissions.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "\u201CThe Forester project is ultimately a conservation project,\u201D Carlson says. \u201CWe want to spread the word that our planet is both beautiful and irreplaceable.\u201D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "The trick is that through the depth and power of their music, they\u2019re able to express this message without having to say anything at all.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Learn more about the ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    className: _MissionStatement_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].link,
+    href: "https://forester.raisely.com/",
+    target: "_blank"
+  }, "Forester Project"), " here."));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MissionStatement);
 
@@ -301,11 +332,7 @@ function MissionStatement() {
 /* harmony import */ var _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar.module.scss */ "./src/components/NavBar/NavBar.module.scss");
 
 
-function NavBar(_ref) {
-  let {
-    isFaded,
-    setIsFaded
-  } = _ref;
+function NavBar() {
   const [isVisible, setIsVisible] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
   const [isMobile, setIsMobile] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [isMenuOpen, setIsMenuOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
@@ -314,10 +341,9 @@ function NavBar(_ref) {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
-        setIsVisible(false);
-        setIsFaded(false); // Remove fading effect on scroll
+        setIsVisible(false); // Fade out when scrolling down
       } else {
-        setIsVisible(true);
+        setIsVisible(true); // Fade in when scrolling up
       }
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     };
@@ -340,13 +366,11 @@ function NavBar(_ref) {
   const handleNavigationClick = (event, targetId) => {
     event.preventDefault();
     const targetElement = document.querySelector(targetId);
-    const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - window.innerHeight / 3;
+    const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - window.innerHeight / 3.8;
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth'
     });
-    setIsFaded(true); // Trigger fade effect
-
     if (isMobile) {
       setIsMenuOpen(false);
     }
@@ -376,8 +400,7 @@ function NavBar(_ref) {
     href: "#videos",
     onClick: e => handleNavigationClick(e, '#videos')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "VIDEOS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "#mission",
-    onClick: e => handleNavigationClick(e, '#mission')
+    href: "#mission"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "MISSION")))), isMobile && isMenuOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MobileMenu
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
@@ -395,8 +418,7 @@ function NavBar(_ref) {
     href: "#videos",
     onClick: e => handleNavigationClick(e, '#videos')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "VIDEOS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "#mission",
-    onClick: e => handleNavigationClick(e, '#mission')
+    href: "#mission"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "OUR MISSION")))));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
@@ -514,6 +536,71 @@ function SocialMediaTop() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaSoundcloud, null)));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SocialMediaTop);
+
+/***/ }),
+
+/***/ "./src/components/Subscribe/Subscribe.js":
+/*!***********************************************!*\
+  !*** ./src/components/Subscribe/Subscribe.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Subscribe.module.scss */ "./src/components/Subscribe/Subscribe.module.scss");
+
+
+function Subscribe() {
+  const [email, setEmail] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+  const [message, setMessage] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
+  const handleInputChange = e => {
+    setEmail(e.target.value);
+  };
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    // Basic email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      setMessage('Please enter a valid email address.');
+      return;
+    }
+
+    // Reset the message
+    setMessage('');
+
+    // Simulate an API call to subscribe the user
+    // Replace this with your actual API call
+    setTimeout(() => {
+      setMessage('Thank you for subscribing!');
+      setEmail('');
+    }, 1000);
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Subscribe
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
+    className: _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].header
+  }, "Subscribe to our newsletter"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
+    onSubmit: handleSubmit,
+    className: _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].SubscribeForm
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "email",
+    value: email,
+    onChange: handleInputChange,
+    placeholder: "Enter your email",
+    className: _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].SubscribeInput,
+    required: true
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    type: "submit",
+    className: _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].SubscribeButton
+  }, "Subscribe")), message && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Message
+  }, message));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Subscribe);
 
 /***/ }),
 
@@ -648,7 +735,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IMqMrT2eGOGeFiLbCAGg {
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   font-family: "Poppins", sans-serif;
 }
 .IMqMrT2eGOGeFiLbCAGg .vhoE8x9DmiQww7vrQ5mS {
@@ -661,7 +748,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IMqMrT2eGOGeFiLbCAGg {
   z-index: 1000;
   pointer-events: none;
   margin-top: -35rem;
-}`, "",{"version":3,"sources":["webpack://./src/App.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,kCAAA;AACJ;AACI;EACI,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;EACA,aAAA;EACA,oBAAA;EACA,kBAAA;AACR","sourcesContent":[".App {\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    position: relative;\n    padding-bottom: 5rem;\n    font-family: \"Poppins\", sans-serif;\n\n    .logo {\n        width: 20rem;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        opacity: 0.6;\n        z-index: 1000;\n        pointer-events: none; \n        margin-top: -35rem;\n    }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/App.module.scss"],"names":[],"mappings":"AAAA;EACI,WAAA;EACA,iBAAA;EACA,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,kBAAA;EACA,oBAAA;EACA,kCAAA;AACJ;AACI;EACI,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,YAAA;EACA,aAAA;EACA,oBAAA;EACA,kBAAA;AACR","sourcesContent":[".App {\n    width: 100%;\n    min-height: 100vh;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    position: relative;\n    padding-bottom: 2rem;\n    font-family: \"Poppins\", sans-serif;\n\n    .logo {\n        width: 20rem;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n        opacity: 0.6;\n        z-index: 1000;\n        pointer-events: none; \n        margin-top: -35rem;\n    }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"App": `IMqMrT2eGOGeFiLbCAGg`,
@@ -828,6 +915,41 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Footer/Footer.module.scss":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Footer/Footer.module.scss ***!
+  \*****************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.p0lSI9uAa0TZuoF1iKdK {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 14px;
+  color: ghostwhite;
+}`, "",{"version":3,"sources":["webpack://./src/components/Footer/Footer.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,eAAA;EACA,iBAAA;AACJ","sourcesContent":[".Footer {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 100px;\n    font-size: 14px;\n    color: ghostwhite;\n}"],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"Footer": `p0lSI9uAa0TZuoF1iKdK`
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/MerchCarousel/MerchCarousel.module.scss":
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/MerchCarousel/MerchCarousel.module.scss ***!
@@ -945,6 +1067,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.fdvC6wJWb7N6Pdr98BXA {
+  position: relative;
   clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
   background-attachment: fixed;
@@ -955,15 +1078,72 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.fdvC6wJWb7N6Pdr98BXA {
   align-items: center;
   width: 100%;
   margin-bottom: 10rem;
+  overflow: hidden;
 }
-.fdvC6wJWb7N6Pdr98BXA .oWon0UkDx0_lYPNnYvv2 {
-  padding: 5rem 5rem;
-  line-height: 1.4rem;
-}`, "",{"version":3,"sources":["webpack://./src/components/MissionStatement/MissionStatement.module.scss"],"names":[],"mappings":"AAAA;EACI,2EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,oBAAA;AACJ;AAAI;EACI,kBAAA;EACA,mBAAA;AAER","sourcesContent":[".MissionStatement {\n    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n    background-image: url('/public/img/forester-film-edits-35.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    margin-bottom: 10rem;\n    .MissionStatementPara {\n        padding: 5rem 5rem;\n        line-height: 1.4rem;\n    }\n}\n"],"sourceRoot":""}]);
+
+.oWon0UkDx0_lYPNnYvv2 {
+  clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: ghostwhite;
+  position: relative;
+  margin: 5rem;
+  padding: 10rem 2rem;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.oWon0UkDx0_lYPNnYvv2 .ersCi17hvo_AFFOoJKx7 {
+  color: rgba(179, 217, 91, 0.873);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.oWon0UkDx0_lYPNnYvv2 .ersCi17hvo_AFFOoJKx7:hover {
+  color: #fff;
+}
+
+/* Adjust clip-path for smaller screens */
+@media (max-width: 1200px) {
+  .fdvC6wJWb7N6Pdr98BXA,
+  .oWon0UkDx0_lYPNnYvv2 {
+    clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);
+  }
+}
+@media (max-width: 992px) {
+  .fdvC6wJWb7N6Pdr98BXA,
+  .oWon0UkDx0_lYPNnYvv2 {
+    clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);
+  }
+}
+@media (max-width: 768px) {
+  .fdvC6wJWb7N6Pdr98BXA,
+  .oWon0UkDx0_lYPNnYvv2 {
+    clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);
+  }
+}
+@media (max-width: 576px) {
+  .fdvC6wJWb7N6Pdr98BXA {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .fdvC6wJWb7N6Pdr98BXA,
+  .oWon0UkDx0_lYPNnYvv2 {
+    clip-path: none;
+    height: 40rem;
+    overflow-y: scroll;
+  }
+  .oWon0UkDx0_lYPNnYvv2 {
+    padding: 2rem 5rem;
+    margin: 0;
+  }
+}`, "",{"version":3,"sources":["webpack://./src/components/MissionStatement/MissionStatement.module.scss"],"names":[],"mappings":"AAAA;EACI,kBAAA;EACA,2EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,oBAAA;EACA,gBAAA;AACJ;;AAEA;EACI,2EAAA;EACA,iBAAA;EACA,mBAAA;EACA,iBAAA;EACA,kBAAA;EACA,YAAA;EACA,mBAAA;EACA,UAAA;EACA,oCAAA;AACJ;;AAEA;EACI,gCAAA;EACA,qBAAA;EACA,gBAAA;EACA,2BAAA;AACJ;;AAEA;EACI,WAAA;AACJ;;AAEA,yCAAA;AACA;EACI;;IAEI,4EAAA;EACN;AACF;AAEA;EACI;;IAEI,4EAAA;EAAN;AACF;AAGA;EACI;;IAEI,4EAAA;EADN;AACF;AAIA;EACI;IACI,iBAAA;IACA,oBAAA;EAFN;EAKE;;IAEI,eAAA;IACA,aAAA;IACA,kBAAA;EAHN;EAME;IACI,kBAAA;IACA,SAAA;EAJN;AACF","sourcesContent":[".MissionStatement {\n    position: relative;\n    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n    background-image: url('/public/img/forester-film-edits-35.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    margin-bottom: 10rem;\n    overflow: hidden;\n}\n\n.MissionStatementPara {\n    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n    font-size: 1.2rem;\n    line-height: 1.6rem;\n    color: ghostwhite;\n    position: relative;\n    margin: 5rem;\n    padding: 10rem 2rem;\n    z-index: 2;\n    background-color: rgba(0, 0, 0, 0.3);\n}\n\n.MissionStatementPara .link {\n    color: rgba(179, 217, 91, 0.873);\n    text-decoration: none;\n    font-weight: 500;\n    transition: color 0.3s ease;\n}\n\n.MissionStatementPara .link:hover {\n    color: #fff;\n}\n\n/* Adjust clip-path for smaller screens */\n@media (max-width: 1200px) {\n    .MissionStatement,\n    .MissionStatementPara {\n        clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);\n    }\n}\n\n@media (max-width: 992px) {\n    .MissionStatement,\n    .MissionStatementPara {\n        clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);\n    }\n}\n\n@media (max-width: 768px) {\n    .MissionStatement,\n    .MissionStatementPara {\n        clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);\n    }\n}\n\n@media (max-width: 576px) {\n    .MissionStatement{\n        padding-top: 5rem;\n        padding-bottom: 5rem;\n    }\n    \n    .MissionStatement,\n    .MissionStatementPara {\n        clip-path: none;\n        height: 40rem;\n        overflow-y: scroll;\n    }\n\n    .MissionStatementPara {\n        padding: 2rem 5rem;\n        margin: 0;\n    }\n}\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"MissionStatement": `fdvC6wJWb7N6Pdr98BXA`,
-	"MissionStatementPara": `oWon0UkDx0_lYPNnYvv2`
+	"MissionStatementPara": `oWon0UkDx0_lYPNnYvv2`,
+	"link": `ersCi17hvo_AFFOoJKx7`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -990,11 +1170,18 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   width: 90%;
+  border-radius: 30px;
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 2000;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.QpVD3qAS0nYBtoQqAYoe.pGuXSjiAF9ReSU4SwCSk {
+  opacity: 0;
+  transform: translateY(-100%);
 }
 .QpVD3qAS0nYBtoQqAYoe .IN1dAZkGN8YgIc1_f2FV {
   display: flex;
@@ -1028,7 +1215,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a:hover {
   color: #1e254a;
-  text-shadow: none;
+  text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a li {
   margin-left: 0.5rem;
@@ -1038,16 +1225,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 .QpVD3qAS0nYBtoQqAYoe .ZcrcTrKhDDmmbAOeAxJJ span {
   background: #fff;
   height: 3px;
   width: 25px;
   margin: 2px 0;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 .QpVD3qAS0nYBtoQqAYoe .ZcrcTrKhDDmmbAOeAxJJ:hover span {
   background: #1e254a;
+  border: 0.5px solid ghostwhite;
+  transition: 0.3s ease;
 }
 .QpVD3qAS0nYBtoQqAYoe .EHyE2pRSdW8SxXlsnalc {
   background: #333;
@@ -1075,6 +1265,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
 .QpVD3qAS0nYBtoQqAYoe .B0N_SpgrkQDn_a8SbL4n a:hover {
   color: #1e254a;
   background-color: rgba(255, 255, 255, 0.1);
+  text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;
 }
 .QpVD3qAS0nYBtoQqAYoe .B0N_SpgrkQDn_a8SbL4n a li {
   cursor: pointer;
@@ -1087,10 +1278,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
     margin-right: 3%;
     display: flex;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;EACA,kBAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,kDAAA;AACJ;AACI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AACR;AAEI;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,cAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;AAAR;AAEQ;EACI,iBAAA;EACA,sBAAA;AAAZ;AAGQ;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,4EAAA;AADZ;AAGY;EACI,cAAA;EACA,iBAAA;AADhB;AAIY;EACI,mBAAA;EACA,eAAA;AAFhB;AAOI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;AALR;AAOQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,gCAAA;AALZ;AAQQ;EACI,mBAAA;AANZ;AAUI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AARR;AAWI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AATR;AAWQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AATZ;AAWY;EACI,cAAA;EACA,0CAAA;AAThB;AAYY;EACI,eAAA;AAVhB;AAeI;EACI;IACI,aAAA;EAbV;EAgBM;IACI,gBAAA;IACA,aAAA;EAdV;AACF","sourcesContent":[".NavBar {\n    width: 90%;\n    padding: 1rem 2rem;\n    position: sticky;\n    top: 0;\n    z-index: 2000;\n    transition: opacity 0.5s ease, transform 0.5s ease;\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        height: 3.5rem;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n        border-radius: 0.75rem;\n\n        &:hover {\n            color: whitesmoke;\n            border-radius: 0.75rem;\n        }\n\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: whitesmoke;\n            text-decoration: none;\n            padding: 0.5rem 1rem;\n            font-weight: 500;\n            font-size: 1.7rem;\n            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;\n            \n            &:hover {\n                color: #1e254a;\n                text-shadow: none;\n            }\n\n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }\n    }\n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: background 0.3s ease;\n        }\n\n        &:hover span {\n            background: #1e254a;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        right: 0;\n        width: 100%;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #1e254a;\n                background-color: rgba(255, 255, 255, 0.1);\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n        .NavList {\n            display: none;\n        }\n\n        .Hamburger {\n            margin-right: 3%;\n            display: flex;\n        }\n    }\n}\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;EACA,mBAAA;EACA,kBAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,oCAAA;EACA,UAAA;EACA,gEAAA;AACJ;AACI;EACI,UAAA;EACA,4BAAA;AACR;AAEI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AAAR;AAGI;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,cAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;AADR;AAGQ;EACI,iBAAA;EACA,sBAAA;AADZ;AAIQ;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,4EAAA;AAFZ;AAIY;EACI,cAAA;EACA,uEAAA;AAFhB;AAKY;EACI,mBAAA;EACA,eAAA;AAHhB;AAQI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;AANR;AAQQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,qBAAA;AANZ;AASQ;EACI,mBAAA;EACA,8BAAA;EACA,qBAAA;AAPZ;AAWI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AATR;AAYI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AAVR;AAYQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AAVZ;AAYY;EACI,cAAA;EACA,0CAAA;EACA,uEAAA;AAVhB;AAaY;EACI,eAAA;AAXhB;AAgBI;EACI;IACI,aAAA;EAdV;EAiBM;IACI,gBAAA;IACA,aAAA;EAfV;AACF","sourcesContent":[".NavBar {\n    width: 90%;\n    border-radius: 30px;\n    padding: 1rem 2rem;\n    position: sticky;\n    top: 0;\n    z-index: 2000;\n    background-color: rgba(0, 0, 0, 0.5);\n    opacity: 1;\n    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;\n\n    &.hidden {\n        opacity: 0;\n        transform: translateY(-100%);\n    }\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        height: 3.5rem;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n        border-radius: 0.75rem;\n\n        &:hover {\n            color: whitesmoke;\n            border-radius: 0.75rem;\n        }\n\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: whitesmoke;\n            text-decoration: none;\n            padding: 0.5rem 1rem;\n            font-weight: 500;\n            font-size: 1.7rem;\n            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;\n\n            &:hover {\n                color: #1e254a;\n                text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;\n            }\n\n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }\n    }\n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n        transition: .3s ease;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: 0.3s ease;\n        }\n\n        &:hover span {\n            background: #1e254a;\n            border: .5px solid ghostwhite;\n            transition: .3s ease;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        right: 0;\n        width: 100%;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #1e254a;\n                background-color: rgba(255, 255, 255, 0.1);\n                text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n        .NavList {\n            display: none;\n        }\n\n        .Hamburger {\n            margin-right: 3%;\n            display: flex;\n        }\n    }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
+	"hidden": `pGuXSjiAF9ReSU4SwCSk`,
 	"NavBarContainer": `IN1dAZkGN8YgIc1_f2FV`,
 	"NavList": `o5xAJUHc5NRtb6zPAGtC`,
 	"Hamburger": `ZcrcTrKhDDmmbAOeAxJJ`,
@@ -1121,7 +1313,6 @@ ___CSS_LOADER_EXPORT___.locals = {
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.Ex5daK_A9alVt94EKfwU {
-  margin-top: -5rem;
   width: 70%;
   display: flex;
   justify-content: center;
@@ -1146,7 +1337,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.Ex5daK_A9alVt94EKfwU {
   background-color: whitesmoke;
   border-radius: 10%;
   transform: scale(1.1);
-}`, "",{"version":3,"sources":["webpack://./src/components/SocialMedia/SocialMediaBottom.module.scss"],"names":[],"mappings":"AAAA;EACI,iBAAA;EACA,UAAA;EACA,aAAA;EACA,uBAAA;AACJ;AAAI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,iBAAA;EACA,iBAAA;EACA,2BAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,UAAA;EACA,yBAAA;EACA,kBAAA;EACA,aAAA;AAER;AAAQ;EACI,cAAA;EACA,4BAAA;EACA,kBAAA;EACA,qBAAA;AAEZ","sourcesContent":[".socialMedia {\n    margin-top: -5rem;\n    width: 70%;\n    display: flex;\n    justify-content: center;\n    a {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        color: whitesmoke;\n        font-size: 1.5rem;\n        transition: color 0.3s ease;\n        width: 3rem;\n        height: 3rem;\n        margin: 0 0.5rem;\n        padding: 0;\n        background-color: #1e254a;\n        border-radius: 10%;\n        z-index: 1000;\n\n        &:hover {\n            color: #1e254a;\n            background-color: whitesmoke;\n            border-radius: 10%;\n            transform: scale(1.1);\n        }\n    }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/SocialMedia/SocialMediaBottom.module.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;EACA,aAAA;EACA,uBAAA;AACJ;AAAI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,iBAAA;EACA,iBAAA;EACA,2BAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,UAAA;EACA,yBAAA;EACA,kBAAA;EACA,aAAA;AAER;AAAQ;EACI,cAAA;EACA,4BAAA;EACA,kBAAA;EACA,qBAAA;AAEZ","sourcesContent":[".socialMedia {\n    width: 70%;\n    display: flex;\n    justify-content: center;\n    a {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        color: whitesmoke;\n        font-size: 1.5rem;\n        transition: color 0.3s ease;\n        width: 3rem;\n        height: 3rem;\n        margin: 0 0.5rem;\n        padding: 0;\n        background-color: #1e254a;\n        border-radius: 10%;\n        z-index: 1000;\n\n        &:hover {\n            color: #1e254a;\n            background-color: whitesmoke;\n            border-radius: 10%;\n            transform: scale(1.1);\n        }\n    }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"socialMedia": `Ex5daK_A9alVt94EKfwU`
@@ -1204,6 +1395,88 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.pIknSODvS_Og9IUYQgge {
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"socialMedia": `pIknSODvS_Og9IUYQgge`
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Subscribe/Subscribe.module.scss":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Subscribe/Subscribe.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.DEW5vkqe8lZd4W0aiaXm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0 5rem;
+  width: 100%;
+}
+.DEW5vkqe8lZd4W0aiaXm .iFnXw_H8tmd1kWEB75Gb {
+  font-size: 1.2rem;
+  color: ghostwhite;
+  margin-bottom: 1rem;
+}
+.DEW5vkqe8lZd4W0aiaXm .H_wryZjgyAqL7uT4pUdP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.DEW5vkqe8lZd4W0aiaXm .H_wryZjgyAqL7uT4pUdP ._D2ENJFvEycq2s291772 {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  width: 30%;
+}
+.DEW5vkqe8lZd4W0aiaXm .H_wryZjgyAqL7uT4pUdP ._D2ENJFvEycq2s291772:focus {
+  border-color: #1e254a;
+}
+.DEW5vkqe8lZd4W0aiaXm .H_wryZjgyAqL7uT4pUdP .UIG7bgZ1DyZCnt3Zs31V {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  background-color: #1e254a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.DEW5vkqe8lZd4W0aiaXm .H_wryZjgyAqL7uT4pUdP .UIG7bgZ1DyZCnt3Zs31V:hover {
+  background-color: #000;
+  border: 1px solid ghostwhite;
+}
+.DEW5vkqe8lZd4W0aiaXm .MeAwkH7EDfQl7df614HM {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: rgba(179, 217, 91, 0.873);
+}`, "",{"version":3,"sources":["webpack://./src/components/Subscribe/Subscribe.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,mBAAA;EACA,WAAA;AACJ;AAAI;EACI,iBAAA;EACA,iBAAA;EACA,mBAAA;AAER;AACI;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;AACN;AACM;EACE,oBAAA;EACA,eAAA;EACA,sBAAA;EACA,kBAAA;EACA,kBAAA;EACA,aAAA;EACA,kCAAA;EACA,UAAA;AACR;AAAQ;EACE,qBAAA;AAEV;AAEM;EACE,sBAAA;EACA,eAAA;EACA,yBAAA;EACA,YAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAR;AAEQ;EACE,sBAAA;EACA,4BAAA;AAAV;AAKI;EACE,gBAAA;EACA,eAAA;EACA,gCAAA;AAHN","sourcesContent":[".Subscribe {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin: 2rem 0 5rem;\n    width: 100%;\n    .header {\n        font-size: 1.2rem;\n        color: ghostwhite;\n        margin-bottom: 1rem;\n    }\n  \n    .SubscribeForm {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      width: 100%;\n  \n      .SubscribeInput {\n        padding: 0.8rem 1rem;\n        font-size: 1rem;\n        border: 2px solid #ccc;\n        border-radius: 4px;\n        margin-right: 1rem;\n        outline: none;\n        transition: border-color 0.3s ease;\n        width: 30%;\n        &:focus {\n          border-color: #1e254a;\n        }\n      }\n  \n      .SubscribeButton {\n        padding: 0.8rem 1.5rem;\n        font-size: 1rem;\n        background-color: #1e254a;\n        color: white;\n        border: none;\n        border-radius: 4px;\n        cursor: pointer;\n        transition: background-color 0.3s ease;\n  \n        &:hover {\n          background-color: #000;\n          border: 1px solid ghostwhite;\n        }\n      }\n    }\n  \n    .Message {\n      margin-top: 1rem;\n      font-size: 1rem;\n      color: rgba(179, 217, 91, 0.873);\n    }\n  }\n  "],"sourceRoot":""}]);
+// Exports
+___CSS_LOADER_EXPORT___.locals = {
+	"Subscribe": `DEW5vkqe8lZd4W0aiaXm`,
+	"header": `iFnXw_H8tmd1kWEB75Gb`,
+	"SubscribeForm": `H_wryZjgyAqL7uT4pUdP`,
+	"SubscribeInput": `_D2ENJFvEycq2s291772`,
+	"SubscribeButton": `UIG7bgZ1DyZCnt3Zs31V`,
+	"Message": `MeAwkH7EDfQl7df614HM`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1275,8 +1548,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.DyskzzB41LkALTA2XioJ {
   left: 50%;
   transform: translate(-50%, -50%);
   color: whitesmoke;
-  opacity: 0.5;
   z-index: 1000;
+  filter: invert(1);
 }
 .DyskzzB41LkALTA2XioJ .WBUPoLGLPVO0zY9pbBUT {
   width: 85%;
@@ -1290,7 +1563,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.DyskzzB41LkALTA2XioJ {
   color: white;
   text-align: center;
   z-index: 1000;
-}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;AACF;AACE;EACE,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,iBAAA;EACA,YAAA;EACA,aAAA;AACJ;AAEE;EACE,UAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;EACH,iBAAA;AAAJ;AAGE;EACE,YAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;AADJ","sourcesContent":[".videoBanner {\n  position: relative;\n  width: 100%;\n  height: 85vh;\n  overflow: hidden;\n  text-align: center;\n\n  .logo {\n    width: 40rem;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: whitesmoke;\n    opacity: 0.5;\n    z-index: 1000;\n  }\n\n  .videoBannerVideo {\n    width: 85%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    border-radius: 1%;\n  }\n\n  .videoBannerContent {\n    bottom: 20px;\n    color: white;\n    text-align: center;\n    z-index: 1000;\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;AACF;AACE;EACE,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,iBAAA;EACA,aAAA;EACA,iBAAA;AACJ;AAEE;EACE,UAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;EACH,iBAAA;AAAJ;AAGE;EACE,YAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;AADJ","sourcesContent":[".videoBanner {\n  position: relative;\n  width: 100%;\n  height: 85vh;\n  overflow: hidden;\n  text-align: center;\n\n  .logo {\n    width: 40rem;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    color: whitesmoke;\n    z-index: 1000;\n    filter: invert(1);\n  }\n\n  .videoBannerVideo {\n    width: 85%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    border-radius: 1%;\n  }\n\n  .videoBannerContent {\n    bottom: 20px;\n    color: white;\n    text-align: center;\n    z-index: 1000;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"videoBanner": `DyskzzB41LkALTA2XioJ`,
@@ -1516,6 +1789,59 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_BackToTop_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_BackToTop_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_BackToTop_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./src/components/Footer/Footer.module.scss":
+/*!**************************************************!*\
+  !*** ./src/components/Footer/Footer.module.scss ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/sass-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js!./Footer.module.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Footer/Footer.module.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Footer_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -1781,6 +2107,59 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_SocialMediaTop_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_SocialMediaTop_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_SocialMediaTop_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./src/components/Subscribe/Subscribe.module.scss":
+/*!********************************************************!*\
+  !*** ./src/components/Subscribe/Subscribe.module.scss ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!../../../node_modules/sass-loader/dist/cjs.js!../../../node_modules/postcss-loader/dist/cjs.js!./Subscribe.module.scss */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/components/Subscribe/Subscribe.module.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -2167,4 +2546,4 @@ module.exports = __webpack_require__.p + "f1786f4de4d641b84864.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.3524d28d566cac0746af582002650ee4.js.map
+//# sourceMappingURL=App.38b85f1303c11d28fde804a29bbe5cbf.js.map

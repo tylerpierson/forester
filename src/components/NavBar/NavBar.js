@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from './NavBar.module.scss';
 
-function NavBar({ isFaded, setIsFaded }) {
+function NavBar() {
   const [isVisible, setIsVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
 
   useEffect(() => {
     let lastScrollTop = 0;
@@ -13,10 +12,9 @@ function NavBar({ isFaded, setIsFaded }) {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
-        setIsVisible(false);
-        setIsFaded(false); // Remove fading effect on scroll
+        setIsVisible(false); // Fade out when scrolling down
       } else {
-        setIsVisible(true);
+        setIsVisible(true); // Fade in when scrolling up
       }
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     };
@@ -44,14 +42,12 @@ function NavBar({ isFaded, setIsFaded }) {
   const handleNavigationClick = (event, targetId) => {
     event.preventDefault();
     const targetElement = document.querySelector(targetId);
-    const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - (window.innerHeight / 3);
+    const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - (window.innerHeight / 3.8);
 
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth'
     });
-
-    setIsFaded(true); // Trigger fade effect
 
     if (isMobile) {
       setIsMenuOpen(false);
@@ -76,7 +72,7 @@ function NavBar({ isFaded, setIsFaded }) {
             <a href="#newmusic" onClick={(e) => handleNavigationClick(e, '#newmusic')}><li>MUSIC</li></a>
             <a href="#store" onClick={(e) => handleNavigationClick(e, '#store')}><li>STORE</li></a>
             <a href="#videos" onClick={(e) => handleNavigationClick(e, '#videos')}><li>VIDEOS</li></a>
-            <a href="#mission" onClick={(e) => handleNavigationClick(e, '#mission')}><li>MISSION</li></a>
+            <a href="#mission"><li>MISSION</li></a>
           </ul>
         )}
       </div>
@@ -87,7 +83,7 @@ function NavBar({ isFaded, setIsFaded }) {
             <a href="#newmusic" onClick={(e) => handleNavigationClick(e, '#newmusic')}><li>NEW MUSIC</li></a>
             <a href="#store" onClick={(e) => handleNavigationClick(e, '#store')}><li>STORE</li></a>
             <a href="#videos" onClick={(e) => handleNavigationClick(e, '#videos')}><li>VIDEOS</li></a>
-            <a href="#mission" onClick={(e) => handleNavigationClick(e, '#mission')}><li>OUR MISSION</li></a>
+            <a href="#mission"><li>OUR MISSION</li></a>
           </ul>
         </div>
       )}
