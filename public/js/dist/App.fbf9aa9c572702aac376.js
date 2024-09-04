@@ -445,35 +445,35 @@ function SocialMediaBottom() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _SocialMediaBottom_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].socialMedia
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://facebook.com",
+    href: "https://facebook.com/upintheforest",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaFacebookF, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://instagram.com",
+    href: "https://instagram.com/forestermusic",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaInstagram, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://tiktok.com",
+    href: "https://www.tiktok.com/@forestermusic",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaTiktok, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://twitter.com",
+    href: "https://x.com/i/flow/login?redirect_after_login=%2Fforestermusic",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaTwitter, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://spotify.com",
+    href: "https://open.spotify.com/artist/3d13oWvwmjcodRr3NzdArc?si=v1zUSeFTSPCvzvARsLHopQ",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaSpotify, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://applemusic.com",
+    href: "https://music.apple.com/us/artist/forester/283340674",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaApple, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://youtube.com",
+    href: "https://www.youtube.com/channel/UCFKUg_b8twVUYBorpscv4Rw",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaYoutube, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://soundcloud.com",
+    href: "https://soundcloud.com/forester-family",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaSoundcloud, null)));
@@ -502,35 +502,35 @@ function SocialMediaTop() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _SocialMediaTop_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].socialMedia
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://facebook.com",
+    href: "https://facebook.com/upintheforest",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaFacebookF, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://instagram.com",
+    href: "https://instagram.com/forestermusic",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaInstagram, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://tiktok.com",
+    href: "https://www.tiktok.com/@forestermusic",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaTiktok, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://twitter.com",
+    href: "https://x.com/i/flow/login?redirect_after_login=%2Fforestermusic",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaTwitter, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://spotify.com",
+    href: "https://open.spotify.com/artist/3d13oWvwmjcodRr3NzdArc?si=v1zUSeFTSPCvzvARsLHopQ",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaSpotify, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://applemusic.com",
+    href: "https://music.apple.com/us/artist/forester/283340674",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaApple, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://youtube.com",
+    href: "https://www.youtube.com/channel/UCFKUg_b8twVUYBorpscv4Rw",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaYoutube, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://soundcloud.com",
+    href: "https://soundcloud.com/forester-family",
     target: "_blank",
     rel: "noopener noreferrer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaSoundcloud, null)));
@@ -893,7 +893,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.h8ZhBt5OcnBAKvND0yEH {
 .BnK6B_f1gXrpZ9op1Qsa {
   background-color: #1b1c1b;
   border: none;
-  border-radius: 50%;
+  border-radius: 30%;
   padding: 10px;
   font-size: 24px;
   color: #fff;
@@ -904,7 +904,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.h8ZhBt5OcnBAKvND0yEH {
 .BnK6B_f1gXrpZ9op1Qsa:hover {
   background-color: #232723;
   transform: scale(1.1);
-}`, "",{"version":3,"sources":["webpack://./src/components/BackToTop/BackToTop.module.scss"],"names":[],"mappings":"AAAA;EACI,eAAA;EACA,YAAA;EACA,WAAA;EACA,aAAA;AACJ;;AAEE;EACE,yBAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;EACA,eAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;EACA,iDAAA;AACJ;AACI;EACE,yBAAA;EACA,qBAAA;AACN","sourcesContent":[".BackToTop {\n    position: fixed;\n    bottom: 20px;\n    right: 20px;\n    z-index: 1000;\n  }\n  \n  .TopButton {\n    background-color: #1b1c1b;\n    border: none;\n    border-radius: 50%;\n    padding: 10px;\n    font-size: 24px;\n    color: #fff;\n    cursor: pointer;\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\n    transition: background-color 0.3s, transform 0.3s;\n  \n    &:hover {\n      background-color: #232723;\n      transform: scale(1.1);\n    }\n  }\n  "],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/BackToTop/BackToTop.module.scss"],"names":[],"mappings":"AAAA;EACI,eAAA;EACA,YAAA;EACA,WAAA;EACA,aAAA;AACJ;;AAEE;EACE,yBAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;EACA,eAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;EACA,iDAAA;AACJ;AACI;EACE,yBAAA;EACA,qBAAA;AACN","sourcesContent":[".BackToTop {\n    position: fixed;\n    bottom: 20px;\n    right: 20px;\n    z-index: 1000;\n  }\n  \n  .TopButton {\n    background-color: #1b1c1b;\n    border: none;\n    border-radius: 30%;\n    padding: 10px;\n    font-size: 24px;\n    color: #fff;\n    cursor: pointer;\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\n    transition: background-color 0.3s, transform 0.3s;\n  \n    &:hover {\n      background-color: #232723;\n      transform: scale(1.1);\n    }\n  }\n  "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"BackToTop": `h8ZhBt5OcnBAKvND0yEH`,
@@ -2546,4 +2546,4 @@ module.exports = __webpack_require__.p + "f1786f4de4d641b84864.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.38b85f1303c11d28fde804a29bbe5cbf.js.map
+//# sourceMappingURL=App.6ec30f8b2a8c2be60c3a735b3cb2724a.js.map

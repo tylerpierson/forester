@@ -5,28 +5,28 @@ import styles from './SocialMediaTop.module.scss';
 function SocialMediaTop() {
   return (
     <div className={styles.socialMedia}>
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+<a href="https://facebook.com/upintheforest" target="_blank" rel="noopener noreferrer">
         <FaFacebookF />
       </a>
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://instagram.com/forestermusic" target="_blank" rel="noopener noreferrer">
         <FaInstagram />
       </a>
-      <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.tiktok.com/@forestermusic" target="_blank" rel="noopener noreferrer">
         <FaTiktok />
       </a>
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://x.com/i/flow/login?redirect_after_login=%2Fforestermusic" target="_blank" rel="noopener noreferrer">
         <FaTwitter />
       </a>
-      <a href="https://spotify.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://open.spotify.com/artist/3d13oWvwmjcodRr3NzdArc?si=v1zUSeFTSPCvzvARsLHopQ" target="_blank" rel="noopener noreferrer">
         <FaSpotify />
       </a>
-      <a href="https://applemusic.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://music.apple.com/us/artist/forester/283340674" target="_blank" rel="noopener noreferrer">
         <FaApple />
       </a>
-      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.youtube.com/channel/UCFKUg_b8twVUYBorpscv4Rw" target="_blank" rel="noopener noreferrer">
         <FaYoutube />
       </a>
-      <a href="https://soundcloud.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://soundcloud.com/forester-family" target="_blank" rel="noopener noreferrer">
         <FaSoundcloud />
       </a>
     </div>
