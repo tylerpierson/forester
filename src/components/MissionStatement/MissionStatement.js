@@ -55,6 +55,9 @@ Ten years later, the vision for Forester has expanded well beyond ragers. A pill
 The trick is that through the depth and power of their music, they’re able to express this message without having to say anything at all.
 <br/>
 <br/>
+A lot of our music is inspired by our planet’s beautiful outdoor spaces, which is why we’ve teamed up with One Tree Planted to offset the carbon generated from streaming our music. We’re calling this initiative 'sustainable streaming,' and we’ll be raising money on our headline tour to plant trees in places that need it most. Our end goal is to make everything we do, from touring to music production, carbon neutral. This way we can do our part in stewarding our planet for future generations. One Dollar = One Tree
+<br/>
+<br/>
 Learn more about the <a className={styles.link} href='https://forester.raisely.com/' target='_blank'>Forester Project</a> here.</p>
     </div>
   )

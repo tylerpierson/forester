@@ -1,7 +1,7 @@
 .MissionStatement {
     position: relative;
     clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);
-    background-image: url('/public/img/forester-film-edits-35.jpg');
+    background-image: url('/public/img/bg-img-approved1.jpeg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -22,7 +22,7 @@
     margin: 5rem;
     padding: 10rem 2rem;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .MissionStatementPara .link {
