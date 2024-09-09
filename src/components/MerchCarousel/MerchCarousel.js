@@ -3,9 +3,9 @@ import styles from './MerchCarousel.module.scss';
 
 const MerchCarousel = ({ isFaded }) => {
   const images = [
-    { src: '/img/hat1.png', alt: 'Image 1', link: 'https://lnk.to/xmoonlight' },
-    { src: '/img/hat2.png', alt: 'Image 2', link: 'https://lnk.to/watercolor' },
-    { src: '/img/hoodie.png', alt: 'Image 3', link: 'https://lnk.to/ARoL' },
+    { src: '/img/hat1.png', alt: 'Image 1', link: 'https://forestermerch.com/products/lose-your-mind-find-your-soul-hat' },
+    { src: '/img/hat2.png', alt: 'Image 2', link: 'https://forestermerch.com/products/forester-5-panel-hat' },
+    { src: '/img/hoodie.png', alt: 'Image 3', link: 'https://forestermerch.com/products/sequoia-hoodie' },
   ];
 
   const extendedImages = [...images, ...images, ...images];

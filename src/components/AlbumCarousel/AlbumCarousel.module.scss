@@ -38,11 +38,12 @@
  
  .carouselItem img {
    width: 100%;
+   height: auto;
    border-radius: 8px;
-   transition: transform 0.3s ease; /* Smooth scaling transition */
+   transition: transform 0.3s ease; 
  
    &:hover {
-     transform: scale(1.05); /* Slightly scale up on hover */
+     transform: scale(1.05); 
    }
  }
  
