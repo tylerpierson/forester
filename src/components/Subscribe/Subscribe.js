@@ -32,7 +32,7 @@ function Subscribe() {
 
   return (
     <div className={styles.Subscribe}>
-        <h2 className={styles.header}>Subscribe to our newsletter</h2>
+        <h2 className={styles.header}>Sign up for updates</h2>
       <form onSubmit={handleSubmit} className={styles.SubscribeForm}>
         <input
           type="email"
@@ -42,7 +42,7 @@ function Subscribe() {
           className={styles.SubscribeInput}
           required
         />
-        <button type="submit" className={styles.SubscribeButton}>Subscribe</button>
+        <button type="submit" className={styles.SubscribeButton}>Sign Up</button>
       </form>
       {message && <p className={styles.Message}>{message}</p>}
     </div>
