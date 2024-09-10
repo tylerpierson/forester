@@ -1543,10 +1543,9 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.HvgboFHhvHeMxm43zFZ6 {
   padding: 10rem 0 5rem 0;
-  margin: 0rem 0 5rem 0;
   width: 90%;
   color: rgb(255, 255, 255);
-}`, "",{"version":3,"sources":["webpack://./src/components/TourSection/TourSection.module.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,qBAAA;EACA,UAAA;EACA,yBAAA;AACF","sourcesContent":[".tourSection {\n  padding: 10rem 0 5rem 0;\n  margin: 0rem 0 5rem 0;\n  width: 90%;\n  color: rgb(255, 255, 255);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/TourSection/TourSection.module.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,UAAA;EACA,yBAAA;AACF","sourcesContent":[".tourSection {\n  padding: 10rem 0 5rem 0;\n  width: 90%;\n  color: rgb(255, 255, 255);\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"tourSection": `HvgboFHhvHeMxm43zFZ6`
@@ -2585,4 +2584,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.c00cde27c2a2e04137cd3bba718609ba.js.map
+//# sourceMappingURL=App.9f91b865f903d44b3c0decaa95a31d24.js.map
