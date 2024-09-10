@@ -11,6 +11,7 @@ import BackToTop from './components/BackToTop/BackToTop';
 import MissionStatement from './components/MissionStatement/MissionStatement';
 import Footer from './components/Footer/Footer';
 import Subscribe from './components/Subscribe/Subscribe';
+import YoutubeSection from './components/YoutubeSection/YoutubeSection';
 
 
 export default function App() {
@@ -19,10 +20,11 @@ export default function App() {
     return (
         <div className={styles.App}>
             <NavBar isFaded={isFaded} setIsFaded={setIsFaded} />
-            <VideoBanner isFaded={isFaded}/>
-            <TourSection isFaded={isFaded}/>
-            <AlbumCarousel isFaded={isFaded}/>
-            <MerchCarousel isFaded={isFaded}/>
+            <VideoBanner/>
+            <TourSection/>
+            <AlbumCarousel/>
+            <MerchCarousel/>
+            <YoutubeSection/>
             <MissionStatement />
             <Subscribe />
             <SocialMediaBottom isFaded={isFaded}/>
