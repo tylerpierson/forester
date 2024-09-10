@@ -669,7 +669,7 @@ const VideoBanner = _ref => {
     className: isFaded ? "".concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner) : "".concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: _VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logo,
-    src: "/public/img/placehold-logo.png",
+    src: "/img/placehold-logo.png",
     alt: "Forester Logo"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("video", {
     autoPlay: true,
@@ -2572,4 +2572,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.ff91d077f6cf13e542d76d79f65abbda.js.map
+//# sourceMappingURL=App.1b667dbd3cff26364e550498b870281a.js.map
