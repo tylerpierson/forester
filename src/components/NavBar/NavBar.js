@@ -5,11 +5,14 @@ function NavBar() {
   const [isVisible, setIsVisible] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [disableScrollFade, setDisableScrollFade] = useState(false);
 
   useEffect(() => {
     let lastScrollTop = 0;
 
     const handleScroll = () => {
+      if (disableScrollFade) return; // Skip fade logic if disabled
+
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
         setIsVisible(false); // Fade out when scrolling down
@@ -33,7 +36,7 @@ function NavBar() {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [disableScrollFade]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -46,8 +49,12 @@ function NavBar() {
 
     window.scrollTo({
       top: offsetPosition,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
+
+    // Temporarily disable scroll fade effect
+    setDisableScrollFade(true);
+    setIsVisible(true); // Ensure NavBar is visible
 
     if (isMobile) {
       setIsMenuOpen(false);
@@ -55,6 +62,9 @@ function NavBar() {
 
     // Add 'focused' class to the clicked section
     targetElement.classList.add(styles.focused);
+
+    // Re-enable scroll fade effect after scrolling animation completes
+    setTimeout(() => setDisableScrollFade(false), 2000);
   };
 
   return (
@@ -72,7 +82,7 @@ function NavBar() {
             <a href="#newmusic" onClick={(e) => handleNavigationClick(e, '#newmusic')}><li>MUSIC</li></a>
             <a href="#store" onClick={(e) => handleNavigationClick(e, '#store')}><li>STORE</li></a>
             <a href="#videos" onClick={(e) => handleNavigationClick(e, '#videos')}><li>VIDEOS</li></a>
-            <a href="#mission"><li>MISSION</li></a>
+            <a href="#mission" onClick={(e) => handleNavigationClick(e, '#mission')}><li>MISSION</li></a>
           </ul>
         )}
       </div>
@@ -83,7 +93,7 @@ function NavBar() {
             <a href="#newmusic" onClick={(e) => handleNavigationClick(e, '#newmusic')}><li>NEW MUSIC</li></a>
             <a href="#store" onClick={(e) => handleNavigationClick(e, '#store')}><li>STORE</li></a>
             <a href="#videos" onClick={(e) => handleNavigationClick(e, '#videos')}><li>VIDEOS</li></a>
-            <a href="#mission"><li>OUR MISSION</li></a>
+            <a href="#mission" onClick={(e) => handleNavigationClick(e, '#mission')}><li>OUR MISSION</li></a>
           </ul>
         </div>
       )}
