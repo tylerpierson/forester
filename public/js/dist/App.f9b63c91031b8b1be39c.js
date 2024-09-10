@@ -200,7 +200,7 @@ function BackToTop() {
 function Footer() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _Footer_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Footer
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA92024 Forester. Site by BT Web Dev"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA92024 Forester. Site by BT Dev"));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
 
@@ -236,15 +236,24 @@ const MerchCarousel = _ref => {
     src: '/img/hoodie.png',
     alt: 'Image 3',
     link: 'https://forestermerch.com/products/sequoia-hoodie'
-  }];
-  const extendedImages = [...images, ...images, ...images];
+  }
+  //add as many merch images as you see fit, the carousel will display up to 3 images at a time on screen
+  ];
+  const visibleImages = images.length > 3 ? images : images.slice(0, 3);
+  const extendedImages = images.length > 3 ? [...visibleImages, ...visibleImages, ...visibleImages] : visibleImages;
   const [currentIndex, setCurrentIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
+  const shouldScroll = images.length > 3;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % (images.length * 3));
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [images.length]);
+    let interval;
+    if (shouldScroll) {
+      interval = setInterval(() => {
+        setCurrentIndex(prevIndex => (prevIndex + 1) % (visibleImages.length * 3));
+      }, 3000);
+    }
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [shouldScroll, visibleImages.length]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "store",
     className: isFaded ? "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer) : "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer)
@@ -253,7 +262,7 @@ const MerchCarousel = _ref => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselInner,
     style: {
-      transform: "translateX(-".concat(currentIndex % images.length * (100 / 3), "%)")
+      transform: "translateX(-".concat(shouldScroll ? currentIndex % visibleImages.length * (100 / 3) : 0, "%)")
     }
   }, extendedImages.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselItem,
@@ -268,13 +277,13 @@ const MerchCarousel = _ref => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: image.src,
     alt: image.alt
-  })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  })))))), shouldScroll && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dotsContainer
   }, Array.from({
-    length: Math.ceil(images.length / 3)
+    length: Math.ceil(visibleImages.length / 3)
   }).map((_, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: index,
-    className: "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dot, " ").concat(currentIndex % images.length === index * 3 ? _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].active : ''),
+    className: "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dot, " ").concat(currentIndex % visibleImages.length === index * 3 ? _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].active : ''),
     onClick: () => setCurrentIndex(index * 3)
   }))));
 };
@@ -361,7 +370,8 @@ function NavBar() {
   const handleNavigationClick = (event, targetId) => {
     event.preventDefault();
     const targetElement = document.querySelector(targetId);
-    const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - window.innerHeight / 3.8;
+    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - window.innerHeight / 2 + targetElement.offsetHeight / 2;
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth'
@@ -2746,4 +2756,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.9f35b1d79d023bba87b7eda1f0664607.js.map
+//# sourceMappingURL=App.8a77f1d840f0ada7854486d2a15767e0.js.map

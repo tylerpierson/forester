@@ -4,7 +4,7 @@ import styles from './Footer.module.scss'
 function Footer() {
   return (
     <div className={styles.Footer}>
-        <p>©2024 Forester. Site by BT Web Dev</p>
+        <p>©2024 Forester. Site by BT Dev</p>
     </div>
   )
 }

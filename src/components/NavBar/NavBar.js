@@ -45,7 +45,8 @@ function NavBar() {
   const handleNavigationClick = (event, targetId) => {
     event.preventDefault();
     const targetElement = document.querySelector(targetId);
-    const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - (window.innerHeight / 3.8);
+    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - (window.innerHeight / 2) + (targetElement.offsetHeight / 2);
 
     window.scrollTo({
       top: offsetPosition,
