@@ -1,62 +1,68 @@
 .carouselContainer {
-    position: relative;
-    width: 100%;
-    max-width: 1560px;
-    margin: auto;
-    overflow: hidden;
-    margin-top: 6rem;
-    margin-bottom: 10rem;
-    padding-top: 1rem;
+  position: relative;
+  width: 100%;
+  height: 40rem;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  padding-top: 1rem;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  max-width: 1560px;
+  display: flex;
+}
+
+.carouselInner {
+  display: flex;
+  width: calc(100% * 3);
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.carouselItem {
+  flex: 0 0 33.33%; 
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.carouselItem img {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+  transition: transform 0.3s ease; 
+
+  &:hover {
+    transform: scale(1.05); 
   }
-  
-  .carousel {
-    display: flex;
-  }
-  
-  .carouselInner {
-    display: flex;
-    width: calc(100% * 3);
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
-  }
-  
-  .carouselItem {
-    flex: 0 0 33.33%; 
-    box-sizing: border-box;
-    padding: 0 20px;
-  }
-  
-  .carouselItem img {
-    width: 100%;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-  
-  .dotsContainer {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .dot.active {
-    background-color: #333;
-  }
-  
-  .dot:hover {
-    background-color: #666;
-  }
-  
+}
+
+.dotsContainer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+.dot:hover {
+  background-color: #666;
+}

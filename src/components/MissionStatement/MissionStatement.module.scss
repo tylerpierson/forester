@@ -1,10 +1,11 @@
 .MissionStatement {
     position: relative;
     clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);
-    background-image: url('/public/img/forester-film-edits-32.jpg');
+    background-image: url('/public/img/forester-film-edits-44.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,11 +23,10 @@
     margin: 5rem;
     padding: 10rem 2rem;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .MissionStatementPara .link {
-    color: rgba(179, 217, 91, 0.873);
+    color: rgba(63, 57, 31, 0.873);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -36,7 +36,26 @@
     color: #fff;
 }
 
-/* Adjust clip-path for smaller screens */
+.linkButton {
+    background-color: #1e254a;
+    color: ghostwhite;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.linkButton:hover {
+    color: #1e254a;
+    background-color: whitesmoke;
+    transform: scale(1);
+}
+
 @media (max-width: 1200px) {
     .MissionStatement,
     .MissionStatementPara {
@@ -59,7 +78,7 @@
 }
 
 @media (max-width: 576px) {
-    .MissionStatement{
+    .MissionStatement {
         padding-top: 5rem;
         padding-bottom: 5rem;
     }
