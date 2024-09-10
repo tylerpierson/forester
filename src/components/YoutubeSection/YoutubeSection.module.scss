@@ -1,0 +1,15 @@
+.PlaylistEmbed {
+    display: flex;
+    justify-content: center;  /* Center the iframe horizontally */
+    margin: 0 auto;           /* Ensure it stays centered */
+    padding: 20px;
+    max-width: 100%;          /* Let it span up to the full width of the page */
+    
+    iframe {
+      width: 1000px;          /* Set the desired width */
+      height: 563px;          /* Maintain the 16:9 aspect ratio */
+      border: none;           /* Remove the iframe border */
+      border-radius: 8px;     /* Add some rounded corners */
+    }
+  }
+  
