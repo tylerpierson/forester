@@ -11,13 +11,13 @@ function NavBar() {
     let lastScrollTop = 0;
 
     const handleScroll = () => {
-      if (disableScrollFade) return; // Skip fade logic if disabled
+      if (disableScrollFade) return; 
 
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
-        setIsVisible(false); // Fade out when scrolling down
+        setIsVisible(false);
       } else {
-        setIsVisible(true); // Fade in when scrolling up
+        setIsVisible(true);
       }
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     };
@@ -45,25 +45,23 @@ function NavBar() {
   const handleNavigationClick = (event, targetId) => {
     event.preventDefault();
     const targetElement = document.querySelector(targetId);
-    const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - (window.innerHeight / 3.8);
+    const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - (window.innerHeight / 2) + (targetElement.offsetHeight / 2);
 
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth',
     });
 
-    // Temporarily disable scroll fade effect
     setDisableScrollFade(true);
-    setIsVisible(true); // Ensure NavBar is visible
+    setIsVisible(true);
 
     if (isMobile) {
       setIsMenuOpen(false);
     }
 
-    // Add 'focused' class to the clicked section
     targetElement.classList.add(styles.focused);
 
-    // Re-enable scroll fade effect after scrolling animation completes
     setTimeout(() => setDisableScrollFade(false), 2000);
   };
 

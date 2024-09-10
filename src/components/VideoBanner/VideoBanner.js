@@ -4,7 +4,7 @@ import SocialMediaTop from '../SocialMedia/SocialMediaTop';
 
 const VideoBanner = ({ isFaded }) => {
   return (
-    <div id="videos" className={isFaded ? `${styles.faded} ${styles.videoBanner}` : `${styles.videoBanner}`}>
+    <div id="video-banner" className={isFaded ? `${styles.faded} ${styles.videoBanner}` : `${styles.videoBanner}`}>
       <img className={styles.logo} src="/img/placehold-logo.png" alt="Forester Logo" />
       <video autoPlay loop muted playsInline className={styles.videoBannerVideo}>
         <source src="/video/forester-banner.mp4" type="video/mp4" />

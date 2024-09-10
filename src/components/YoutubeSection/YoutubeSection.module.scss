@@ -1,16 +1,31 @@
+.PlaylistEmbedWrapper {
+  position: relative;
+  width: 100vw; 
+  margin: 0;
+  margin-bottom: 5rem;   
+  padding: 0;
+  overflow: hidden; 
+  clip-path: polygon(65% 0%, 98% 0%, 92% 100%, 50% 90%, 20% 100%, 0% 80%, 5% 20%);
+  background-image: url('/public/img/forester-film-edits-17.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
 .PlaylistEmbed {
-    display: flex;
-    justify-content: center;  /* Center the iframe horizontally */
-    margin: 0 auto;           /* Ensure it stays centered */
-    padding: 20px;
-    max-width: 100%;          /* Let it span up to the full width of the page */
-    margin-bottom: 4rem;
-    
-    iframe {
-      width: 1510px;          /* Set the desired width */
-      height: 600px;          /* Maintain the 16:9 aspect ratio */
-      border: none;           /* Remove the iframe border */
-      border-radius: 8px;     /* Add some rounded corners */
-    }
-  }
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  padding: 20px;
+  margin: 3.2rem;     
+  max-width: 1510px;      
+  height: 600px;      
   
+  iframe {
+    width: 75%;    
+    height: 75%;   
+    border: none;  
+    border-radius: 8px;
+  }
+}
+
