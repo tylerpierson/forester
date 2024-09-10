@@ -1608,11 +1608,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.DyskzzB41LkALTA2XioJ {
   text-align: center;
 }
 .DyskzzB41LkALTA2XioJ .gnSjDnSvFnetzzLkRRgd {
-  width: 40rem;
+  width: 20rem;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   z-index: 1000;
   filter: invert(1);
 }
@@ -1628,7 +1628,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.DyskzzB41LkALTA2XioJ {
   color: white;
   text-align: center;
   z-index: 1000;
-}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;AACF;AACE;EACE,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,aAAA;EACA,iBAAA;AACJ;AAEE;EACE,UAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;EACH,iBAAA;AAAJ;AAGE;EACE,YAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;AADJ","sourcesContent":[".videoBanner {\n  position: relative;\n  width: 100%;\n  height: 85vh;\n  overflow: hidden;\n  text-align: center;\n\n  .logo {\n    width: 40rem;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    z-index: 1000;\n    filter: invert(1);\n  }\n\n  .videoBannerVideo {\n    width: 85%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    border-radius: 1%;\n  }\n\n  .videoBannerContent {\n    bottom: 20px;\n    color: white;\n    text-align: center;\n    z-index: 1000;\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;AACF;AACE;EACE,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,8BAAA;EACA,aAAA;EACA,iBAAA;AACJ;AAEE;EACE,UAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;EACH,iBAAA;AAAJ;AAGE;EACE,YAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;AADJ","sourcesContent":[".videoBanner {\n  position: relative;\n  width: 100%;\n  height: 85vh;\n  overflow: hidden;\n  text-align: center;\n\n  .logo {\n    width: 20rem;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -0%);\n    z-index: 1000;\n    filter: invert(1);\n  }\n\n  .videoBannerVideo {\n    width: 85%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    border-radius: 1%;\n  }\n\n  .videoBannerContent {\n    bottom: 20px;\n    color: white;\n    text-align: center;\n    z-index: 1000;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"videoBanner": `DyskzzB41LkALTA2XioJ`,
@@ -1665,13 +1665,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.VWPSXPUeoaj3Rv439YpH {
   margin: 0 auto; /* Ensure it stays centered */
   padding: 20px;
   max-width: 100%; /* Let it span up to the full width of the page */
+  margin-bottom: 4rem;
 }
 .VWPSXPUeoaj3Rv439YpH iframe {
-  width: 1000px; /* Set the desired width */
-  height: 563px; /* Maintain the 16:9 aspect ratio */
+  width: 1510px; /* Set the desired width */
+  height: 600px; /* Maintain the 16:9 aspect ratio */
   border: none; /* Remove the iframe border */
   border-radius: 8px; /* Add some rounded corners */
-}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,uBAAA,EAAA,mCAAA;EACA,cAAA,EAAA,6BAAA;EACA,aAAA;EACA,eAAA,EAAA,iDAAA;AACJ;AACI;EACE,aAAA,EAAA,0BAAA;EACA,aAAA,EAAA,mCAAA;EACA,YAAA,EAAA,6BAAA;EACA,kBAAA,EAAA,6BAAA;AACN","sourcesContent":[".PlaylistEmbed {\n    display: flex;\n    justify-content: center;  /* Center the iframe horizontally */\n    margin: 0 auto;           /* Ensure it stays centered */\n    padding: 20px;\n    max-width: 100%;          /* Let it span up to the full width of the page */\n    \n    iframe {\n      width: 1000px;          /* Set the desired width */\n      height: 563px;          /* Maintain the 16:9 aspect ratio */\n      border: none;           /* Remove the iframe border */\n      border-radius: 8px;     /* Add some rounded corners */\n    }\n  }\n  "],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,uBAAA,EAAA,mCAAA;EACA,cAAA,EAAA,6BAAA;EACA,aAAA;EACA,eAAA,EAAA,iDAAA;EACA,mBAAA;AACJ;AACI;EACE,aAAA,EAAA,0BAAA;EACA,aAAA,EAAA,mCAAA;EACA,YAAA,EAAA,6BAAA;EACA,kBAAA,EAAA,6BAAA;AACN","sourcesContent":[".PlaylistEmbed {\n    display: flex;\n    justify-content: center;  /* Center the iframe horizontally */\n    margin: 0 auto;           /* Ensure it stays centered */\n    padding: 20px;\n    max-width: 100%;          /* Let it span up to the full width of the page */\n    margin-bottom: 4rem;\n    \n    iframe {\n      width: 1510px;          /* Set the desired width */\n      height: 600px;          /* Maintain the 16:9 aspect ratio */\n      border: none;           /* Remove the iframe border */\n      border-radius: 8px;     /* Add some rounded corners */\n    }\n  }\n  "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"PlaylistEmbed": `VWPSXPUeoaj3Rv439YpH`
@@ -2704,4 +2705,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.b8bcbad8bd8b3906e9ffb3711cc2f6a4.js.map
+//# sourceMappingURL=App.cda03502f04559dbef5a5f7fbf188794.js.map

@@ -4,10 +4,11 @@
     margin: 0 auto;           /* Ensure it stays centered */
     padding: 20px;
     max-width: 100%;          /* Let it span up to the full width of the page */
+    margin-bottom: 4rem;
     
     iframe {
-      width: 1000px;          /* Set the desired width */
-      height: 563px;          /* Maintain the 16:9 aspect ratio */
+      width: 1510px;          /* Set the desired width */
+      height: 600px;          /* Maintain the 16:9 aspect ratio */
       border: none;           /* Remove the iframe border */
       border-radius: 8px;     /* Add some rounded corners */
     }
