@@ -1021,6 +1021,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.yT1CNjb_DHTHO9GBDoBA {
   width: 100%;
   height: 40rem;
   margin: auto;
+  margin-top: 4.5rem;
   overflow: hidden;
   margin-bottom: 3rem;
   padding-top: 1rem;
@@ -1082,7 +1083,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.yT1CNjb_DHTHO9GBDoBA {
 
 .nOFpFsbjECSQDFe0hOAg:hover {
   background-color: #666;
-}`, "",{"version":3,"sources":["webpack://./src/components/MerchCarousel/MerchCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,gBAAA;EACA,mBAAA;EACA,iBAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,iBAAA;EACA,aAAA;AACF;;AAEA;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACF;;AAEA;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,kBAAA;EACA,+BAAA;AACF;AACE;EACE,sBAAA;AACJ;;AAGA;EACE,kBAAA;EACA,gBAAA;AAAF;;AAGA;EACE,qBAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,sBAAA;AAAF;;AAGA;EACE,sBAAA;AAAF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  overflow: hidden;\n  margin-bottom: 3rem;\n  padding-top: 1rem;\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.carousel {\n  max-width: 1560px;\n  display: flex;\n}\n\n.carouselInner {\n  display: flex;\n  width: calc(100% * 3);\n  transition: transform 0.5s ease-in-out;\n  will-change: transform;\n}\n\n.carouselItem {\n  flex: 0 0 33.33%; \n  box-sizing: border-box;\n  padding: 0 20px;\n}\n\n.carouselItem img {\n  width: 100%;\n  height: 450px;\n  border-radius: 8px;\n  transition: transform 0.3s ease; \n\n  &:hover {\n    transform: scale(1.05); \n  }\n}\n\n.dotsContainer {\n  text-align: center;\n  margin-top: 10px;\n}\n\n.dot {\n  display: inline-block;\n  width: 10px;\n  height: 10px;\n  margin: 0 5px;\n  background-color: #ccc;\n  border-radius: 50%;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.dot.active {\n  background-color: #333;\n}\n\n.dot:hover {\n  background-color: #666;\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/MerchCarousel/MerchCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;EACA,mBAAA;EACA,iBAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,iBAAA;EACA,aAAA;AACF;;AAEA;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACF;;AAEA;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,kBAAA;EACA,+BAAA;AACF;AACE;EACE,sBAAA;AACJ;;AAGA;EACE,kBAAA;EACA,gBAAA;AAAF;;AAGA;EACE,qBAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,sBAAA;AAAF;;AAGA;EACE,sBAAA;AAAF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  margin-top: 4.5rem;\n  overflow: hidden;\n  margin-bottom: 3rem;\n  padding-top: 1rem;\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.carousel {\n  max-width: 1560px;\n  display: flex;\n}\n\n.carouselInner {\n  display: flex;\n  width: calc(100% * 3);\n  transition: transform 0.5s ease-in-out;\n  will-change: transform;\n}\n\n.carouselItem {\n  flex: 0 0 33.33%; \n  box-sizing: border-box;\n  padding: 0 20px;\n}\n\n.carouselItem img {\n  width: 100%;\n  height: 450px;\n  border-radius: 8px;\n  transition: transform 0.3s ease; \n\n  &:hover {\n    transform: scale(1.05); \n  }\n}\n\n.dotsContainer {\n  text-align: center;\n  margin-top: 10px;\n}\n\n.dot {\n  display: inline-block;\n  width: 10px;\n  height: 10px;\n  margin: 0 5px;\n  background-color: #ccc;\n  border-radius: 50%;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.dot.active {\n  background-color: #333;\n}\n\n.dot:hover {\n  background-color: #666;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `yT1CNjb_DHTHO9GBDoBA`,
@@ -1591,7 +1592,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.HvgboFHhvHeMxm43zFZ6 {
   padding: 10rem 0 5rem 0;
   width: 90%;
   color: rgb(255, 255, 255);
-}`, "",{"version":3,"sources":["webpack://./src/components/TourSection/TourSection.module.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,UAAA;EACA,yBAAA;AACF","sourcesContent":[".tourSection {\n  padding: 10rem 0 5rem 0;\n  width: 90%;\n  color: rgb(255, 255, 255);\n}"],"sourceRoot":""}]);
+  margin-top: 4.2rem;
+}`, "",{"version":3,"sources":["webpack://./src/components/TourSection/TourSection.module.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,UAAA;EACA,yBAAA;EACA,kBAAA;AACF","sourcesContent":[".tourSection {\n  padding: 10rem 0 5rem 0;\n  width: 90%;\n  color: rgb(255, 255, 255);\n  margin-top: 4.2rem;\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"tourSection": `HvgboFHhvHeMxm43zFZ6`
@@ -1691,7 +1693,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.bZS7FVegf5kLSxLOTQAb {
   margin-bottom: 5rem;
   padding: 0;
   overflow: hidden;
-  clip-path: polygon(70% 0%, 98% 0%, 95% 100%, 50% 90%, 20% 100%, 0% 80%, 10% 20%);
+  clip-path: polygon(65% 0%, 98% 0%, 92% 100%, 50% 90%, 20% 100%, 0% 80%, 5% 20%);
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
   background-attachment: fixed;
   background-size: cover;
@@ -1712,7 +1714,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.bZS7FVegf5kLSxLOTQAb {
   height: 75%;
   border: none;
   border-radius: 8px;
-}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,YAAA;EACA,SAAA;EACA,mBAAA;EACA,UAAA;EACA,gBAAA;EACA,gFAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,cAAA;EACA,iBAAA;EACA,aAAA;AACF;AACE;EACE,UAAA;EACA,WAAA;EACA,YAAA;EACA,kBAAA;AACJ","sourcesContent":[".PlaylistEmbedWrapper {\n  position: relative;\n  width: 100vw; \n  margin: 0;\n  margin-bottom: 5rem;   \n  padding: 0;\n  overflow: hidden; \n  clip-path: polygon(70% 0%, 98% 0%, 95% 100%, 50% 90%, 20% 100%, 0% 80%, 10% 20%);\n  background-image: url('/public/img/forester-film-edits-17.jpg');\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n}\n\n.PlaylistEmbed {\n  display: flex;\n  justify-content: center;  \n  align-items: center;\n  padding: 20px;\n  margin: 3.2rem;     \n  max-width: 1510px;      \n  height: 600px;      \n  \n  iframe {\n    width: 75%;    \n    height: 75%;   \n    border: none;  \n    border-radius: 8px;\n  }\n}\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,YAAA;EACA,SAAA;EACA,mBAAA;EACA,UAAA;EACA,gBAAA;EACA,+EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,cAAA;EACA,iBAAA;EACA,aAAA;AACF;AACE;EACE,UAAA;EACA,WAAA;EACA,YAAA;EACA,kBAAA;AACJ","sourcesContent":[".PlaylistEmbedWrapper {\n  position: relative;\n  width: 100vw; \n  margin: 0;\n  margin-bottom: 5rem;   \n  padding: 0;\n  overflow: hidden; \n  clip-path: polygon(65% 0%, 98% 0%, 92% 100%, 50% 90%, 20% 100%, 0% 80%, 5% 20%);\n  background-image: url('/public/img/forester-film-edits-17.jpg');\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n}\n\n.PlaylistEmbed {\n  display: flex;\n  justify-content: center;  \n  align-items: center;\n  padding: 20px;\n  margin: 3.2rem;     \n  max-width: 1510px;      \n  height: 600px;      \n  \n  iframe {\n    width: 75%;    \n    height: 75%;   \n    border: none;  \n    border-radius: 8px;\n  }\n}\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"PlaylistEmbedWrapper": `bZS7FVegf5kLSxLOTQAb`,
@@ -2756,4 +2758,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.8a77f1d840f0ada7854486d2a15767e0.js.map
+//# sourceMappingURL=App.34d25dd367bf2a91d37cd97d381fea75.js.map
