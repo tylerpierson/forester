@@ -30,47 +30,44 @@
         border-radius: 0.75rem;
 
         a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
             color: whitesmoke;
             text-decoration: none;
             padding: 0.5rem 1rem;
             font-weight: 500;
             font-size: 1.7rem;
-            position: relative;
-            overflow: hidden;
-            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-        
+            transition: color 0.3s ease, transform 0.3s ease;
+
             &:hover {
                 color: #242c56;
                 transform: scale(1.05); 
             }
-        
+
             &:before {
                 content: '';
                 position: absolute;
-                width: 100%;  
+                width: 90%;  
                 height: 2px;
                 background-color: #242c56;
                 bottom: 0;
-                left: 50%;  
-                transform: translateX(-50%) scaleX(0);  
-                transform-origin: center;
+                left: 0;
+                transform: scaleX(0);
+                transform-origin: center; 
+                margin-left: .70rem;
                 transition: transform 0.3s ease-in-out;
+                box-shadow: 0 2px 8px rgba(245, 245, 245, 0.25);
             }
-        
+
             &:hover:before {
-                transform: translateX(-50%) scaleX(1); 
+                transform: scaleX(.75);  
             }
-        
+
             li {
                 margin-left: 0.5rem;
                 cursor: pointer;
             }
-        }
-    }        
-
+        }      
+    }  
 
     .Hamburger {
         display: none;

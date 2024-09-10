@@ -664,7 +664,7 @@ const VideoBanner = _ref => {
     isFaded
   } = _ref;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "videos",
+    id: "video-banner",
     className: isFaded ? "".concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner) : "".concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: _VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logo,
@@ -703,6 +703,8 @@ const VideoBanner = _ref => {
 
 function YoutubeSection() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    id: "videos"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _YoutubeSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].PlaylistEmbedWrapper
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _YoutubeSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].PlaylistEmbed
@@ -713,7 +715,7 @@ function YoutubeSection() {
     allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
     referrerPolicy: "strict-origin-when-cross-origin",
     allowFullScreen: true
-  })));
+  }))));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (YoutubeSection);
 
@@ -922,7 +924,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.h8ZhBt5OcnBAKvND0yEH {
 }
 
 .BnK6B_f1gXrpZ9op1Qsa {
-  background-color: #1b1c1b;
+  background-color: #242c56;
   border: none;
   border-radius: 30%;
   padding: 10px;
@@ -931,11 +933,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.h8ZhBt5OcnBAKvND0yEH {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.3s;
+  /* Centering the arrow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .BnK6B_f1gXrpZ9op1Qsa:hover {
-  background-color: #232723;
+  background-color: #fff;
+  color: #242c56;
   transform: scale(1.1);
-}`, "",{"version":3,"sources":["webpack://./src/components/BackToTop/BackToTop.module.scss"],"names":[],"mappings":"AAAA;EACI,eAAA;EACA,YAAA;EACA,WAAA;EACA,aAAA;AACJ;;AAEE;EACE,yBAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;EACA,eAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;EACA,iDAAA;AACJ;AACI;EACE,yBAAA;EACA,qBAAA;AACN","sourcesContent":[".BackToTop {\n    position: fixed;\n    bottom: 20px;\n    right: 20px;\n    z-index: 1000;\n  }\n  \n  .TopButton {\n    background-color: #1b1c1b;\n    border: none;\n    border-radius: 30%;\n    padding: 10px;\n    font-size: 24px;\n    color: #fff;\n    cursor: pointer;\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\n    transition: background-color 0.3s, transform 0.3s;\n  \n    &:hover {\n      background-color: #232723;\n      transform: scale(1.1);\n    }\n  }\n  "],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/BackToTop/BackToTop.module.scss"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,YAAA;EACA,WAAA;EACA,aAAA;AACF;;AAEA;EACE,yBAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;EACA,eAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;EACA,iDAAA;EAEA,wBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAEE;EACE,sBAAA;EACA,cAAA;EACA,qBAAA;AAAJ","sourcesContent":[".BackToTop {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n  z-index: 1000;\n}\n\n.TopButton {\n  background-color: #242c56;\n  border: none;\n  border-radius: 30%;\n  padding: 10px;\n  font-size: 24px;\n  color: #fff;\n  cursor: pointer;\n  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\n  transition: background-color 0.3s, transform 0.3s;\n  \n  /* Centering the arrow */\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n  &:hover {\n    background-color: #fff;\n    color: #242c56;\n    transform: scale(1.1);\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"BackToTop": `h8ZhBt5OcnBAKvND0yEH`,
@@ -1256,17 +1263,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   border-radius: 0.75rem;
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   color: whitesmoke;
   text-decoration: none;
   padding: 0.5rem 1rem;
   font-weight: 500;
   font-size: 1.7rem;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a:hover {
   color: #242c56;
@@ -1275,17 +1278,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a:before {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 2px;
   background-color: #242c56;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
+  left: 0;
+  transform: scaleX(0);
   transform-origin: center;
+  margin-left: 0.7rem;
   transition: transform 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgba(245, 245, 245, 0.25);
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a:hover:before {
-  transform: translateX(-50%) scaleX(1);
+  transform: scaleX(0.75);
 }
 .QpVD3qAS0nYBtoQqAYoe .o5xAJUHc5NRtb6zPAGtC a li {
   margin-left: 0.5rem;
@@ -1347,7 +1352,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
     margin-right: 3%;
     display: flex;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;EACA,mBAAA;EACA,kBAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,UAAA;EACA,gEAAA;AACJ;AACI;EACI,UAAA;EACA,4BAAA;AACR;AAEI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AAAR;AAGI;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,cAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;AADR;AAGQ;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACA,gBAAA;EACA,4EAAA;AADZ;AAGY;EACI,cAAA;EACA,sBAAA;AADhB;AAIY;EACI,WAAA;EACA,kBAAA;EACA,WAAA;EACA,WAAA;EACA,yBAAA;EACA,SAAA;EACA,SAAA;EACA,qCAAA;EACA,wBAAA;EACA,sCAAA;AAFhB;AAKY;EACI,qCAAA;AAHhB;AAMY;EACI,mBAAA;EACA,eAAA;AAJhB;AAUI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;AARR;AAUQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,qBAAA;AARZ;AAWQ;EACI,mBAAA;EACA,8BAAA;AATZ;AAaI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AAXR;AAcI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AAZR;AAcQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AAZZ;AAcY;EACI,cAAA;EACA,0CAAA;EACA,uEAAA;AAZhB;AAeY;EACI,eAAA;AAbhB;AAkBI;EACI;IACI,aAAA;EAhBV;EAmBM;IACI,gBAAA;IACA,aAAA;EAjBV;AACF","sourcesContent":[".NavBar {\n    width: 90%;\n    border-radius: 30px;\n    padding: 1rem 2rem;\n    position: sticky;\n    top: 0;\n    z-index: 2000;\n    opacity: 1;\n    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;\n\n    &.hidden {\n        opacity: 0;\n        transform: translateY(-100%);\n    }\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        height: 3.5rem;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n        border-radius: 0.75rem;\n\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: whitesmoke;\n            text-decoration: none;\n            padding: 0.5rem 1rem;\n            font-weight: 500;\n            font-size: 1.7rem;\n            position: relative;\n            overflow: hidden;\n            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;\n        \n            &:hover {\n                color: #242c56;\n                transform: scale(1.05); \n            }\n        \n            &:before {\n                content: '';\n                position: absolute;\n                width: 100%;  \n                height: 2px;\n                background-color: #242c56;\n                bottom: 0;\n                left: 50%;  \n                transform: translateX(-50%) scaleX(0);  \n                transform-origin: center;\n                transition: transform 0.3s ease-in-out;\n            }\n        \n            &:hover:before {\n                transform: translateX(-50%) scaleX(1); \n            }\n        \n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }\n    }        \n\n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n        transition: 0.3s ease;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: 0.3s ease;\n        }\n\n        &:hover span {\n            background: #1e254a;\n            border: 0.5px solid ghostwhite;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        right: 0;\n        width: 100%;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #1e254a;\n                background-color: rgba(255, 255, 255, 0.1);\n                text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n        .NavList {\n            display: none;\n        }\n\n        .Hamburger {\n            margin-right: 3%;\n            display: flex;\n        }\n    }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;EACA,mBAAA;EACA,kBAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,UAAA;EACA,gEAAA;AACJ;AACI;EACI,UAAA;EACA,4BAAA;AACR;AAEI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AAAR;AAGI;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,cAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;AADR;AAGQ;EACI,kBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,gDAAA;AADZ;AAGY;EACI,cAAA;EACA,sBAAA;AADhB;AAIY;EACI,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,yBAAA;EACA,SAAA;EACA,OAAA;EACA,oBAAA;EACA,wBAAA;EACA,mBAAA;EACA,sCAAA;EACA,+CAAA;AAFhB;AAKY;EACI,uBAAA;AAHhB;AAMY;EACI,mBAAA;EACA,eAAA;AAJhB;AASI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;AAPR;AASQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,qBAAA;AAPZ;AAUQ;EACI,mBAAA;EACA,8BAAA;AARZ;AAYI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,QAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AAVR;AAaI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AAXR;AAaQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AAXZ;AAaY;EACI,cAAA;EACA,0CAAA;EACA,uEAAA;AAXhB;AAcY;EACI,eAAA;AAZhB;AAiBI;EACI;IACI,aAAA;EAfV;EAkBM;IACI,gBAAA;IACA,aAAA;EAhBV;AACF","sourcesContent":[".NavBar {\n    width: 90%;\n    border-radius: 30px;\n    padding: 1rem 2rem;\n    position: sticky;\n    top: 0;\n    z-index: 2000;\n    opacity: 1;\n    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;\n\n    &.hidden {\n        opacity: 0;\n        transform: translateY(-100%);\n    }\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        height: 3.5rem;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n        border-radius: 0.75rem;\n\n        a {\n            position: relative;\n            color: whitesmoke;\n            text-decoration: none;\n            padding: 0.5rem 1rem;\n            font-weight: 500;\n            font-size: 1.7rem;\n            transition: color 0.3s ease, transform 0.3s ease;\n\n            &:hover {\n                color: #242c56;\n                transform: scale(1.05); \n            }\n\n            &:before {\n                content: '';\n                position: absolute;\n                width: 90%;  \n                height: 2px;\n                background-color: #242c56;\n                bottom: 0;\n                left: 0;\n                transform: scaleX(0);\n                transform-origin: center; \n                margin-left: .70rem;\n                transition: transform 0.3s ease-in-out;\n                box-shadow: 0 2px 8px rgba(245, 245, 245, 0.25);\n            }\n\n            &:hover:before {\n                transform: scaleX(.75);  \n            }\n\n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }      \n    }  \n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n        transition: 0.3s ease;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: 0.3s ease;\n        }\n\n        &:hover span {\n            background: #1e254a;\n            border: 0.5px solid ghostwhite;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        right: 0;\n        width: 100%;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #1e254a;\n                background-color: rgba(255, 255, 255, 0.1);\n                text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n        .NavList {\n            display: none;\n        }\n\n        .Hamburger {\n            margin-right: 3%;\n            display: flex;\n        }\n    }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
@@ -1633,7 +1638,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.DyskzzB41LkALTA2XioJ {
   color: white;
   text-align: center;
   z-index: 1000;
-}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;AACF;AACE;EACE,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,8BAAA;EACA,aAAA;EACA,iBAAA;AACJ;AAEE;EACE,UAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;EACH,iBAAA;EACA,0FAAA;AAAJ;AAIE;EACE,YAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;AAFJ","sourcesContent":[".videoBanner {\n  position: relative;\n  width: 100%;\n  height: 85vh;\n  overflow: hidden;\n  text-align: center;\n\n  .logo {\n    width: 20rem;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -0%);\n    z-index: 1000;\n    filter: invert(1);\n  }\n\n  .videoBannerVideo {\n    width: 85%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    border-radius: 1%;\n    clip-path: polygon(85% 10%, 100% 0%, 100% 90%, 85% 100%, 15% 100%, 0% 90%, 0% 10%, 15% 0%);\n\n  }\n\n  .videoBannerContent {\n    bottom: 20px;\n    color: white;\n    text-align: center;\n    z-index: 1000;\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;AACF;AACE;EACE,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,8BAAA;EACA,aAAA;EACA,iBAAA;AACJ;AAEE;EACE,UAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;EACH,iBAAA;EACA,0FAAA;AAAJ;AAGE;EACE,YAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;AADJ","sourcesContent":[".videoBanner {\n  position: relative;\n  width: 100%;\n  height: 85vh;\n  overflow: hidden;\n  text-align: center;\n\n  .logo {\n    width: 20rem;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -0%);\n    z-index: 1000;\n    filter: invert(1);\n  }\n\n  .videoBannerVideo {\n    width: 85%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    border-radius: 1%;\n    clip-path: polygon(85% 10%, 100% 0%, 100% 90%, 85% 100%, 15% 100%, 0% 90%, 0% 10%, 15% 0%);\n  }\n\n  .videoBannerContent {\n    bottom: 20px;\n    color: white;\n    text-align: center;\n    z-index: 1000;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"videoBanner": `DyskzzB41LkALTA2XioJ`,
@@ -2741,4 +2746,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.f9cc18c344558e145619a1853bb156a3.js.map
+//# sourceMappingURL=App.9f35b1d79d023bba87b7eda1f0664607.js.map

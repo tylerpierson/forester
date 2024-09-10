@@ -3,6 +3,7 @@ import styles from './YoutubeSection.module.scss';
 
 function YoutubeSection() {
   return (
+    <div id="videos">
     <div className={styles.PlaylistEmbedWrapper}>  
       <div className={styles.PlaylistEmbed}>
         <iframe
@@ -15,6 +16,7 @@ function YoutubeSection() {
         ></iframe>
       </div>
     </div>
+  </div>
   );
 }
 
