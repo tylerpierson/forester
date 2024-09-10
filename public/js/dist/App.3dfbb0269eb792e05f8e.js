@@ -329,9 +329,12 @@ function NavBar() {
   const [isVisible, setIsVisible] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
   const [isMobile, setIsMobile] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const [isMenuOpen, setIsMenuOpen] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  const [disableScrollFade, setDisableScrollFade] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     let lastScrollTop = 0;
     const handleScroll = () => {
+      if (disableScrollFade) return; // Skip fade logic if disabled
+
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
         setIsVisible(false); // Fade out when scrolling down
@@ -352,7 +355,7 @@ function NavBar() {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [disableScrollFade]);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -364,12 +367,20 @@ function NavBar() {
       top: offsetPosition,
       behavior: 'smooth'
     });
+
+    // Temporarily disable scroll fade effect
+    setDisableScrollFade(true);
+    setIsVisible(true); // Ensure NavBar is visible
+
     if (isMobile) {
       setIsMenuOpen(false);
     }
 
     // Add 'focused' class to the clicked section
     targetElement.classList.add(_NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].focused);
+
+    // Re-enable scroll fade effect after scrolling animation completes
+    setTimeout(() => setDisableScrollFade(false), 2000);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "".concat(_NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].NavBar, " ").concat(!isVisible ? _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].hidden : '')
@@ -393,7 +404,8 @@ function NavBar() {
     href: "#videos",
     onClick: e => handleNavigationClick(e, '#videos')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "VIDEOS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "#mission"
+    href: "#mission",
+    onClick: e => handleNavigationClick(e, '#mission')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "MISSION")))), isMobile && isMenuOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MobileMenu
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
@@ -411,7 +423,8 @@ function NavBar() {
     href: "#videos",
     onClick: e => handleNavigationClick(e, '#videos')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "VIDEOS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "#mission"
+    href: "#mission",
+    onClick: e => handleNavigationClick(e, '#mission')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "OUR MISSION")))));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
@@ -1557,10 +1570,9 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.HvgboFHhvHeMxm43zFZ6 {
   padding: 10rem 0 5rem 0;
-  margin: 0rem 0 5rem 0;
   width: 90%;
   color: rgb(255, 255, 255);
-}`, "",{"version":3,"sources":["webpack://./src/components/TourSection/TourSection.module.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,qBAAA;EACA,UAAA;EACA,yBAAA;AACF","sourcesContent":[".tourSection {\n  padding: 10rem 0 5rem 0;\n  margin: 0rem 0 5rem 0;\n  width: 90%;\n  color: rgb(255, 255, 255);\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/TourSection/TourSection.module.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,UAAA;EACA,yBAAA;AACF","sourcesContent":[".tourSection {\n  padding: 10rem 0 5rem 0;\n  width: 90%;\n  color: rgb(255, 255, 255);\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"tourSection": `HvgboFHhvHeMxm43zFZ6`
@@ -1647,9 +1659,23 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.VWPSXPUeoaj3Rv439YpH {
+  display: flex;
+  justify-content: center; /* Center the iframe horizontally */
+  margin: 0 auto; /* Ensure it stays centered */
+  padding: 20px;
+  max-width: 100%; /* Let it span up to the full width of the page */
+}
+.VWPSXPUeoaj3Rv439YpH iframe {
+  width: 1000px; /* Set the desired width */
+  height: 563px; /* Maintain the 16:9 aspect ratio */
+  border: none; /* Remove the iframe border */
+  border-radius: 8px; /* Add some rounded corners */
+}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,uBAAA,EAAA,mCAAA;EACA,cAAA,EAAA,6BAAA;EACA,aAAA;EACA,eAAA,EAAA,iDAAA;AACJ;AACI;EACE,aAAA,EAAA,0BAAA;EACA,aAAA,EAAA,mCAAA;EACA,YAAA,EAAA,6BAAA;EACA,kBAAA,EAAA,6BAAA;AACN","sourcesContent":[".PlaylistEmbed {\n    display: flex;\n    justify-content: center;  /* Center the iframe horizontally */\n    margin: 0 auto;           /* Ensure it stays centered */\n    padding: 20px;\n    max-width: 100%;          /* Let it span up to the full width of the page */\n    \n    iframe {\n      width: 1000px;          /* Set the desired width */\n      height: 563px;          /* Maintain the 16:9 aspect ratio */\n      border: none;           /* Remove the iframe border */\n      border-radius: 8px;     /* Add some rounded corners */\n    }\n  }\n  "],"sourceRoot":""}]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {};
+___CSS_LOADER_EXPORT___.locals = {
+	"PlaylistEmbed": `VWPSXPUeoaj3Rv439YpH`
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
@@ -2678,4 +2704,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.3227aa2f9b074a8330f98cf840ec3f90.js.map
+//# sourceMappingURL=App.b8bcbad8bd8b3906e9ffb3711cc2f6a4.js.map
