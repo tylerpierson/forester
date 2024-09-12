@@ -37,15 +37,6 @@ const AlbumCarousel = ({ isFaded }) => {
           ))}
         </div>
       </div>
-      <div className={styles.dotsContainer}>
-        {Array.from({ length: Math.ceil(images.length / 3) }).map((_, index) => (
-          <div
-            key={index}
-            className={`${styles.dot} ${currentIndex % images.length === index * 3 ? styles.active : ''}`}
-            onClick={() => setCurrentIndex(index * 3)}
-          ></div>
-        ))}
-      </div>
     </div>
   );
 };

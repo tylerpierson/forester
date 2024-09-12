@@ -16,7 +16,6 @@
   align-items: center;
 }
 
- 
  .carousel {
   max-width: 1560px;
 
@@ -47,35 +46,19 @@
    }
  }
  
- .dotsContainer {
-   text-align: center;
-   margin-top: 10px;
-   visibility: hidden;
- }
- 
- .dot {
-   display: inline-block;
-   width: 10px;
-   height: 10px;
-   margin: 0 5px;
-   background-color: #ccc;
-   border-radius: 50%;
-   cursor: pointer;
-   transition: background-color 0.3s ease;
- }
- 
- .dot.active {
-   background-color: #333;
- }
- 
- .dot:hover {
-   background-color: #666;
- }
- 
  @media screen and (max-width: 768px) {
-   .carouselContainer {
-     width: 100vw; 
-     height: 20rem;
-     margin: 0;
-   }
- }
+  .carouselContainer {
+    width: 100vw; 
+    height: 20rem;
+    margin: 0;
+  }
+
+  .carouselInner {
+    width: 100%; /* Ensure the inner carousel takes up only the full width of one item */
+  }
+
+  .carouselItem {
+    flex: 0 0 100%; /* Adjust to show only one item per screen */
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+}
