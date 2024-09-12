@@ -12,7 +12,7 @@
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Changed the styling so the image starts to the far left when scrolling (when adding items to the carousel) */
   align-items: center;
 }
 
@@ -50,6 +50,7 @@
  .dotsContainer {
    text-align: center;
    margin-top: 10px;
+   visibility: hidden;
  }
  
  .dot {

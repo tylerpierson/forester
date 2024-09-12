@@ -824,7 +824,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.k5ppDul8KDJObz5jno_w {
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -859,6 +859,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.k5ppDul8KDJObz5jno_w {
 .A8EWqXJkMaIN6Ijf7xKZ {
   text-align: center;
   margin-top: 10px;
+  visibility: hidden;
 }
 
 .s2far6oKhzUvCO5hC4sQ {
@@ -878,7 +879,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.k5ppDul8KDJObz5jno_w {
 
 .s2far6oKhzUvCO5hC4sQ:hover {
   background-color: #666;
-}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,gBAAA;EACA,qBAAA;EACA,iBAAA;EACA,4EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;;AAGC;EACC,iBAAA;EAEC,aAAA;AADH;;AAIC;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AADH;;AAIC;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AADH;;AAIC;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,+BAAA;AADH;AAGG;EACE,sBAAA;AADL;;AAKC;EACE,kBAAA;EACA,gBAAA;AAFH;;AAKC;EACE,qBAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAFH;;AAKC;EACE,sBAAA;AAFH;;AAKC;EACE,sBAAA;AAFH","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  overflow: hidden;\n  margin-bottom: 1.5rem;\n  padding-top: 1rem;\n  clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n  background-image: url('/public/img/forester-film-edits-9.jpg');\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n \n .carousel {\n  max-width: 1560px;\n\n   display: flex;\n }\n \n .carouselInner {\n   display: flex;\n   width: calc(100% * 3);\n   transition: transform 0.5s ease-in-out;\n   will-change: transform;\n }\n \n .carouselItem {\n   flex: 0 0 33.33%; \n   box-sizing: border-box;\n   padding: 0 20px;\n }\n \n .carouselItem img {\n   width: 100%;\n   height: auto;\n   border-radius: 8px;\n   transition: transform 0.3s ease; \n \n   &:hover {\n     transform: scale(1.05); \n   }\n }\n \n .dotsContainer {\n   text-align: center;\n   margin-top: 10px;\n }\n \n .dot {\n   display: inline-block;\n   width: 10px;\n   height: 10px;\n   margin: 0 5px;\n   background-color: #ccc;\n   border-radius: 50%;\n   cursor: pointer;\n   transition: background-color 0.3s ease;\n }\n \n .dot.active {\n   background-color: #333;\n }\n \n .dot:hover {\n   background-color: #666;\n }\n "],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,gBAAA;EACA,qBAAA;EACA,iBAAA;EACA,4EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,2BAAA;EACA,mBAAA;AACF;;AAGC;EACC,iBAAA;EAEC,aAAA;AADH;;AAIC;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AADH;;AAIC;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AADH;;AAIC;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,+BAAA;AADH;AAGG;EACE,sBAAA;AADL;;AAKC;EACE,kBAAA;EACA,gBAAA;EACA,kBAAA;AAFH;;AAKC;EACE,qBAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAFH;;AAKC;EACE,sBAAA;AAFH;;AAKC;EACE,sBAAA;AAFH","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  overflow: hidden;\n  margin-bottom: 1.5rem;\n  padding-top: 1rem;\n  clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n  background-image: url('/public/img/forester-film-edits-9.jpg');\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n \n .carousel {\n  max-width: 1560px;\n\n   display: flex;\n }\n \n .carouselInner {\n   display: flex;\n   width: calc(100% * 3);\n   transition: transform 0.5s ease-in-out;\n   will-change: transform;\n }\n \n .carouselItem {\n   flex: 0 0 33.33%; \n   box-sizing: border-box;\n   padding: 0 20px;\n }\n \n .carouselItem img {\n   width: 100%;\n   height: auto;\n   border-radius: 8px;\n   transition: transform 0.3s ease; \n \n   &:hover {\n     transform: scale(1.05); \n   }\n }\n \n .dotsContainer {\n   text-align: center;\n   margin-top: 10px;\n   visibility: hidden;\n }\n \n .dot {\n   display: inline-block;\n   width: 10px;\n   height: 10px;\n   margin: 0 5px;\n   background-color: #ccc;\n   border-radius: 50%;\n   cursor: pointer;\n   transition: background-color 0.3s ease;\n }\n \n .dot.active {\n   background-color: #333;\n }\n \n .dot:hover {\n   background-color: #666;\n }\n "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `k5ppDul8KDJObz5jno_w`,
@@ -1050,6 +1051,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.yT1CNjb_DHTHO9GBDoBA {
 .XKtY6Cj920X9aNJ3vook {
   text-align: center;
   margin-top: 10px;
+  visibility: hidden;
 }
 
 .nOFpFsbjECSQDFe0hOAg {
@@ -1069,7 +1071,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.yT1CNjb_DHTHO9GBDoBA {
 
 .nOFpFsbjECSQDFe0hOAg:hover {
   background-color: #666;
-}`, "",{"version":3,"sources":["webpack://./src/components/MerchCarousel/MerchCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;EACA,mBAAA;EACA,iBAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,iBAAA;EACA,aAAA;AACF;;AAEA;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACF;;AAEA;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,kBAAA;EACA,+BAAA;AACF;AACE;EACE,sBAAA;AACJ;;AAGA;EACE,kBAAA;EACA,gBAAA;AAAF;;AAGA;EACE,qBAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,sBAAA;AAAF;;AAGA;EACE,sBAAA;AAAF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  margin-top: 4.5rem;\n  overflow: hidden;\n  margin-bottom: 3rem;\n  padding-top: 1rem;\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.carousel {\n  max-width: 1560px;\n  display: flex;\n}\n\n.carouselInner {\n  display: flex;\n  width: calc(100% * 3);\n  transition: transform 0.5s ease-in-out;\n  will-change: transform;\n}\n\n.carouselItem {\n  flex: 0 0 33.33%; \n  box-sizing: border-box;\n  padding: 0 20px;\n}\n\n.carouselItem img {\n  width: 100%;\n  height: 450px;\n  border-radius: 8px;\n  transition: transform 0.3s ease; \n\n  &:hover {\n    transform: scale(1.05); \n  }\n}\n\n.dotsContainer {\n  text-align: center;\n  margin-top: 10px;\n}\n\n.dot {\n  display: inline-block;\n  width: 10px;\n  height: 10px;\n  margin: 0 5px;\n  background-color: #ccc;\n  border-radius: 50%;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.dot.active {\n  background-color: #333;\n}\n\n.dot:hover {\n  background-color: #666;\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/MerchCarousel/MerchCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;EACA,mBAAA;EACA,iBAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,iBAAA;EACA,aAAA;AACF;;AAEA;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACF;;AAEA;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,kBAAA;EACA,+BAAA;AACF;AACE;EACE,sBAAA;AACJ;;AAGA;EACE,kBAAA;EACA,gBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,qBAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,sBAAA;AAAF;;AAGA;EACE,sBAAA;AAAF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  margin-top: 4.5rem;\n  overflow: hidden;\n  margin-bottom: 3rem;\n  padding-top: 1rem;\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.carousel {\n  max-width: 1560px;\n  display: flex;\n}\n\n.carouselInner {\n  display: flex;\n  width: calc(100% * 3);\n  transition: transform 0.5s ease-in-out;\n  will-change: transform;\n}\n\n.carouselItem {\n  flex: 0 0 33.33%; \n  box-sizing: border-box;\n  padding: 0 20px;\n}\n\n.carouselItem img {\n  width: 100%;\n  height: 450px;\n  border-radius: 8px;\n  transition: transform 0.3s ease; \n\n  &:hover {\n    transform: scale(1.05); \n  }\n}\n\n.dotsContainer {\n  text-align: center;\n  margin-top: 10px;\n  visibility: hidden;\n}\n\n.dot {\n  display: inline-block;\n  width: 10px;\n  height: 10px;\n  margin: 0 5px;\n  background-color: #ccc;\n  border-radius: 50%;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.dot.active {\n  background-color: #333;\n}\n\n.dot:hover {\n  background-color: #666;\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `yT1CNjb_DHTHO9GBDoBA`,
@@ -2705,4 +2707,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.c581572c9a8c132f7af70ab9b8fcf51d.js.map
+//# sourceMappingURL=App.f686f378b10a88874076ceb5ea15c1ac.js.map
