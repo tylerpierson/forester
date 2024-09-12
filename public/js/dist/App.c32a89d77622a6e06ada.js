@@ -562,51 +562,37 @@ function SocialMediaTop() {
 
 
 function Subscribe() {
-  const [email, setEmail] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
-  const [message, setMessage] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('');
-  const handleInputChange = e => {
-    setEmail(e.target.value);
-  };
-  const handleSubmit = e => {
-    e.preventDefault();
-
-    // Basic email validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-      setMessage('Please enter a valid email address.');
-      return;
-    }
-
-    // Reset the message
-    setMessage('');
-
-    // Simulate an API call to subscribe the user
-    // Replace this with your actual API call
-    setTimeout(() => {
-      setMessage('Thank you for subscribing!');
-      setEmail('');
-    }, 1000);
-  };
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    const script = document.createElement('script');
+    script.src = 'https://embed.laylo.com/laylo-sdk.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Subscribe
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-    className: _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].header
-  }, "SIGN UP FOR UPDATES"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
-    onSubmit: handleSubmit,
-    className: _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].SubscribeForm
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    type: "email",
-    value: email,
-    onChange: handleInputChange,
-    placeholder: "Enter your email",
-    className: _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].SubscribeInput,
-    required: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    type: "submit",
-    className: _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].SubscribeButton
-  }, "SIGN UP")), message && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: _Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Message
-  }, message));
+    style: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '50%',
+      margin: '2rem 0 5rem'
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
+    id: "laylo-drop-WUaiI",
+    frameBorder: "0",
+    scrolling: "no",
+    allow: "web-share",
+    allowTransparency: "true",
+    style: {
+      width: '1px',
+      minWidth: '100%',
+      maxWidth: '1000px'
+    },
+    src: "https://embed.laylo.com?dropId=WUaiI&color=2d186d&minimal=false&theme=dark",
+    title: "Laylo Drop"
+  }));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Subscribe);
 
@@ -1504,66 +1490,22 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.DEW5vkqe8lZd4W0aiaXm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem 0 5rem;
-  width: 100%;
-}
-.DEW5vkqe8lZd4W0aiaXm .iFnXw_H8tmd1kWEB75Gb {
-  font-size: 1.2rem;
-  color: ghostwhite;
-  margin-bottom: 1rem;
-}
-.DEW5vkqe8lZd4W0aiaXm .H_wryZjgyAqL7uT4pUdP {
+___CSS_LOADER_EXPORT___.push([module.id, `.HxUZiFz5n1DLSXkSfu8V {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2rem 0 5rem;
   width: 100%;
+  z-index: 1000;
 }
-.DEW5vkqe8lZd4W0aiaXm .H_wryZjgyAqL7uT4pUdP ._D2ENJFvEycq2s291772 {
-  padding: 0.8rem 1rem;
-  font-size: 1rem;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  margin-right: 1rem;
-  outline: none;
-  transition: border-color 0.3s ease;
-  width: 30%;
-}
-.DEW5vkqe8lZd4W0aiaXm .H_wryZjgyAqL7uT4pUdP ._D2ENJFvEycq2s291772:focus {
-  border-color: #1e254a;
-}
-.DEW5vkqe8lZd4W0aiaXm .H_wryZjgyAqL7uT4pUdP .UIG7bgZ1DyZCnt3Zs31V {
-  padding: 0.8rem 1.5rem;
-  font-size: 1.1rem;
-  font-family: "Poppins", sans-serif;
-  background-color: #1e254a;
-  color: white;
+.HxUZiFz5n1DLSXkSfu8V iframe {
+  width: 50%;
+  max-width: 500px;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.DEW5vkqe8lZd4W0aiaXm .H_wryZjgyAqL7uT4pUdP .UIG7bgZ1DyZCnt3Zs31V:hover {
-  color: #1e254a;
-  background-color: #fff;
-  transform: scale(1);
-}
-.DEW5vkqe8lZd4W0aiaXm .MeAwkH7EDfQl7df614HM {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: rgba(245, 245, 245, 0.873);
-}`, "",{"version":3,"sources":["webpack://./src/components/Subscribe/Subscribe.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,mBAAA;EACA,WAAA;AACJ;AAAI;EACI,iBAAA;EACA,iBAAA;EACA,mBAAA;AAER;AACI;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;AACN;AACM;EACE,oBAAA;EACA,eAAA;EACA,sBAAA;EACA,kBAAA;EACA,kBAAA;EACA,aAAA;EACA,kCAAA;EACA,UAAA;AACR;AAAQ;EACE,qBAAA;AAEV;AAEM;EACE,sBAAA;EACA,iBAAA;EACA,kCAAA;EACA,yBAAA;EACA,YAAA;EACA,YAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAR;AAEQ;EACE,cAAA;EACA,sBAAA;EACA,mBAAA;AAAV;AAKI;EACE,gBAAA;EACA,eAAA;EACA,iCAAA;AAHN","sourcesContent":[".Subscribe {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin: 2rem 0 5rem;\n    width: 100%;\n    .header {\n        font-size: 1.2rem;\n        color: ghostwhite;\n        margin-bottom: 1rem;\n    }\n  \n    .SubscribeForm {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      width: 100%;\n  \n      .SubscribeInput {\n        padding: 0.8rem 1rem;\n        font-size: 1rem;\n        border: 2px solid #ccc;\n        border-radius: 4px;\n        margin-right: 1rem;\n        outline: none;\n        transition: border-color 0.3s ease;\n        width: 30%;\n        &:focus {\n          border-color: #1e254a;\n        }\n      }\n  \n      .SubscribeButton {\n        padding: 0.8rem 1.5rem;\n        font-size: 1.1rem;\n        font-family: \"Poppins\", sans-serif;\n        background-color: #1e254a;\n        color: white;\n        border: none;\n        border-radius: 4px;\n        cursor: pointer;\n        transition: background-color 0.3s ease;\n  \n        &:hover {\n          color: #1e254a;\n          background-color: #fff;\n          transform: scale(1);\n        }\n      }\n    }\n  \n    .Message {\n      margin-top: 1rem;\n      font-size: 1rem;\n      color: rgba(245, 245, 245, 0.873);\n    }\n  }\n  "],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Subscribe/Subscribe.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mBAAA;EACA,WAAA;EACA,aAAA;AACF;AACE;EACE,UAAA;EACA,gBAAA;EACA,YAAA;AACJ","sourcesContent":[".subscribeContainer {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 2rem 0 5rem;\n  width: 100%;\n  z-index: 1000;\n\n  iframe {\n    width: 50%;\n    max-width: 500px;\n    border: none;\n  }\n}\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"Subscribe": `DEW5vkqe8lZd4W0aiaXm`,
-	"header": `iFnXw_H8tmd1kWEB75Gb`,
-	"SubscribeForm": `H_wryZjgyAqL7uT4pUdP`,
-	"SubscribeInput": `_D2ENJFvEycq2s291772`,
-	"SubscribeButton": `UIG7bgZ1DyZCnt3Zs31V`,
-	"Message": `MeAwkH7EDfQl7df614HM`
+	"subscribeContainer": `HxUZiFz5n1DLSXkSfu8V`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1693,7 +1635,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.bZS7FVegf5kLSxLOTQAb {
   margin-bottom: 5rem;
   padding: 0;
   overflow: hidden;
-  clip-path: polygon(65% 0%, 98% 0%, 92% 100%, 50% 90%, 20% 100%, 0% 80%, 5% 20%);
+  clip-path: polygon(0% 20%, 15% 10%, 70% 0%, 100% 0%, 100% 100%, 50% 92%, 20% 100%, 0% 90%);
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
   background-attachment: fixed;
   background-size: cover;
@@ -1714,7 +1656,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.bZS7FVegf5kLSxLOTQAb {
   height: 75%;
   border: none;
   border-radius: 8px;
-}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,YAAA;EACA,SAAA;EACA,mBAAA;EACA,UAAA;EACA,gBAAA;EACA,+EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,cAAA;EACA,iBAAA;EACA,aAAA;AACF;AACE;EACE,UAAA;EACA,WAAA;EACA,YAAA;EACA,kBAAA;AACJ","sourcesContent":[".PlaylistEmbedWrapper {\n  position: relative;\n  width: 100vw; \n  margin: 0;\n  margin-bottom: 5rem;   \n  padding: 0;\n  overflow: hidden; \n  clip-path: polygon(65% 0%, 98% 0%, 92% 100%, 50% 90%, 20% 100%, 0% 80%, 5% 20%);\n  background-image: url('/public/img/forester-film-edits-17.jpg');\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n}\n\n.PlaylistEmbed {\n  display: flex;\n  justify-content: center;  \n  align-items: center;\n  padding: 20px;\n  margin: 3.2rem;     \n  max-width: 1510px;      \n  height: 600px;      \n  \n  iframe {\n    width: 75%;    \n    height: 75%;   \n    border: none;  \n    border-radius: 8px;\n  }\n}\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,YAAA;EACA,SAAA;EACA,mBAAA;EACA,UAAA;EACA,gBAAA;EACA,0FAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,cAAA;EACA,iBAAA;EACA,aAAA;AACF;AACE;EACE,UAAA;EACA,WAAA;EACA,YAAA;EACA,kBAAA;AACJ","sourcesContent":[".PlaylistEmbedWrapper {\n  position: relative;\n  width: 100vw; \n  margin: 0;\n  margin-bottom: 5rem;   \n  padding: 0;\n  overflow: hidden; \n  clip-path: polygon(0% 20%, 15% 10%, 70% 0%, 100% 0%, 100% 100%, 50% 92%, 20% 100%, 0% 90%);\n  background-image: url('/public/img/forester-film-edits-17.jpg');\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n}\n\n.PlaylistEmbed {\n  display: flex;\n  justify-content: center;  \n  align-items: center;\n  padding: 20px;\n  margin: 3.2rem;     \n  max-width: 1510px;      \n  height: 600px;      \n  \n  iframe {\n    width: 75%;    \n    height: 75%;   \n    border: none;  \n    border-radius: 8px;\n  }\n}\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"PlaylistEmbedWrapper": `bZS7FVegf5kLSxLOTQAb`,
@@ -2265,11 +2207,8 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /*!********************************************************!*\
   !*** ./src/components/Subscribe/Subscribe.module.scss ***!
   \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
@@ -2309,7 +2248,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_2_use_1_node_modules_sass_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_Subscribe_module_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -2759,4 +2698,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.d0eee3df9d90d1fe1e3934ddd4ba4d9c.js.map
+//# sourceMappingURL=App.cdbaa47da4930a24fe05971d4db24663.js.map
