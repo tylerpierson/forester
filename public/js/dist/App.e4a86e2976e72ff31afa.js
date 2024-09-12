@@ -123,15 +123,7 @@ const AlbumCarousel = _ref => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: image.src,
     alt: image.alt
-  })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dotsContainer
-  }, Array.from({
-    length: Math.ceil(images.length / 3)
-  }).map((_, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    key: index,
-    className: "".concat(_AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dot, " ").concat(currentIndex % images.length === index * 3 ? _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].active : ''),
-    onClick: () => setCurrentIndex(index * 3)
-  }))));
+  })))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AlbumCarousel);
 
@@ -904,47 +896,26 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.k5ppDul8KDJObz5jno_w {
   transform: scale(1.05);
 }
 
-.A8EWqXJkMaIN6Ijf7xKZ {
-  text-align: center;
-  margin-top: 10px;
-  visibility: hidden;
-}
-
-.s2far6oKhzUvCO5hC4sQ {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.s2far6oKhzUvCO5hC4sQ.L7GtzVwXVpyte3VuVMb3 {
-  background-color: #333;
-}
-
-.s2far6oKhzUvCO5hC4sQ:hover {
-  background-color: #666;
-}
-
 @media screen and (max-width: 768px) {
   .k5ppDul8KDJObz5jno_w {
     width: 100vw;
     height: 20rem;
     margin: 0;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,gBAAA;EACA,qBAAA;EACA,iBAAA;EACA,4EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,2BAAA,EAAA,+GAAA;EACA,mBAAA;AACF;;AAGC;EACC,iBAAA;EAEC,aAAA;AADH;;AAIC;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AADH;;AAIC;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AADH;;AAIC;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,+BAAA;AADH;AAGG;EACE,sBAAA;AADL;;AAKC;EACE,kBAAA;EACA,gBAAA;EACA,kBAAA;AAFH;;AAKC;EACE,qBAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAFH;;AAKC;EACE,sBAAA;AAFH;;AAKC;EACE,sBAAA;AAFH;;AAKC;EACE;IACE,YAAA;IACA,aAAA;IACA,SAAA;EAFH;AACF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  overflow: hidden;\n  margin-bottom: 1.5rem;\n  padding-top: 1rem;\n  clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n  background-image: url('/public/img/forester-film-edits-9.jpg');\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: flex-start; /* Changed the styling so the image starts to the far left when scrolling (when adding items to the carousel) */\n  align-items: center;\n}\n\n \n .carousel {\n  max-width: 1560px;\n\n   display: flex;\n }\n \n .carouselInner {\n   display: flex;\n   width: calc(100% * 3);\n   transition: transform 0.5s ease-in-out;\n   will-change: transform;\n }\n \n .carouselItem {\n   flex: 0 0 33.33%; \n   box-sizing: border-box;\n   padding: 0 20px;\n }\n \n .carouselItem img {\n   width: 100%;\n   height: auto;\n   border-radius: 8px;\n   transition: transform 0.3s ease; \n \n   &:hover {\n     transform: scale(1.05); \n   }\n }\n \n .dotsContainer {\n   text-align: center;\n   margin-top: 10px;\n   visibility: hidden;\n }\n \n .dot {\n   display: inline-block;\n   width: 10px;\n   height: 10px;\n   margin: 0 5px;\n   background-color: #ccc;\n   border-radius: 50%;\n   cursor: pointer;\n   transition: background-color 0.3s ease;\n }\n \n .dot.active {\n   background-color: #333;\n }\n \n .dot:hover {\n   background-color: #666;\n }\n \n @media screen and (max-width: 768px) {\n   .carouselContainer {\n     width: 100vw; \n     height: 20rem;\n     margin: 0;\n   }\n }"],"sourceRoot":""}]);
+  .Haa1XkWbPWq3uO05xDAb {
+    width: 100%; /* Ensure the inner carousel takes up only the full width of one item */
+  }
+  .rH3TneSeMPN9Ym3micOW {
+    flex: 0 0 100%; /* Adjust to show only one item per screen */
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,gBAAA;EACA,qBAAA;EACA,iBAAA;EACA,4EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,2BAAA,EAAA,+GAAA;EACA,mBAAA;AACF;;AAEC;EACC,iBAAA;EAEC,aAAA;AAAH;;AAGC;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AAAH;;AAGC;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AAAH;;AAGC;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,+BAAA;AAAH;AAEG;EACE,sBAAA;AAAL;;AAIC;EACC;IACE,YAAA;IACA,aAAA;IACA,SAAA;EADF;EAIA;IACE,WAAA,EAAA,uEAAA;EAFF;EAKA;IACE,cAAA,EAAA,4CAAA;IACA,eAAA,EAAA,uCAAA;EAHF;AACF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  overflow: hidden;\n  margin-bottom: 1.5rem;\n  padding-top: 1rem;\n  clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n  background-image: url('/public/img/forester-film-edits-9.jpg');\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: flex-start; /* Changed the styling so the image starts to the far left when scrolling (when adding items to the carousel) */\n  align-items: center;\n}\n\n .carousel {\n  max-width: 1560px;\n\n   display: flex;\n }\n \n .carouselInner {\n   display: flex;\n   width: calc(100% * 3);\n   transition: transform 0.5s ease-in-out;\n   will-change: transform;\n }\n \n .carouselItem {\n   flex: 0 0 33.33%; \n   box-sizing: border-box;\n   padding: 0 20px;\n }\n \n .carouselItem img {\n   width: 100%;\n   height: auto;\n   border-radius: 8px;\n   transition: transform 0.3s ease; \n \n   &:hover {\n     transform: scale(1.05); \n   }\n }\n \n @media screen and (max-width: 768px) {\n  .carouselContainer {\n    width: 100vw; \n    height: 20rem;\n    margin: 0;\n  }\n\n  .carouselInner {\n    width: 100%; /* Ensure the inner carousel takes up only the full width of one item */\n  }\n\n  .carouselItem {\n    flex: 0 0 100%; /* Adjust to show only one item per screen */\n    padding: 0 10px; /* Adjust padding for smaller screens */\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `k5ppDul8KDJObz5jno_w`,
 	"carousel": `lLj8b8N8hv0CUYek4MAw`,
 	"carouselInner": `Haa1XkWbPWq3uO05xDAb`,
-	"carouselItem": `rH3TneSeMPN9Ym3micOW`,
-	"dotsContainer": `A8EWqXJkMaIN6Ijf7xKZ`,
-	"dot": `s2far6oKhzUvCO5hC4sQ`,
-	"active": `L7GtzVwXVpyte3VuVMb3`
+	"carouselItem": `rH3TneSeMPN9Ym3micOW`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1104,51 +1075,27 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.yT1CNjb_DHTHO9GBDoBA {
   transform: scale(1.05);
 }
 
-.XKtY6Cj920X9aNJ3vook {
-  text-align: center;
-  margin-top: 10px;
-  visibility: hidden;
-}
-
-.nOFpFsbjECSQDFe0hOAg {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.nOFpFsbjECSQDFe0hOAg.TDVAVvKWAd7JYxfZFguw {
-  background-color: #333;
-}
-
-.nOFpFsbjECSQDFe0hOAg:hover {
-  background-color: #666;
-}
-
 @media screen and (max-width: 768px) {
   .yT1CNjb_DHTHO9GBDoBA {
     height: 10rem;
     margin-top: 4.5rem;
   }
+  .nKIEvLOJMnFOG5pvhn3u {
+    flex: 0 0 100%;
+    padding: 0 10px;
+  }
   .nKIEvLOJMnFOG5pvhn3u img {
-    width: 100%;
+    width: 123px;
     height: 115px;
     margin: 0;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/MerchCarousel/MerchCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;EACA,mBAAA;EACA,iBAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,iBAAA;EACA,aAAA;AACF;;AAEA;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACF;;AAEA;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,kBAAA;EACA,+BAAA;AACF;AACE;EACE,sBAAA;AACJ;;AAGA;EACE,kBAAA;EACA,gBAAA;EACA,kBAAA;AAAF;;AAGA;EACE,qBAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,sBAAA;EACA,kBAAA;EACA,eAAA;EACA,sCAAA;AAAF;;AAGA;EACE,sBAAA;AAAF;;AAGA;EACE,sBAAA;AAAF;;AAGA;EACE;IACE,aAAA;IACA,kBAAA;EAAF;EAGA;IACE,WAAA;IACA,aAAA;IACA,SAAA;EADF;AACF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  margin-top: 4.5rem;\n  overflow: hidden;\n  margin-bottom: 3rem;\n  padding-top: 1rem;\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.carousel {\n  max-width: 1560px;\n  display: flex;\n}\n\n.carouselInner {\n  display: flex;\n  width: calc(100% * 3);\n  transition: transform 0.5s ease-in-out;\n  will-change: transform;\n}\n\n.carouselItem {\n  flex: 0 0 33.33%; \n  box-sizing: border-box;\n  padding: 0 20px;\n}\n\n.carouselItem img {\n  width: 100%;\n  height: 450px;\n  border-radius: 8px;\n  transition: transform 0.3s ease; \n\n  &:hover {\n    transform: scale(1.05); \n  }\n}\n\n.dotsContainer {\n  text-align: center;\n  margin-top: 10px;\n  visibility: hidden;\n}\n\n.dot {\n  display: inline-block;\n  width: 10px;\n  height: 10px;\n  margin: 0 5px;\n  background-color: #ccc;\n  border-radius: 50%;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n}\n\n.dot.active {\n  background-color: #333;\n}\n\n.dot:hover {\n  background-color: #666;\n}\n\n@media screen and (max-width: 768px) {\n  .carouselContainer {\n    height: 10rem;\n    margin-top: 4.5rem;\n  }\n\n  .carouselItem img {\n    width: 100%;\n    height: 115px;\n    margin: 0;\n  }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/MerchCarousel/MerchCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;EACA,mBAAA;EACA,iBAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,iBAAA;EACA,aAAA;AACF;;AAEA;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACF;;AAEA;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,kBAAA;EACA,+BAAA;AACF;AACE;EACE,sBAAA;AACJ;;AAGA;EACE;IACE,aAAA;IACA,kBAAA;EAAF;EAGA;IACE,cAAA;IACA,eAAA;EADF;EAIA;IACE,YAAA;IACA,aAAA;IACA,SAAA;EAFF;AACF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  margin-top: 4.5rem;\n  overflow: hidden;\n  margin-bottom: 3rem;\n  padding-top: 1rem;\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.carousel {\n  max-width: 1560px;\n  display: flex;\n}\n\n.carouselInner {\n  display: flex;\n  width: calc(100% * 3);\n  transition: transform 0.5s ease-in-out;\n  will-change: transform;\n}\n\n.carouselItem {\n  flex: 0 0 33.33%; \n  box-sizing: border-box;\n  padding: 0 20px;\n}\n\n.carouselItem img {\n  width: 100%;\n  height: 450px;\n  border-radius: 8px;\n  transition: transform 0.3s ease; \n\n  &:hover {\n    transform: scale(1.05); \n  }\n}\n\n@media screen and (max-width: 768px) {\n  .carouselContainer {\n    height: 10rem;\n    margin-top: 4.5rem;\n  }\n\n  .carouselItem {\n    flex: 0 0 100%;\n    padding: 0 10px;\n  }\n\n  .carouselItem img {\n    width: 123px;\n    height: 115px;\n    margin: 0;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `yT1CNjb_DHTHO9GBDoBA`,
 	"carousel": `tWWzLIVgUCJnz6xfZlok`,
 	"carouselInner": `Nt8ZtOvxeMb8cxnJssPO`,
-	"carouselItem": `nKIEvLOJMnFOG5pvhn3u`,
-	"dotsContainer": `XKtY6Cj920X9aNJ3vook`,
-	"dot": `nOFpFsbjECSQDFe0hOAg`,
-	"active": `TDVAVvKWAd7JYxfZFguw`
+	"carouselItem": `nKIEvLOJMnFOG5pvhn3u`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1532,7 +1479,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.uYrXtwYQZtJpSmB8rs2z {
     margin: 0 0.5rem;
     padding: 0;
     background-color: #1e254a;
-    border-radius: 20%;
+    border-radius: 10%;
     z-index: 1000;
   }
   .uYrXtwYQZtJpSmB8rs2z a:hover {
@@ -1540,7 +1487,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.uYrXtwYQZtJpSmB8rs2z {
     background-color: whitesmoke;
     border-radius: 10%;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/SocialMedia/SocialMediaMobile.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;AACJ;;AAEA;EACI;IACI,aAAA;IACA,gBAAA;IACA,uBAAA;EACN;EAAM;IACI,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,iBAAA;IACA,iBAAA;IACA,2BAAA;IACA,WAAA;IACA,YAAA;IACA,gBAAA;IACA,UAAA;IACA,yBAAA;IACA,kBAAA;IACA,aAAA;EAEV;EAAU;IACI,cAAA;IACA,4BAAA;IACA,kBAAA;EAEd;AACF","sourcesContent":[".socialMedia {\n    display: none;\n}\n\n@media screen and (max-width: 768px) {\n    .socialMedia {\n        display: flex;\n        margin-top: 2rem;\n        justify-content: center;\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: whitesmoke;\n            font-size: 1.5rem;\n            transition: color 0.3s ease;\n            width: 2rem;\n            height: 2rem;\n            margin: 0 0.5rem;\n            padding: 0;\n            background-color: #1e254a;\n            border-radius: 20%;\n            z-index: 1000;\n    \n            &:hover {\n                color: #1e254a;\n                background-color: whitesmoke;\n                border-radius: 10%;\n            }\n        }\n    }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/SocialMedia/SocialMediaMobile.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;AACJ;;AAEA;EACI;IACI,aAAA;IACA,gBAAA;IACA,uBAAA;EACN;EAAM;IACI,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,iBAAA;IACA,iBAAA;IACA,2BAAA;IACA,WAAA;IACA,YAAA;IACA,gBAAA;IACA,UAAA;IACA,yBAAA;IACA,kBAAA;IACA,aAAA;EAEV;EAAU;IACI,cAAA;IACA,4BAAA;IACA,kBAAA;EAEd;AACF","sourcesContent":[".socialMedia {\n    display: none;\n}\n\n@media screen and (max-width: 768px) {\n    .socialMedia {\n        display: flex;\n        margin-top: 2rem;\n        justify-content: center;\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: whitesmoke;\n            font-size: 1.5rem;\n            transition: color 0.3s ease;\n            width: 2rem;\n            height: 2rem;\n            margin: 0 0.5rem;\n            padding: 0;\n            background-color: #1e254a;\n            border-radius: 10%;\n            z-index: 1000;\n    \n            &:hover {\n                color: #1e254a;\n                background-color: whitesmoke;\n                border-radius: 10%;\n            }\n        }\n    }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"socialMedia": `uYrXtwYQZtJpSmB8rs2z`
@@ -2924,4 +2871,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.3ccfb653debb2e161b119d94473473a7.js.map
+//# sourceMappingURL=App.f37e7cee0098e13b064720e065485fc0.js.map

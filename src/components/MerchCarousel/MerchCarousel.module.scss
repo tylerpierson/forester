@@ -44,39 +44,19 @@
   }
 }
 
-.dotsContainer {
-  text-align: center;
-  margin-top: 10px;
-  visibility: hidden;
-}
-
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  background-color: #333;
-}
-
-.dot:hover {
-  background-color: #666;
-}
-
 @media screen and (max-width: 768px) {
   .carouselContainer {
     height: 10rem;
     margin-top: 4.5rem;
   }
 
+  .carouselItem {
+    flex: 0 0 100%;
+    padding: 0 10px;
+  }
+
   .carouselItem img {
-    width: 100%;
+    width: 123px;
     height: 115px;
     margin: 0;
   }
