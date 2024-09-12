@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import styles from './App.module.scss';
 import NavBar from './components/NavBar/NavBar';
 import SocialMediaTop from './components/SocialMedia/SocialMediaTop';
+import SocialMediaMobile from './components/SocialMedia/SocialMediaMobile';
 import SocialMediaBottom from './components/SocialMedia/SocialMediaBottom';
 import AlbumCarousel from './components/AlbumCarousel/AlbumCarousel';
 import VideoBanner from './components/VideoBanner/VideoBanner';
@@ -21,6 +22,7 @@ export default function App() {
         <div className={styles.App}>
             <NavBar isFaded={isFaded} setIsFaded={setIsFaded} />
             <VideoBanner/>
+            <SocialMediaMobile/>
             <TourSection/>
             <AlbumCarousel/>
             <MerchCarousel/>

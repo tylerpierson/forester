@@ -1,0 +1,32 @@
+.socialMedia {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .socialMedia {
+        display: flex;
+        margin-top: 2rem;
+        justify-content: center;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: whitesmoke;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+            width: 2rem;
+            height: 2rem;
+            margin: 0 0.5rem;
+            padding: 0;
+            background-color: #1e254a;
+            border-radius: 20%;
+            z-index: 1000;
+    
+            &:hover {
+                color: #1e254a;
+                background-color: whitesmoke;
+                border-radius: 10%;
+            }
+        }
+    }
+}

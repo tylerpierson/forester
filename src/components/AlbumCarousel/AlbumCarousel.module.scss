@@ -72,3 +72,10 @@
    background-color: #666;
  }
  
+ @media screen and (max-width: 768px) {
+   .carouselContainer {
+     width: 100vw; 
+     height: 20rem;
+     margin: 0;
+   }
+ }

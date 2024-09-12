@@ -7,9 +7,18 @@
   z-index: 1000;
 
   iframe {
-    width: 50%;
-    max-width: 500px;
+    width: 100%; /* Full width of its container */
+    max-width: 1000px; /* Maximum width to prevent it from becoming too wide */
     border: none;
+    min-width: 320px; /* Minimum width to maintain a reasonable size */
   }
 }
 
+@media screen and (max-width: 768px) {
+  .subscribeContainer {
+    iframe {
+      width: 90%; /* Takes up 90% of the width on smaller screens */
+      max-width: 100%; /* Ensure it scales correctly */
+    }
+  }
+}

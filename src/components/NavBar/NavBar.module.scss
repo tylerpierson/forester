@@ -1,5 +1,5 @@
 .NavBar {
-    width: 90%;
+
     border-radius: 30px;
     padding: 1rem 2rem;
     position: sticky;
@@ -93,8 +93,7 @@
         background: #333;
         position: absolute;
         top: 100%;
-        right: 0;
-        width: 100%;
+        left: 0;
         padding: 1rem 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
@@ -126,12 +125,13 @@
     }
 
     @media (max-width: 768px) {
+
         .NavList {
             display: none;
+            text-align: center;
         }
 
         .Hamburger {
-            margin-right: 3%;
             display: flex;
         }
     }

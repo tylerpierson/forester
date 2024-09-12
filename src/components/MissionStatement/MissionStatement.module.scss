@@ -86,12 +86,12 @@
     .MissionStatement,
     .MissionStatementPara {
         clip-path: none;
-        height: 40rem;
-        overflow-y: scroll;
+        height: 30rem;
     }
 
     .MissionStatementPara {
-        padding: 2rem 5rem;
+        padding: 2rem 2rem;
+        font-size: .8rem;
         margin: 0;
     }
 }
