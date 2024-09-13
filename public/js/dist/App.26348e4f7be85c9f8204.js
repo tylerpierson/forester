@@ -1738,34 +1738,38 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `.bZS7FVegf5kLSxLOTQAb {
-  width: 100vw;
-  margin: 0;
-  margin-bottom: 5rem;
-  padding: 0;
-  overflow: hidden;
-  clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);
-  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+___CSS_LOADER_EXPORT___.push([module.id, `@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .bZS7FVegf5kLSxLOTQAb {
+    width: 100vw;
+    margin: 0;
+    margin-bottom: 5rem;
+    padding: 0;
+    overflow: hidden;
+    clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  .VWPSXPUeoaj3Rv439YpH {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1000px;
+  }
+  .VWPSXPUeoaj3Rv439YpH iframe {
+    height: 472.5px;
+    width: 840px;
+    border: none;
+    border-radius: 8px;
+  }
 }
-
-.VWPSXPUeoaj3Rv439YpH {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 1000px;
-}
-.VWPSXPUeoaj3Rv439YpH iframe {
-  height: 472.5px;
-  width: 840px;
-  border: none;
-  border-radius: 8px;
-}
-
-@media screen and (max-width: 900px) {
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 900px), screen and (min-resolution: 192dpi) and (max-width: 900px) {
+  .bZS7FVegf5kLSxLOTQAb {
+    background-size: contain;
+    background-attachment: fixed;
+  }
   .VWPSXPUeoaj3Rv439YpH {
     height: 400px;
   }
@@ -1773,7 +1777,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.bZS7FVegf5kLSxLOTQAb {
     height: 220.5px;
     width: 392px;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,SAAA;EACA,mBAAA;EACA,UAAA;EACA,gBAAA;EACA,0FAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,cAAA;AACF;AACE;EACE,eAAA;EACA,YAAA;EACA,YAAA;EACA,kBAAA;AACJ;;AAGA;EACE;IACE,aAAA;EAAF;EACE;IACE,eAAA;IACA,YAAA;EACJ;AACF","sourcesContent":[".PlaylistEmbedWrapper {\n  width: 100vw; \n  margin: 0;\n  margin-bottom: 5rem;   \n  padding: 0;\n  overflow: hidden; \n  clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);\n  background-image: url('/public/img/forester-film-edits-17.jpg');\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n}\n\n.PlaylistEmbed {\n  display: flex;\n  justify-content: center;  \n  align-items: center;\n  width: 100%;    \n  height: 1000px;      \n  \n  iframe {\n    height: 472.5px;\n    width: 840px;\n    border: none;  \n    border-radius: 8px;\n  }\n}\n\n@media screen and (max-width: 900px) {\n  .PlaylistEmbed {\n    height: 400px;\n    iframe {\n      height: 220.5px;\n      width: 392px;\n    }\n  }\n}\n\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACE;IACE,YAAA;IACA,SAAA;IACA,mBAAA;IACA,UAAA;IACA,gBAAA;IACA,0FAAA;IACA,yDAAA;IACA,4BAAA;IACA,sBAAA;IACA,2BAAA;EACF;EAEA;IACE,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,WAAA;IACA,cAAA;EAAF;EAEE;IACE,eAAA;IACA,YAAA;IACA,YAAA;IACA,kBAAA;EAAJ;AACF;AAGE;EACE;IACE,wBAAA;IACA,4BAAA;EADJ;EAGE;IACE,aAAA;EADJ;EAEI;IACE,eAAA;IACA,YAAA;EAAN;AACF","sourcesContent":["@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {\n  .PlaylistEmbedWrapper {\n    width: 100vw; \n    margin: 0;\n    margin-bottom: 5rem;   \n    padding: 0;\n    overflow: hidden; \n    clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);\n    background-image: url('/public/img/forester-film-edits-17.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n  }\n\n  .PlaylistEmbed {\n    display: flex;\n    justify-content: center;  \n    align-items: center;\n    width: 100%;    \n    height: 1000px;      \n    \n    iframe {\n      height: 472.5px;\n      width: 840px;\n      border: none;  \n      border-radius: 8px;\n    }\n  }\n\n  @media screen and (max-width: 900px) {\n    .PlaylistEmbedWrapper {\n      background-size: contain;\n      background-attachment: fixed;\n    }\n    .PlaylistEmbed {\n      height: 400px;\n      iframe {\n        height: 220.5px;\n        width: 392px;\n      }\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"PlaylistEmbedWrapper": `bZS7FVegf5kLSxLOTQAb`,
@@ -2871,4 +2875,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.dff6dbeb1771d29ba8f5dcb035c69fbb.js.map
+//# sourceMappingURL=App.6167a951035c5d47885ed395b0777da1.js.map
