@@ -96,8 +96,7 @@ const AlbumCarousel = _ref => {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
-
+    }, 3000);
     return () => clearInterval(interval);
   }, [images.length]);
   const visibleImages = [images[currentIndex % images.length], images[(currentIndex + 1) % images.length], images[(currentIndex + 2) % images.length]];
@@ -2879,4 +2878,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.dfc0cf4538a9c4e9cf9fadc47b0c92c5.js.map
+//# sourceMappingURL=App.be8b61e1b4269b23e32472591f404dac.js.map
