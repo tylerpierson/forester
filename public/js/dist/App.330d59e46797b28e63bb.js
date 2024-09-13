@@ -92,25 +92,23 @@ const AlbumCarousel = _ref => {
     alt: 'Image 4',
     link: 'https://lowly.ffm.to/forester-kerosene'
   }];
-  const extendedImages = [...images, ...images, ...images];
   const [currentIndex, setCurrentIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % (images.length * 3));
-    }, 3000);
+      setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+
     return () => clearInterval(interval);
   }, [images.length]);
+  const visibleImages = [images[currentIndex % images.length], images[(currentIndex + 1) % images.length], images[(currentIndex + 2) % images.length]];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "newmusic",
     className: isFaded ? "".concat(_AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer) : "".concat(_AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carousel
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselInner,
-    style: {
-      transform: "translateX(-".concat(currentIndex % images.length * (100 / 3), "%)")
-    }
-  }, extendedImages.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselInner
+  }, visibleImages.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselItem,
     key: index,
     style: {
@@ -219,46 +217,42 @@ const MerchCarousel = _ref => {
     isFaded
   } = _ref;
   const images = [{
-    src: '/img/hat1.png',
-    alt: 'Image 1',
-    link: 'https://forestermerch.com/products/lose-your-mind-find-your-soul-hat'
-  }, {
     src: '/img/hat2.png',
-    alt: 'Image 2',
+    alt: 'Image 1',
     link: 'https://forestermerch.com/products/forester-5-panel-hat'
   }, {
     src: '/img/hoodie.png',
-    alt: 'Image 3',
+    alt: 'Image 2',
     link: 'https://forestermerch.com/products/sequoia-hoodie'
+  }, {
+    src: '/img/hat1.png',
+    alt: 'Image 3',
+    link: 'https://forestermerch.com/products/lose-your-mind-find-your-soul-hat'
   }
-  //add as many merch images as you see fit, the carousel will display up to 3 images at a time on screen
+  // Add more merch images as needed
   ];
-  const visibleImages = images.length > 3 ? images : images.slice(0, 3);
-  const extendedImages = images.length > 3 ? [...visibleImages, ...visibleImages, ...visibleImages] : visibleImages;
   const [currentIndex, setCurrentIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
   const shouldScroll = images.length > 3;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     let interval;
     if (shouldScroll) {
       interval = setInterval(() => {
-        setCurrentIndex(prevIndex => (prevIndex + 1) % (visibleImages.length * 3));
+        setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
       }, 3000);
     }
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [shouldScroll, visibleImages.length]);
+  }, [shouldScroll, images.length]);
+  const visibleImages = shouldScroll ? [images[currentIndex % images.length], images[(currentIndex + 1) % images.length], images[(currentIndex + 2) % images.length]] : images;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "store",
     className: isFaded ? "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer) : "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carousel
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselInner,
-    style: {
-      transform: "translateX(-".concat(shouldScroll ? currentIndex % visibleImages.length * (100 / 3) : 0, "%)")
-    }
-  }, extendedImages.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselInner
+  }, visibleImages.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselItem,
     key: index,
     style: {
@@ -274,10 +268,10 @@ const MerchCarousel = _ref => {
   })))))), shouldScroll && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dotsContainer
   }, Array.from({
-    length: Math.ceil(visibleImages.length / 3)
+    length: Math.ceil(images.length / 3)
   }).map((_, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: index,
-    className: "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dot, " ").concat(currentIndex % visibleImages.length === index * 3 ? _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].active : ''),
+    className: "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dot, " ").concat(currentIndex === index * 3 ? _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].active : ''),
     onClick: () => setCurrentIndex(index * 3)
   }))));
 };
@@ -657,22 +651,31 @@ const TourSection = _ref => {
     isFaded
   } = _ref;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const script = document.createElement('script');
-    script.src = "https://widget.seated.com/app.js";
-    script.async = true;
-    document.body.appendChild(script);
+    // Laylo widget script
+    const layloScript = document.createElement('script');
+    layloScript.src = "https://embed.laylo.com/laylo-sdk.js";
+    layloScript.async = true;
+    document.body.appendChild(layloScript);
     return () => {
-      document.body.removeChild(script);
+      // Clean up the Laylo script on component unmount
+      document.body.removeChild(layloScript);
     };
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "tour",
     className: isFaded ? "".concat(_TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].tourSection) : "".concat(_TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].tourSection)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "seated-55fdf2c0",
-    className: _TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].seatedEmbed,
-    "data-artist-id": "ba27e0de-7b7e-4885-854a-87b49f4d12a1",
-    "data-css-version": "3"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
+    id: "laylo-drop-46c2fa69-4ca5-4e2c-ba7e-46e26d1b0b40",
+    frameBorder: "0",
+    scrolling: "no",
+    allow: "web-share",
+    allowTransparency: "true",
+    style: {
+      width: '1px',
+      minWidth: '100%',
+      maxWidth: '1000px'
+    },
+    src: "https://embed.laylo.com?dropId=46c2fa69-4ca5-4e2c-ba7e-46e26d1b0b40&color=2f152f&minimal=true&theme=dark"
   }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TourSection);
@@ -704,7 +707,7 @@ const VideoBanner = _ref => {
     className: isFaded ? "".concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner) : "".concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: _VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logo,
-    src: "/img/placehold-logo.png",
+    src: "/img/1logo.png",
     alt: "Forester Logo"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("video", {
     autoPlay: true,
@@ -864,13 +867,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.k5ppDul8KDJObz5jno_w {
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: flex-start; /* Changed the styling so the image starts to the far left when scrolling (when adding items to the carousel) */
+  justify-content: center;
   align-items: center;
 }
 
 .lLj8b8N8hv0CUYek4MAw {
   max-width: 1560px;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  margin: auto;
 }
 
 .Haa1XkWbPWq3uO05xDAb {
@@ -903,13 +909,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.k5ppDul8KDJObz5jno_w {
     margin: 0;
   }
   .Haa1XkWbPWq3uO05xDAb {
-    width: 100%; /* Ensure the inner carousel takes up only the full width of one item */
+    width: 100%;
   }
   .rH3TneSeMPN9Ym3micOW {
-    flex: 0 0 100%; /* Adjust to show only one item per screen */
-    padding: 0 10px; /* Adjust padding for smaller screens */
+    flex: 0 0 100%;
+    padding: 0 10px;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,gBAAA;EACA,qBAAA;EACA,iBAAA;EACA,4EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,2BAAA,EAAA,+GAAA;EACA,mBAAA;AACF;;AAEC;EACC,iBAAA;EAEC,aAAA;AAAH;;AAGC;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AAAH;;AAGC;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AAAH;;AAGC;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,+BAAA;AAAH;AAEG;EACE,sBAAA;AAAL;;AAIC;EACC;IACE,YAAA;IACA,aAAA;IACA,SAAA;EADF;EAIA;IACE,WAAA,EAAA,uEAAA;EAFF;EAKA;IACE,cAAA,EAAA,4CAAA;IACA,eAAA,EAAA,uCAAA;EAHF;AACF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  overflow: hidden;\n  margin-bottom: 1.5rem;\n  padding-top: 1rem;\n  clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n  background-image: url('/public/img/forester-film-edits-9.jpg');\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: flex-start; /* Changed the styling so the image starts to the far left when scrolling (when adding items to the carousel) */\n  align-items: center;\n}\n\n .carousel {\n  max-width: 1560px;\n\n   display: flex;\n }\n \n .carouselInner {\n   display: flex;\n   width: calc(100% * 3);\n   transition: transform 0.5s ease-in-out;\n   will-change: transform;\n }\n \n .carouselItem {\n   flex: 0 0 33.33%; \n   box-sizing: border-box;\n   padding: 0 20px;\n }\n \n .carouselItem img {\n   width: 100%;\n   height: auto;\n   border-radius: 8px;\n   transition: transform 0.3s ease; \n \n   &:hover {\n     transform: scale(1.05); \n   }\n }\n \n @media screen and (max-width: 768px) {\n  .carouselContainer {\n    width: 100vw; \n    height: 20rem;\n    margin: 0;\n  }\n\n  .carouselInner {\n    width: 100%; /* Ensure the inner carousel takes up only the full width of one item */\n  }\n\n  .carouselItem {\n    flex: 0 0 100%; /* Adjust to show only one item per screen */\n    padding: 0 10px; /* Adjust padding for smaller screens */\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,gBAAA;EACA,qBAAA;EACA,iBAAA;EACA,4EAAA;EACA,yDAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,iBAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,YAAA;AACF;;AAEA;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACF;;AAEA;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACF;;AAEA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,+BAAA;AACF;AACE;EACE,sBAAA;AACJ;;AAGA;EACE;IACE,YAAA;IACA,aAAA;IACA,SAAA;EAAF;EAGA;IACE,WAAA;EADF;EAIA;IACE,cAAA;IACA,eAAA;EAFF;AACF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  overflow: hidden;\n  margin-bottom: 1.5rem;\n  padding-top: 1rem;\n  clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n  background-image: url('/public/img/forester-film-edits-9.jpg');\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center; \n}\n\n.carousel {\n  max-width: 1560px;\n  width: 100%; \n  display: flex;\n  justify-content: center; \n  margin: auto; \n}\n\n.carouselInner {\n  display: flex;\n  width: calc(100% * 3);\n  transition: transform 0.5s ease-in-out;\n  will-change: transform;\n}\n\n.carouselItem {\n  flex: 0 0 33.33%;\n  box-sizing: border-box;\n  padding: 0 20px;\n}\n\n.carouselItem img {\n  width: 100%;\n  height: auto;\n  border-radius: 8px;\n  transition: transform 0.3s ease;\n\n  &:hover {\n    transform: scale(1.05);\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .carouselContainer {\n    width: 100vw;\n    height: 20rem;\n    margin: 0;\n  }\n\n  .carouselInner {\n    width: 100%;\n  }\n\n  .carouselItem {\n    flex: 0 0 100%;\n    padding: 0 10px;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `k5ppDul8KDJObz5jno_w`,
@@ -1364,7 +1370,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   .QpVD3qAS0nYBtoQqAYoe .ZcrcTrKhDDmmbAOeAxJJ {
     display: flex;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EAEI,mBAAA;EACA,kBAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,UAAA;EACA,gEAAA;AAAJ;AAEI;EACI,UAAA;EACA,4BAAA;AAAR;AAGI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AADR;AAII;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,cAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;AAFR;AAIQ;EACI,kBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,gDAAA;AAFZ;AAIY;EACI,cAAA;EACA,sBAAA;AAFhB;AAKY;EACI,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,yBAAA;EACA,SAAA;EACA,OAAA;EACA,oBAAA;EACA,wBAAA;EACA,mBAAA;EACA,sCAAA;EACA,+CAAA;AAHhB;AAMY;EACI,uBAAA;AAJhB;AAOY;EACI,mBAAA;EACA,eAAA;AALhB;AAUI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;AARR;AAUQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,qBAAA;AARZ;AAWQ;EACI,mBAAA;EACA,8BAAA;AATZ;AAaI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,OAAA;EACA,eAAA;EACA,wCAAA;AAXR;AAcI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AAZR;AAcQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AAZZ;AAcY;EACI,cAAA;EACA,0CAAA;EACA,uEAAA;AAZhB;AAeY;EACI,eAAA;AAbhB;AAkBI;EAEI;IACI,aAAA;IACA,kBAAA;EAjBV;EAoBM;IACI,aAAA;EAlBV;AACF","sourcesContent":[".NavBar {\n\n    border-radius: 30px;\n    padding: 1rem 2rem;\n    position: sticky;\n    top: 0;\n    z-index: 2000;\n    opacity: 1;\n    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;\n\n    &.hidden {\n        opacity: 0;\n        transform: translateY(-100%);\n    }\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        height: 3.5rem;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n        border-radius: 0.75rem;\n\n        a {\n            position: relative;\n            color: whitesmoke;\n            text-decoration: none;\n            padding: 0.5rem 1rem;\n            font-weight: 500;\n            font-size: 1.7rem;\n            transition: color 0.3s ease, transform 0.3s ease;\n\n            &:hover {\n                color: #242c56;\n                transform: scale(1.05); \n            }\n\n            &:before {\n                content: '';\n                position: absolute;\n                width: 90%;  \n                height: 2px;\n                background-color: #242c56;\n                bottom: 0;\n                left: 0;\n                transform: scaleX(0);\n                transform-origin: center; \n                margin-left: .70rem;\n                transition: transform 0.3s ease-in-out;\n                box-shadow: 0 2px 8px rgba(245, 245, 245, 0.25);\n            }\n\n            &:hover:before {\n                transform: scaleX(.75);  \n            }\n\n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }      \n    }  \n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n        transition: 0.3s ease;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: 0.3s ease;\n        }\n\n        &:hover span {\n            background: #1e254a;\n            border: 0.5px solid ghostwhite;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        left: 0;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #1e254a;\n                background-color: rgba(255, 255, 255, 0.1);\n                text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n\n        .NavList {\n            display: none;\n            text-align: center;\n        }\n\n        .Hamburger {\n            display: flex;\n        }\n    }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,mBAAA;EACA,kBAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,UAAA;EACA,gEAAA;AACJ;AACI;EACI,UAAA;EACA,4BAAA;AACR;AAEI;EACI,aAAA;EACA,uBAAA;EACA,mBAAA;AAAR;AAGI;EACI,aAAA;EACA,uBAAA;EACA,WAAA;EACA,cAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;AADR;AAGQ;EACI,kBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,gDAAA;AADZ;AAGY;EACI,cAAA;EACA,sBAAA;AADhB;AAIY;EACI,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,yBAAA;EACA,SAAA;EACA,OAAA;EACA,oBAAA;EACA,wBAAA;EACA,mBAAA;EACA,sCAAA;EACA,+CAAA;AAFhB;AAKY;EACI,uBAAA;AAHhB;AAMY;EACI,mBAAA;EACA,eAAA;AAJhB;AASI;EACI,aAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;AAPR;AASQ;EACI,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,qBAAA;AAPZ;AAUQ;EACI,mBAAA;EACA,8BAAA;AARZ;AAYI;EACI,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,OAAA;EACA,eAAA;EACA,wCAAA;AAVR;AAaI;EACI,gBAAA;EACA,UAAA;EACA,SAAA;AAXR;AAaQ;EACI,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AAXZ;AAaY;EACI,cAAA;EACA,0CAAA;EACA,uEAAA;AAXhB;AAcY;EACI,eAAA;AAZhB;AAiBI;EAEI;IACI,aAAA;IACA,kBAAA;EAhBV;EAmBM;IACI,aAAA;EAjBV;AACF","sourcesContent":[".NavBar {\n    border-radius: 30px;\n    padding: 1rem 2rem;\n    position: sticky;\n    top: 0;\n    z-index: 2000;\n    opacity: 1;\n    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;\n\n    &.hidden {\n        opacity: 0;\n        transform: translateY(-100%);\n    }\n\n    .NavBarContainer {\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    .NavList {\n        display: flex;\n        justify-content: center;\n        width: auto;\n        height: 3.5rem;\n        list-style: none;\n        padding: 0;\n        margin: 0;\n        border-radius: 0.75rem;\n\n        a {\n            position: relative;\n            color: whitesmoke;\n            text-decoration: none;\n            padding: 0.5rem 1rem;\n            font-weight: 500;\n            font-size: 1.7rem;\n            transition: color 0.3s ease, transform 0.3s ease;\n\n            &:hover {\n                color: #242c56;\n                transform: scale(1.05); \n            }\n\n            &:before {\n                content: '';\n                position: absolute;\n                width: 90%;  \n                height: 2px;\n                background-color: #242c56;\n                bottom: 0;\n                left: 0;\n                transform: scaleX(0);\n                transform-origin: center; \n                margin-left: .70rem;\n                transition: transform 0.3s ease-in-out;\n                box-shadow: 0 2px 8px rgba(245, 245, 245, 0.25);\n            }\n\n            &:hover:before {\n                transform: scaleX(.75);  \n            }\n\n            li {\n                margin-left: 0.5rem;\n                cursor: pointer;\n            }\n        }      \n    }  \n\n    .Hamburger {\n        display: none;\n        flex-direction: column;\n        cursor: pointer;\n        transition: 0.3s ease;\n\n        span {\n            background: #fff;\n            height: 3px;\n            width: 25px;\n            margin: 2px 0;\n            transition: 0.3s ease;\n        }\n\n        &:hover span {\n            background: #1e254a;\n            border: 0.5px solid ghostwhite;\n        }\n    }\n\n    .MobileMenu {\n        background: #333;\n        position: absolute;\n        top: 100%;\n        left: 0;\n        padding: 1rem 0;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n\n    .MobileNavList {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n\n        a {\n            display: block;\n            color: #fff;\n            text-decoration: none;\n            padding: 1rem 2rem;\n            font-weight: 500;\n            font-size: 1.1rem;\n            transition: color 0.3s ease, background-color 0.3s ease;\n\n            &:hover {\n                color: #1e254a;\n                background-color: rgba(255, 255, 255, 0.1);\n                text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;\n            }\n\n            li {\n                cursor: pointer;\n            }\n        }\n    }\n\n    @media (max-width: 768px) {\n\n        .NavList {\n            display: none;\n            text-align: center;\n        }\n\n        .Hamburger {\n            display: flex;\n        }\n    }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
@@ -1670,13 +1676,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.DyskzzB41LkALTA2XioJ {
   text-align: center;
 }
 .DyskzzB41LkALTA2XioJ .gnSjDnSvFnetzzLkRRgd {
-  width: 20rem;
+  width: 35rem;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, -10%);
   z-index: 1000;
-  filter: invert(1);
+  margin-top: 10rem;
 }
 .DyskzzB41LkALTA2XioJ .WBUPoLGLPVO0zY9pbBUT {
   width: 85%;
@@ -1702,7 +1708,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.DyskzzB41LkALTA2XioJ {
     width: 10rem;
     margin-top: -5rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;AACF;AACE;EACE,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,8BAAA;EACA,aAAA;EACA,iBAAA;AACJ;AAEE;EACE,UAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;EACH,iBAAA;EACA,0FAAA;AAAJ;AAGE;EACE,YAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;AADJ;;AAKA;EACE;IACE,YAAA;IACA,WAAA;EAFF;EAGE;IACE,YAAA;IACA,iBAAA;EADJ;AACF","sourcesContent":[".videoBanner {\n  position: relative;\n  width: 100%;\n  height: 85vh;\n  overflow: hidden;\n  text-align: center;\n\n  .logo {\n    width: 20rem;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -0%);\n    z-index: 1000;\n    filter: invert(1);\n  }\n\n  .videoBannerVideo {\n    width: 85%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    border-radius: 1%;\n    clip-path: polygon(85% 10%, 100% 0%, 100% 90%, 85% 100%, 15% 100%, 0% 90%, 0% 10%, 15% 0%);\n  }\n\n  .videoBannerContent {\n    bottom: 20px;\n    color: white;\n    text-align: center;\n    z-index: 1000;\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .videoBanner {\n    height: 30vh;\n    width: 100%;\n    .logo {\n      width: 10rem;\n      margin-top: -5rem;\n    }\n  }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;AACF;AACE;EACE,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,aAAA;EACA,iBAAA;AACJ;AAEE;EACE,UAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;EACH,iBAAA;EACA,0FAAA;AAAJ;AAGE;EACE,YAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;AADJ;;AAKA;EACE;IACE,YAAA;IACA,WAAA;EAFF;EAGE;IACE,YAAA;IACA,iBAAA;EADJ;AACF","sourcesContent":[".videoBanner {\n  position: relative;\n  width: 100%;\n  height: 85vh;\n  overflow: hidden;\n  text-align: center;\n\n  .logo {\n    width: 35rem;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -10%);\n    z-index: 1000;\n    margin-top: 10rem;\n  }\n\n  .videoBannerVideo {\n    width: 85%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    border-radius: 1%;\n    clip-path: polygon(85% 10%, 100% 0%, 100% 90%, 85% 100%, 15% 100%, 0% 90%, 0% 10%, 15% 0%);\n  }\n\n  .videoBannerContent {\n    bottom: 20px;\n    color: white;\n    text-align: center;\n    z-index: 1000;\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .videoBanner {\n    height: 30vh;\n    width: 100%;\n    .logo {\n      width: 10rem;\n      margin-top: -5rem;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"videoBanner": `DyskzzB41LkALTA2XioJ`,
@@ -2871,4 +2877,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.f37e7cee0098e13b064720e065485fc0.js.map
+//# sourceMappingURL=App.2fbf3419be1d2738ba11c5a175655ef8.js.map

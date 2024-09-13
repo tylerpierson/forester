@@ -12,53 +12,55 @@
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: flex-start; /* Changed the styling so the image starts to the far left when scrolling (when adding items to the carousel) */
-  align-items: center;
+  justify-content: center;
+  align-items: center; 
 }
 
- .carousel {
+.carousel {
   max-width: 1560px;
+  width: 100%; 
+  display: flex;
+  justify-content: center; 
+  margin: auto; 
+}
 
-   display: flex;
- }
- 
- .carouselInner {
-   display: flex;
-   width: calc(100% * 3);
-   transition: transform 0.5s ease-in-out;
-   will-change: transform;
- }
- 
- .carouselItem {
-   flex: 0 0 33.33%; 
-   box-sizing: border-box;
-   padding: 0 20px;
- }
- 
- .carouselItem img {
-   width: 100%;
-   height: auto;
-   border-radius: 8px;
-   transition: transform 0.3s ease; 
- 
-   &:hover {
-     transform: scale(1.05); 
-   }
- }
- 
- @media screen and (max-width: 768px) {
+.carouselInner {
+  display: flex;
+  width: calc(100% * 3);
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.carouselItem {
+  flex: 0 0 33.33%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.carouselItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media screen and (max-width: 768px) {
   .carouselContainer {
-    width: 100vw; 
+    width: 100vw;
     height: 20rem;
     margin: 0;
   }
 
   .carouselInner {
-    width: 100%; /* Ensure the inner carousel takes up only the full width of one item */
+    width: 100%;
   }
 
   .carouselItem {
-    flex: 0 0 100%; /* Adjust to show only one item per screen */
-    padding: 0 10px; /* Adjust padding for smaller screens */
+    flex: 0 0 100%;
+    padding: 0 10px;
   }
 }
