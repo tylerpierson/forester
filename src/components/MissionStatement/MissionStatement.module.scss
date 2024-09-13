@@ -97,4 +97,10 @@
             margin: 0;
         }
     }
+
+    @media screen and (max-width: 500px) {
+        .MissionStatement {
+          background-image: url('/public/img/FF-44.webp');
+        }
+      }
 }
