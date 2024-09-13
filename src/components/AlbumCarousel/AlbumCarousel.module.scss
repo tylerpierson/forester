@@ -12,16 +12,16 @@
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  align-items: center; 
 }
 
 .carousel {
   max-width: 1560px;
-  width: 100%; /* Make sure it takes the available space */
+  width: 100%; 
   display: flex;
-  justify-content: center; /* Center carousel items */
-  margin: auto; /* Ensure the carousel is centered within its parent */
+  justify-content: center; 
+  margin: auto; 
 }
 
 .carouselInner {
