@@ -1,38 +1,39 @@
-.PlaylistEmbedWrapper {
-  width: 100vw; 
-  margin: 0;
-  margin-bottom: 5rem;   
-  padding: 0;
-  overflow: hidden; 
-  clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);
-  background-image: url('/public/img/forester-film-edits-17.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-
-.PlaylistEmbed {
-  display: flex;
-  justify-content: center;  
-  align-items: center;
-  width: 100%;    
-  height: 1000px;      
-  
-  iframe {
-    height: 472.5px;
-    width: 840px;
-    border: none;  
-    border-radius: 8px;
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .PlaylistEmbedWrapper {
+    width: 100vw; 
+    margin: 0;
+    margin-bottom: 5rem;   
+    padding: 0;
+    overflow: hidden; 
+    clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);
+    background-image: url('/public/img/forester-film-edits-17.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
   }
-}
 
-@media screen and (max-width: 900px) {
   .PlaylistEmbed {
-    height: 400px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    width: 100%;    
+    height: 1000px;      
+    
     iframe {
-      height: 220.5px;
-      width: 392px;
+      height: 472.5px;
+      width: 840px;
+      border: none;  
+      border-radius: 8px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .PlaylistEmbed {
+      height: 400px;
+      iframe {
+        height: 220.5px;
+        width: 392px;
+      }
     }
   }
 }
-

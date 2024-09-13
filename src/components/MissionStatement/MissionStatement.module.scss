@@ -1,99 +1,100 @@
-.MissionStatement {
-    position: relative;
-    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);
-    background-image: url('/public/img/forester-film-edits-44.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 5rem;
-    overflow: hidden;
-}
-
-.MissionStatementPara {
-    clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    color: ghostwhite;
-    position: relative;
-    margin: 5rem;
-    padding: 10rem 2rem;
-    z-index: 2;
-}
-
-.MissionStatementPara .link {
-    color: rgba(63, 57, 31, 0.873);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.MissionStatementPara .link:hover {
-    color: #fff;
-}
-
-.linkButton {
-    background-color: #1e254a;
-    color: ghostwhite;
-    font-family: "Poppins", sans-serif;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-weight: 500;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
-
-.linkButton:hover {
-    color: #1e254a;
-    background-color: whitesmoke;
-    transform: scale(1);
-}
-
-@media (max-width: 1200px) {
-    .MissionStatement,
-    .MissionStatementPara {
-        clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);
-    }
-}
-
-@media (max-width: 992px) {
-    .MissionStatement,
-    .MissionStatementPara {
-        clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);
-    }
-}
-
-@media (max-width: 768px) {
-    .MissionStatement,
-    .MissionStatementPara {
-        clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);
-    }
-}
-
-@media (max-width: 576px) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .MissionStatement {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-        margin-bottom: -.25rem;
+        position: relative;
+        clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);
+        background-image: url('/public/img/forester-film-edits-44.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 5rem;
+        overflow: hidden;
     }
-    
-    .MissionStatement,
+
     .MissionStatementPara {
         clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);
-        height: 30rem;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        color: ghostwhite;
+        position: relative;
+        margin: 5rem;
+        padding: 10rem 2rem;
+        z-index: 2;
     }
 
-    .MissionStatementPara {
-        padding: 2rem 2rem;
-        font-size: .8rem;
-        margin: 0;
+    .MissionStatementPara .link {
+        color: rgba(63, 57, 31, 0.873);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .MissionStatementPara .link:hover {
+        color: #fff;
+    }
+
+    .linkButton {
+        background-color: #1e254a;
+        color: ghostwhite;
+        font-family: "Poppins", sans-serif;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-weight: 500;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        border-radius: 5px;
+        text-transform: uppercase;
+    }
+
+    .linkButton:hover {
+        color: #1e254a;
+        background-color: whitesmoke;
+        transform: scale(1);
+    }
+
+    @media (max-width: 1200px) {
+        .MissionStatement,
+        .MissionStatementPara {
+            clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);
+        }
+    }
+
+    @media (max-width: 992px) {
+        .MissionStatement,
+        .MissionStatementPara {
+            clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .MissionStatement,
+        .MissionStatementPara {
+            clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .MissionStatement {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            margin-bottom: -.25rem;
+        }
+        
+        .MissionStatement,
+        .MissionStatementPara {
+            clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);
+            height: 30rem;
+        }
+
+        .MissionStatementPara {
+            padding: 2rem 2rem;
+            font-size: .8rem;
+            margin: 0;
+        }
     }
 }
-

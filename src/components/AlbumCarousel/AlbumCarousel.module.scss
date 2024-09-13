@@ -1,67 +1,69 @@
-.carouselContainer {
-  position: relative;
-  width: 100%;
-  height: 40rem;
-  margin: auto;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-  padding-top: 1rem;
-  clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);
-  background-image: url('/public/img/forester-film-edits-9.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-}
-
-.carousel {
-  max-width: 1560px;
-  width: 100%; 
-  display: flex;
-  justify-content: center; 
-  margin: auto; 
-}
-
-.carouselInner {
-  display: flex;
-  width: calc(100% * 3);
-  transition: transform 0.5s ease-in-out;
-  will-change: transform;
-}
-
-.carouselItem {
-  flex: 0 0 33.33%;
-  box-sizing: border-box;
-  padding: 0 20px;
-}
-
-.carouselItem img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-}
-
-@media screen and (max-width: 768px) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .carouselContainer {
-    width: 100vw;
-    height: 20rem;
-    margin: 0;
-    margin-bottom: -2rem;
+    position: relative;
+    width: 100%;
+    height: 40rem;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);
+    background-image: url('/public/img/forester-film-edits-9.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  .carousel {
+    max-width: 1560px;
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    margin: auto; 
   }
 
   .carouselInner {
-    width: 100%;
+    display: flex;
+    width: calc(100% * 3);
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
   }
 
   .carouselItem {
-    flex: 0 0 100%;
-    padding: 0 10px;
+    flex: 0 0 33.33%;
+    box-sizing: border-box;
+    padding: 0 20px;
+  }
+
+  .carouselItem img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .carouselContainer {
+      width: 100vw;
+      height: 20rem;
+      margin: 0;
+      margin-bottom: -2rem;
+    }
+
+    .carouselInner {
+      width: 100%;
+    }
+
+    .carouselItem {
+      flex: 0 0 100%;
+      padding: 0 10px;
+    }
   }
 }
