@@ -28,16 +28,21 @@
   }
 
   @media screen and (max-width: 900px) {
-    .PlaylistEmbedWrapper {
-      background-size: contain;
-      background-attachment: fixed;
-    }
     .PlaylistEmbed {
       height: 400px;
       iframe {
         height: 220.5px;
         width: 392px;
       }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .PlaylistEmbedWrapper {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
     }
   }
 }
