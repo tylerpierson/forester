@@ -101,8 +101,7 @@
     @media screen and (max-width: 500px) {
         .MissionStatement {
           background-image: url('/public/img/FF-44.jpg');
-          background-size: 980px 385.5px;
-          background-repeat: no-repeat;
+          background-size: cover;
         }
       }
 }
