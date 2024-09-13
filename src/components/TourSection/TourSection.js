@@ -3,19 +3,30 @@ import styles from './TourSection.module.scss';
 
 const TourSection = ({ isFaded }) => {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "https://widget.seated.com/app.js";
-    script.async = true;
-    document.body.appendChild(script);
+    // Laylo widget script
+    const layloScript = document.createElement('script');
+    layloScript.src = "https://embed.laylo.com/laylo-sdk.js";
+    layloScript.async = true;
+    document.body.appendChild(layloScript);
 
     return () => {
-      document.body.removeChild(script);
+      // Clean up the Laylo script on component unmount
+      document.body.removeChild(layloScript);
     };
   }, []);
 
   return (
     <div id="tour" className={isFaded ? `${styles.faded} ${styles.tourSection}` : `${styles.tourSection}`}>
-      <div id="seated-55fdf2c0" className={styles.seatedEmbed} data-artist-id="ba27e0de-7b7e-4885-854a-87b49f4d12a1" data-css-version="3"></div>
+      {/* Laylo embed */}
+      <iframe
+        id="laylo-drop-46c2fa69-4ca5-4e2c-ba7e-46e26d1b0b40"
+        frameBorder="0"
+        scrolling="no"
+        allow="web-share"
+        allowTransparency="true"
+        style={{ width: '1px', minWidth: '100%', maxWidth: '1000px' }}
+        src="https://embed.laylo.com?dropId=46c2fa69-4ca5-4e2c-ba7e-46e26d1b0b40&color=2f152f&minimal=true&theme=dark"
+      ></iframe>
     </div>
   );
 };

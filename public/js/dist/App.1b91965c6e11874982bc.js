@@ -217,46 +217,42 @@ const MerchCarousel = _ref => {
     isFaded
   } = _ref;
   const images = [{
-    src: '/img/hat1.png',
-    alt: 'Image 1',
-    link: 'https://forestermerch.com/products/lose-your-mind-find-your-soul-hat'
-  }, {
     src: '/img/hat2.png',
-    alt: 'Image 2',
+    alt: 'Image 1',
     link: 'https://forestermerch.com/products/forester-5-panel-hat'
   }, {
     src: '/img/hoodie.png',
-    alt: 'Image 3',
+    alt: 'Image 2',
     link: 'https://forestermerch.com/products/sequoia-hoodie'
+  }, {
+    src: '/img/hat1.png',
+    alt: 'Image 3',
+    link: 'https://forestermerch.com/products/lose-your-mind-find-your-soul-hat'
   }
-  //add as many merch images as you see fit, the carousel will display up to 3 images at a time on screen
+  // Add more merch images as needed
   ];
-  const visibleImages = images.length > 3 ? images : images.slice(0, 3);
-  const extendedImages = images.length > 3 ? [...visibleImages, ...visibleImages, ...visibleImages] : visibleImages;
   const [currentIndex, setCurrentIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
   const shouldScroll = images.length > 3;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     let interval;
     if (shouldScroll) {
       interval = setInterval(() => {
-        setCurrentIndex(prevIndex => (prevIndex + 1) % (visibleImages.length * 3));
-      }, 3000);
+        setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
+      }, 3000); // Change image every 3 seconds
     }
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [shouldScroll, visibleImages.length]);
+  }, [shouldScroll, images.length]);
+  const visibleImages = shouldScroll ? [images[currentIndex % images.length], images[(currentIndex + 1) % images.length], images[(currentIndex + 2) % images.length]] : images;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "store",
     className: isFaded ? "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer) : "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carousel
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselInner,
-    style: {
-      transform: "translateX(-".concat(shouldScroll ? currentIndex % visibleImages.length * (100 / 3) : 0, "%)")
-    }
-  }, extendedImages.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselInner
+  }, visibleImages.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselItem,
     key: index,
     style: {
@@ -272,10 +268,10 @@ const MerchCarousel = _ref => {
   })))))), shouldScroll && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dotsContainer
   }, Array.from({
-    length: Math.ceil(visibleImages.length / 3)
+    length: Math.ceil(images.length / 3)
   }).map((_, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     key: index,
-    className: "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dot, " ").concat(currentIndex % visibleImages.length === index * 3 ? _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].active : ''),
+    className: "".concat(_MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dot, " ").concat(currentIndex === index * 3 ? _MerchCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].active : ''),
     onClick: () => setCurrentIndex(index * 3)
   }))));
 };
@@ -655,22 +651,31 @@ const TourSection = _ref => {
     isFaded
   } = _ref;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const script = document.createElement('script');
-    script.src = "https://widget.seated.com/app.js";
-    script.async = true;
-    document.body.appendChild(script);
+    // Laylo widget script
+    const layloScript = document.createElement('script');
+    layloScript.src = "https://embed.laylo.com/laylo-sdk.js";
+    layloScript.async = true;
+    document.body.appendChild(layloScript);
     return () => {
-      document.body.removeChild(script);
+      // Clean up the Laylo script on component unmount
+      document.body.removeChild(layloScript);
     };
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "tour",
     className: isFaded ? "".concat(_TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].tourSection) : "".concat(_TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].tourSection)
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "seated-55fdf2c0",
-    className: _TourSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].seatedEmbed,
-    "data-artist-id": "ba27e0de-7b7e-4885-854a-87b49f4d12a1",
-    "data-css-version": "3"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
+    id: "laylo-drop-46c2fa69-4ca5-4e2c-ba7e-46e26d1b0b40",
+    frameBorder: "0",
+    scrolling: "no",
+    allow: "web-share",
+    allowTransparency: "true",
+    style: {
+      width: '1px',
+      minWidth: '100%',
+      maxWidth: '1000px'
+    },
+    src: "https://embed.laylo.com?dropId=46c2fa69-4ca5-4e2c-ba7e-46e26d1b0b40&color=2f152f&minimal=true&theme=dark"
   }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TourSection);
@@ -2872,4 +2877,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.3af7ae778c33f706ce5fe3440d377794.js.map
+//# sourceMappingURL=App.097bc532264482e194e25d8fe4dc3226.js.map
