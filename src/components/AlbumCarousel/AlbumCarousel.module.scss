@@ -67,4 +67,10 @@
       padding: 0 10px;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    .carouselContainer {
+      background-image: url('/public/img/FF-9.webp');
+    }
+  }
 }

@@ -216,15 +216,15 @@ const MerchCarousel = _ref => {
     isFaded
   } = _ref;
   const images = [{
-    src: '/img/hat2.png',
+    src: '/img/hat2_subtle_crop.webp',
     alt: 'Image 1',
     link: 'https://forestermerch.com/products/forester-5-panel-hat'
   }, {
-    src: '/img/hoodie.png',
+    src: '/img/hoodie_subtle_crop.webp',
     alt: 'Image 2',
     link: 'https://forestermerch.com/products/sequoia-hoodie'
   }, {
-    src: '/img/hat1.png',
+    src: '/img/hat1_subtle_crop.webp',
     alt: 'Image 3',
     link: 'https://forestermerch.com/products/lose-your-mind-find-your-soul-hat'
   }
@@ -849,8 +849,10 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../public/img/forester-film-edits-9.jpg */ "./public/img/forester-film-edits-9.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../public/img/FF-9.webp */ "./public/img/FF-9.webp"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .k5ppDul8KDJObz5jno_w {
@@ -904,6 +906,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@media (-webkit-min-device-pixel-ratio
     height: 20rem;
     margin: 0;
     margin-bottom: -2rem;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
   }
   .Haa1XkWbPWq3uO05xDAb {
     width: 100%;
@@ -912,7 +915,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@media (-webkit-min-device-pixel-ratio
     flex: 0 0 100%;
     padding: 0 10px;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE;IACE,kBAAA;IACA,WAAA;IACA,aAAA;IACA,YAAA;IACA,gBAAA;IACA,qBAAA;IACA,iBAAA;IACA,4EAAA;IACA,yDAAA;IACA,4BAAA;IACA,sBAAA;IACA,2BAAA;IACA,aAAA;IACA,uBAAA;IACA,mBAAA;EACF;EAEA;IACE,iBAAA;IACA,WAAA;IACA,aAAA;IACA,uBAAA;IACA,YAAA;EAAF;EAGA;IACE,aAAA;IACA,WAAA;IACA,sCAAA;IACA,sBAAA;EADF;EAIA;IACE,gBAAA;IACA,sBAAA;IACA,eAAA;EAFF;EAKA;IACE,WAAA;IACA,YAAA;IACA,kBAAA;IACA,+BAAA;EAHF;EAKE;IACE,sBAAA;EAHJ;AACF;AAME;EACE;IACE,YAAA;IACA,aAAA;IACA,SAAA;IACA,oBAAA;EAJJ;EAOE;IACE,WAAA;EALJ;EAQE;IACE,cAAA;IACA,eAAA;EANJ;AACF","sourcesContent":["@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {\n  .carouselContainer {\n    position: relative;\n    width: 100%;\n    height: 40rem;\n    margin: auto;\n    overflow: hidden;\n    margin-bottom: 1.5rem;\n    padding-top: 1rem;\n    clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n    background-image: url('/public/img/forester-film-edits-9.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center; \n  }\n\n  .carousel {\n    max-width: 1560px;\n    width: 100%; \n    display: flex;\n    justify-content: center; \n    margin: auto; \n  }\n\n  .carouselInner {\n    display: flex;\n    width: calc(100% * 3);\n    transition: transform 0.5s ease-in-out;\n    will-change: transform;\n  }\n\n  .carouselItem {\n    flex: 0 0 33.33%;\n    box-sizing: border-box;\n    padding: 0 20px;\n  }\n\n  .carouselItem img {\n    width: 100%;\n    height: auto;\n    border-radius: 8px;\n    transition: transform 0.3s ease;\n\n    &:hover {\n      transform: scale(1.05);\n    }\n  }\n\n  @media screen and (max-width: 768px) {\n    .carouselContainer {\n      width: 100vw;\n      height: 20rem;\n      margin: 0;\n      margin-bottom: -2rem;\n    }\n\n    .carouselInner {\n      width: 100%;\n    }\n\n    .carouselItem {\n      flex: 0 0 100%;\n      padding: 0 10px;\n    }\n  }\n}"],"sourceRoot":""}]);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 500px), screen and (min-resolution: 192dpi) and (max-width: 500px) {
+  .k5ppDul8KDJObz5jno_w {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+  }
+}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE;IACE,kBAAA;IACA,WAAA;IACA,aAAA;IACA,YAAA;IACA,gBAAA;IACA,qBAAA;IACA,iBAAA;IACA,4EAAA;IACA,yDAAA;IACA,4BAAA;IACA,sBAAA;IACA,2BAAA;IACA,aAAA;IACA,uBAAA;IACA,mBAAA;EACF;EAEA;IACE,iBAAA;IACA,WAAA;IACA,aAAA;IACA,uBAAA;IACA,YAAA;EAAF;EAGA;IACE,aAAA;IACA,WAAA;IACA,sCAAA;IACA,sBAAA;EADF;EAIA;IACE,gBAAA;IACA,sBAAA;IACA,eAAA;EAFF;EAKA;IACE,WAAA;IACA,YAAA;IACA,kBAAA;IACA,+BAAA;EAHF;EAKE;IACE,sBAAA;EAHJ;AACF;AAME;EACE;IACE,YAAA;IACA,aAAA;IACA,SAAA;IACA,oBAAA;IACA,yDAAA;EAJJ;EAOE;IACE,WAAA;EALJ;EAQE;IACE,cAAA;IACA,eAAA;EANJ;AACF;AASE;EACE;IACE,yDAAA;EAPJ;AACF","sourcesContent":["@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {\n  .carouselContainer {\n    position: relative;\n    width: 100%;\n    height: 40rem;\n    margin: auto;\n    overflow: hidden;\n    margin-bottom: 1.5rem;\n    padding-top: 1rem;\n    clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n    background-image: url('/public/img/forester-film-edits-9.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center; \n  }\n\n  .carousel {\n    max-width: 1560px;\n    width: 100%; \n    display: flex;\n    justify-content: center; \n    margin: auto; \n  }\n\n  .carouselInner {\n    display: flex;\n    width: calc(100% * 3);\n    transition: transform 0.5s ease-in-out;\n    will-change: transform;\n  }\n\n  .carouselItem {\n    flex: 0 0 33.33%;\n    box-sizing: border-box;\n    padding: 0 20px;\n  }\n\n  .carouselItem img {\n    width: 100%;\n    height: auto;\n    border-radius: 8px;\n    transition: transform 0.3s ease;\n\n    &:hover {\n      transform: scale(1.05);\n    }\n  }\n\n  @media screen and (max-width: 768px) {\n    .carouselContainer {\n      width: 100vw;\n      height: 20rem;\n      margin: 0;\n      margin-bottom: -2rem;\n      background-image: url('/public/img/FF-9.webp');\n    }\n\n    .carouselInner {\n      width: 100%;\n    }\n\n    .carouselItem {\n      flex: 0 0 100%;\n      padding: 0 10px;\n    }\n  }\n\n  @media screen and (max-width: 500px) {\n    .carouselContainer {\n      background-image: url('/public/img/FF-9.webp');\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `k5ppDul8KDJObz5jno_w`,
@@ -1125,8 +1133,10 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../public/img/forester-film-edits-44.jpg */ "./public/img/forester-film-edits-44.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../public/img/FF-44.webp */ "./public/img/FF-44.webp"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .fdvC6wJWb7N6Pdr98BXA {
@@ -1216,7 +1226,12 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@media (-webkit-min-device-pixel-ratio
     font-size: 0.8rem;
     margin: 0;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/MissionStatement/MissionStatement.module.scss"],"names":[],"mappings":"AAAA;EACI;IACI,kBAAA;IACA,2EAAA;IACA,yDAAA;IACA,4BAAA;IACA,sBAAA;IACA,2BAAA;IACA,kCAAA;IACA,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,WAAA;IACA,mBAAA;IACA,gBAAA;EACN;EAEE;IACI,2EAAA;IACA,iBAAA;IACA,mBAAA;IACA,iBAAA;IACA,kBAAA;IACA,YAAA;IACA,mBAAA;IACA,UAAA;EAAN;EAGE;IACI,8BAAA;IACA,qBAAA;IACA,gBAAA;IACA,2BAAA;EADN;EAIE;IACI,WAAA;EAFN;EAKE;IACI,yBAAA;IACA,iBAAA;IACA,kCAAA;IACA,YAAA;IACA,uBAAA;IACA,gBAAA;IACA,iBAAA;IACA,eAAA;IACA,uDAAA;IACA,kBAAA;IACA,yBAAA;EAHN;EAME;IACI,cAAA;IACA,4BAAA;IACA,mBAAA;EAJN;AACF;AAMI;EACI;;IAEI,4EAAA;EAJV;AACF;AAOI;EACI;;IAEI,4EAAA;EALV;AACF;AAQI;EACI;;IAEI,4EAAA;EANV;AACF;AASI;EACI;IACI,iBAAA;IACA,oBAAA;IACA,uBAAA;EAPV;EAUM;;IAEI,2EAAA;IACA,aAAA;EARV;EAWM;IACI,kBAAA;IACA,iBAAA;IACA,SAAA;EATV;AACF","sourcesContent":["@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {\n    .MissionStatement {\n        position: relative;\n        clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n        background-image: url('/public/img/forester-film-edits-44.jpg');\n        background-attachment: fixed;\n        background-size: cover;\n        background-position: center;\n        font-family: \"Poppins\", sans-serif;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        width: 100%;\n        margin-bottom: 5rem;\n        overflow: hidden;\n    }\n\n    .MissionStatementPara {\n        clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n        font-size: 1.2rem;\n        line-height: 1.6rem;\n        color: ghostwhite;\n        position: relative;\n        margin: 5rem;\n        padding: 10rem 2rem;\n        z-index: 2;\n    }\n\n    .MissionStatementPara .link {\n        color: rgba(63, 57, 31, 0.873);\n        text-decoration: none;\n        font-weight: 500;\n        transition: color 0.3s ease;\n    }\n\n    .MissionStatementPara .link:hover {\n        color: #fff;\n    }\n\n    .linkButton {\n        background-color: #1e254a;\n        color: ghostwhite;\n        font-family: \"Poppins\", sans-serif;\n        border: none;\n        padding: 0.75rem 1.5rem;\n        font-weight: 500;\n        font-size: 1.1rem;\n        cursor: pointer;\n        transition: background-color 0.3s ease, color 0.3s ease;\n        border-radius: 5px;\n        text-transform: uppercase;\n    }\n\n    .linkButton:hover {\n        color: #1e254a;\n        background-color: whitesmoke;\n        transform: scale(1);\n    }\n\n    @media (max-width: 1200px) {\n        .MissionStatement,\n        .MissionStatementPara {\n            clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);\n        }\n    }\n\n    @media (max-width: 992px) {\n        .MissionStatement,\n        .MissionStatementPara {\n            clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);\n        }\n    }\n\n    @media (max-width: 768px) {\n        .MissionStatement,\n        .MissionStatementPara {\n            clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);\n        }\n    }\n\n    @media (max-width: 576px) {\n        .MissionStatement {\n            padding-top: 5rem;\n            padding-bottom: 5rem;\n            margin-bottom: -.25rem;\n        }\n        \n        .MissionStatement,\n        .MissionStatementPara {\n            clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n            height: 30rem;\n        }\n\n        .MissionStatementPara {\n            padding: 2rem 2rem;\n            font-size: .8rem;\n            margin: 0;\n        }\n    }\n}"],"sourceRoot":""}]);
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 500px), screen and (min-resolution: 192dpi) and (max-width: 500px) {
+  .fdvC6wJWb7N6Pdr98BXA {
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+  }
+}`, "",{"version":3,"sources":["webpack://./src/components/MissionStatement/MissionStatement.module.scss"],"names":[],"mappings":"AAAA;EACI;IACI,kBAAA;IACA,2EAAA;IACA,yDAAA;IACA,4BAAA;IACA,sBAAA;IACA,2BAAA;IACA,kCAAA;IACA,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,WAAA;IACA,mBAAA;IACA,gBAAA;EACN;EAEE;IACI,2EAAA;IACA,iBAAA;IACA,mBAAA;IACA,iBAAA;IACA,kBAAA;IACA,YAAA;IACA,mBAAA;IACA,UAAA;EAAN;EAGE;IACI,8BAAA;IACA,qBAAA;IACA,gBAAA;IACA,2BAAA;EADN;EAIE;IACI,WAAA;EAFN;EAKE;IACI,yBAAA;IACA,iBAAA;IACA,kCAAA;IACA,YAAA;IACA,uBAAA;IACA,gBAAA;IACA,iBAAA;IACA,eAAA;IACA,uDAAA;IACA,kBAAA;IACA,yBAAA;EAHN;EAME;IACI,cAAA;IACA,4BAAA;IACA,mBAAA;EAJN;AACF;AAMI;EACI;;IAEI,4EAAA;EAJV;AACF;AAOI;EACI;;IAEI,4EAAA;EALV;AACF;AAQI;EACI;;IAEI,4EAAA;EANV;AACF;AASI;EACI;IACI,iBAAA;IACA,oBAAA;IACA,uBAAA;EAPV;EAUM;;IAEI,2EAAA;IACA,aAAA;EARV;EAWM;IACI,kBAAA;IACA,iBAAA;IACA,SAAA;EATV;AACF;AAYI;EACI;IACE,yDAAA;EAVR;AACF","sourcesContent":["@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {\n    .MissionStatement {\n        position: relative;\n        clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n        background-image: url('/public/img/forester-film-edits-44.jpg');\n        background-attachment: fixed;\n        background-size: cover;\n        background-position: center;\n        font-family: \"Poppins\", sans-serif;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        width: 100%;\n        margin-bottom: 5rem;\n        overflow: hidden;\n    }\n\n    .MissionStatementPara {\n        clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n        font-size: 1.2rem;\n        line-height: 1.6rem;\n        color: ghostwhite;\n        position: relative;\n        margin: 5rem;\n        padding: 10rem 2rem;\n        z-index: 2;\n    }\n\n    .MissionStatementPara .link {\n        color: rgba(63, 57, 31, 0.873);\n        text-decoration: none;\n        font-weight: 500;\n        transition: color 0.3s ease;\n    }\n\n    .MissionStatementPara .link:hover {\n        color: #fff;\n    }\n\n    .linkButton {\n        background-color: #1e254a;\n        color: ghostwhite;\n        font-family: \"Poppins\", sans-serif;\n        border: none;\n        padding: 0.75rem 1.5rem;\n        font-weight: 500;\n        font-size: 1.1rem;\n        cursor: pointer;\n        transition: background-color 0.3s ease, color 0.3s ease;\n        border-radius: 5px;\n        text-transform: uppercase;\n    }\n\n    .linkButton:hover {\n        color: #1e254a;\n        background-color: whitesmoke;\n        transform: scale(1);\n    }\n\n    @media (max-width: 1200px) {\n        .MissionStatement,\n        .MissionStatementPara {\n            clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);\n        }\n    }\n\n    @media (max-width: 992px) {\n        .MissionStatement,\n        .MissionStatementPara {\n            clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);\n        }\n    }\n\n    @media (max-width: 768px) {\n        .MissionStatement,\n        .MissionStatementPara {\n            clip-path: polygon(75% 2%, 100% 0, 100% 100%, 79% 99%, 25% 100%, 0 99%, 0 0);\n        }\n    }\n\n    @media (max-width: 576px) {\n        .MissionStatement {\n            padding-top: 5rem;\n            padding-bottom: 5rem;\n            margin-bottom: -.25rem;\n        }\n        \n        .MissionStatement,\n        .MissionStatementPara {\n            clip-path: polygon(65% 0, 100% 3%, 100% 100%, 34% 95%, 0 100%, 0 0, 36% 6%);\n            height: 30rem;\n        }\n\n        .MissionStatementPara {\n            padding: 2rem 2rem;\n            font-size: .8rem;\n            margin: 0;\n        }\n    }\n\n    @media screen and (max-width: 500px) {\n        .MissionStatement {\n          background-image: url('/public/img/FF-44.webp');\n        }\n      }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"MissionStatement": `fdvC6wJWb7N6Pdr98BXA`,
@@ -1735,8 +1750,10 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../public/img/forester-film-edits-17.jpg */ "./public/img/forester-film-edits-17.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../public/img/forester-film-edits-17.webp */ "./public/img/forester-film-edits-17.webp"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .bZS7FVegf5kLSxLOTQAb {
@@ -1776,12 +1793,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@media (-webkit-min-device-pixel-ratio
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 500px), screen and (min-resolution: 192dpi) and (max-width: 500px) {
   .bZS7FVegf5kLSxLOTQAb {
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACE;IACE,YAAA;IACA,SAAA;IACA,mBAAA;IACA,UAAA;IACA,gBAAA;IACA,0FAAA;IACA,yDAAA;IACA,4BAAA;IACA,sBAAA;IACA,2BAAA;EACF;EAEA;IACE,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,WAAA;IACA,cAAA;EAAF;EAEE;IACE,eAAA;IACA,YAAA;IACA,YAAA;IACA,kBAAA;EAAJ;AACF;AAGE;EACE;IACE,aAAA;EADJ;EAEI;IACE,eAAA;IACA,YAAA;EAAN;AACF;AAIE;EACE;IACE,2BAAA;IACA,wBAAA;IACA,4BAAA;IACA,6BAAA;EAFJ;AACF","sourcesContent":["@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {\n  .PlaylistEmbedWrapper {\n    width: 100vw; \n    margin: 0;\n    margin-bottom: 5rem;   \n    padding: 0;\n    overflow: hidden; \n    clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);\n    background-image: url('/public/img/forester-film-edits-17.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n  }\n\n  .PlaylistEmbed {\n    display: flex;\n    justify-content: center;  \n    align-items: center;\n    width: 100%;    \n    height: 1000px;      \n    \n    iframe {\n      height: 472.5px;\n      width: 840px;\n      border: none;  \n      border-radius: 8px;\n    }\n  }\n\n  @media screen and (max-width: 900px) {\n    .PlaylistEmbed {\n      height: 400px;\n      iframe {\n        height: 220.5px;\n        width: 392px;\n      }\n    }\n  }\n\n  @media screen and (max-width: 500px) {\n    .PlaylistEmbedWrapper {\n      background-position: center;\n      background-size: contain;\n      background-repeat: no-repeat;\n      background-attachment: scroll;\n    }\n  }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACE;IACE,YAAA;IACA,SAAA;IACA,mBAAA;IACA,UAAA;IACA,gBAAA;IACA,0FAAA;IACA,yDAAA;IACA,4BAAA;IACA,sBAAA;IACA,2BAAA;EACF;EAEA;IACE,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,WAAA;IACA,cAAA;EAAF;EAEE;IACE,eAAA;IACA,YAAA;IACA,YAAA;IACA,kBAAA;EAAJ;AACF;AAGE;EACE;IACE,aAAA;EADJ;EAEI;IACE,eAAA;IACA,YAAA;EAAN;AACF;AAIE;EACE;IACE,yDAAA;EAFJ;AACF","sourcesContent":["@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {\n  .PlaylistEmbedWrapper {\n    width: 100vw; \n    margin: 0;\n    margin-bottom: 5rem;   \n    padding: 0;\n    overflow: hidden; \n    clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);\n    background-image: url('/public/img/forester-film-edits-17.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n  }\n\n  .PlaylistEmbed {\n    display: flex;\n    justify-content: center;  \n    align-items: center;\n    width: 100%;    \n    height: 1000px;      \n    \n    iframe {\n      height: 472.5px;\n      width: 840px;\n      border: none;  \n      border-radius: 8px;\n    }\n  }\n\n  @media screen and (max-width: 900px) {\n    .PlaylistEmbed {\n      height: 400px;\n      iframe {\n        height: 220.5px;\n        width: 392px;\n      }\n    }\n  }\n\n  @media screen and (max-width: 500px) {\n    .PlaylistEmbedWrapper {\n      background-image: url('/public/img/forester-film-edits-17.webp');\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"PlaylistEmbedWrapper": `bZS7FVegf5kLSxLOTQAb`,
@@ -2643,6 +2657,26 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./public/img/FF-44.webp":
+/*!*******************************!*\
+  !*** ./public/img/FF-44.webp ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "509c15de2e007d229623.webp";
+
+/***/ }),
+
+/***/ "./public/img/FF-9.webp":
+/*!******************************!*\
+  !*** ./public/img/FF-9.webp ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "5cc67e659b5eb733d47f.webp";
+
+/***/ }),
+
 /***/ "./public/img/forester-film-edits-17.jpg":
 /*!***********************************************!*\
   !*** ./public/img/forester-film-edits-17.jpg ***!
@@ -2650,6 +2684,16 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "85699ac69a573ef98f11.jpg";
+
+/***/ }),
+
+/***/ "./public/img/forester-film-edits-17.webp":
+/*!************************************************!*\
+  !*** ./public/img/forester-film-edits-17.webp ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "c615ca6d34106f017367.webp";
 
 /***/ }),
 
@@ -2879,4 +2923,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.ac198b2a3b168114f0c93c1303b44506.js.map
+//# sourceMappingURL=App.97713c14b9bae60b2f07231b0fd29efd.js.map
