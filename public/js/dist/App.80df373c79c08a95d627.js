@@ -850,9 +850,11 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../public/img/forester-film-edits-9.jpg */ "./public/img/forester-film-edits-9.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../public/img/FF-9.webp */ "./public/img/FF-9.webp"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(/*! ../../../../public/img/FF-9.jpg */ "./public/img/FF-9.jpg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .k5ppDul8KDJObz5jno_w {
@@ -918,9 +920,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@media (-webkit-min-device-pixel-ratio
 }
 @media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 500px), screen and (min-resolution: 192dpi) and (max-width: 500px) {
   .k5ppDul8KDJObz5jno_w {
-    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE;IACE,kBAAA;IACA,WAAA;IACA,aAAA;IACA,YAAA;IACA,gBAAA;IACA,qBAAA;IACA,iBAAA;IACA,4EAAA;IACA,yDAAA;IACA,4BAAA;IACA,sBAAA;IACA,2BAAA;IACA,aAAA;IACA,uBAAA;IACA,mBAAA;EACF;EAEA;IACE,iBAAA;IACA,WAAA;IACA,aAAA;IACA,uBAAA;IACA,YAAA;EAAF;EAGA;IACE,aAAA;IACA,WAAA;IACA,sCAAA;IACA,sBAAA;EADF;EAIA;IACE,gBAAA;IACA,sBAAA;IACA,eAAA;EAFF;EAKA;IACE,WAAA;IACA,YAAA;IACA,kBAAA;IACA,+BAAA;EAHF;EAKE;IACE,sBAAA;EAHJ;AACF;AAME;EACE;IACE,YAAA;IACA,aAAA;IACA,SAAA;IACA,oBAAA;IACA,yDAAA;EAJJ;EAOE;IACE,WAAA;EALJ;EAQE;IACE,cAAA;IACA,eAAA;EANJ;AACF;AASE;EACE;IACE,yDAAA;EAPJ;AACF","sourcesContent":["@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {\n  .carouselContainer {\n    position: relative;\n    width: 100%;\n    height: 40rem;\n    margin: auto;\n    overflow: hidden;\n    margin-bottom: 1.5rem;\n    padding-top: 1rem;\n    clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n    background-image: url('/public/img/forester-film-edits-9.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center; \n  }\n\n  .carousel {\n    max-width: 1560px;\n    width: 100%; \n    display: flex;\n    justify-content: center; \n    margin: auto; \n  }\n\n  .carouselInner {\n    display: flex;\n    width: calc(100% * 3);\n    transition: transform 0.5s ease-in-out;\n    will-change: transform;\n  }\n\n  .carouselItem {\n    flex: 0 0 33.33%;\n    box-sizing: border-box;\n    padding: 0 20px;\n  }\n\n  .carouselItem img {\n    width: 100%;\n    height: auto;\n    border-radius: 8px;\n    transition: transform 0.3s ease;\n\n    &:hover {\n      transform: scale(1.05);\n    }\n  }\n\n  @media screen and (max-width: 768px) {\n    .carouselContainer {\n      width: 100vw;\n      height: 20rem;\n      margin: 0;\n      margin-bottom: -2rem;\n      background-image: url('/public/img/FF-9.webp');\n    }\n\n    .carouselInner {\n      width: 100%;\n    }\n\n    .carouselItem {\n      flex: 0 0 100%;\n      padding: 0 10px;\n    }\n  }\n\n  @media screen and (max-width: 500px) {\n    .carouselContainer {\n      background-image: url('/public/img/FF-9.webp');\n    }\n  }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE;IACE,kBAAA;IACA,WAAA;IACA,aAAA;IACA,YAAA;IACA,gBAAA;IACA,qBAAA;IACA,iBAAA;IACA,4EAAA;IACA,yDAAA;IACA,4BAAA;IACA,sBAAA;IACA,2BAAA;IACA,aAAA;IACA,uBAAA;IACA,mBAAA;EACF;EAEA;IACE,iBAAA;IACA,WAAA;IACA,aAAA;IACA,uBAAA;IACA,YAAA;EAAF;EAGA;IACE,aAAA;IACA,WAAA;IACA,sCAAA;IACA,sBAAA;EADF;EAIA;IACE,gBAAA;IACA,sBAAA;IACA,eAAA;EAFF;EAKA;IACE,WAAA;IACA,YAAA;IACA,kBAAA;IACA,+BAAA;EAHF;EAKE;IACE,sBAAA;EAHJ;AACF;AAME;EACE;IACE,YAAA;IACA,aAAA;IACA,SAAA;IACA,oBAAA;IACA,yDAAA;EAJJ;EAOE;IACE,WAAA;EALJ;EAQE;IACE,cAAA;IACA,eAAA;EANJ;AACF;AASE;EACE;IACE,yDAAA;EAPJ;AACF","sourcesContent":["@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {\n  .carouselContainer {\n    position: relative;\n    width: 100%;\n    height: 40rem;\n    margin: auto;\n    overflow: hidden;\n    margin-bottom: 1.5rem;\n    padding-top: 1rem;\n    clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n    background-image: url('/public/img/forester-film-edits-9.jpg');\n    background-attachment: fixed;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center; \n  }\n\n  .carousel {\n    max-width: 1560px;\n    width: 100%; \n    display: flex;\n    justify-content: center; \n    margin: auto; \n  }\n\n  .carouselInner {\n    display: flex;\n    width: calc(100% * 3);\n    transition: transform 0.5s ease-in-out;\n    will-change: transform;\n  }\n\n  .carouselItem {\n    flex: 0 0 33.33%;\n    box-sizing: border-box;\n    padding: 0 20px;\n  }\n\n  .carouselItem img {\n    width: 100%;\n    height: auto;\n    border-radius: 8px;\n    transition: transform 0.3s ease;\n\n    &:hover {\n      transform: scale(1.05);\n    }\n  }\n\n  @media screen and (max-width: 768px) {\n    .carouselContainer {\n      width: 100vw;\n      height: 20rem;\n      margin: 0;\n      margin-bottom: -2rem;\n      background-image: url('/public/img/FF-9.webp');\n    }\n\n    .carouselInner {\n      width: 100%;\n    }\n\n    .carouselItem {\n      flex: 0 0 100%;\n      padding: 0 10px;\n    }\n  }\n\n  @media screen and (max-width: 500px) {\n    .carouselContainer {\n      background-image: url('/public/img/FF-9.jpg');\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `k5ppDul8KDJObz5jno_w`,
@@ -2667,6 +2669,16 @@ module.exports = __webpack_require__.p + "509c15de2e007d229623.webp";
 
 /***/ }),
 
+/***/ "./public/img/FF-9.jpg":
+/*!*****************************!*\
+  !*** ./public/img/FF-9.jpg ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "729e21bcad68c391d5a6.jpg";
+
+/***/ }),
+
 /***/ "./public/img/FF-9.webp":
 /*!******************************!*\
   !*** ./public/img/FF-9.webp ***!
@@ -2923,4 +2935,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.97713c14b9bae60b2f07231b0fd29efd.js.map
+//# sourceMappingURL=App.1835487e2fda9b9df1c8a6cd9bb2e05f.js.map
