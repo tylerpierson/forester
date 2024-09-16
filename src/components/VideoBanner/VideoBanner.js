@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './VideoBanner.module.scss';
 import SocialMediaTop from '../SocialMedia/SocialMediaTop';
 
 const VideoBanner = ({ isFaded }) => {
+
+  useEffect(() => {
+    const video = document.querySelector('video');
+    if (video) {
+      video.play().catch(error => {
+        console.log('Autoplay failed:', error);
+      });
+    }
+  }, []);
+
   return (
     <div id="video-banner" className={isFaded ? `${styles.faded} ${styles.videoBanner}` : `${styles.videoBanner}`}>
       <img className={styles.logo} src="/img/1logo.png" alt="Forester Logo" />
@@ -18,4 +28,3 @@ const VideoBanner = ({ isFaded }) => {
 };
 
 export default VideoBanner;
-
