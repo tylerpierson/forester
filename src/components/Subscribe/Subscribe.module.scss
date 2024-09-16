@@ -7,10 +7,10 @@
   z-index: 1000;
 
   iframe {
-    width: 100%; /* Full width of its container */
-    max-width: 1000px; /* Maximum width to prevent it from becoming too wide */
+    width: 100%;
+    max-width: 1000px;
     border: none;
-    min-width: 320px; /* Minimum width to maintain a reasonable size */
+    min-width: 320px;
   }
 }
 
@@ -18,8 +18,8 @@
   .subscribeContainer {
     margin-bottom: -1rem;
     iframe {
-      width: 90%; /* Takes up 90% of the width on smaller screens */
-      max-width: 100%; /* Ensure it scales correctly */
+      width: 90%;
+      max-width: 100%;
     }
   }
 }
