@@ -28,8 +28,6 @@ function NavBar() {
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
-
-    // Initial check
     handleResize();
 
     return () => {
