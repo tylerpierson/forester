@@ -906,6 +906,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.k5ppDul8KDJObz5jno_w {
     margin: 0;
     margin-bottom: -2rem;
     background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+    margin-top: -6rem;
   }
   .Haa1XkWbPWq3uO05xDAb {
     width: 100%;
@@ -920,7 +921,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.k5ppDul8KDJObz5jno_w {
     background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
     background-size: cover;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAE;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,gBAAA;EACA,qBAAA;EACA,iBAAA;EACA,4EAAA;EACA,yDAAA;EACA,6BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACJ;;AAEE;EACE,iBAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,YAAA;AACJ;;AAEE;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACJ;;AAEE;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACJ;;AAEE;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,+BAAA;AACJ;AACI;EACE,sBAAA;AACN;;AAGE;EACE;IACE,YAAA;IACA,aAAA;IACA,SAAA;IACA,oBAAA;IACA,yDAAA;EAAJ;EAGE;IACE,WAAA;EADJ;EAIE;IACE,cAAA;IACA,eAAA;EAFJ;AACF;AAKE;EACE;IACE,yDAAA;IACA,sBAAA;EAHJ;AACF","sourcesContent":["  .carouselContainer {\n    position: relative;\n    width: 100%;\n    height: 40rem;\n    margin: auto;\n    overflow: hidden;\n    margin-bottom: 1.5rem;\n    padding-top: 1rem;\n    clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n    background-image: url('/public/img/forester-film-edits-9.jpg');\n    background-attachment: scroll;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center; \n  }\n\n  .carousel {\n    max-width: 1560px;\n    width: 100%; \n    display: flex;\n    justify-content: center; \n    margin: auto; \n  }\n\n  .carouselInner {\n    display: flex;\n    width: calc(100% * 3);\n    transition: transform 0.5s ease-in-out;\n    will-change: transform;\n  }\n\n  .carouselItem {\n    flex: 0 0 33.33%;\n    box-sizing: border-box;\n    padding: 0 20px;\n  }\n\n  .carouselItem img {\n    width: 100%;\n    height: auto;\n    border-radius: 8px;\n    transition: transform 0.3s ease;\n\n    &:hover {\n      transform: scale(1.05);\n    }\n  }\n\n  @media screen and (max-width: 768px) {\n    .carouselContainer {\n      width: 100vw;\n      height: 20rem;\n      margin: 0;\n      margin-bottom: -2rem;\n      background-image: url('/public/img/forester-film-edits-9.jpg');\n    }\n\n    .carouselInner {\n      width: 100%;\n    }\n\n    .carouselItem {\n      flex: 0 0 100%;\n      padding: 0 10px;\n    }\n  }\n\n  @media screen and (max-width: 500px) {\n    .carouselContainer {\n      background-image: url('/public/img/forester-film-edits-9.jpg');\n      background-size: cover;\n    }\n  }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAE;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,gBAAA;EACA,qBAAA;EACA,iBAAA;EACA,4EAAA;EACA,yDAAA;EACA,6BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACJ;;AAEE;EACE,iBAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,YAAA;AACJ;;AAEE;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACJ;;AAEE;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACJ;;AAEE;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,+BAAA;AACJ;AACI;EACE,sBAAA;AACN;;AAGE;EACE;IACE,YAAA;IACA,aAAA;IACA,SAAA;IACA,oBAAA;IACA,yDAAA;IACA,iBAAA;EAAJ;EAGE;IACE,WAAA;EADJ;EAIE;IACE,cAAA;IACA,eAAA;EAFJ;AACF;AAKE;EACE;IACE,yDAAA;IACA,sBAAA;EAHJ;AACF","sourcesContent":["  .carouselContainer {\n    position: relative;\n    width: 100%;\n    height: 40rem;\n    margin: auto;\n    overflow: hidden;\n    margin-bottom: 1.5rem;\n    padding-top: 1rem;\n    clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n    background-image: url('/public/img/forester-film-edits-9.jpg');\n    background-attachment: scroll;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center; \n  }\n\n  .carousel {\n    max-width: 1560px;\n    width: 100%; \n    display: flex;\n    justify-content: center; \n    margin: auto; \n  }\n\n  .carouselInner {\n    display: flex;\n    width: calc(100% * 3);\n    transition: transform 0.5s ease-in-out;\n    will-change: transform;\n  }\n\n  .carouselItem {\n    flex: 0 0 33.33%;\n    box-sizing: border-box;\n    padding: 0 20px;\n  }\n\n  .carouselItem img {\n    width: 100%;\n    height: auto;\n    border-radius: 8px;\n    transition: transform 0.3s ease;\n\n    &:hover {\n      transform: scale(1.05);\n    }\n  }\n\n  @media screen and (max-width: 768px) {\n    .carouselContainer {\n      width: 100vw;\n      height: 20rem;\n      margin: 0;\n      margin-bottom: -2rem;\n      background-image: url('/public/img/forester-film-edits-9.jpg');\n      margin-top: -6rem;\n    }\n\n    .carouselInner {\n      width: 100%;\n    }\n\n    .carouselItem {\n      flex: 0 0 100%;\n      padding: 0 10px;\n    }\n  }\n\n  @media screen and (max-width: 500px) {\n    .carouselContainer {\n      background-image: url('/public/img/forester-film-edits-9.jpg');\n      background-size: cover;\n    }\n  }"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `k5ppDul8KDJObz5jno_w`,
@@ -1646,9 +1647,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.HvgboFHhvHeMxm43zFZ6 {
 
 @media screen and (max-width: 768px) {
   .HvgboFHhvHeMxm43zFZ6 {
-    margin-top: -6rem;
+    margin-top: -8rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/TourSection/TourSection.module.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,UAAA;EACA,yBAAA;EACA,kBAAA;AACF;;AAEA;EACE;IACE,iBAAA;EACF;AACF","sourcesContent":[".tourSection {\n  padding: 10rem 0 5rem 0;\n  width: 90%;\n  color: rgb(255, 255, 255);\n  margin-top: 4.2rem;\n}\n\n@media screen and (max-width: 768px) {\n  .tourSection {\n    margin-top: -6rem;\n  }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/TourSection/TourSection.module.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,UAAA;EACA,yBAAA;EACA,kBAAA;AACF;;AAEA;EACE;IACE,iBAAA;EACF;AACF","sourcesContent":[".tourSection {\n  padding: 10rem 0 5rem 0;\n  width: 90%;\n  color: rgb(255, 255, 255);\n  margin-top: 4.2rem;\n}\n\n@media screen and (max-width: 768px) {\n  .tourSection {\n    margin-top: -8rem;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"tourSection": `HvgboFHhvHeMxm43zFZ6`
@@ -2891,4 +2892,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.f3d75a0d8c7e85234b36423bf49c7b39.js.map
+//# sourceMappingURL=App.ad71f0341f1ec072a6dc29adc6f477f0.js.map
