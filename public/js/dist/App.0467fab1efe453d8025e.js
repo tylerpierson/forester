@@ -697,6 +697,14 @@ const VideoBanner = _ref => {
   let {
     isFaded
   } = _ref;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    const video = document.querySelector('video');
+    if (video) {
+      video.play().catch(error => {
+        console.log('Autoplay failed:', error);
+      });
+    }
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "video-banner",
     className: isFaded ? "".concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner) : "".concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner)
@@ -1488,8 +1496,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.uYrXtwYQZtJpSmB8rs2z {
     color: whitesmoke;
     font-size: 1.5rem;
     transition: color 0.3s ease;
-    width: 2rem;
-    height: 2rem;
+    width: 2.2rem;
+    height: 2.2rem;
     margin: 0 0.5rem;
     padding: 0;
     background-color: #1e254a;
@@ -1501,7 +1509,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.uYrXtwYQZtJpSmB8rs2z {
     background-color: whitesmoke;
     border-radius: 10%;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/SocialMedia/SocialMediaMobile.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;AACJ;;AAEA;EACI;IACI,aAAA;IACA,gBAAA;IACA,uBAAA;EACN;EAAM;IACI,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,iBAAA;IACA,iBAAA;IACA,2BAAA;IACA,WAAA;IACA,YAAA;IACA,gBAAA;IACA,UAAA;IACA,yBAAA;IACA,kBAAA;IACA,aAAA;EAEV;EAAU;IACI,cAAA;IACA,4BAAA;IACA,kBAAA;EAEd;AACF","sourcesContent":[".socialMedia {\n    display: none;\n}\n\n@media screen and (max-width: 768px) {\n    .socialMedia {\n        display: flex;\n        margin-top: 2rem;\n        justify-content: center;\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: whitesmoke;\n            font-size: 1.5rem;\n            transition: color 0.3s ease;\n            width: 2rem;\n            height: 2rem;\n            margin: 0 0.5rem;\n            padding: 0;\n            background-color: #1e254a;\n            border-radius: 10%;\n            z-index: 1000;\n    \n            &:hover {\n                color: #1e254a;\n                background-color: whitesmoke;\n                border-radius: 10%;\n            }\n        }\n    }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/SocialMedia/SocialMediaMobile.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;AACJ;;AAEA;EACI;IACI,aAAA;IACA,gBAAA;IACA,uBAAA;EACN;EAAM;IACI,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,iBAAA;IACA,iBAAA;IACA,2BAAA;IACA,aAAA;IACA,cAAA;IACA,gBAAA;IACA,UAAA;IACA,yBAAA;IACA,kBAAA;IACA,aAAA;EAEV;EAAU;IACI,cAAA;IACA,4BAAA;IACA,kBAAA;EAEd;AACF","sourcesContent":[".socialMedia {\n    display: none;\n}\n\n@media screen and (max-width: 768px) {\n    .socialMedia {\n        display: flex;\n        margin-top: 2rem;\n        justify-content: center;\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: whitesmoke;\n            font-size: 1.5rem;\n            transition: color 0.3s ease;\n            width: 2.2rem;\n            height: 2.2rem;\n            margin: 0 0.5rem;\n            padding: 0;\n            background-color: #1e254a;\n            border-radius: 10%;\n            z-index: 1000;\n    \n            &:hover {\n                color: #1e254a;\n                background-color: whitesmoke;\n                border-radius: 10%;\n            }\n        }\n    }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"socialMedia": `uYrXtwYQZtJpSmB8rs2z`
@@ -2894,4 +2902,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.70853b9ac493830c93e57b6f2e69e4a3.js.map
+//# sourceMappingURL=App.4b7d7f8eb2d444fc31f70a051092a174.js.map
