@@ -18,3 +18,4 @@ const VideoBanner = ({ isFaded }) => {
 };
 
 export default VideoBanner;
+
