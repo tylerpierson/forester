@@ -648,13 +648,11 @@ const TourSection = _ref => {
     isFaded
   } = _ref;
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    // Laylo widget script
     const layloScript = document.createElement('script');
     layloScript.src = "https://embed.laylo.com/laylo-sdk.js";
     layloScript.async = true;
     document.body.appendChild(layloScript);
     return () => {
-      // Clean up the Laylo script on component unmount
       document.body.removeChild(layloScript);
     };
   }, []);
@@ -969,7 +967,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.h8ZhBt5OcnBAKvND0yEH {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s, transform 0.3s;
-  /* Centering the arrow */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -978,7 +975,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.h8ZhBt5OcnBAKvND0yEH {
   background-color: #fff;
   color: #242c56;
   transform: scale(1.1);
-}`, "",{"version":3,"sources":["webpack://./src/components/BackToTop/BackToTop.module.scss"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,YAAA;EACA,WAAA;EACA,aAAA;AACF;;AAEA;EACE,yBAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;EACA,eAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;EACA,iDAAA;EAEA,wBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AAAF;AAEE;EACE,sBAAA;EACA,cAAA;EACA,qBAAA;AAAJ","sourcesContent":[".BackToTop {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n  z-index: 1000;\n}\n\n.TopButton {\n  background-color: #242c56;\n  border: none;\n  border-radius: 30%;\n  padding: 10px;\n  font-size: 24px;\n  color: #fff;\n  cursor: pointer;\n  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\n  transition: background-color 0.3s, transform 0.3s;\n  \n  /* Centering the arrow */\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n  &:hover {\n    background-color: #fff;\n    color: #242c56;\n    transform: scale(1.1);\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/BackToTop/BackToTop.module.scss"],"names":[],"mappings":"AAAA;EACE,eAAA;EACA,YAAA;EACA,WAAA;EACA,aAAA;AACF;;AAEA;EACE,yBAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;EACA,eAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;EACA,iDAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;AACE;EACE,sBAAA;EACA,cAAA;EACA,qBAAA;AACJ","sourcesContent":[".BackToTop {\n  position: fixed;\n  bottom: 20px;\n  right: 20px;\n  z-index: 1000;\n}\n\n.TopButton {\n  background-color: #242c56;\n  border: none;\n  border-radius: 30%;\n  padding: 10px;\n  font-size: 24px;\n  color: #fff;\n  cursor: pointer;\n  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);\n  transition: background-color 0.3s, transform 0.3s;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n  &:hover {\n    background-color: #fff;\n    color: #242c56;\n    transform: scale(1.1);\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"BackToTop": `h8ZhBt5OcnBAKvND0yEH`,
@@ -1601,10 +1598,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.HxUZiFz5n1DLSXkSfu8V {
   z-index: 1000;
 }
 .HxUZiFz5n1DLSXkSfu8V iframe {
-  width: 100%; /* Full width of its container */
-  max-width: 1000px; /* Maximum width to prevent it from becoming too wide */
+  width: 100%;
+  max-width: 1000px;
   border: none;
-  min-width: 320px; /* Minimum width to maintain a reasonable size */
+  min-width: 320px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1612,10 +1609,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.HxUZiFz5n1DLSXkSfu8V {
     margin-bottom: -1rem;
   }
   .HxUZiFz5n1DLSXkSfu8V iframe {
-    width: 90%; /* Takes up 90% of the width on smaller screens */
-    max-width: 100%; /* Ensure it scales correctly */
+    width: 90%;
+    max-width: 100%;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/Subscribe/Subscribe.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mBAAA;EACA,WAAA;EACA,aAAA;AACF;AACE;EACE,WAAA,EAAA,gCAAA;EACA,iBAAA,EAAA,uDAAA;EACA,YAAA;EACA,gBAAA,EAAA,gDAAA;AACJ;;AAGA;EACE;IACE,oBAAA;EAAF;EACE;IACE,UAAA,EAAA,iDAAA;IACA,eAAA,EAAA,+BAAA;EACJ;AACF","sourcesContent":[".subscribeContainer {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 2rem 0 5rem;\n  width: 100%;\n  z-index: 1000;\n\n  iframe {\n    width: 100%; /* Full width of its container */\n    max-width: 1000px; /* Maximum width to prevent it from becoming too wide */\n    border: none;\n    min-width: 320px; /* Minimum width to maintain a reasonable size */\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .subscribeContainer {\n    margin-bottom: -1rem;\n    iframe {\n      width: 90%; /* Takes up 90% of the width on smaller screens */\n      max-width: 100%; /* Ensure it scales correctly */\n    }\n  }\n}\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/Subscribe/Subscribe.module.scss"],"names":[],"mappings":"AAAA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,mBAAA;EACA,WAAA;EACA,aAAA;AACF;AACE;EACE,WAAA;EACA,iBAAA;EACA,YAAA;EACA,gBAAA;AACJ;;AAGA;EACE;IACE,oBAAA;EAAF;EACE;IACE,UAAA;IACA,eAAA;EACJ;AACF","sourcesContent":[".subscribeContainer {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: 2rem 0 5rem;\n  width: 100%;\n  z-index: 1000;\n\n  iframe {\n    width: 100%;\n    max-width: 1000px;\n    border: none;\n    min-width: 320px;\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .subscribeContainer {\n    margin-bottom: -1rem;\n    iframe {\n      width: 90%;\n      max-width: 100%;\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"subscribeContainer": `HxUZiFz5n1DLSXkSfu8V`
@@ -2897,4 +2894,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.d43adde166e8d73f0342cd34d424719c.js.map
+//# sourceMappingURL=App.70853b9ac493830c93e57b6f2e69e4a3.js.map
