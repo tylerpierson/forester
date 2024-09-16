@@ -16,6 +16,7 @@
 
 @media screen and (max-width: 768px) {
   .subscribeContainer {
+    margin-bottom: -1rem;
     iframe {
       width: 90%; /* Takes up 90% of the width on smaller screens */
       max-width: 100%; /* Ensure it scales correctly */
