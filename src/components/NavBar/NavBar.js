@@ -11,7 +11,7 @@ function NavBar() {
     let lastScrollTop = 0;
 
     const handleScroll = () => {
-      if (disableScrollFade) return; 
+      if (disableScrollFade) return;
 
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
