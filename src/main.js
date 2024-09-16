@@ -3,6 +3,5 @@ class Test {
 		console.log('Forester Music');
 	};
 }
-// test
 const test = new Test();
 test.main();
