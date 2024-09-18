@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './AlbumCarousel.module.scss';
 
 const AlbumCarousel = ({ isFaded }) => {
@@ -7,23 +7,23 @@ const AlbumCarousel = ({ isFaded }) => {
     { src: '/img/watercolor.jpg', alt: 'Image 2', link: 'https://lnk.to/watercolor' },
     { src: '/img/AROL.jpg', alt: 'Image 3', link: 'https://lnk.to/ARoL' },
     { src: '/img/kerosene.jpg', alt: 'Image 4', link: 'https://lowly.ffm.to/forester-kerosene' },
-  ];
+    ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+  const handleNext = () => {
+    if (currentIndex < images.length - 4) {
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }
+  };
 
-    return () => clearInterval(interval);
-  }, [images.length]);
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prevIndex) => prevIndex - 1);
+    }
+  };
 
-  const visibleImages = [
-    images[currentIndex % images.length],
-    images[(currentIndex + 1) % images.length],
-    images[(currentIndex + 2) % images.length],
-  ];
+  const visibleImages = images.slice(currentIndex, currentIndex + 4); // Show 4 images at a time
 
   return (
     <div
@@ -31,15 +31,26 @@ const AlbumCarousel = ({ isFaded }) => {
       className={isFaded ? `${styles.faded} ${styles.carouselContainer}` : `${styles.carouselContainer}`}
     >
       <div className={styles.carousel}>
+        {images.length > 4 && (
+          <button className={styles.prevButton} onClick={handlePrev} disabled={currentIndex === 0}>‹</button>
+        )}
+
         <div className={styles.carouselInner}>
           {visibleImages.map((image, index) => (
-            <div className={styles.carouselItem} key={index} style={{ flex: '0 0 33.33%' }}>
+            <div
+              className={styles.carouselItem}
+              key={index}
+              style={{ flex: '0 0 25%' }}
+            >
               <a target="_blank" href={image.link} rel="noopener noreferrer">
                 <img src={image.src} alt={image.alt} />
               </a>
             </div>
           ))}
         </div>
+        {images.length > 4 && (
+          <button className={styles.nextButton} onClick={handleNext} disabled={currentIndex >= images.length - 4}>›</button>
+        )}
       </div>
     </div>
   );

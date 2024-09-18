@@ -1,76 +1,106 @@
-  .carouselContainer {
-    position: relative;
-    width: 100%;
-    height: 40rem;
-    margin: auto;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
-    padding-top: 1rem;
-    clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);
-    background-image: url('/public/img/forester-film-edits-9.jpg');
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  height: 40rem;
+  margin: auto;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);
+  background-image: url('/public/img/forester-film-edits-9.jpg');
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .carousel {
-    max-width: 1560px;
-    width: 100%; 
-    display: flex;
-    justify-content: center; 
-    margin: auto; 
+.carousel {
+  max-width: 1560px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+}
+
+.carouselInner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselItem {
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.carouselItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 10;
+  background-color: transparent;
+  color: white;
+}
+
+.prevButton {
+  left: -50px;
+}
+
+.nextButton {
+  right: -50px;
+}
+
+@media screen and (max-width: 768px) {
+  .carouselContainer {
+    width: 100vw;
+    height: 20rem;
+    margin: 0;
+    margin-bottom: -2rem;
+    background-image: url('/public/img/forester-film-edits-9.jpg');
+    margin-top: -6rem;
   }
 
   .carouselInner {
-    display: flex;
-    width: calc(100% * 3);
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
+    width: 100%;
   }
 
   .carouselItem {
-    flex: 0 0 33.33%;
-    box-sizing: border-box;
-    padding: 0 20px;
+    flex: 0 0 100%;
+    padding: 0 10px;
   }
 
-  .carouselItem img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.05);
-    }
+  .prevButton,
+  .nextButton {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    left: -25px;
+    right: -25px;
   }
+}
 
-  @media screen and (max-width: 768px) {
-    .carouselContainer {
-      width: 100vw;
-      height: 20rem;
-      margin: 0;
-      margin-bottom: -2rem;
-      background-image: url('/public/img/forester-film-edits-9.jpg');
-      margin-top: -6rem;
-    }
-
-    .carouselInner {
-      width: 100%;
-    }
-
-    .carouselItem {
-      flex: 0 0 100%;
-      padding: 0 10px;
-    }
+@media screen and (max-width: 500px) {
+  .carouselContainer {
+    background-image: url('/public/img/forester-film-edits-9.jpg');
+    background-size: cover;
   }
-
-  @media screen and (max-width: 500px) {
-    .carouselContainer {
-      background-image: url('/public/img/forester-film-edits-9.jpg');
-      background-size: cover;
-    }
-  }
+}
