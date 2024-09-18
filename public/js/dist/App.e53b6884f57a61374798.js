@@ -93,25 +93,34 @@ const AlbumCarousel = _ref => {
     link: 'https://lowly.ffm.to/forester-kerosene'
   }];
   const [currentIndex, setCurrentIndex] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [images.length]);
-  const visibleImages = [images[currentIndex % images.length], images[(currentIndex + 1) % images.length], images[(currentIndex + 2) % images.length]];
+  const handleNext = () => {
+    if (currentIndex < images.length - 4) {
+      setCurrentIndex(prevIndex => prevIndex + 1);
+    }
+  };
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(prevIndex => prevIndex - 1);
+    }
+  };
+  const visibleImages = images.slice(currentIndex, currentIndex + 4); // Show 4 images at a time
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "newmusic",
     className: isFaded ? "".concat(_AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer) : "".concat(_AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselContainer)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carousel
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, images.length > 4 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    className: _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].prevButton,
+    onClick: handlePrev,
+    disabled: currentIndex === 0
+  }, "\u2039"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselInner
   }, visibleImages.map((image, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].carouselItem,
     key: index,
     style: {
-      flex: '0 0 33.33%'
+      flex: '0 0 25%'
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     target: "_blank",
@@ -120,7 +129,11 @@ const AlbumCarousel = _ref => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: image.src,
     alt: image.alt
-  })))))));
+  }))))), images.length > 4 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    className: _AlbumCarousel_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].nextButton,
+    onClick: handleNext,
+    disabled: currentIndex >= images.length - 4
+  }, "\u203A")));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AlbumCarousel);
 
@@ -879,18 +892,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.k5ppDul8KDJObz5jno_w {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: auto;
+  position: relative;
 }
 
 .Haa1XkWbPWq3uO05xDAb {
   display: flex;
-  width: 300%;
   transition: transform 0.5s ease-in-out;
-  will-change: transform;
 }
 
 .rH3TneSeMPN9Ym3micOW {
-  flex: 0 0 33.33%;
+  flex: 0 0 25%;
   box-sizing: border-box;
   padding: 0 20px;
 }
@@ -903,6 +916,28 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.k5ppDul8KDJObz5jno_w {
 }
 .rH3TneSeMPN9Ym3micOW img:hover {
   transform: scale(1.05);
+}
+
+.kymANabxy3OqEioxo3Da,
+.MNM4ksbepXpREG24X5Lg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 10;
+  background-color: transparent;
+  color: white;
+}
+
+.kymANabxy3OqEioxo3Da {
+  left: -50px;
+}
+
+.MNM4ksbepXpREG24X5Lg {
+  right: -50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -921,19 +956,28 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.k5ppDul8KDJObz5jno_w {
     flex: 0 0 100%;
     padding: 0 10px;
   }
+  .kymANabxy3OqEioxo3Da,
+  .MNM4ksbepXpREG24X5Lg {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    left: -25px;
+    right: -25px;
+  }
 }
 @media screen and (max-width: 500px) {
   .k5ppDul8KDJObz5jno_w {
     background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
     background-size: cover;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAE;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,gBAAA;EACA,qBAAA;EACA,iBAAA;EACA,4EAAA;EACA,yDAAA;EACA,6BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACJ;;AAEE;EACE,iBAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,YAAA;AACJ;;AAEE;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACJ;;AAEE;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;AACJ;;AAEE;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,+BAAA;AACJ;AACI;EACE,sBAAA;AACN;;AAGE;EACE;IACE,YAAA;IACA,aAAA;IACA,SAAA;IACA,oBAAA;IACA,yDAAA;IACA,iBAAA;EAAJ;EAGE;IACE,WAAA;EADJ;EAIE;IACE,cAAA;IACA,eAAA;EAFJ;AACF;AAKE;EACE;IACE,yDAAA;IACA,sBAAA;EAHJ;AACF","sourcesContent":["  .carouselContainer {\n    position: relative;\n    width: 100%;\n    height: 40rem;\n    margin: auto;\n    overflow: hidden;\n    margin-bottom: 1.5rem;\n    padding-top: 1rem;\n    clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n    background-image: url('/public/img/forester-film-edits-9.jpg');\n    background-attachment: scroll;\n    background-size: cover;\n    background-position: center;\n    display: flex;\n    justify-content: center;\n    align-items: center; \n  }\n\n  .carousel {\n    max-width: 1560px;\n    width: 100%; \n    display: flex;\n    justify-content: center; \n    margin: auto; \n  }\n\n  .carouselInner {\n    display: flex;\n    width: calc(100% * 3);\n    transition: transform 0.5s ease-in-out;\n    will-change: transform;\n  }\n\n  .carouselItem {\n    flex: 0 0 33.33%;\n    box-sizing: border-box;\n    padding: 0 20px;\n  }\n\n  .carouselItem img {\n    width: 100%;\n    height: auto;\n    border-radius: 8px;\n    transition: transform 0.3s ease;\n\n    &:hover {\n      transform: scale(1.05);\n    }\n  }\n\n  @media screen and (max-width: 768px) {\n    .carouselContainer {\n      width: 100vw;\n      height: 20rem;\n      margin: 0;\n      margin-bottom: -2rem;\n      background-image: url('/public/img/forester-film-edits-9.jpg');\n      margin-top: -6rem;\n    }\n\n    .carouselInner {\n      width: 100%;\n    }\n\n    .carouselItem {\n      flex: 0 0 100%;\n      padding: 0 10px;\n    }\n  }\n\n  @media screen and (max-width: 500px) {\n    .carouselContainer {\n      background-image: url('/public/img/forester-film-edits-9.jpg');\n      background-size: cover;\n    }\n  }"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/AlbumCarousel/AlbumCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,gBAAA;EACA,qBAAA;EACA,iBAAA;EACA,4EAAA;EACA,yDAAA;EACA,6BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,iBAAA;EACA,WAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,YAAA;EACA,kBAAA;AACF;;AAEA;EACE,aAAA;EACA,sCAAA;AACF;;AAEA;EACE,aAAA;EACA,sBAAA;EACA,eAAA;AACF;;AAEA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,+BAAA;AACF;AACE;EACE,sBAAA;AACJ;;AAGA;;EAEE,kBAAA;EACA,QAAA;EACA,2BAAA;EACA,YAAA;EACA,eAAA;EACA,eAAA;EACA,aAAA;EACA,WAAA;EACA,6BAAA;EACA,YAAA;AAAF;;AAGA;EACE,WAAA;AAAF;;AAGA;EACE,YAAA;AAAF;;AAGA;EACE;IACE,YAAA;IACA,aAAA;IACA,SAAA;IACA,oBAAA;IACA,yDAAA;IACA,iBAAA;EAAF;EAGA;IACE,WAAA;EADF;EAIA;IACE,cAAA;IACA,eAAA;EAFF;EAKA;;IAEE,iBAAA;IACA,eAAA;IACA,WAAA;IACA,YAAA;EAHF;AACF;AAMA;EACE;IACE,yDAAA;IACA,sBAAA;EAJF;AACF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  overflow: hidden;\n  margin-bottom: 1.5rem;\n  padding-top: 1rem;\n  clip-path: polygon(75% 5%, 100% 0, 100% 100%, 49% 96%, 25% 100%, 0 93%, 0 0);\n  background-image: url('/public/img/forester-film-edits-9.jpg');\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.carousel {\n  max-width: 1560px;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin: auto;\n  position: relative;\n}\n\n.carouselInner {\n  display: flex;\n  transition: transform 0.5s ease-in-out;\n}\n\n.carouselItem {\n  flex: 0 0 25%;\n  box-sizing: border-box;\n  padding: 0 20px;\n}\n\n.carouselItem img {\n  width: 100%;\n  height: auto;\n  border-radius: 8px;\n  transition: transform 0.3s ease;\n\n  &:hover {\n    transform: scale(1.05);\n  }\n}\n\n.prevButton,\n.nextButton {\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  border: none;\n  font-size: 2rem;\n  cursor: pointer;\n  padding: 1rem;\n  z-index: 10;\n  background-color: transparent;\n  color: white;\n}\n\n.prevButton {\n  left: -50px;\n}\n\n.nextButton {\n  right: -50px;\n}\n\n@media screen and (max-width: 768px) {\n  .carouselContainer {\n    width: 100vw;\n    height: 20rem;\n    margin: 0;\n    margin-bottom: -2rem;\n    background-image: url('/public/img/forester-film-edits-9.jpg');\n    margin-top: -6rem;\n  }\n\n  .carouselInner {\n    width: 100%;\n  }\n\n  .carouselItem {\n    flex: 0 0 100%;\n    padding: 0 10px;\n  }\n\n  .prevButton,\n  .nextButton {\n    font-size: 1.5rem;\n    padding: 0.5rem;\n    left: -25px;\n    right: -25px;\n  }\n}\n\n@media screen and (max-width: 500px) {\n  .carouselContainer {\n    background-image: url('/public/img/forester-film-edits-9.jpg');\n    background-size: cover;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `k5ppDul8KDJObz5jno_w`,
 	"carousel": `lLj8b8N8hv0CUYek4MAw`,
 	"carouselInner": `Haa1XkWbPWq3uO05xDAb`,
-	"carouselItem": `rH3TneSeMPN9Ym3micOW`
+	"carouselItem": `rH3TneSeMPN9Ym3micOW`,
+	"prevButton": `kymANabxy3OqEioxo3Da`,
+	"nextButton": `MNM4ksbepXpREG24X5Lg`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1272,7 +1316,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  z-index: 2000;
+  z-index: 2000; /* Ensure the NavBar stays on top of content */
   opacity: 1;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
@@ -1347,15 +1391,25 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   border: 0.5px solid ghostwhite;
 }
 .QpVD3qAS0nYBtoQqAYoe .EHyE2pRSdW8SxXlsnalc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Adjust for spacing */
   background: #333;
   position: absolute;
-  top: 100%;
+  top: 100%; /* Position right under the NavBar */
   left: 0;
-  width: 100%;
-  padding: 1rem 0;
+  width: 100%; /* Span the full width of the page */
+  min-height: 50vh; /* Ensure it has a minimum height to avoid being too small */
+  padding: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 999; /* Ensure it appears above other elements */
 }
 .QpVD3qAS0nYBtoQqAYoe .B0N_SpgrkQDn_a8SbL4n {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1364,9 +1418,10 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   display: block;
   color: #fff;
   text-decoration: none;
-  padding: 1rem 2rem;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  padding: 1.5rem 0; /* Increase padding to make items more clickable */
+  text-align: center;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 .QpVD3qAS0nYBtoQqAYoe .B0N_SpgrkQDn_a8SbL4n a:hover {
@@ -1385,8 +1440,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   }
   .QpVD3qAS0nYBtoQqAYoe .ZcrcTrKhDDmmbAOeAxJJ {
     display: flex;
+    margin-top: 10px;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,mBAAA;EACA,kBAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA;EACA,UAAA;EACA,gEAAA;AACJ;AACI;EACE,UAAA;EACA,4BAAA;AACN;AAEI;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAAN;AAGI;EACE,aAAA;EACA,uBAAA;EACA,WAAA;EACA,cAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;AADN;AAGM;EACE,kBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,gDAAA;AADR;AAGQ;EACE,cAAA;EACA,sBAAA;AADV;AAIQ;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,yBAAA;EACA,SAAA;EACA,OAAA;EACA,oBAAA;EACA,wBAAA;EACA,mBAAA;EACA,sCAAA;EACA,+CAAA;AAFV;AAKQ;EACE,uBAAA;AAHV;AAMQ;EACE,mBAAA;EACA,eAAA;AAJV;AASI;EACE,aAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;AAPN;AASM;EACE,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,qBAAA;AAPR;AAUM;EACE,mBAAA;EACA,8BAAA;AARR;AAYI;EACE,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,OAAA;EACA,WAAA;EACA,eAAA;EACA,wCAAA;AAVN;AAaI;EACE,gBAAA;EACA,UAAA;EACA,SAAA;AAXN;AAaM;EACE,cAAA;EACA,WAAA;EACA,qBAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,uDAAA;AAXR;AAaQ;EACE,cAAA;EACA,0CAAA;EACA,uEAAA;AAXV;AAcQ;EACE,eAAA;AAZV;AAiBI;EACE;IACE,aAAA;IACA,kBAAA;IACA,SAAA;EAfN;EAkBI;IACE,aAAA;EAhBN;AACF","sourcesContent":[".NavBar {\n    border-radius: 30px;\n    padding: 1rem 2rem;\n    position: sticky;\n    top: 0;\n    z-index: 2000;\n    opacity: 1;\n    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;\n  \n    &.hidden {\n      opacity: 0;\n      transform: translateY(-100%);\n    }\n  \n    .NavBarContainer {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n  \n    .NavList {\n      display: flex;\n      justify-content: center;\n      width: auto;\n      height: 3.5rem;\n      list-style: none;\n      padding: 0;\n      margin: 0;\n      border-radius: 0.75rem;\n  \n      a {\n        position: relative;\n        color: whitesmoke;\n        text-decoration: none;\n        padding: 0.5rem 1rem;\n        font-weight: 500;\n        font-size: 1.7rem;\n        transition: color 0.3s ease, transform 0.3s ease;\n  \n        &:hover {\n          color: #242c56;\n          transform: scale(1.05);\n        }\n  \n        &:before {\n          content: '';\n          position: absolute;\n          width: 90%;\n          height: 2px;\n          background-color: #242c56;\n          bottom: 0;\n          left: 0;\n          transform: scaleX(0);\n          transform-origin: center;\n          margin-left: 0.7rem;\n          transition: transform 0.3s ease-in-out;\n          box-shadow: 0 2px 8px rgba(245, 245, 245, 0.25);\n        }\n  \n        &:hover:before {\n          transform: scaleX(0.75);\n        }\n  \n        li {\n          margin-left: 0.5rem;\n          cursor: pointer;\n        }\n      }\n    }\n  \n    .Hamburger {\n      display: none;\n      flex-direction: column;\n      cursor: pointer;\n      transition: 0.3s ease;\n  \n      span {\n        background: #fff;\n        height: 3px;\n        width: 25px;\n        margin: 2px 0;\n        transition: 0.3s ease;\n      }\n  \n      &:hover span {\n        background: #1e254a;\n        border: 0.5px solid ghostwhite;\n      }\n    }\n  \n    .MobileMenu {\n      background: #333;\n      position: absolute;\n      top: 100%;\n      left: 0;\n      width: 100%;\n      padding: 1rem 0;\n      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\n    }\n  \n    .MobileNavList {\n      list-style: none;\n      padding: 0;\n      margin: 0;\n  \n      a {\n        display: block;\n        color: #fff;\n        text-decoration: none;\n        padding: 1rem 2rem;\n        font-weight: 500;\n        font-size: 1.1rem;\n        transition: color 0.3s ease, background-color 0.3s ease;\n  \n        &:hover {\n          color: #1e254a;\n          background-color: rgba(255, 255, 255, 0.1);\n          text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;\n        }\n  \n        li {\n          cursor: pointer;\n        }\n      }\n    }\n  \n    @media (max-width: 768px) {\n      .NavList {\n        display: none;\n        visibility: hidden;\n        height: 0;\n      }\n  \n      .Hamburger {\n        display: flex;\n      }\n    }\n  }\n  "],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,mBAAA;EACA,kBAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA,EAAA,8CAAA;EACA,UAAA;EACA,gEAAA;AACJ;AACI;EACE,UAAA;EACA,4BAAA;AACN;AAEI;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAAN;AAGI;EACE,aAAA;EACA,uBAAA;EACA,WAAA;EACA,cAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;AADN;AAGM;EACE,kBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,gDAAA;AADR;AAGQ;EACE,cAAA;EACA,sBAAA;AADV;AAIQ;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,yBAAA;EACA,SAAA;EACA,OAAA;EACA,oBAAA;EACA,wBAAA;EACA,mBAAA;EACA,sCAAA;EACA,+CAAA;AAFV;AAKQ;EACE,uBAAA;AAHV;AAMQ;EACE,mBAAA;EACA,eAAA;AAJV;AASI;EACE,aAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;AAPN;AASM;EACE,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,qBAAA;AAPR;AAUM;EACE,mBAAA;EACA,8BAAA;AARR;AAYI;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,2BAAA,EAAA,uBAAA;EACA,gBAAA;EACA,kBAAA;EACA,SAAA,EAAA,oCAAA;EACA,OAAA;EACA,WAAA,EAAA,oCAAA;EACA,gBAAA,EAAA,4DAAA;EACA,aAAA;EACA,wCAAA;EACA,YAAA,EAAA,2CAAA;AAVN;AAaI;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;AAXN;AAaM;EACE,cAAA;EACA,WAAA;EACA,qBAAA;EACA,gBAAA;EACA,iBAAA;EACA,iBAAA,EAAA,kDAAA;EACA,kBAAA;EACA,uDAAA;AAXR;AAaQ;EACE,cAAA;EACA,0CAAA;EACA,uEAAA;AAXV;AAcQ;EACE,eAAA;AAZV;AAiBI;EACE;IACE,aAAA;IACA,kBAAA;IACA,SAAA;EAfN;EAkBI;IACE,aAAA;IACA,gBAAA;EAhBN;AACF","sourcesContent":[".NavBar {\n    border-radius: 30px;\n    padding: 1rem 2rem;\n    position: sticky;\n    top: 0;\n    z-index: 2000; /* Ensure the NavBar stays on top of content */\n    opacity: 1;\n    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;\n  \n    &.hidden {\n      opacity: 0;\n      transform: translateY(-100%);\n    }\n  \n    .NavBarContainer {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n  \n    .NavList {\n      display: flex;\n      justify-content: center;\n      width: auto;\n      height: 3.5rem;\n      list-style: none;\n      padding: 0;\n      margin: 0;\n      border-radius: 0.75rem;\n  \n      a {\n        position: relative;\n        color: whitesmoke;\n        text-decoration: none;\n        padding: 0.5rem 1rem;\n        font-weight: 500;\n        font-size: 1.7rem;\n        transition: color 0.3s ease, transform 0.3s ease;\n  \n        &:hover {\n          color: #242c56;\n          transform: scale(1.05);\n        }\n  \n        &:before {\n          content: '';\n          position: absolute;\n          width: 90%;\n          height: 2px;\n          background-color: #242c56;\n          bottom: 0;\n          left: 0;\n          transform: scaleX(0);\n          transform-origin: center;\n          margin-left: 0.7rem;\n          transition: transform 0.3s ease-in-out;\n          box-shadow: 0 2px 8px rgba(245, 245, 245, 0.25);\n        }\n  \n        &:hover:before {\n          transform: scaleX(0.75);\n        }\n  \n        li {\n          margin-left: 0.5rem;\n          cursor: pointer;\n        }\n      }\n    }\n  \n    .Hamburger {\n      display: none;\n      flex-direction: column;\n      cursor: pointer;\n      transition: 0.3s ease;\n  \n      span {\n        background: #fff;\n        height: 3px;\n        width: 25px;\n        margin: 2px 0;\n        transition: 0.3s ease;\n      }\n  \n      &:hover span {\n        background: #1e254a;\n        border: 0.5px solid ghostwhite;\n      }\n    }\n  \n    .MobileMenu {\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: flex-start; /* Adjust for spacing */\n      background: #333;\n      position: absolute;\n      top: 100%; /* Position right under the NavBar */\n      left: 0;\n      width: 100%; /* Span the full width of the page */\n      min-height: 50vh; /* Ensure it has a minimum height to avoid being too small */\n      padding: 2rem;\n      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); \n      z-index: 999; /* Ensure it appears above other elements */\n    }\n  \n    .MobileNavList {\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      list-style: none;\n      padding: 0;\n      margin: 0;\n  \n      a {\n        display: block;\n        color: #fff;\n        text-decoration: none;\n        font-weight: 500;\n        font-size: 1.5rem;\n        padding: 1.5rem 0; /* Increase padding to make items more clickable */\n        text-align: center;\n        transition: color 0.3s ease, background-color 0.3s ease;\n  \n        &:hover {\n          color: #1e254a;\n          background-color: rgba(255, 255, 255, 0.1);\n          text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;\n        }\n  \n        li {\n          cursor: pointer;\n        }\n      }\n    }\n  \n    @media (max-width: 768px) {\n      .NavList {\n        display: none;\n        visibility: hidden;\n        height: 0;\n      }\n  \n      .Hamburger {\n        display: flex;\n        margin-top: 10px;\n      }\n    }\n  }  "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
@@ -2902,4 +2958,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.4b7d7f8eb2d444fc31f70a051092a174.js.map
+//# sourceMappingURL=App.ed7bc0e8fec1116699ad4f52474cb898.js.map

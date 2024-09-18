@@ -3,7 +3,7 @@
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
-    z-index: 2000;
+    z-index: 2000; /* Ensure the NavBar stays on top of content */
     opacity: 1;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   
@@ -89,16 +89,26 @@
     }
   
     .MobileMenu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; /* Adjust for spacing */
       background: #333;
       position: absolute;
-      top: 100%;
+      top: 100%; /* Position right under the NavBar */
       left: 0;
-      width: 100%;
-      padding: 1rem 0;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      width: 100%; /* Span the full width of the page */
+      min-height: 50vh; /* Ensure it has a minimum height to avoid being too small */
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+      z-index: 999; /* Ensure it appears above other elements */
     }
   
     .MobileNavList {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       list-style: none;
       padding: 0;
       margin: 0;
@@ -107,9 +117,10 @@
         display: block;
         color: #fff;
         text-decoration: none;
-        padding: 1rem 2rem;
         font-weight: 500;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
+        padding: 1.5rem 0; /* Increase padding to make items more clickable */
+        text-align: center;
         transition: color 0.3s ease, background-color 0.3s ease;
   
         &:hover {
@@ -133,7 +144,7 @@
   
       .Hamburger {
         display: flex;
+        margin-top: 10px;
       }
     }
-  }
-  
+  }  
