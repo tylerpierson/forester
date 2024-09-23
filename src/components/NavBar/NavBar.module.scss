@@ -95,13 +95,8 @@
       justify-content: flex-start; /* Adjust for spacing */
       background: #333;
       position: absolute;
-      top: 100%; /* Position right under the NavBar */
-      left: 0;
-      width: 100%; /* Span the full width of the page */
-      min-height: 50vh; /* Ensure it has a minimum height to avoid being too small */
-      padding: 2rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-      z-index: 999; /* Ensure it appears above other elements */
+      top: 100%;
+      width: 100vw;
     }
   
     .MobileNavList {

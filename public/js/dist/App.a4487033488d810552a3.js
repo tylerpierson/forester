@@ -331,7 +331,11 @@ function MissionStatement() {
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar.module.scss */ "./src/components/NavBar/NavBar.module.scss");
+/* harmony import */ var _NavBarDesktop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBarDesktop */ "./src/components/NavBar/NavBarDesktop.js");
+/* harmony import */ var _NavBarMobile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavBarMobile */ "./src/components/NavBar/NavBarMobile.js");
+/* harmony import */ var _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./NavBar.module.scss */ "./src/components/NavBar/NavBar.module.scss");
+
+
 
 
 function NavBar() {
@@ -379,17 +383,43 @@ function NavBar() {
     if (isMobile) {
       setIsMenuOpen(false);
     }
-    targetElement.classList.add(_NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].focused);
     setTimeout(() => setDisableScrollFade(false), 2000);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "".concat(_NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].NavBar, " ").concat(!isVisible ? _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].hidden : '')
+    className: "".concat(_NavBar_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].NavBar, " ").concat(!isVisible ? _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].hidden : '')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].NavBarContainer
-  }, isMobile ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Hamburger,
-    onClick: toggleMenu
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_3__["default"].NavBarContainer
+  }, isMobile ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_NavBarMobile__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    isMenuOpen: isMenuOpen,
+    toggleMenu: toggleMenu,
+    handleNavigationClick: handleNavigationClick
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_NavBarDesktop__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    handleNavigationClick: handleNavigationClick
+  })));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
+
+/***/ }),
+
+/***/ "./src/components/NavBar/NavBarDesktop.js":
+/*!************************************************!*\
+  !*** ./src/components/NavBar/NavBarDesktop.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar.module.scss */ "./src/components/NavBar/NavBar.module.scss");
+
+
+function NavBarDesktop(_ref) {
+  let {
+    handleNavigationClick
+  } = _ref;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].NavList
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#tour",
@@ -406,7 +436,36 @@ function NavBar() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "VIDEOS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     href: "#mission",
     onClick: e => handleNavigationClick(e, '#mission')
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "MISSION")))), isMobile && isMenuOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "MISSION")));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBarDesktop);
+
+/***/ }),
+
+/***/ "./src/components/NavBar/NavBarMobile.js":
+/*!***********************************************!*\
+  !*** ./src/components/NavBar/NavBarMobile.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar.module.scss */ "./src/components/NavBar/NavBar.module.scss");
+
+
+function NavBarMobile(_ref) {
+  let {
+    isMenuOpen,
+    toggleMenu,
+    handleNavigationClick
+  } = _ref;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Hamburger,
+    onClick: toggleMenu
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null)), isMenuOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MobileMenu
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].MobileNavList
@@ -427,7 +486,7 @@ function NavBar() {
     onClick: e => handleNavigationClick(e, '#mission')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "OUR MISSION")))));
 }
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBarMobile);
 
 /***/ }),
 
@@ -1397,13 +1456,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   justify-content: flex-start; /* Adjust for spacing */
   background: #333;
   position: absolute;
-  top: 100%; /* Position right under the NavBar */
-  left: 0;
-  width: 100%; /* Span the full width of the page */
-  min-height: 50vh; /* Ensure it has a minimum height to avoid being too small */
-  padding: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 999; /* Ensure it appears above other elements */
+  top: 100%;
+  width: 100vw;
 }
 .QpVD3qAS0nYBtoQqAYoe .B0N_SpgrkQDn_a8SbL4n {
   display: flex;
@@ -1442,7 +1496,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
     display: flex;
     margin-top: 10px;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,mBAAA;EACA,kBAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA,EAAA,8CAAA;EACA,UAAA;EACA,gEAAA;AACJ;AACI;EACE,UAAA;EACA,4BAAA;AACN;AAEI;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAAN;AAGI;EACE,aAAA;EACA,uBAAA;EACA,WAAA;EACA,cAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;AADN;AAGM;EACE,kBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,gDAAA;AADR;AAGQ;EACE,cAAA;EACA,sBAAA;AADV;AAIQ;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,yBAAA;EACA,SAAA;EACA,OAAA;EACA,oBAAA;EACA,wBAAA;EACA,mBAAA;EACA,sCAAA;EACA,+CAAA;AAFV;AAKQ;EACE,uBAAA;AAHV;AAMQ;EACE,mBAAA;EACA,eAAA;AAJV;AASI;EACE,aAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;AAPN;AASM;EACE,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,qBAAA;AAPR;AAUM;EACE,mBAAA;EACA,8BAAA;AARR;AAYI;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,2BAAA,EAAA,uBAAA;EACA,gBAAA;EACA,kBAAA;EACA,SAAA,EAAA,oCAAA;EACA,OAAA;EACA,WAAA,EAAA,oCAAA;EACA,gBAAA,EAAA,4DAAA;EACA,aAAA;EACA,wCAAA;EACA,YAAA,EAAA,2CAAA;AAVN;AAaI;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;AAXN;AAaM;EACE,cAAA;EACA,WAAA;EACA,qBAAA;EACA,gBAAA;EACA,iBAAA;EACA,iBAAA,EAAA,kDAAA;EACA,kBAAA;EACA,uDAAA;AAXR;AAaQ;EACE,cAAA;EACA,0CAAA;EACA,uEAAA;AAXV;AAcQ;EACE,eAAA;AAZV;AAiBI;EACE;IACE,aAAA;IACA,kBAAA;IACA,SAAA;EAfN;EAkBI;IACE,aAAA;IACA,gBAAA;EAhBN;AACF","sourcesContent":[".NavBar {\n    border-radius: 30px;\n    padding: 1rem 2rem;\n    position: sticky;\n    top: 0;\n    z-index: 2000; /* Ensure the NavBar stays on top of content */\n    opacity: 1;\n    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;\n  \n    &.hidden {\n      opacity: 0;\n      transform: translateY(-100%);\n    }\n  \n    .NavBarContainer {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n  \n    .NavList {\n      display: flex;\n      justify-content: center;\n      width: auto;\n      height: 3.5rem;\n      list-style: none;\n      padding: 0;\n      margin: 0;\n      border-radius: 0.75rem;\n  \n      a {\n        position: relative;\n        color: whitesmoke;\n        text-decoration: none;\n        padding: 0.5rem 1rem;\n        font-weight: 500;\n        font-size: 1.7rem;\n        transition: color 0.3s ease, transform 0.3s ease;\n  \n        &:hover {\n          color: #242c56;\n          transform: scale(1.05);\n        }\n  \n        &:before {\n          content: '';\n          position: absolute;\n          width: 90%;\n          height: 2px;\n          background-color: #242c56;\n          bottom: 0;\n          left: 0;\n          transform: scaleX(0);\n          transform-origin: center;\n          margin-left: 0.7rem;\n          transition: transform 0.3s ease-in-out;\n          box-shadow: 0 2px 8px rgba(245, 245, 245, 0.25);\n        }\n  \n        &:hover:before {\n          transform: scaleX(0.75);\n        }\n  \n        li {\n          margin-left: 0.5rem;\n          cursor: pointer;\n        }\n      }\n    }\n  \n    .Hamburger {\n      display: none;\n      flex-direction: column;\n      cursor: pointer;\n      transition: 0.3s ease;\n  \n      span {\n        background: #fff;\n        height: 3px;\n        width: 25px;\n        margin: 2px 0;\n        transition: 0.3s ease;\n      }\n  \n      &:hover span {\n        background: #1e254a;\n        border: 0.5px solid ghostwhite;\n      }\n    }\n  \n    .MobileMenu {\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: flex-start; /* Adjust for spacing */\n      background: #333;\n      position: absolute;\n      top: 100%; /* Position right under the NavBar */\n      left: 0;\n      width: 100%; /* Span the full width of the page */\n      min-height: 50vh; /* Ensure it has a minimum height to avoid being too small */\n      padding: 2rem;\n      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); \n      z-index: 999; /* Ensure it appears above other elements */\n    }\n  \n    .MobileNavList {\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      list-style: none;\n      padding: 0;\n      margin: 0;\n  \n      a {\n        display: block;\n        color: #fff;\n        text-decoration: none;\n        font-weight: 500;\n        font-size: 1.5rem;\n        padding: 1.5rem 0; /* Increase padding to make items more clickable */\n        text-align: center;\n        transition: color 0.3s ease, background-color 0.3s ease;\n  \n        &:hover {\n          color: #1e254a;\n          background-color: rgba(255, 255, 255, 0.1);\n          text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;\n        }\n  \n        li {\n          cursor: pointer;\n        }\n      }\n    }\n  \n    @media (max-width: 768px) {\n      .NavList {\n        display: none;\n        visibility: hidden;\n        height: 0;\n      }\n  \n      .Hamburger {\n        display: flex;\n        margin-top: 10px;\n      }\n    }\n  }  "],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,mBAAA;EACA,kBAAA;EACA,gBAAA;EACA,MAAA;EACA,aAAA,EAAA,8CAAA;EACA,UAAA;EACA,gEAAA;AACJ;AACI;EACE,UAAA;EACA,4BAAA;AACN;AAEI;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;AAAN;AAGI;EACE,aAAA;EACA,uBAAA;EACA,WAAA;EACA,cAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;AADN;AAGM;EACE,kBAAA;EACA,iBAAA;EACA,qBAAA;EACA,oBAAA;EACA,gBAAA;EACA,iBAAA;EACA,gDAAA;AADR;AAGQ;EACE,cAAA;EACA,sBAAA;AADV;AAIQ;EACE,WAAA;EACA,kBAAA;EACA,UAAA;EACA,WAAA;EACA,yBAAA;EACA,SAAA;EACA,OAAA;EACA,oBAAA;EACA,wBAAA;EACA,mBAAA;EACA,sCAAA;EACA,+CAAA;AAFV;AAKQ;EACE,uBAAA;AAHV;AAMQ;EACE,mBAAA;EACA,eAAA;AAJV;AASI;EACE,aAAA;EACA,sBAAA;EACA,eAAA;EACA,qBAAA;AAPN;AASM;EACE,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,qBAAA;AAPR;AAUM;EACE,mBAAA;EACA,8BAAA;AARR;AAYI;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,2BAAA,EAAA,uBAAA;EACA,gBAAA;EACA,kBAAA;EACA,SAAA;EACA,YAAA;AAVN;AAaI;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,uBAAA;EACA,gBAAA;EACA,UAAA;EACA,SAAA;AAXN;AAaM;EACE,cAAA;EACA,WAAA;EACA,qBAAA;EACA,gBAAA;EACA,iBAAA;EACA,iBAAA,EAAA,kDAAA;EACA,kBAAA;EACA,uDAAA;AAXR;AAaQ;EACE,cAAA;EACA,0CAAA;EACA,uEAAA;AAXV;AAcQ;EACE,eAAA;AAZV;AAiBI;EACE;IACE,aAAA;IACA,kBAAA;IACA,SAAA;EAfN;EAkBI;IACE,aAAA;IACA,gBAAA;EAhBN;AACF","sourcesContent":[".NavBar {\n    border-radius: 30px;\n    padding: 1rem 2rem;\n    position: sticky;\n    top: 0;\n    z-index: 2000; /* Ensure the NavBar stays on top of content */\n    opacity: 1;\n    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;\n  \n    &.hidden {\n      opacity: 0;\n      transform: translateY(-100%);\n    }\n  \n    .NavBarContainer {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n  \n    .NavList {\n      display: flex;\n      justify-content: center;\n      width: auto;\n      height: 3.5rem;\n      list-style: none;\n      padding: 0;\n      margin: 0;\n      border-radius: 0.75rem;\n  \n      a {\n        position: relative;\n        color: whitesmoke;\n        text-decoration: none;\n        padding: 0.5rem 1rem;\n        font-weight: 500;\n        font-size: 1.7rem;\n        transition: color 0.3s ease, transform 0.3s ease;\n  \n        &:hover {\n          color: #242c56;\n          transform: scale(1.05);\n        }\n  \n        &:before {\n          content: '';\n          position: absolute;\n          width: 90%;\n          height: 2px;\n          background-color: #242c56;\n          bottom: 0;\n          left: 0;\n          transform: scaleX(0);\n          transform-origin: center;\n          margin-left: 0.7rem;\n          transition: transform 0.3s ease-in-out;\n          box-shadow: 0 2px 8px rgba(245, 245, 245, 0.25);\n        }\n  \n        &:hover:before {\n          transform: scaleX(0.75);\n        }\n  \n        li {\n          margin-left: 0.5rem;\n          cursor: pointer;\n        }\n      }\n    }\n  \n    .Hamburger {\n      display: none;\n      flex-direction: column;\n      cursor: pointer;\n      transition: 0.3s ease;\n  \n      span {\n        background: #fff;\n        height: 3px;\n        width: 25px;\n        margin: 2px 0;\n        transition: 0.3s ease;\n      }\n  \n      &:hover span {\n        background: #1e254a;\n        border: 0.5px solid ghostwhite;\n      }\n    }\n  \n    .MobileMenu {\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: flex-start; /* Adjust for spacing */\n      background: #333;\n      position: absolute;\n      top: 100%;\n      width: 100vw;\n    }\n  \n    .MobileNavList {\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      justify-content: center;\n      list-style: none;\n      padding: 0;\n      margin: 0;\n  \n      a {\n        display: block;\n        color: #fff;\n        text-decoration: none;\n        font-weight: 500;\n        font-size: 1.5rem;\n        padding: 1.5rem 0; /* Increase padding to make items more clickable */\n        text-align: center;\n        transition: color 0.3s ease, background-color 0.3s ease;\n  \n        &:hover {\n          color: #1e254a;\n          background-color: rgba(255, 255, 255, 0.1);\n          text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;\n        }\n  \n        li {\n          cursor: pointer;\n        }\n      }\n    }\n  \n    @media (max-width: 768px) {\n      .NavList {\n        display: none;\n        visibility: hidden;\n        height: 0;\n      }\n  \n      .Hamburger {\n        display: flex;\n        margin-top: 10px;\n      }\n    }\n  }  "],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
@@ -2958,4 +3012,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.ed7bc0e8fec1116699ad4f52474cb898.js.map
+//# sourceMappingURL=App.893b58137f5fa576286ac60231e75450.js.map
