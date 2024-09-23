@@ -3,7 +3,7 @@
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
-    z-index: 2000; /* Ensure the NavBar stays on top of content */
+    z-index: 2000;
     opacity: 1;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   
@@ -93,8 +93,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start; /* Adjust for spacing */
-      background: #333;
+      justify-content: flex-start; 
+      background: #130013;
       position: absolute;
       top: 100%;
       width: 100vw;
@@ -116,13 +116,13 @@
         text-decoration: none;
         font-weight: 500;
         font-size: 1.5rem;
-        padding: 1.5rem 0; /* Increase padding to make items more clickable */
+        padding: 1.5rem 0; 
         text-align: center;
         transition: color 0.3s ease, background-color 0.3s ease;
   
         &:hover {
-          color: #1e254a;
-          background-color: rgba(255, 255, 255, 0.1);
+          color: white;
+          background-color: #242c56;
           text-shadow: 0 0 2px ghostwhite, 0 0 4px ghostwhite, 0 0 6px ghostwhite;
         }
   
