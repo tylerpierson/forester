@@ -782,7 +782,7 @@ const VideoBanner = _ref => {
     className: isFaded ? "".concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].faded, " ").concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner) : "".concat(_VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].videoBanner)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: _VideoBanner_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logo,
-    src: "/img/1logo.png",
+    src: "/img/DROPSHADOW 2.png",
     alt: "Forester Logo"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("video", {
     autoPlay: true,
@@ -3033,4 +3033,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.26f1a810dbcb3d4fc853bb9d37edbff5.js.map
+//# sourceMappingURL=App.61c0fb6ea74046a5aced2d83a7614a9e.js.map
