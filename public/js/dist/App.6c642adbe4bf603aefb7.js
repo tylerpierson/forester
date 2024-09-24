@@ -1853,12 +1853,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.DyskzzB41LkALTA2XioJ {
   .DyskzzB41LkALTA2XioJ {
     height: 30vh;
     width: 100%;
+    position: relative;
+    overflow: visible;
   }
   .DyskzzB41LkALTA2XioJ .gnSjDnSvFnetzzLkRRgd {
     width: 10rem;
-    margin-top: -5rem;
+    top: -2.8rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 0;
+    z-index: 3000;
+    position: absolute;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;AACF;AACE;EACE,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,aAAA;EACA,iBAAA;AACJ;AAEE;EACE,UAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;EACH,iBAAA;EACA,0FAAA;AAAJ;AAGE;EACE,YAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;AADJ;;AAKA;EACE;IACE,YAAA;IACA,WAAA;EAFF;EAGE;IACE,YAAA;IACA,iBAAA;EADJ;AACF","sourcesContent":[".videoBanner {\n  position: relative;\n  width: 100%;\n  height: 85vh;\n  overflow: hidden;\n  text-align: center;\n\n  .logo {\n    width: 35rem;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -10%);\n    z-index: 1000;\n    margin-top: 10rem;\n  }\n\n  .videoBannerVideo {\n    width: 85%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    border-radius: 1%;\n    clip-path: polygon(85% 10%, 100% 0%, 100% 90%, 85% 100%, 15% 100%, 0% 90%, 0% 10%, 15% 0%);\n  }\n\n  .videoBannerContent {\n    bottom: 20px;\n    color: white;\n    text-align: center;\n    z-index: 1000;\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .videoBanner {\n    height: 30vh;\n    width: 100%;\n    .logo {\n      width: 10rem;\n      margin-top: -5rem;\n    }\n  }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/VideoBanner/VideoBanner.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,YAAA;EACA,gBAAA;EACA,kBAAA;AACF;AACE;EACE,YAAA;EACA,kBAAA;EACA,QAAA;EACA,SAAA;EACA,gCAAA;EACA,aAAA;EACA,iBAAA;AACJ;AAEE;EACE,UAAA;EACA,YAAA;EACA,oBAAA;EACG,iBAAA;EACH,iBAAA;EACA,0FAAA;AAAJ;AAGE;EACE,YAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;AADJ;;AAKA;EACE;IACE,YAAA;IACA,WAAA;IACA,kBAAA;IACA,iBAAA;EAFF;EAIE;IACE,YAAA;IACA,YAAA;IACA,SAAA;IACA,6BAAA;IACA,aAAA;IACA,aAAA;IACA,kBAAA;EAFJ;AACF","sourcesContent":[".videoBanner {\n  position: relative;\n  width: 100%;\n  height: 85vh;\n  overflow: hidden;\n  text-align: center;\n\n  .logo {\n    width: 35rem;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -10%);\n    z-index: 1000;\n    margin-top: 10rem;\n  }\n\n  .videoBannerVideo {\n    width: 85%;\n    height: 100%;\n    -o-object-fit: cover;\n       object-fit: cover;\n    border-radius: 1%;\n    clip-path: polygon(85% 10%, 100% 0%, 100% 90%, 85% 100%, 15% 100%, 0% 90%, 0% 10%, 15% 0%);\n  }\n\n  .videoBannerContent {\n    bottom: 20px;\n    color: white;\n    text-align: center;\n    z-index: 1000;\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .videoBanner {\n    height: 30vh;\n    width: 100%;\n    position: relative;\n    overflow: visible;\n\n    .logo {\n      width: 10rem;\n      top: -2.8rem; \n      left: 50%;\n      transform: translate(-50%, 0);\n      margin-top: 0;\n      z-index: 3000; \n      position: absolute;\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"videoBanner": `DyskzzB41LkALTA2XioJ`,
@@ -3033,4 +3040,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.a61fff012298ccb412c5314ad368be51.js.map
+//# sourceMappingURL=App.2a8af08b3ad6e750ead5925cfc5fcb48.js.map

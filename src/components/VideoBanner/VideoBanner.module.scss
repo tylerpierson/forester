@@ -35,9 +35,17 @@
   .videoBanner {
     height: 30vh;
     width: 100%;
+    position: relative;
+    overflow: visible;
+
     .logo {
       width: 10rem;
-      margin-top: -5rem;
+      top: -2.8rem; 
+      left: 50%;
+      transform: translate(-50%, 0);
+      margin-top: 0;
+      z-index: 3000; 
+      position: absolute;
     }
   }
 }
