@@ -816,14 +816,45 @@ const VideoBanner = _ref => {
 
 
 function YoutubeSection() {
+  const [playlistItems, setPlaylistItems] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
+  const [selectedVideo, setSelectedVideo] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''); // State for selected video
+
+  // Your YouTube API key and Playlist ID
+  const API_KEY = 'AIzaSyBuwCkEx76Gp4WDl43QzGBr_StnuW-s4ME';
+  const PLAYLIST_ID = 'PLZhApeQFymxqHAIofGEAKCWtM8Z7tvtgg';
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    // Fetch playlist items from YouTube Data API
+    const fetchPlaylistItems = async () => {
+      try {
+        const response = await fetch("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=".concat(PLAYLIST_ID, "&maxResults=25&key=").concat(API_KEY));
+        const data = await response.json();
+        setPlaylistItems(data.items);
+        // Set the first video as the default selected video
+        setSelectedVideo(data.items[0].snippet.resourceId.videoId);
+      } catch (error) {
+        console.error('Error fetching playlist items:', error);
+      }
+    };
+    fetchPlaylistItems();
+  }, [PLAYLIST_ID]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "videos"
+    id: "videos",
+    className: _YoutubeSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].YoutubeSection
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: _YoutubeSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].PlaylistEmbedWrapper
+    className: _YoutubeSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].PlaylistContainer
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: _YoutubeSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].PlaylistSidebar
+  }, playlistItems.map(item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    key: item.snippet.resourceId.videoId,
+    className: _YoutubeSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].PlaylistItem,
+    onClick: () => setSelectedVideo(item.snippet.resourceId.videoId) // Change video on click
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: item.snippet.thumbnails.default.url,
+    alt: item.snippet.title
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, item.snippet.title.replace(/\u00A0/g, ' '))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _YoutubeSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].PlaylistEmbed
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
-    src: "https://www.youtube.com/embed/videoseries?list=PLZhApeQFymxqHAIofGEAKCWtM8Z7tvtgg",
+    src: "https://www.youtube.com/embed/".concat(selectedVideo),
     title: "YouTube video player",
     frameBorder: "0",
     allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
@@ -1917,51 +1948,87 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .bZS7FVegf5kLSxLOTQAb {
-    width: 100vw;
-    margin: 0;
-    margin-bottom: 5rem;
-    padding: 0;
-    overflow: hidden;
-    clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);
-    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: center;
-  }
-  .VWPSXPUeoaj3Rv439YpH {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 1000px;
-  }
-  .VWPSXPUeoaj3Rv439YpH iframe {
-    height: 472.5px;
-    width: 840px;
-    border: none;
-    border-radius: 8px;
-  }
+___CSS_LOADER_EXPORT___.push([module.id, `.IXFdfeY78Nt5TGWfqqYn {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);
+  background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 900px), screen and (min-resolution: 192dpi) and (max-width: 900px) {
-  .VWPSXPUeoaj3Rv439YpH {
-    height: 400px;
-  }
-  .VWPSXPUeoaj3Rv439YpH iframe {
-    height: 220.5px;
-    width: 392px;
-  }
+
+.fpfa1ckDocKp370wxIxi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 0;
+  white-space: normal;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 500px), screen and (min-resolution: 192dpi) and (max-width: 500px) {
-  .bZS7FVegf5kLSxLOTQAb {
-    background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
-    background-size: cover;
-  }
-}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACE;IACE,YAAA;IACA,SAAA;IACA,mBAAA;IACA,UAAA;IACA,gBAAA;IACA,0FAAA;IACA,yDAAA;IACA,6BAAA;IACA,sBAAA;IACA,2BAAA;EACF;EAEA;IACE,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,WAAA;IACA,cAAA;EAAF;EAEE;IACE,eAAA;IACA,YAAA;IACA,YAAA;IACA,kBAAA;EAAJ;AACF;AAGE;EACE;IACE,aAAA;EADJ;EAEI;IACE,eAAA;IACA,YAAA;EAAN;AACF;AAIE;EACE;IACE,yDAAA;IACA,sBAAA;EAFJ;AACF","sourcesContent":["@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {\n  .PlaylistEmbedWrapper {\n    width: 100vw; \n    margin: 0;\n    margin-bottom: 5rem;   \n    padding: 0;\n    overflow: hidden; \n    clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);\n    background-image: url('/public/img/forester-film-edits-17.jpg');\n    background-attachment: scroll;\n    background-size: cover;\n    background-position: center;\n  }\n\n  .PlaylistEmbed {\n    display: flex;\n    justify-content: center;  \n    align-items: center;\n    width: 100%;    \n    height: 1000px;      \n    \n    iframe {\n      height: 472.5px;\n      width: 840px;\n      border: none;  \n      border-radius: 8px;\n    }\n  }\n\n  @media screen and (max-width: 900px) {\n    .PlaylistEmbed {\n      height: 400px;\n      iframe {\n        height: 220.5px;\n        width: 392px;\n      }\n    }\n  }\n\n  @media screen and (max-width: 500px) {\n    .PlaylistEmbedWrapper {\n      background-image: url('/public/img/forester-film-edits-17.jpg');\n      background-size: cover;\n    }\n  }\n}"],"sourceRoot":""}]);
+
+.f3zTeKpPKUCMt8NV_zqp {
+  overflow-y: scroll;
+  max-height: 500px;
+  width: 30%;
+  padding: 0;
+  white-space: normal;
+  word-spacing: -0.2rem;
+}
+
+.EtmmejX8WTw1EIkva73k {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0.3rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  white-space: normal;
+}
+.EtmmejX8WTw1EIkva73k:hover {
+  background-color: #f0f0f0;
+}
+.EtmmejX8WTw1EIkva73k:hover p {
+  color: #333;
+}
+.EtmmejX8WTw1EIkva73k img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 30%;
+  margin: 0.3rem 1rem 0.3rem 1rem;
+}
+.EtmmejX8WTw1EIkva73k p {
+  width: 70%;
+  font-size: 0.9rem;
+  color: #f1f1f1;
+  transition: color 0.3s ease;
+}
+
+.VWPSXPUeoaj3Rv439YpH {
+  flex-grow: 1;
+}
+.VWPSXPUeoaj3Rv439YpH iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  border: none;
+}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACE,YAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,0FAAA;EACA,yDAAA;EACA,6BAAA;EACA,sBAAA;EACA,2BAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,iBAAA;EACA,oCAAA;EACA,aAAA;EACA,mBAAA;EACA,SAAA;EACA,mBAAA;AACF;;AAEA;EACE,kBAAA;EACA,iBAAA;EACA,UAAA;EACA,UAAA;EACA,mBAAA;EACA,qBAAA;AACF;;AAEA;EACE,aAAA;EACA,WAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EACA,qBAAA;EACA,uDAAA;EACA,SAAA;EACA,mBAAA;AACF;AACE;EACE,yBAAA;AACJ;AACI;EACE,WAAA;AACN;AAGE;EACE,oBAAA;EACG,iBAAA;EACH,UAAA;EACA,+BAAA;AADJ;AAIE;EACE,UAAA;EACA,iBAAA;EACA,cAAA;EACA,2BAAA;AAFJ;;AAMA;EACE,YAAA;AAHF;AAIE;EACE,WAAA;EACA,aAAA;EACA,kBAAA;EACA,YAAA;AAFJ","sourcesContent":[".YoutubeSection {\n  width: 100vw;\n  height: 60vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 2rem;\n  clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);\n  background-image: url('/public/img/forester-film-edits-17.jpg');\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n}\n\n.PlaylistContainer {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  max-width: 1200px;\n  background-color: rgba(0, 0, 0, 0.4);\n  padding: 2rem;\n  border-radius: 1rem;\n  margin: 0;\n  white-space: normal;\n}\n\n.PlaylistSidebar {\n  overflow-y: scroll;\n  max-height: 500px;\n  width: 30%;  \n  padding: 0;\n  white-space: normal;\n  word-spacing: -.2rem;\n}\n\n.PlaylistItem {\n  display: flex;\n  width: 100%;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n  margin-bottom: .3rem;\n  transition: background-color 0.3s ease, color 0.3s ease;\n  margin: 0;\n  white-space: normal;\n\n  &:hover {\n    background-color: #f0f0f0;\n\n    p {\n      color: #333;\n    }\n  }\n\n  img {\n    -o-object-fit: cover;\n       object-fit: cover;\n    width: 30%;\n    margin: .3rem 1rem .3rem 1rem;\n  }\n\n  p {\n    width: 70%;\n    font-size: 0.9rem;\n    color: #f1f1f1;\n    transition: color 0.3s ease;\n  }\n}\n\n.PlaylistEmbed {\n  flex-grow: 1;\n  iframe {\n    width: 100%;\n    height: 500px;\n    border-radius: 8px;\n    border: none;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
-	"PlaylistEmbedWrapper": `bZS7FVegf5kLSxLOTQAb`,
+	"YoutubeSection": `IXFdfeY78Nt5TGWfqqYn`,
+	"PlaylistContainer": `fpfa1ckDocKp370wxIxi`,
+	"PlaylistSidebar": `f3zTeKpPKUCMt8NV_zqp`,
+	"PlaylistItem": `EtmmejX8WTw1EIkva73k`,
 	"PlaylistEmbed": `VWPSXPUeoaj3Rv439YpH`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -3056,4 +3123,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.297a574df97339d2047cf44d1dcc6d7c.js.map
+//# sourceMappingURL=App.25fc0a036873426545d6994e433594bf.js.map
