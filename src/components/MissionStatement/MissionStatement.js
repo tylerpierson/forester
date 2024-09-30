@@ -5,7 +5,7 @@ function MissionStatement() {
   return (
     <div id="mission" className={styles.MissionStatement}>
         <p className={styles.MissionStatementPara}>
-          A lot of our music is inspired by our planet’s beautiful outdoor spaces, which is why we’ve teamed up with One Tree Planted to offset the carbon generated from streaming our music.
+          Our music is inspired by Earth’s beautiful outdoor spaces, which is why we’ve teamed up with One Tree Planted to offset the carbon generated from streaming our music.
           <br/><br/>
           We’re calling this initiative 'sustainable streaming,' and we’ll be raising money on our headline tour to plant trees in places that need it most.
           <br/><br/>
