@@ -83,3 +83,23 @@
     margin: 0;
   }
 }
+
+@media screen and (max-width: 468px) {
+  .carouselContainer {
+    height: 10rem;
+    margin-top: 4.5rem;
+  }
+
+  .carouselItem {
+    flex: 0 0 100%;
+    padding: 0 10px;
+    width: 80%;
+    height: 80%;
+  }
+
+  .carouselItem img {
+    width: 92.25px;
+    height: 86.25px;
+    margin: 0;
+  }
+}

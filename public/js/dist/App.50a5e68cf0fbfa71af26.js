@@ -1229,7 +1229,24 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.yT1CNjb_DHTHO9GBDoBA {
     height: 115px;
     margin: 0;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/MerchCarousel/MerchCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;EACA,mBAAA;EACA,iBAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,iBAAA;EACA,aAAA;AACF;;AAEA;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACF;;AAEA;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;EACA,YAAA;EACA,aAAA;AACF;;AAEA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,+BAAA;AACF;AACE;EACE,sBAAA;AACJ;;AAGA;EACE;IACE,YAAA;IACA,aAAA;EAAF;AACF;AAGA;EACE;IACE,aAAA;EADF;EAIA;IACE,YAAA;IACA,aAAA;EAFF;AACF;AAKA;EACE;IACE,aAAA;IACA,kBAAA;EAHF;EAMA;IACE,cAAA;IACA,eAAA;IACA,WAAA;IACA,YAAA;EAJF;EAOA;IACE,YAAA;IACA,aAAA;IACA,SAAA;EALF;AACF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  margin-top: 4.5rem;\n  overflow: hidden;\n  margin-bottom: 3rem;\n  padding-top: 1rem;\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.carousel {\n  max-width: 1560px;\n  display: flex;\n}\n\n.carouselInner {\n  display: flex;\n  width: calc(100% * 3);\n  transition: transform 0.5s ease-in-out;\n  will-change: transform;\n}\n\n.carouselItem {\n  flex: 0 0 33.33%; \n  box-sizing: border-box;\n  padding: 0 10px;\n  width: 500px;\n  height: 450px;\n}\n\n.carouselItem img {\n  width: 100%;\n  height: 100%;\n  border-radius: 8px;\n  transition: transform 0.3s ease; \n\n  &:hover {\n    transform: scale(1.05); \n  }\n}\n\n@media screen and (max-width: 1300px) {\n  .carouselItem {\n    width: 350px;\n    height: 350px;\n  }\n}\n\n@media screen and (max-width: 1000px) {\n  .carouselContainer {\n    height: 20rem;\n  }\n\n  .carouselItem {\n    width: 250px;\n    height: 250px;\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .carouselContainer {\n    height: 10rem;\n    margin-top: 4.5rem;\n  }\n\n  .carouselItem {\n    flex: 0 0 100%;\n    padding: 0 10px;\n    width: 100%;\n    height: 100%;\n  }\n\n  .carouselItem img {\n    width: 123px;\n    height: 115px;\n    margin: 0;\n  }\n}"],"sourceRoot":""}]);
+}
+@media screen and (max-width: 468px) {
+  .yT1CNjb_DHTHO9GBDoBA {
+    height: 10rem;
+    margin-top: 4.5rem;
+  }
+  .nKIEvLOJMnFOG5pvhn3u {
+    flex: 0 0 100%;
+    padding: 0 10px;
+    width: 80%;
+    height: 80%;
+  }
+  .nKIEvLOJMnFOG5pvhn3u img {
+    width: 92.25px;
+    height: 86.25px;
+    margin: 0;
+  }
+}`, "",{"version":3,"sources":["webpack://./src/components/MerchCarousel/MerchCarousel.module.scss"],"names":[],"mappings":"AAAA;EACE,kBAAA;EACA,WAAA;EACA,aAAA;EACA,YAAA;EACA,kBAAA;EACA,gBAAA;EACA,mBAAA;EACA,iBAAA;EACA,4BAAA;EACA,sBAAA;EACA,2BAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;AACF;;AAEA;EACE,iBAAA;EACA,aAAA;AACF;;AAEA;EACE,aAAA;EACA,WAAA;EACA,sCAAA;EACA,sBAAA;AACF;;AAEA;EACE,gBAAA;EACA,sBAAA;EACA,eAAA;EACA,YAAA;EACA,aAAA;AACF;;AAEA;EACE,WAAA;EACA,YAAA;EACA,kBAAA;EACA,+BAAA;AACF;AACE;EACE,sBAAA;AACJ;;AAGA;EACE;IACE,YAAA;IACA,aAAA;EAAF;AACF;AAGA;EACE;IACE,aAAA;EADF;EAIA;IACE,YAAA;IACA,aAAA;EAFF;AACF;AAKA;EACE;IACE,aAAA;IACA,kBAAA;EAHF;EAMA;IACE,cAAA;IACA,eAAA;IACA,WAAA;IACA,YAAA;EAJF;EAOA;IACE,YAAA;IACA,aAAA;IACA,SAAA;EALF;AACF;AAQA;EACE;IACE,aAAA;IACA,kBAAA;EANF;EASA;IACE,cAAA;IACA,eAAA;IACA,UAAA;IACA,WAAA;EAPF;EAUA;IACE,cAAA;IACA,eAAA;IACA,SAAA;EARF;AACF","sourcesContent":[".carouselContainer {\n  position: relative;\n  width: 100%;\n  height: 40rem;\n  margin: auto;\n  margin-top: 4.5rem;\n  overflow: hidden;\n  margin-bottom: 3rem;\n  padding-top: 1rem;\n  background-attachment: fixed;\n  background-size: cover;\n  background-position: center;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.carousel {\n  max-width: 1560px;\n  display: flex;\n}\n\n.carouselInner {\n  display: flex;\n  width: calc(100% * 3);\n  transition: transform 0.5s ease-in-out;\n  will-change: transform;\n}\n\n.carouselItem {\n  flex: 0 0 33.33%; \n  box-sizing: border-box;\n  padding: 0 10px;\n  width: 500px;\n  height: 450px;\n}\n\n.carouselItem img {\n  width: 100%;\n  height: 100%;\n  border-radius: 8px;\n  transition: transform 0.3s ease; \n\n  &:hover {\n    transform: scale(1.05); \n  }\n}\n\n@media screen and (max-width: 1300px) {\n  .carouselItem {\n    width: 350px;\n    height: 350px;\n  }\n}\n\n@media screen and (max-width: 1000px) {\n  .carouselContainer {\n    height: 20rem;\n  }\n\n  .carouselItem {\n    width: 250px;\n    height: 250px;\n  }\n}\n\n@media screen and (max-width: 768px) {\n  .carouselContainer {\n    height: 10rem;\n    margin-top: 4.5rem;\n  }\n\n  .carouselItem {\n    flex: 0 0 100%;\n    padding: 0 10px;\n    width: 100%;\n    height: 100%;\n  }\n\n  .carouselItem img {\n    width: 123px;\n    height: 115px;\n    margin: 0;\n  }\n}\n\n@media screen and (max-width: 468px) {\n  .carouselContainer {\n    height: 10rem;\n    margin-top: 4.5rem;\n  }\n\n  .carouselItem {\n    flex: 0 0 100%;\n    padding: 0 10px;\n    width: 80%;\n    height: 80%;\n  }\n\n  .carouselItem img {\n    width: 92.25px;\n    height: 86.25px;\n    margin: 0;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"carouselContainer": `yT1CNjb_DHTHO9GBDoBA`,
@@ -1616,7 +1633,8 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.uYrXtwYQZtJpSmB8rs2z {
   .uYrXtwYQZtJpSmB8rs2z {
     display: flex;
     margin-top: 2rem;
-    justify-content: center;
+    justify-content: space-around;
+    width: 100%;
   }
   .uYrXtwYQZtJpSmB8rs2z a {
     display: flex;
@@ -1627,7 +1645,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.uYrXtwYQZtJpSmB8rs2z {
     transition: color 0.3s ease;
     width: 2.2rem;
     height: 2.2rem;
-    margin: 0 0.5rem;
+    margin: 0;
     padding: 0;
     background-color: #1e254a;
     border-radius: 10%;
@@ -1638,7 +1656,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.uYrXtwYQZtJpSmB8rs2z {
     background-color: whitesmoke;
     border-radius: 10%;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/SocialMedia/SocialMediaMobile.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;AACJ;;AAEA;EACI;IACI,aAAA;IACA,gBAAA;IACA,uBAAA;EACN;EAAM;IACI,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,iBAAA;IACA,iBAAA;IACA,2BAAA;IACA,aAAA;IACA,cAAA;IACA,gBAAA;IACA,UAAA;IACA,yBAAA;IACA,kBAAA;IACA,aAAA;EAEV;EAAU;IACI,cAAA;IACA,4BAAA;IACA,kBAAA;EAEd;AACF","sourcesContent":[".socialMedia {\n    display: none;\n}\n\n@media screen and (max-width: 768px) {\n    .socialMedia {\n        display: flex;\n        margin-top: 2rem;\n        justify-content: center;\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: whitesmoke;\n            font-size: 1.5rem;\n            transition: color 0.3s ease;\n            width: 2.2rem;\n            height: 2.2rem;\n            margin: 0 0.5rem;\n            padding: 0;\n            background-color: #1e254a;\n            border-radius: 10%;\n            z-index: 1000;\n    \n            &:hover {\n                color: #1e254a;\n                background-color: whitesmoke;\n                border-radius: 10%;\n            }\n        }\n    }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/SocialMedia/SocialMediaMobile.module.scss"],"names":[],"mappings":"AAAA;EACI,aAAA;AACJ;;AAEA;EACI;IACI,aAAA;IACA,gBAAA;IACA,6BAAA;IACA,WAAA;EACN;EAAM;IACI,aAAA;IACA,uBAAA;IACA,mBAAA;IACA,iBAAA;IACA,iBAAA;IACA,2BAAA;IACA,aAAA;IACA,cAAA;IACA,SAAA;IACA,UAAA;IACA,yBAAA;IACA,kBAAA;IACA,aAAA;EAEV;EAAU;IACI,cAAA;IACA,4BAAA;IACA,kBAAA;EAEd;AACF","sourcesContent":[".socialMedia {\n    display: none;\n}\n\n@media screen and (max-width: 768px) {\n    .socialMedia {\n        display: flex;\n        margin-top: 2rem;\n        justify-content: space-around;\n        width: 100%;\n        a {\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            color: whitesmoke;\n            font-size: 1.5rem;\n            transition: color 0.3s ease;\n            width: 2.2rem;\n            height: 2.2rem;\n            margin: 0;\n            padding: 0;\n            background-color: #1e254a;\n            border-radius: 10%;\n            z-index: 1000;\n    \n            &:hover {\n                color: #1e254a;\n                background-color: whitesmoke;\n                border-radius: 10%;\n            }\n        }\n    }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"socialMedia": `uYrXtwYQZtJpSmB8rs2z`
@@ -3038,4 +3056,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.529fff5d9c21ec24bd0313873e33fd40.js.map
+//# sourceMappingURL=App.297a574df97339d2047cf44d1dcc6d7c.js.map
