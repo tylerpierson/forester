@@ -1,6 +1,6 @@
 .YoutubeSection {
   width: 100%;
-  height: 60vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +10,7 @@
   background-attachment: scroll;
   background-size: cover;
   background-position: center;
+  margin-bottom: 4rem;
 }
 
 .PlaylistContainer {
@@ -18,7 +19,6 @@
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  background-color: rgba(0, 0, 0, 0.4);
   padding: 2rem;
   border-radius: 1rem;
   margin: 0;
@@ -78,6 +78,11 @@
 }
 
 @media screen and (max-width: 480px) {
+
+  .YoutubeSection {
+    height: 60vh;
+    margin-bottom: 3.5rem;
+  }
   .PlaylistContainer {
     flex-direction: column-reverse;
   }
@@ -103,110 +108,3 @@
     }
   }
 }
-
-.YoutubeSection {
-  width: 100%;
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);
-  background-image: url('/public/img/forester-film-edits-17.jpg');
-  background-attachment: scroll;
-  background-size: cover;
-  background-position: center;
-}
-
-.PlaylistContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 2rem;
-  border-radius: 1rem;
-  margin: 0;
-  white-space: normal;
-}
-
-.PlaylistSidebar {
-  overflow-y: scroll;
-  max-height: 500px;
-  width: 30%;  
-  padding: 0;
-  white-space: normal;
-  word-spacing: -.2rem;
-}
-
-.PlaylistItem {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin-bottom: .3rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin: 0;
-  white-space: normal;
-
-  &:hover {
-    background-color: #f0f0f0;
-
-    p {
-      color: #333;
-    }
-  }
-
-  img {
-    object-fit: cover;
-    width: 30%;
-    margin: .3rem 1rem .3rem 1rem;
-  }
-
-  p {
-    width: 70%;
-    font-size: 0.9rem;
-    color: #f1f1f1;
-    transition: color 0.3s ease;
-  }
-}
-
-.PlaylistEmbed {
-  flex-grow: 1;
-  iframe {
-    width: 100%;
-    height: 500px;
-    border-radius: 8px;
-    border: none;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .PlaylistContainer {
-    flex-direction: column-reverse;
-  }
-
-  .PlaylistSidebar {
-    max-height: 200px;
-    width: 100%;
-  }
-
-  .PlaylistItem {
-    img {
-      width: 25%;
-    }
-
-    p {
-      font-size: 0.75rem;
-    }
-  }
-
-  .PlaylistEmbed {
-    iframe {
-      height: 250px;
-    }
-  }
-}
-
