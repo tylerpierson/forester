@@ -28,6 +28,12 @@ function YoutubeSection() {
     fetchPlaylistItems();
   }, [PLAYLIST_ID]);
 
+  // Function to format video titles
+  const formatTitle = (title) => {
+    return title
+  };
+  
+
   return (
     <div id="videos" className={styles.YoutubeSection}>
       <div className={styles.PlaylistContainer}>
@@ -40,8 +46,8 @@ function YoutubeSection() {
               onClick={() => setSelectedVideo(item.snippet.resourceId.videoId)} // Change video on click
             >
               <img src={item.snippet.thumbnails.default.url} alt={item.snippet.title} />
-              {/* Replace &nbsp; with a space in the title */}
-              <p>{item.snippet.title.replace(/\u00A0/g, ' ')}</p>
+              {/* Format title to add spaces where necessary */}
+              <p>{formatTitle(item.snippet.title)}</p>
             </div>
           ))}
         </div>

@@ -837,6 +837,11 @@ function YoutubeSection() {
     };
     fetchPlaylistItems();
   }, [PLAYLIST_ID]);
+
+  // Function to format video titles
+  const formatTitle = title => {
+    return title;
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "videos",
     className: _YoutubeSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].YoutubeSection
@@ -851,7 +856,7 @@ function YoutubeSection() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     src: item.snippet.thumbnails.default.url,
     alt: item.snippet.title
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, item.snippet.title.replace(/\u00A0/g, ' '))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, formatTitle(item.snippet.title))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: _YoutubeSection_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].PlaylistEmbed
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
     src: "https://www.youtube.com/embed/".concat(selectedVideo),
@@ -1836,14 +1841,14 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.HvgboFHhvHeMxm43zFZ6 {
   padding: 10rem 0 5rem 0;
   width: 90%;
   color: rgb(255, 255, 255);
-  margin-top: 4.2rem;
+  margin-top: 2rem;
 }
 
 @media screen and (max-width: 768px) {
   .HvgboFHhvHeMxm43zFZ6 {
     margin-top: -8rem;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/TourSection/TourSection.module.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,UAAA;EACA,yBAAA;EACA,kBAAA;AACF;;AAEA;EACE;IACE,iBAAA;EACF;AACF","sourcesContent":[".tourSection {\n  padding: 10rem 0 5rem 0;\n  width: 90%;\n  color: rgb(255, 255, 255);\n  margin-top: 4.2rem;\n}\n\n@media screen and (max-width: 768px) {\n  .tourSection {\n    margin-top: -8rem;\n  }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/TourSection/TourSection.module.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;EACA,UAAA;EACA,yBAAA;EACA,gBAAA;AACF;;AAEA;EACE;IACE,iBAAA;EACF;AACF","sourcesContent":[".tourSection {\n  padding: 10rem 0 5rem 0;\n  width: 90%;\n  color: rgb(255, 255, 255);\n  margin-top: 2rem;\n}\n\n@media screen and (max-width: 768px) {\n  .tourSection {\n    margin-top: -8rem;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"tourSection": `HvgboFHhvHeMxm43zFZ6`
@@ -1959,7 +1964,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IXFdfeY78Nt5TGWfqqYn {
   height: 80vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 2rem;
   clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);
   background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
@@ -1988,6 +1992,18 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IXFdfeY78Nt5TGWfqqYn {
   padding: 0;
   white-space: normal;
   word-spacing: -0.2rem;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  scrollbar-width: thin;
+}
+.f3zTeKpPKUCMt8NV_zqp ::-webkit-scrollbar {
+  width: 8px;
+}
+.f3zTeKpPKUCMt8NV_zqp ::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.f3zTeKpPKUCMt8NV_zqp ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
 }
 
 .EtmmejX8WTw1EIkva73k {
@@ -2026,7 +2042,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IXFdfeY78Nt5TGWfqqYn {
 .VWPSXPUeoaj3Rv439YpH iframe {
   width: 100%;
   height: 500px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: none;
 }
 
@@ -2051,7 +2067,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.IXFdfeY78Nt5TGWfqqYn {
   .VWPSXPUeoaj3Rv439YpH iframe {
     height: 250px;
   }
-}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,aAAA;EACA,0FAAA;EACA,yDAAA;EACA,6BAAA;EACA,sBAAA;EACA,2BAAA;EACA,mBAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,iBAAA;EACA,aAAA;EACA,mBAAA;EACA,SAAA;EACA,mBAAA;AACF;;AAEA;EACE,kBAAA;EACA,iBAAA;EACA,UAAA;EACA,UAAA;EACA,mBAAA;EACA,qBAAA;AACF;;AAEA;EACE,aAAA;EACA,WAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EACA,qBAAA;EACA,uDAAA;EACA,SAAA;EACA,mBAAA;AACF;AACE;EACE,yBAAA;AACJ;AACI;EACE,WAAA;AACN;AAGE;EACE,oBAAA;EACG,iBAAA;EACH,UAAA;EACA,+BAAA;AADJ;AAIE;EACE,UAAA;EACA,iBAAA;EACA,cAAA;EACA,2BAAA;AAFJ;;AAMA;EACE,YAAA;AAHF;AAIE;EACE,WAAA;EACA,aAAA;EACA,kBAAA;EACA,YAAA;AAFJ;;AAMA;EAEE;IACE,YAAA;IACA,qBAAA;EAJF;EAMA;IACE,8BAAA;EAJF;EAOA;IACE,iBAAA;IACA,WAAA;EALF;EASE;IACE,UAAA;EAPJ;EAUE;IACE,kBAAA;EARJ;EAaE;IACE,aAAA;EAXJ;AACF","sourcesContent":[".YoutubeSection {\n  width: 100%;\n  height: 80vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 2rem;\n  clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);\n  background-image: url('/public/img/forester-film-edits-17.jpg');\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  margin-bottom: 4rem;\n}\n\n.PlaylistContainer {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  max-width: 1200px;\n  padding: 2rem;\n  border-radius: 1rem;\n  margin: 0;\n  white-space: normal;\n}\n\n.PlaylistSidebar {\n  overflow-y: scroll;\n  max-height: 500px;\n  width: 30%;  \n  padding: 0;\n  white-space: normal;\n  word-spacing: -.2rem;\n}\n\n.PlaylistItem {\n  display: flex;\n  width: 100%;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n  margin-bottom: .3rem;\n  transition: background-color 0.3s ease, color 0.3s ease;\n  margin: 0;\n  white-space: normal;\n\n  &:hover {\n    background-color: #f0f0f0;\n\n    p {\n      color: #333;\n    }\n  }\n\n  img {\n    -o-object-fit: cover;\n       object-fit: cover;\n    width: 30%;\n    margin: .3rem 1rem .3rem 1rem;\n  }\n\n  p {\n    width: 70%;\n    font-size: 0.9rem;\n    color: #f1f1f1;\n    transition: color 0.3s ease;\n  }\n}\n\n.PlaylistEmbed {\n  flex-grow: 1;\n  iframe {\n    width: 100%;\n    height: 500px;\n    border-radius: 8px;\n    border: none;\n  }\n}\n\n@media screen and (max-width: 480px) {\n\n  .YoutubeSection {\n    height: 60vh;\n    margin-bottom: 3.5rem;\n  }\n  .PlaylistContainer {\n    flex-direction: column-reverse;\n  }\n\n  .PlaylistSidebar {\n    max-height: 200px;\n    width: 100%;\n  }\n\n  .PlaylistItem {\n    img {\n      width: 25%;\n    }\n\n    p {\n      font-size: 0.75rem;\n    }\n  }\n\n  .PlaylistEmbed {\n    iframe {\n      height: 250px;\n    }\n  }\n}"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/components/YoutubeSection/YoutubeSection.module.scss"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,aAAA;EACA,0FAAA;EACA,yDAAA;EACA,6BAAA;EACA,sBAAA;EACA,2BAAA;EACA,mBAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,WAAA;EACA,iBAAA;EACA,aAAA;EACA,mBAAA;EACA,SAAA;EACA,mBAAA;AACF;;AAEA;EACE,kBAAA;EACA,iBAAA;EACA,UAAA;EACA,UAAA;EACA,mBAAA;EACA,qBAAA;EAeE,qDAAA;EACA,qBAAA;AAbJ;AADI;EACE,UAAA;AAGN;AAAI;EACE,6BAAA;AAEN;AACI;EACE,0CAAA;EACA,kBAAA;AACN;;AAMA;EACE,aAAA;EACA,WAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EACA,qBAAA;EACA,uDAAA;EACA,SAAA;EACA,mBAAA;AAHF;AAKE;EACE,yBAAA;AAHJ;AAKI;EACE,WAAA;AAHN;AAOE;EACE,oBAAA;EACG,iBAAA;EACH,UAAA;EACA,+BAAA;AALJ;AAQE;EACE,UAAA;EACA,iBAAA;EACA,cAAA;EACA,2BAAA;AANJ;;AAUA;EACE,YAAA;AAPF;AAQE;EACE,WAAA;EACA,aAAA;EACA,kBAAA;EACA,YAAA;AANJ;;AAUA;EAEE;IACE,YAAA;IACA,qBAAA;EARF;EAUA;IACE,8BAAA;EARF;EAWA;IACE,iBAAA;IACA,WAAA;EATF;EAaE;IACE,UAAA;EAXJ;EAcE;IACE,kBAAA;EAZJ;EAiBE;IACE,aAAA;EAfJ;AACF","sourcesContent":[".YoutubeSection {\n  width: 100%;\n  height: 80vh;\n  display: flex;\n  justify-content: center;\n  padding: 2rem;\n  clip-path: polygon(0% 0%, 25% 10%, 70% 0%, 100% 10%, 100% 100%, 50% 92%, 20% 100%, 0% 95%);\n  background-image: url('/public/img/forester-film-edits-17.jpg');\n  background-attachment: scroll;\n  background-size: cover;\n  background-position: center;\n  margin-bottom: 4rem;\n}\n\n.PlaylistContainer {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  max-width: 1200px;\n  padding: 2rem;\n  border-radius: 1rem;\n  margin: 0;\n  white-space: normal;\n}\n\n.PlaylistSidebar {\n  overflow-y: scroll;\n  max-height: 500px;\n  width: 30%;  \n  padding: 0;\n  white-space: normal;\n  word-spacing: -.2rem;\n    \n    ::-webkit-scrollbar {\n      width: 8px; \n    }\n  \n    ::-webkit-scrollbar-track {\n      background-color: transparent; \n    }\n  \n    ::-webkit-scrollbar-thumb {\n      background-color: rgba(255, 255, 255, 0.3); \n      border-radius: 4px; \n    }\n  \n    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;\n    scrollbar-width: thin;\n}\n\n.PlaylistItem {\n  display: flex;\n  width: 100%;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n  margin-bottom: .3rem;\n  transition: background-color 0.3s ease, color 0.3s ease;\n  margin: 0;\n  white-space: normal;\n\n  &:hover {\n    background-color: #f0f0f0;\n\n    p {\n      color: #333;\n    }\n  }\n\n  img {\n    -o-object-fit: cover;\n       object-fit: cover;\n    width: 30%;\n    margin: .3rem 1rem .3rem 1rem;\n  }\n\n  p {\n    width: 70%;\n    font-size: 0.9rem;\n    color: #f1f1f1;\n    transition: color 0.3s ease;\n  }\n}\n\n.PlaylistEmbed {\n  flex-grow: 1;\n  iframe {\n    width: 100%;\n    height: 500px;\n    border-radius: 6px;\n    border: none;\n  }\n}\n\n@media screen and (max-width: 480px) {\n\n  .YoutubeSection {\n    height: 60vh;\n    margin-bottom: 3.5rem;\n  }\n  .PlaylistContainer {\n    flex-direction: column-reverse;\n  }\n\n  .PlaylistSidebar {\n    max-height: 200px;\n    width: 100%;\n  }\n\n  .PlaylistItem {\n    img {\n      width: 25%;\n    }\n\n    p {\n      font-size: 0.75rem;\n    }\n  }\n\n  .PlaylistEmbed {\n    iframe {\n      height: 250px;\n    }\n  }\n}"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"YoutubeSection": `IXFdfeY78Nt5TGWfqqYn`,
@@ -3152,4 +3168,4 @@ module.exports = __webpack_require__.p + "ee4db0486b1f406ef3c4.jpg";
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=App.c9a5a734cffbb99f7d69677decc94a1c.js.map
+//# sourceMappingURL=App.9eef8e997ab8e0197cd55985e019d65f.js.map
